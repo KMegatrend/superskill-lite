@@ -1,0 +1,56 @@
+[
+  {
+    "id": "vercel-deploy",
+    "title": "Vercel 배포 자동화",
+    "description": "웹 애플리케이션을 Vercel에 자동으로 배포하고 필요한 환경 변수를 세팅해주는 스킬입니다.",
+    "category": "DevOps",
+    "tags": ["배포", "Vercel", "웹"],
+    "author": "Antigravity",
+    "downloads": 1240
+  },
+  {
+    "id": "react-component-generator",
+    "title": "React 컴포넌트 생성기",
+    "description": "Storybook, 테스트 코드, 스타일 파일이 포함된 React 컴포넌트 보일러플레이트를 빠르게 생성합니다.",
+    "category": "Frontend",
+    "tags": ["React", "컴포넌트", "Storybook"],
+    "author": "Frontend Team",
+    "downloads": 3105
+  },
+  {
+    "id": "database-migration-helper",
+    "title": "데이터베이스 마이그레이션 도우미",
+    "description": "안전한 스키마 변경을 위해 SQL 마이그레이션 스크립트를 작성하고 검증해줍니다.",
+    "category": "Backend",
+    "tags": ["DB", "SQL", "마이그레이션"],
+    "author": "DBA",
+    "downloads": 856
+  },
+  {
+    "id": "security-scanner",
+    "title": "의존성 보안 스캐너",
+    "description": "프로젝트의 `package.json`이나 `requirements.txt`를 분석하여 알려진 취약점을 경고합니다.",
+    "category": "Security",
+    "tags": ["보안", "취약점", "분석"],
+    "author": "Security Team",
+    "downloads": 2041
+  },
+  {
+    "id": "bigquery-optimizer",
+    "title": "BigQuery 쿼리 최적화기",
+    "description": "비용을 절감하고 실행 속도를 높이기 위해 BigQuery SQL 쿼리를 분석하고 최적화합니다.",
+    "category": "Data",
+    "tags": ["BigQuery", "SQL", "최적화"],
+    "author": "Data Team",
+    "downloads": 1823
+  },
+  {
+    "id": "docker-compose-setup",
+    "title": "Docker Compose 셋업",
+    "description": "다중 컨테이너 애플리케이션 환경을 위한 `docker-compose.yml` 템플릿을 구성합니다.",
+    "category": "DevOps",
+    "tags": ["Docker", "컨테이너", "인프라"],
+    "author": "DevOps Ninja",
+    "downloads": 4012
+  }
+]

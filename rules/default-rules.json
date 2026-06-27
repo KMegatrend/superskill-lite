@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "pathReplacements": [
+    { "from": ".claude/skills/", "to": ".agent/skills/" },
+    { "from": ".claude/commands/", "to": ".agent/commands/" },
+    { "from": ".claude/", "to": ".agent/" },
+    { "from": "/.claude", "to": "/.agent" }
+  ],
+  "textReplacements": [
+    { "from": "Claude Code", "to": "Antigravity", "caseSensitive": true },
+    { "from": "claude code", "to": "antigravity", "caseSensitive": true },
+    { "from": "Claude code", "to": "Antigravity", "caseSensitive": true },
+    { "from": "claude-code", "to": "antigravity", "caseSensitive": true },
+    { "from": "CLAUDE.md", "to": "AGENTS.md", "caseSensitive": true },
+    { "from": "claude.md", "to": "agents.md", "caseSensitive": true },
+    { "from": "/claude ", "to": "/antigravity ", "caseSensitive": false },
+    { "from": "claude skills", "to": "antigravity skills", "caseSensitive": false },
+    { "from": "Claude Skills", "to": "Antigravity Skills", "caseSensitive": true },
+    { "from": "claude_code", "to": "antigravity", "caseSensitive": false }
+  ],
+  "fieldMappings": {
+    "allowed-tools": "requires"
+  },
+  "ignoredFiles": [
+    ".git",
+    "node_modules",
+    ".DS_Store",
+    "Thumbs.db",
+    "__pycache__"
+  ],
+  "binaryExtensions": [
+    ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico",
+    ".woff", ".woff2", ".ttf", ".eot",
+    ".zip", ".tar", ".gz",
+    ".pdf", ".doc", ".docx"
+  ]
+}

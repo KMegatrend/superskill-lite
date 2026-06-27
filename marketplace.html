@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude → Antigravity Skill Converter</title>
+  <meta name="description" content="GitHub에 존재하는 Claude Code 스킬을 Antigravity IDE에서 사용할 수 있는 스킬 패키지로 변환하는 도구">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔄</text></svg>">
+</head>
+<body>
+  <div class="app-container" id="app">
+
+    <!-- ═══ Navigation ═══ -->
+    <nav class="top-nav">
+      <div class="nav-brand" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.025em; color: var(--text-primary); cursor: pointer;" onclick="window.scrollTo(0,0)">
+        <div style="background-color: #3b82f6; color: white; width: 1.75rem; height: 1.75rem; border-radius: 0.375rem; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 900;">AI</div>
+        Super <span style="background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; color: transparent;">Skill</span>
+      </div>
+      <div class="nav-tabs" style="margin-left: auto; display: flex; align-items: center; gap: 0.5rem;">
+        <button class="nav-tab active" data-view="marketplace" id="nav-marketplace" data-i18n="nav_marketplace">마켓플레이스</button>
+        <button class="nav-tab" data-view="converter" id="nav-converter" data-i18n="nav_converter">스킬 변환기</button>
+        <button class="nav-tab" data-view="translator" id="nav-translator" data-i18n="nav_translator">스킬 번역기</button>
+        <button class="nav-tab" data-view="my-skills" id="nav-my-skills">⚙️ 내 스킬 관리</button>
+        <button class="nav-tab" id="btn-lang-toggle" style="background: var(--bg-secondary); border-radius: 20px; padding: 4px 12px; margin-left: 10px;">🌐 English</button>
+      </div>
+      <div class="hide-on-mobile" style="margin-right: 1.5rem; display: flex; align-items: center; margin-left: 1rem;">
+        <a href="/#dashboard" style="background: rgba(59, 130, 246, 0.2); border: 1px solid rgba(59, 130, 246, 0.4); color: #60a5fa; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-weight: bold; font-size: 0.875rem; transition: all 0.2s; white-space: nowrap;" onmouseover="this.style.background='rgba(59, 130, 246, 0.4)'" onmouseout="this.style.background='rgba(59, 130, 246, 0.2)'">← 마이페이지 (요금제)</a>
+      </div>
+    </nav>
+
+    <!-- ═══ View: Marketplace ═══ -->
+    <div id="view-marketplace" class="view-section active">
+      <div class="marketplace-container">
+        <!-- Sidebar -->
+        <aside class="marketplace-sidebar">
+          <div class="sidebar-header">
+            <h3>카테고리</h3>
+          </div>
+          <ul class="category-list" id="category-list">
+            <!-- Categories will be rendered here -->
+          </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="marketplace-main">
+          <div class="marketplace-header">
+            <h2 data-i18n="market_title">스킬 둘러보기</h2>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; width: 100%; max-width: 800px;">
+              <div class="search-box" style="flex: 1; margin: 0;">
+                <input type="text" id="search-input" name="search_skills_random" autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly');" data-i18n="market_search_placeholder" placeholder="스킬 검색... (예: Next.js, 보안)" spellcheck="false">
+              </div>
+              <button class="btn btn-secondary" id="btn-sync-github" style="white-space: nowrap; height: 46px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.2rem; font-weight: 500;">
+                🔄 깃허브 스킬 동기화
+              </button>
+              <button class="btn btn-primary" id="btn-ai-recommend" style="white-space: nowrap; height: 46px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.2rem; font-weight: 500; background: linear-gradient(135deg, #6366f1, #ec4899); border: none;">
+                ✨ AI 스킬 추천
+              </button>
+            </div>
+          </div>
+          
+          <!-- Skill Grid -->
+          <div class="skill-grid" id="market-skill-grid">
+            <!-- Skills will be rendered here -->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- ═══ View: Converter ═══ -->
+    <div id="view-converter" class="view-section" style="display: none;">
+      <!-- ═══ Hero ═══ -->
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        Skill Converter v1.0
+      </div>
+      <h1>
+        <span class="gradient-text">Claude Code</span> 스킬을<br>
+        <span class="gradient-text">Antigravity</span>로 변환
+      </h1>
+      <p class="subtitle">
+        GitHub 저장소의 Claude Code 스킬을 분석하고,
+        Antigravity IDE에서 바로 사용할 수 있는 패키지로 자동 변환합니다.
+      </p>
+    </section>
+
+    <!-- ═══ Input Section ═══ -->
+    <section class="input-section">
+      <div class="glass-card">
+        <div class="section-title">📥 소스 입력</div>
+
+        <div class="input-tabs">
+          <button class="input-tab active" data-tab="github" id="tab-github">
+            🔗 GitHub 저장소
+          </button>
+          <button class="input-tab" data-tab="paste" id="tab-paste">
+            📋 직접 붙여넣기
+          </button>
+        </div>
+
+        <!-- GitHub URL Input -->
+        <div class="input-group" id="input-github">
+          <input
+            type="text"
+            class="input-field"
+            id="github-url"
+            placeholder="https://github.com/username/repo 또는 username/repo"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <p class="input-help">
+            💡 Public 저장소의 URL을 입력하세요. 예: anthropics/skills
+          </p>
+        </div>
+
+        <!-- Paste Input (hidden by default) -->
+        <div class="input-group" id="input-paste" style="display: none;">
+          <textarea
+            class="input-field"
+            id="paste-content"
+            placeholder="---
+name: my-skill
+description: 스킬 설명을 입력하세요.
+---
+
+# 스킬 제목
+
+스킬 내용을 여기에 붙여넣으세요..."
+            spellcheck="false"
+          ></textarea>
+          <p class="input-help">
+            💡 SKILL.md 파일의 전체 내용을 붙여넣으세요.
+          </p>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn-primary" id="btn-convert">
+            🔄 변환 시작
+          </button>
+          <button class="btn btn-secondary" id="btn-sample">
+            📦 샘플 테스트
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Progress Section ═══ -->
+    <section class="progress-section" id="progress-section">
+      <div class="glass-card">
+        <div class="section-title">⏳ 변환 진행</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="log-container" id="log-container"></div>
+      </div>
+    </section>
+
+    <!-- ═══ Results Section ═══ -->
+    <section class="results-section" id="results-section">
+      <div class="results-header">
+        <h2>📊 변환 결과</h2>
+        <div class="download-row">
+          <button class="btn btn-secondary" id="btn-download-json">
+            📄 JSON 리포트
+          </button>
+          <button class="btn btn-secondary" id="btn-download-html">
+            🌐 HTML 리포트
+          </button>
+          <button class="btn btn-primary" id="btn-download-pack">
+            📦 패키지 다운로드
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card total">
+          <div class="stat-number" id="stat-total">0</div>
+          <div class="stat-label">전체</div>
+        </div>
+        <div class="stat-card success">
+          <div class="stat-number" id="stat-success">0</div>
+          <div class="stat-label">성공</div>
+        </div>
+        <div class="stat-card warning">
+          <div class="stat-number" id="stat-warning">0</div>
+          <div class="stat-label">경고</div>
+        </div>
+        <div class="stat-card failed">
+          <div class="stat-number" id="stat-failed">0</div>
+          <div class="stat-label">실패</div>
+        </div>
+      </div>
+
+      <!-- Skill List -->
+      <div class="skill-list" id="skill-list"></div>
+    </section>
+    </div> <!-- End View: Converter -->
+
+    <!-- ═══ View: My Skills ═══ -->
+    <div id="view-my-skills" class="view-section" style="display:none; padding: 2rem;">
+      <div style="max-width: 1000px; margin: 0 auto;">
+        <div style="margin-bottom: 2rem;">
+          <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">⚙️ 내 스킬 관리 (설치된 프로그램)</h2>
+          <p style="color: var(--text-secondary);">현재 내 프로젝트에 설치되어 작동 중인 스킬 목록입니다. 권한 허용 후 클릭 한 번으로 흔적 없이 삭제할 수 있습니다.</p>
+        </div>
+        
+        <div style="background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-primary); overflow-x: auto;">
+          <div style="min-width: 500px;">
+            <div style="padding: 1rem 1.5rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-primary); display: grid; grid-template-columns: 2fr 1fr 80px; font-weight: bold; color: var(--text-primary);">
+              <div>스킬 이름</div>
+              <div>적용된 AI</div>
+              <div style="text-align: right;">관리</div>
+            </div>
+            <div id="my-skills-list-container" style="display: flex; flex-direction: column;">
+              <!-- Installed skills will be rendered here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End View: My Skills -->
+
+    <!-- ═══ View: Translator ═══ -->
+    <div id="view-translator" class="view-section" style="display:none; padding: 2rem;">
+      <div style="max-width: 1400px; margin: 0 auto;">
+        <div style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
+          <div>
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">🌐 스킬 한글 번역기</h2>
+            <p style="color: var(--text-secondary);">영문 SKILL.md 원문을 붙여넣으면 코드 블록과 YAML 키워드를 보존하면서 설명만 한글로 번역합니다.</p>
+          </div>
+          <button class="btn btn-primary" id="btn-translate-start" style="white-space: nowrap; height: 46px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.2rem; font-weight: 500; background: linear-gradient(135deg, #6366f1, #ec4899); border: none;">🚀 한글로 번역하기</button>
+        </div>
+        
+        <div class="translator-layout">
+          <!-- Left: Input -->
+          <div style="flex: 1; display: flex; flex-direction: column; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-primary); overflow: hidden;">
+            <div style="padding: 1rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-primary); font-weight: bold; color: var(--text-primary);">
+              🇬🇧 영문 원본 (Input)
+            </div>
+            <textarea id="translator-input" style="flex: 1; padding: 1rem; background: transparent; border: none; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; resize: none; outline: none;" placeholder="여기에 영문 SKILL.md 파일 내용을 붙여넣으세요..."></textarea>
+          </div>
+          
+          <!-- Right: Output -->
+          <div style="flex: 1; display: flex; flex-direction: column; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-primary); overflow: hidden; position: relative;">
+            <div style="padding: 1rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-primary); font-weight: bold; color: var(--accent-green); display: flex; justify-content: space-between; align-items: center;">
+              <span>🇰🇷 한글 번역본 (Output)</span>
+              <button class="btn-secondary" id="btn-translate-copy" style="padding: 4px 12px; font-size: 0.8rem;">📋 복사하기</button>
+            </div>
+            <textarea id="translator-output" readonly style="flex: 1; padding: 1rem; background: transparent; border: none; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; resize: none; outline: none;" placeholder="번역 결과가 여기에 표시됩니다."></textarea>
+            
+            <div id="translator-loading" style="display:none; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px); align-items: center; justify-content: center; flex-direction: column; gap: 1rem;">
+              <div class="spinner"></div>
+              <div style="color: white; font-weight: bold;">번역하는 중... (10~20초 소요)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End View: Translator -->
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="footer">
+      <p>Built with ❤️ for the Antigravity IDE community</p>
+    </footer>
+
+  </div>
+    <!-- ═══ Multi-AI Install Modal ═══ -->
+    <div id="install-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="install-modal-backdrop" id="install-modal-backdrop"></div>
+      <div class="install-modal-box">
+        <div class="install-modal-header" style="border-bottom: 1px solid var(--border-primary); padding-bottom: 1.5rem; margin-bottom: 1.5rem; align-items: flex-start;">
+          <div class="install-modal-icon" id="modal-skill-icon" style="font-size: 2.5rem; background: var(--bg-primary); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 12px; border: 1px solid var(--border-primary);">📦</div>
+          <div style="flex: 1;">
+            <h3 id="modal-title" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">스킬명</h3>
+            <p id="modal-filename" style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.4;">스킬 설명이 여기에 표시됩니다.</p>
+          </div>
+          <button class="install-modal-close" id="install-modal-close" style="align-self: flex-start; margin-top: 5px;">✕</button>
+        </div>
+
+        <div class="install-modal-body">
+          <div class="install-path-preset">
+            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">🌐 직접 복사해서 쓰기 (웹 기반)</h4>
+            <div class="preset-btns" style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 2rem;" id="ai-selector-web">
+              <button class="preset-btn" data-ai="clipboard" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
+                <div style="flex: 1;">
+                  <div style="font-weight: bold; color: var(--text-primary); display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+                    <span style="display: flex; align-items: center; gap: 6px;">
+                      <!-- ChatGPT Image -->
+                      <img src="/assets/chatgpt-logo-new.png" width="24" height="24" alt="ChatGPT Logo" style="object-fit: contain;">
+                      ChatGPT
+                    </span>
+                    <span style="color: var(--text-muted);">/</span>
+                    <span style="display: flex; align-items: center; gap: 6px;">
+                      <!-- Claude Image -->
+                      <img src="/assets/claude-ai-symbol.svg" width="23" height="23" alt="Claude Logo" style="object-fit: contain;">
+                      Claude
+                    </span>
+                    <span style="margin-left: 4px;">(클립보드 복사)</span>
+                  </div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">프롬프트를 복사하여 대화창에 직접 붙여넣으세요</div>
+                </div>
+              </button>
+            </div>
+
+            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">💻 내 컴퓨터에 자동 설치 (로컬 IDE)</h4>
+            <div class="preset-btns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;" id="ai-selector-local">
+              <button class="preset-btn" data-ai="cursor" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.5rem; display: flex; align-items: center; color: var(--text-primary);">
+                  <!-- Cursor Image -->
+                  <img src="/assets/cursor-logo.png" width="24" height="24" alt="Cursor Logo" style="object-fit: contain;">
+                </span>
+                <div><div style="font-weight: bold; color: var(--text-primary);">Cursor</div><div style="font-size: 0.8rem; color: var(--text-muted);">.cursorrules</div></div>
+              </button>
+              <button class="preset-btn" data-ai="windsurf" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.5rem; display: flex; align-items: center; color: var(--text-primary);">
+                  <!-- Windsurf Image -->
+                  <img src="/assets/windsurf-logo.png" width="28" height="28" alt="Windsurf Logo" style="object-fit: contain;">
+                </span>
+                <div><div style="font-weight: bold; color: var(--text-primary);">Windsurf</div><div style="font-size: 0.8rem; color: var(--text-muted);">.windsurfrules</div></div>
+              </button>
+              <button class="preset-btn" data-ai="copilot" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.5rem; display: flex; align-items: center; color: var(--text-primary);">
+                  <!-- GitHub Copilot Image -->
+                  <img src="/assets/copilot-logo.svg" width="24" height="24" alt="GitHub Copilot Logo" style="object-fit: contain;">
+                </span>
+                <div><div style="font-weight: bold; color: var(--text-primary);">Copilot</div><div style="font-size: 0.8rem; color: var(--text-muted);">.github/copilot-instructions.md</div></div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-modal-footer" style="display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-primary);">
+          <button class="btn btn-secondary" id="install-modal-cancel" style="padding: 12px 24px; font-size: 1rem;">취소</button>
+          <button class="btn btn-primary" id="install-modal-ok" style="padding: 12px 24px; font-size: 1rem; display: flex; align-items: center; gap: 8px;" disabled>
+            <span id="install-btn-icon">📦</span>
+            <span id="install-btn-text">적용 방식을 선택하세요</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ Sync Progress Modal ═══ -->
+    <div id="sync-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="sync-modal-title">
+      <div class="install-modal-backdrop" id="sync-modal-backdrop"></div>
+      <div class="install-modal-box" style="max-width: 700px; width: 90%;">
+        <div class="install-modal-header">
+          <div class="install-modal-icon">🔄</div>
+          <div>
+            <h3 id="sync-modal-title">깃허브 스킬 동기화</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.85rem;">전 세계의 Claude Code 스킬 저장소로부터 최신 스킬을 수집하고 자동 번역합니다.</p>
+          </div>
+          <button class="install-modal-close" id="sync-modal-close">✕</button>
+        </div>
+
+        <div class="install-modal-body">
+          <div class="log-container" id="sync-log-container" style="height: 300px; background: rgba(15, 23, 42, 0.6); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; padding: 1rem; border-radius: var(--radius-md); overflow-y: auto; white-space: pre-wrap; border: 1px solid var(--border-primary); margin-bottom: 1rem; color: var(--text-primary);"></div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">※ 깃허브 API 및 구글 번역 연동으로 인해 약 1~2분의 시간이 소요될 수 있습니다. 창을 닫아도 동기화는 백그라운드에서 계속 실행됩니다.</p>
+        </div>
+
+        <div class="install-modal-footer">
+          <button class="btn btn-primary" id="sync-modal-ok">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ AI Recommend Modal ═══ -->
+    <div id="ai-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="ai-modal-title">
+      <div class="install-modal-backdrop" id="ai-modal-backdrop"></div>
+      <div class="install-modal-box" style="max-width: 600px; width: 90%;">
+        <div class="install-modal-header">
+          <div class="install-modal-icon" style="background: linear-gradient(135deg, #6366f1, #ec4899); color: white; -webkit-text-fill-color: white; border: none;">✨</div>
+          <div style="flex: 1;">
+            <h3 id="ai-modal-title">AI 스킬 추천</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.85rem;">현재 어떤 작업을 하려고 하시나요? AI가 적합한 스킬을 찾아드립니다.</p>
+          </div>
+          <button class="btn btn-ghost" id="btn-ai-settings" style="margin-right: 10px; padding: 0.4rem 0.8rem; font-size: 0.85rem;" title="AI API 설정">⚙️ 설정</button>
+          <button class="install-modal-close" id="ai-modal-close">✕</button>
+        </div>
+
+        <div class="install-modal-body">
+          <textarea id="ai-query-input" placeholder="예: Next.js로 다국어 지원되는 랜딩페이지를 만들려고 해. 성능 최적화까지 고려할 수 있는 스킬을 추천해줘." style="width: 100%; height: 120px; padding: 1rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); font-family: inherit; font-size: 0.95rem; resize: none; outline: none; margin-bottom: 1rem; box-sizing: border-box;"></textarea>
+          
+          <div id="ai-loading" style="display: none; align-items: center; gap: 1rem; color: var(--accent-indigo); font-weight: 500;">
+            <div class="spinner" style="border-top-color: var(--accent-indigo);"></div>
+            <span>AI가 400여 개의 스킬 중 가장 적합한 스킬을 분석 중입니다...</span>
+          </div>
+        </div>
+
+        <div class="install-modal-footer" style="justify-content: space-between; align-items: center;">
+          <div id="ai-mode-badge" style="font-size: 0.8rem; padding: 0.4rem 0.7rem; border-radius: 6px; font-weight: 600; max-width: 70%;"></div>
+          <button class="btn btn-primary" id="btn-ai-submit" style="background: linear-gradient(135deg, #6366f1, #ec4899); border: none; flex-shrink: 0;">✨ 추천받기</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ AI Settings Modal ═══ -->
+    <div id="ai-settings-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="ai-settings-title">
+      <div class="install-modal-backdrop" id="ai-settings-backdrop"></div>
+      <div class="install-modal-box" style="max-width: 500px; width: 90%;">
+        <div class="install-modal-header">
+          <div class="install-modal-icon">⚙️</div>
+          <div>
+            <h3 id="ai-settings-title">AI API 설정</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.85rem;">추천 기능에 사용할 AI 모델과 API 키를 설정합니다. 키는 브라우저에만 안전하게 보관됩니다.</p>
+          </div>
+          <button class="install-modal-close" id="ai-settings-close">✕</button>
+        </div>
+
+        <div class="install-modal-body">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">Google Gemini API Key</label>
+            <input type="password" id="ai-apikey-input" placeholder="AIzaSy..." style="width: 100%; padding: 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); outline: none; box-sizing: border-box;">
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">* Google AI Studio에서 무료로 발급받을 수 있으며 브라우저 로컬에만 안전하게 보관됩니다.</p>
+          </div>
+        </div>
+
+        <div class="install-modal-footer" style="justify-content: flex-end;">
+          <button class="btn btn-primary" id="btn-ai-settings-save">설정 저장</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  <script type="module" src="/src/main_legacy.js"></script>
+
+</body>
+</html>

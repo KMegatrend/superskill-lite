@@ -1,0 +1,1 @@
+[추측]: 현재 목표는 'Trend/Competition Analysis'입니다.
