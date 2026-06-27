@@ -18,8 +18,8 @@
       </div>
       <div class="nav-tabs" style="margin-left: auto; display: flex; align-items: center; gap: 0.5rem;">
         <button class="nav-tab active" data-view="marketplace" id="nav-marketplace" data-i18n="nav_marketplace">마켓플레이스</button>
-        <button class="nav-tab" data-view="converter" id="nav-converter" data-i18n="nav_converter">스킬 변환기</button>
-        <button class="nav-tab" data-view="translator" id="nav-translator" data-i18n="nav_translator">스킬 번역기</button>
+        <button class="nav-tab" data-view="converter" id="nav-converter" data-i18n="nav_converter" style="display: none;">스킬 변환기</button>
+        <button class="nav-tab" data-view="translator" id="nav-translator" data-i18n="nav_translator" style="display: none;">스킬 번역기</button>
         <button class="nav-tab" data-view="my-skills" id="nav-my-skills">⚙️ 내 스킬 관리</button>
         <button class="nav-tab" id="btn-lang-toggle" style="background: var(--bg-secondary); border-radius: 20px; padding: 4px 12px; margin-left: 10px;">🌐 English</button>
       </div>
@@ -49,9 +49,6 @@
               <div class="search-box" style="flex: 1; margin: 0;">
                 <input type="text" id="search-input" name="search_skills_random" autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly');" data-i18n="market_search_placeholder" placeholder="스킬 검색... (예: Next.js, 보안)" spellcheck="false">
               </div>
-              <button class="btn btn-secondary" id="btn-sync-github" style="white-space: nowrap; height: 46px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.2rem; font-weight: 500;">
-                🔄 깃허브 스킬 동기화
-              </button>
               <button class="btn btn-primary" id="btn-ai-recommend" style="white-space: nowrap; height: 46px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.2rem; font-weight: 500; background: linear-gradient(135deg, #6366f1, #ec4899); border: none;">
                 ✨ AI 스킬 추천
               </button>

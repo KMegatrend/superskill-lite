@@ -829,34 +829,7 @@ function renderMarketSkills(append = false) {
   
   const visibleSkills = filtered.slice(append ? marketState.visibleCount - 20 : 0, marketState.visibleCount);
 
-  // ─── 카테고리별 GitHub 검색 링크 상단 배너 추가 ───
-  if (!append && marketState.activeCategory !== 'all' && marketState.recommendedIds.length === 0) {
-    const activeCatObj = marketState.data.categories.find(c => c.id === marketState.activeCategory);
-    const catName = activeCatObj ? activeCatObj.name : '';
-    const searchQuery = encodeURIComponent(`claude code skill ${catName}`);
-    
-    const banner = document.createElement('div');
-    banner.style.gridColumn = '1 / -1';
-    banner.style.padding = '1.5rem';
-    banner.style.marginBottom = '1rem';
-    banner.style.background = 'var(--bg-secondary)';
-    banner.style.border = '1px solid var(--border-primary)';
-    banner.style.borderRadius = 'var(--radius-lg)';
-    banner.style.display = 'flex';
-    banner.style.justifyContent = 'space-between';
-    banner.style.alignItems = 'center';
-    
-    banner.innerHTML = `
-      <div>
-        <h3 style="margin: 0 0 0.5rem 0; color: var(--text-primary);">🌐 ${catName} 카테고리의 더 많은 스킬 찾기</h3>
-        <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">공식 저장소에 없는 새로나온 스킬들을 GitHub에서 검색해 보세요. 원하는 스킬을 찾으면 AI에게 다운로드를 요청하실 수 있습니다.</p>
-      </div>
-      <a href="https://github.com/search?q=${searchQuery}&type=repositories" target="_blank" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
-        🔍 ${t('btn_github_search')}
-      </a>
-    `;
-    container.appendChild(banner);
-  }
+  // GitHub 검색 링크 배너 제거됨
 
   visibleSkills.forEach((skill, index) => {
     const aiInstalled = getInstallState(skill.id);
@@ -869,22 +842,16 @@ function renderMarketSkills(append = false) {
     const isPlaceholder = skill.sourceUrl && skill.sourceUrl.includes('github.com/search');
     
     let actionButton = '';
-    if (isPlaceholder) {
+    if (aiInstalled) {
       actionButton = `
-        <a href="${skill.sourceUrl}" target="_blank" class="btn-install" style="background: var(--bg-secondary); color: var(--text-primary); text-decoration: none; text-align: center; border: 1px solid var(--border-primary);">
-          🔍 ${t('btn_github_search')}
-        </a>
-      `;
-    } else if (aiInstalled) {
-      actionButton = `
-        <button class="btn-uninstall" data-id="${skill.id}" style="background: var(--accent-red); color: white; border: none; padding: 0.8rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer;">
-          🗑️ ${t('btn_uninstall')} (${aiInstalled})
+        <button class="btn-uninstall" data-id="${skill.id}" style="background: white; color: var(--text-secondary); border: 1px solid var(--border-primary); padding: 0.8rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; transition: all 0.2s;">
+          ✅ 추가됨
         </button>
       `;
     } else {
       actionButton = `
-        <button class="btn-install" data-id="${skill.id}" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.8rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer;">
-          🚀 ${t('btn_install')}
+        <button class="btn-install" data-id="${skill.id}" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.8rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 4px rgba(59,130,246,0.2);">
+          ⬇️ 추가하기
         </button>
       `;
     }
@@ -894,9 +861,9 @@ function renderMarketSkills(append = false) {
 
     let authorBadgeHtml = '';
     if (skill.author === 'AI Super Skill') {
-      authorBadgeHtml = `<span class="market-tag" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); color: white; border: none; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">👑 AI Super Skill</span>`;
+      authorBadgeHtml = `<span class="market-tag" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); color: white; border: none; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">👑 공식 인증 스킬</span>`;
     } else {
-      authorBadgeHtml = `<span class="market-tag" style="background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-primary); margin-bottom: 0.5rem; display: inline-block; font-size: 0.75rem;">🐱 GitHub Official</span>`;
+      authorBadgeHtml = `<span class="market-tag" style="background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-primary); margin-bottom: 0.5rem; display: inline-block; font-size: 0.75rem;">🛡️ 검증된 스킬</span>`;
     }
 
     let statusBadge = '';
@@ -944,8 +911,11 @@ function renderMarketSkills(append = false) {
         });
       } else {
         const installBtn = card.querySelector('.btn-install');
-        installBtn.addEventListener('click', () => {
-          openInstallModal(skill);
+        installBtn.addEventListener('click', async () => {
+          const success = await installSkillToAI('ide', skill);
+          if (success) {
+            renderMarketSkills();
+          }
         });
       }
     }
