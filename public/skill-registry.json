@@ -1,56 +1,234 @@
-[
-  {
-    "id": "vercel-deploy",
-    "title": "Vercel 배포 자동화",
-    "description": "웹 애플리케이션을 Vercel에 자동으로 배포하고 필요한 환경 변수를 세팅해주는 스킬입니다.",
-    "category": "DevOps",
-    "tags": ["배포", "Vercel", "웹"],
-    "author": "Antigravity",
-    "downloads": 1240
-  },
-  {
-    "id": "react-component-generator",
-    "title": "React 컴포넌트 생성기",
-    "description": "Storybook, 테스트 코드, 스타일 파일이 포함된 React 컴포넌트 보일러플레이트를 빠르게 생성합니다.",
-    "category": "Frontend",
-    "tags": ["React", "컴포넌트", "Storybook"],
-    "author": "Frontend Team",
-    "downloads": 3105
-  },
-  {
-    "id": "database-migration-helper",
-    "title": "데이터베이스 마이그레이션 도우미",
-    "description": "안전한 스키마 변경을 위해 SQL 마이그레이션 스크립트를 작성하고 검증해줍니다.",
-    "category": "Backend",
-    "tags": ["DB", "SQL", "마이그레이션"],
-    "author": "DBA",
-    "downloads": 856
-  },
-  {
-    "id": "security-scanner",
-    "title": "의존성 보안 스캐너",
-    "description": "프로젝트의 `package.json`이나 `requirements.txt`를 분석하여 알려진 취약점을 경고합니다.",
-    "category": "Security",
-    "tags": ["보안", "취약점", "분석"],
-    "author": "Security Team",
-    "downloads": 2041
-  },
-  {
-    "id": "bigquery-optimizer",
-    "title": "BigQuery 쿼리 최적화기",
-    "description": "비용을 절감하고 실행 속도를 높이기 위해 BigQuery SQL 쿼리를 분석하고 최적화합니다.",
-    "category": "Data",
-    "tags": ["BigQuery", "SQL", "최적화"],
-    "author": "Data Team",
-    "downloads": 1823
-  },
-  {
-    "id": "docker-compose-setup",
-    "title": "Docker Compose 셋업",
-    "description": "다중 컨테이너 애플리케이션 환경을 위한 `docker-compose.yml` 템플릿을 구성합니다.",
-    "category": "DevOps",
-    "tags": ["Docker", "컨테이너", "인프라"],
-    "author": "DevOps Ninja",
-    "downloads": 4012
-  }
-]
+{
+  "lastUpdated": "2026-06-28T00:00:00.000Z",
+  "source": "superskill-lite-curation",
+  "categories": [
+    { "id": "all", "name": "전체보기" },
+    { "id": "business", "name": "비즈니스/마케팅" },
+    { "id": "dev", "name": "코딩/개발" },
+    { "id": "design", "name": "디자인/UI" },
+    { "id": "docs", "name": "문서/기획" },
+    { "id": "life", "name": "일상/유틸" }
+  ],
+  "skills": [
+    {
+      "id": "marketing-writer",
+      "name": "마케팅 블로그 글쓰기",
+      "description": "제품이나 서비스 소개 글을 SEO(검색엔진 최적화) 트렌드에 맞게 매력적으로 작성해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.2.0",
+      "categoryId": "business",
+      "tags": ["블로그", "마케팅", "SEO", "글쓰기"],
+      "downloads": 24500,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "error-solver",
+      "name": "코드 에러 해결사",
+      "description": "이해하기 어려운 에러 메시지만 복사해서 붙여넣으세요. 원인과 해결책을 초보자 눈높이에서 친절히 설명해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "2.1.0",
+      "categoryId": "dev",
+      "tags": ["에러해결", "디버깅", "초보자"],
+      "downloads": 48200,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "email-translator",
+      "name": "영문 비즈니스 이메일",
+      "description": "한국어로 대충 쓴 내용을 세련되고 프로페셔널한 비즈니스 영어 이메일로 다듬어 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.5",
+      "categoryId": "business",
+      "tags": ["이메일", "번역", "영어", "업무"],
+      "downloads": 31200,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "react-tutor",
+      "name": "리액트(React) 입문 튜터",
+      "description": "어려운 React 코드를 쉬운 비유와 꼼꼼한 주석으로 설명해 주어 코딩 공부를 도와주는 1:1 과외 선생님입니다.",
+      "author": "AI Super Skill",
+      "version": "1.5.0",
+      "categoryId": "dev",
+      "tags": ["React", "프론트엔드", "과외"],
+      "downloads": 18400,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "sql-maker",
+      "name": "SQL 쿼리 자판기",
+      "description": "'최근 한 달간 가입한 20대 유저 찾아줘'라고 말하면 안전하고 정확한 SQL 쿼리문으로 변환해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.1.2",
+      "categoryId": "dev",
+      "tags": ["SQL", "데이터베이스", "쿼리"],
+      "downloads": 15600,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "security-checker",
+      "name": "초간단 보안 점검",
+      "description": "내가 짠 코드에 해킹 위험이나 개인정보 유출 요소가 없는지 빠르게 점검하고 안전한 코드를 제안합니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "dev",
+      "tags": ["보안", "해킹방지", "점검"],
+      "downloads": 9800,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "meeting-summary",
+      "name": "기획서/회의록 요약 봇",
+      "description": "길고 횡설수설한 회의 내용이나 문서를 핵심만 딱 짚어서 3줄 요약과 불릿 포인트로 깔끔하게 정리해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "2.0.1",
+      "categoryId": "docs",
+      "tags": ["요약", "회의록", "문서정리"],
+      "downloads": 27500,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "python-auto",
+      "name": "파이썬 업무 자동화",
+      "description": "반복되는 엑셀 노가다 업무를 파이썬 코드로 단숨에 자동화할 수 있도록 기초 스크립트를 짜줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.3.0",
+      "categoryId": "dev",
+      "tags": ["파이썬", "자동화", "엑셀"],
+      "downloads": 22100,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "ux-advisor",
+      "name": "UI/UX 개선 요정",
+      "description": "현재 만들고 있는 웹사이트 코드나 아이디어를 주면, 더 예쁘고 쓰기 편하게 디자인 꿀팁을 제안해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.1.5",
+      "categoryId": "design",
+      "tags": ["UI", "UX", "디자인", "프론트엔드"],
+      "downloads": 19300,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "git-helper",
+      "name": "깃(Git) 명령어 도우미",
+      "description": "'깃허브에 올리고 싶어'라고 하면 현재 상황에 맞는 Git 명령어를 1-2-3 단계로 딱딱 알려줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.8",
+      "categoryId": "dev",
+      "tags": ["Git", "GitHub", "버전관리"],
+      "downloads": 21000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "insta-reels",
+      "name": "인스타그램 릴스 대본 작가",
+      "description": "요즘 유행하는 밈과 트렌드를 반영하여, 조회수가 폭발하는 짧고 강렬한 릴스/쇼츠 대본을 작성해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.4.0",
+      "categoryId": "business",
+      "tags": ["인스타그램", "릴스", "쇼츠", "대본"],
+      "downloads": 35400,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "copywriter-pro",
+      "name": "카피라이팅 프로",
+      "description": "쇼핑몰 상세페이지나 광고 배너에 들어갈, 고객의 지갑을 열게 만드는 매력적인 카피 문구를 뽑아줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.2.5",
+      "categoryId": "business",
+      "tags": ["카피라이팅", "광고", "쇼핑몰"],
+      "downloads": 18900,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "ppt-structure",
+      "name": "PPT 목차 기획자",
+      "description": "발표 주제만 던져주면 기승전결이 완벽한 PPT 슬라이드 목차와 각 장에 들어갈 핵심 내용을 기획해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.1.0",
+      "categoryId": "docs",
+      "tags": ["PPT", "발표", "기획"],
+      "downloads": 14200,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "resume-reviewer",
+      "name": "이력서/자소서 첨삭기",
+      "description": "평범한 자기소개서를 기업이 원하는 인재상에 맞춰 전문적이고 설득력 있는 문장으로 탈바꿈시켜 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.3.2",
+      "categoryId": "life",
+      "tags": ["취업", "이력서", "자소서", "첨삭"],
+      "downloads": 29800,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "travel-planner",
+      "name": "J형 맞춤 여행 플래너",
+      "description": "여행지, 기간, 예산만 알려주면 동선과 맛집까지 고려한 완벽한 시간대별 여행 일정을 짜줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "life",
+      "tags": ["여행", "일정", "계획"],
+      "downloads": 17600,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "regex-generator",
+      "name": "정규식(Regex) 생성기",
+      "description": "외우기 힘든 정규표현식을 '이메일 주소만 추출해줘' 같은 한국어 설명만으로 정확하게 생성해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.4",
+      "categoryId": "dev",
+      "tags": ["정규식", "Regex", "개발툴"],
+      "downloads": 8500,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "color-palette",
+      "name": "트렌디 컬러 팔레트 추천",
+      "description": "브랜드의 분위기나 키워드만 입력하면, 서로 잘 어울리는 세련된 웹/앱 디자인 컬러 조합을 HEX 코드로 추천합니다.",
+      "author": "AI Super Skill",
+      "version": "1.1.1",
+      "categoryId": "design",
+      "tags": ["컬러", "색상", "디자인", "팔레트"],
+      "downloads": 12400,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "seo-keyword",
+      "name": "SEO 황금 키워드 발굴기",
+      "description": "경쟁은 적고 검색량은 많은 꿀 키워드를 찾아 블로그나 웹사이트의 트래픽을 늘릴 수 있게 도와줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.5.2",
+      "categoryId": "business",
+      "tags": ["SEO", "키워드", "마케팅", "트래픽"],
+      "downloads": 26700,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "code-refactor",
+      "name": "클린 코드 리팩토링",
+      "description": "지저분하고 스파게티 같은 코드를 읽기 쉽고 유지보수하기 좋은 깔끔한 코드로 다듬어 줍니다.",
+      "author": "AI Super Skill",
+      "version": "2.0.0",
+      "categoryId": "dev",
+      "tags": ["리팩토링", "클린코드", "개발"],
+      "downloads": 19900,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "contract-reader",
+      "name": "어려운 계약서 해독기",
+      "description": "이해하기 힘든 법률 용어로 가득 찬 계약서나 약관을 중학생도 이해할 수 있는 쉬운 말로 풀어서 설명해 줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.1",
+      "categoryId": "life",
+      "tags": ["법률", "계약서", "해석", "유틸"],
+      "downloads": 11300,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    }
+  ]
+}
