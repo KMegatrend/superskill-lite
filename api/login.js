@@ -18,8 +18,14 @@ export default function handler(req, res) {
 
   return (async () => {
     try {
-      // 1. KV에서 계정 조회
-      const storedHashedPassword = await kv.get(`auth:${id}`);
+      // 1. KV에서 계정 조회 시도 (에러 발생 시 fallback으로 넘어감)
+      let storedHashedPassword = null;
+      try {
+        storedHashedPassword = await kv.get(`auth:${id}`);
+      } catch (kvError) {
+        console.warn("KV Database not connected. Falling back to hardcoded users.");
+      }
+      
       let isAuthenticated = false;
 
       if (storedHashedPassword) {
@@ -28,9 +34,14 @@ export default function handler(req, res) {
           isAuthenticated = true;
         }
       } else {
-        // Fallback: Vercel 환경변수 (기존 사용자를 위한 하위 호환성)
+        // Fallback: 하드코딩된 유저 및 Vercel 환경변수
+        const users = {
+          'master': 'wotjdWkd@@1',
+          'member01': '@@2237'
+        };
+        
+        // 환경변수에 설정된 사용자가 있다면 추가
         const authorizedUsersRaw = process.env.AUTHORIZED_USERS || '';
-        const users = {};
         authorizedUsersRaw.split(',').forEach(pair => {
           const [uid, upw] = pair.split(':').map(s => s.trim());
           if (uid && upw) {
@@ -38,15 +49,15 @@ export default function handler(req, res) {
           }
         });
 
-        if (!process.env.AUTHORIZED_USERS) {
-          users['admin'] = '1234';
-        }
-
         if (users[id] && users[id] === password) {
           isAuthenticated = true;
-          // 자동으로 KV로 마이그레이션 (옵션)
-          const newHashed = crypto.createHash('sha256').update(password).digest('hex');
-          await kv.set(`auth:${id}`, newHashed);
+          // 자동으로 KV로 마이그레이션 (옵션 - KV가 연결되어 있을 때만)
+          try {
+            const newHashed = crypto.createHash('sha256').update(password).digest('hex');
+            await kv.set(`auth:${id}`, newHashed);
+          } catch (e) {
+            // KV 연결 안됨 무시
+          }
         }
       }
 
