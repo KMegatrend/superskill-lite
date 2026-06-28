@@ -53,45 +53,45 @@ export const faqs = [
 
 export const packFeatures = [
   {
-    id: 'designer',
-    badgeText: '🎨 Designer Pack',
-    badgeColor: 'text-purple-700',
-    badgeBg: 'bg-purple-100',
-    title: '전문가급 UI/UX 디자인',
-    description: "ui-ux-pro-max, canvas-design 스킬을 통해 단순한 와이어프레임을 모던하고 매력적인 인터페이스로 변환합니다.",
-    features: [
-      'Glassmorphism & Gradient 효과',
-      '반응형 모바일 우선 설계',
-      '사용자 경험(UX) 최적화 로직'
-    ],
-    imageMock: 'designer'
-  },
-  {
-    id: 'wizard',
-    badgeText: '⚡ Web Wizard Pack',
+    id: 'productivity',
+    badgeText: '⚡ 업무 효율화 팩',
     badgeColor: 'text-blue-700',
     badgeBg: 'bg-blue-100',
-    title: '클린 코드 & 최신 기술 스택',
-    description: "react-patterns, tailwind-patterns 스킬이 스파게티 코드를 방지하고, 유지보수 가능한 엔터프라이즈급 코드를 작성합니다.",
+    title: '엑셀, 보고서 작성을 순식간에',
+    description: "복잡한 엑셀 수식 작성, 이메일 초안 작성 등 반복되고 귀찮은 사무 업무를 AI가 대신 처리해 줍니다.",
     features: [
-      'React Best Practices (Custom Hooks 등)',
-      'SEO & Accessibility 최적화',
-      'Tailwind CSS 유틸리티 적극 활용'
+      '엑셀/스프레드시트 수식 자동화',
+      '프로페셔널한 비즈니스 이메일 작성',
+      '회의록 요약 및 보고서 포맷팅'
     ],
     imageMock: 'wizard'
   },
   {
-    id: 'pm',
-    badgeText: '📊 Product Manager Pack',
+    id: 'writing',
+    badgeText: '📝 글쓰기 도우미 팩',
     badgeColor: 'text-green-700',
     badgeBg: 'bg-green-100',
-    title: '완벽한 기획 & 로직 설계',
-    description: "pm-master, logic-architect 스킬을 통해 모호한 아이디어를 구체적인 PRD(제품 요구사항 정의서)와 비즈니스 로직으로 구조화합니다.",
+    title: '블로그, SNS 포스팅 마스터',
+    description: "막막한 블로그 글쓰기, 인스타그램 캡션, 마케팅 카피 문구를 매력적이고 센스 있게 작성해 줍니다.",
     features: [
-      'User Journey & 페르소나 분석',
-      '데이터베이스 스키마 설계',
-      '엣지 케이스 및 예외 처리 가이드'
+      '독자를 사로잡는 블로그 포스팅',
+      'SNS 채널별 맞춤형 카피라이팅',
+      '맞춤법 및 문맥 자동 교정'
     ],
     imageMock: 'pm'
+  },
+  {
+    id: 'ideation',
+    badgeText: '💡 아이디어 기획 팩',
+    badgeColor: 'text-purple-700',
+    badgeBg: 'bg-purple-100',
+    title: '새로운 기획과 영감 발굴',
+    description: "유튜브 대본 기획, 새로운 비즈니스 아이디어 발상 등 창의력이 필요한 작업에 영감을 불어넣습니다.",
+    features: [
+      '트렌디한 유튜브 대본 및 스토리보드',
+      '마케팅 캠페인 기획 및 브레인스토밍',
+      '시장 조사 및 트렌드 분석 가이드'
+    ],
+    imageMock: 'designer'
   }
 ];

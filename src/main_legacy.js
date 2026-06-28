@@ -4,14 +4,7 @@
  */
 
 import './style.css';
-import { collectSkills, parseGitHubUrl } from './core/collector.js';
-import { parseSkillMd } from './core/parser.js';
-import { loadRules, applyAllRules, applyPathRules } from './core/rule-engine.js';
-import { packageSkill, createDownloadablePackage } from './core/packager.js';
-import { validateSkill, summarizeValidation } from './core/validator.js';
-import { generateJsonReport, generateHtmlReport, downloadReport } from './core/reporter.js';
 import { fetchAiRecommendation } from './core/ai-client.js';
-import { translateMarkdownFull } from './core/translator.js';
 import { t, setLang, getLang, applyTranslations } from './core/i18n.js';
 import { installSkillToAI, uninstallSkillFromAI, getInstallState, showCustomAlert } from './core/installer.js';
 
@@ -20,26 +13,7 @@ let currentResults = null;
 
 // ─── DOM 요소 ───
 const elements = {
-  tabGithub: document.getElementById('tab-github'),
-  tabPaste: document.getElementById('tab-paste'),
-  inputGithub: document.getElementById('input-github'),
-  inputPaste: document.getElementById('input-paste'),
-  githubUrl: document.getElementById('github-url'),
-  pasteContent: document.getElementById('paste-content'),
-  btnConvert: document.getElementById('btn-convert'),
-  btnSample: document.getElementById('btn-sample'),
-  progressSection: document.getElementById('progress-section'),
-  progressBar: document.getElementById('progress-bar'),
-  logContainer: document.getElementById('log-container'),
-  resultsSection: document.getElementById('results-section'),
-  statTotal: document.getElementById('stat-total'),
-  statSuccess: document.getElementById('stat-success'),
-  statWarning: document.getElementById('stat-warning'),
-  statFailed: document.getElementById('stat-failed'),
   skillList: document.getElementById('skill-list'),
-  btnDownloadJson: document.getElementById('btn-download-json'),
-  btnDownloadHtml: document.getElementById('btn-download-html'),
-  btnDownloadPack: document.getElementById('btn-download-pack'),
 };
 
 // ─── 탭 전환 ───

@@ -18,8 +18,6 @@
       </div>
       <div class="nav-tabs" style="margin-left: auto; display: flex; align-items: center; gap: 0.5rem;">
         <button class="nav-tab active" data-view="marketplace" id="nav-marketplace" data-i18n="nav_marketplace">마켓플레이스</button>
-        <button class="nav-tab" data-view="converter" id="nav-converter" data-i18n="nav_converter" style="display: none;">스킬 변환기</button>
-        <button class="nav-tab" data-view="translator" id="nav-translator" data-i18n="nav_translator" style="display: none;">스킬 번역기</button>
         <button class="nav-tab" data-view="my-skills" id="nav-my-skills">⚙️ 내 스킬 관리</button>
         <button class="nav-tab" id="btn-lang-toggle" style="background: var(--bg-secondary); border-radius: 20px; padding: 4px 12px; margin-left: 10px;">🌐 English</button>
       </div>
@@ -63,137 +61,6 @@
       </div>
     </div>
 
-    <!-- ═══ View: Converter ═══ -->
-    <div id="view-converter" class="view-section" style="display: none;">
-      <!-- ═══ Hero ═══ -->
-    <section class="hero">
-      <div class="hero-badge">
-        <span class="pulse"></span>
-        Skill Converter v1.0
-      </div>
-      <h1>
-        <span class="gradient-text">Claude Code</span> 스킬을<br>
-        <span class="gradient-text">Antigravity</span>로 변환
-      </h1>
-      <p class="subtitle">
-        GitHub 저장소의 Claude Code 스킬을 분석하고,
-        Antigravity IDE에서 바로 사용할 수 있는 패키지로 자동 변환합니다.
-      </p>
-    </section>
-
-    <!-- ═══ Input Section ═══ -->
-    <section class="input-section">
-      <div class="glass-card">
-        <div class="section-title">📥 소스 입력</div>
-
-        <div class="input-tabs">
-          <button class="input-tab active" data-tab="github" id="tab-github">
-            🔗 GitHub 저장소
-          </button>
-          <button class="input-tab" data-tab="paste" id="tab-paste">
-            📋 직접 붙여넣기
-          </button>
-        </div>
-
-        <!-- GitHub URL Input -->
-        <div class="input-group" id="input-github">
-          <input
-            type="text"
-            class="input-field"
-            id="github-url"
-            placeholder="https://github.com/username/repo 또는 username/repo"
-            autocomplete="off"
-            spellcheck="false"
-          >
-          <p class="input-help">
-            💡 Public 저장소의 URL을 입력하세요. 예: anthropics/skills
-          </p>
-        </div>
-
-        <!-- Paste Input (hidden by default) -->
-        <div class="input-group" id="input-paste" style="display: none;">
-          <textarea
-            class="input-field"
-            id="paste-content"
-            placeholder="---
-name: my-skill
-description: 스킬 설명을 입력하세요.
----
-
-# 스킬 제목
-
-스킬 내용을 여기에 붙여넣으세요..."
-            spellcheck="false"
-          ></textarea>
-          <p class="input-help">
-            💡 SKILL.md 파일의 전체 내용을 붙여넣으세요.
-          </p>
-        </div>
-
-        <div class="action-row">
-          <button class="btn btn-primary" id="btn-convert">
-            🔄 변환 시작
-          </button>
-          <button class="btn btn-secondary" id="btn-sample">
-            📦 샘플 테스트
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ Progress Section ═══ -->
-    <section class="progress-section" id="progress-section">
-      <div class="glass-card">
-        <div class="section-title">⏳ 변환 진행</div>
-        <div class="progress-bar-container">
-          <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        <div class="log-container" id="log-container"></div>
-      </div>
-    </section>
-
-    <!-- ═══ Results Section ═══ -->
-    <section class="results-section" id="results-section">
-      <div class="results-header">
-        <h2>📊 변환 결과</h2>
-        <div class="download-row">
-          <button class="btn btn-secondary" id="btn-download-json">
-            📄 JSON 리포트
-          </button>
-          <button class="btn btn-secondary" id="btn-download-html">
-            🌐 HTML 리포트
-          </button>
-          <button class="btn btn-primary" id="btn-download-pack">
-            📦 패키지 다운로드
-          </button>
-        </div>
-      </div>
-
-      <!-- Stats Grid -->
-      <div class="stats-grid" id="stats-grid">
-        <div class="stat-card total">
-          <div class="stat-number" id="stat-total">0</div>
-          <div class="stat-label">전체</div>
-        </div>
-        <div class="stat-card success">
-          <div class="stat-number" id="stat-success">0</div>
-          <div class="stat-label">성공</div>
-        </div>
-        <div class="stat-card warning">
-          <div class="stat-number" id="stat-warning">0</div>
-          <div class="stat-label">경고</div>
-        </div>
-        <div class="stat-card failed">
-          <div class="stat-number" id="stat-failed">0</div>
-          <div class="stat-label">실패</div>
-        </div>
-      </div>
-
-      <!-- Skill List -->
-      <div class="skill-list" id="skill-list"></div>
-    </section>
-    </div> <!-- End View: Converter -->
-
     <!-- ═══ View: My Skills ═══ -->
     <div id="view-my-skills" class="view-section" style="display:none; padding: 2rem;">
       <div style="max-width: 1000px; margin: 0 auto;">
@@ -216,43 +83,6 @@ description: 스킬 설명을 입력하세요.
         </div>
       </div>
     </div> <!-- End View: My Skills -->
-
-    <!-- ═══ View: Translator ═══ -->
-    <div id="view-translator" class="view-section" style="display:none; padding: 2rem;">
-      <div style="max-width: 1400px; margin: 0 auto;">
-        <div style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
-          <div>
-            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">🌐 스킬 한글 번역기</h2>
-            <p style="color: var(--text-secondary);">영문 SKILL.md 원문을 붙여넣으면 코드 블록과 YAML 키워드를 보존하면서 설명만 한글로 번역합니다.</p>
-          </div>
-          <button class="btn btn-primary" id="btn-translate-start" style="white-space: nowrap; height: 46px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.2rem; font-weight: 500; background: linear-gradient(135deg, #6366f1, #ec4899); border: none;">🚀 한글로 번역하기</button>
-        </div>
-        
-        <div class="translator-layout">
-          <!-- Left: Input -->
-          <div style="flex: 1; display: flex; flex-direction: column; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-primary); overflow: hidden;">
-            <div style="padding: 1rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-primary); font-weight: bold; color: var(--text-primary);">
-              🇬🇧 영문 원본 (Input)
-            </div>
-            <textarea id="translator-input" style="flex: 1; padding: 1rem; background: transparent; border: none; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; resize: none; outline: none;" placeholder="여기에 영문 SKILL.md 파일 내용을 붙여넣으세요..."></textarea>
-          </div>
-          
-          <!-- Right: Output -->
-          <div style="flex: 1; display: flex; flex-direction: column; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-primary); overflow: hidden; position: relative;">
-            <div style="padding: 1rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-primary); font-weight: bold; color: var(--accent-green); display: flex; justify-content: space-between; align-items: center;">
-              <span>🇰🇷 한글 번역본 (Output)</span>
-              <button class="btn-secondary" id="btn-translate-copy" style="padding: 4px 12px; font-size: 0.8rem;">📋 복사하기</button>
-            </div>
-            <textarea id="translator-output" readonly style="flex: 1; padding: 1rem; background: transparent; border: none; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; resize: none; outline: none;" placeholder="번역 결과가 여기에 표시됩니다."></textarea>
-            
-            <div id="translator-loading" style="display:none; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(4px); align-items: center; justify-content: center; flex-direction: column; gap: 1rem;">
-              <div class="spinner"></div>
-              <div style="color: white; font-weight: bold;">번역하는 중... (10~20초 소요)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- End View: Translator -->
 
     <!-- ═══ Footer ═══ -->
     <footer class="footer">
@@ -335,30 +165,6 @@ description: 스킬 설명을 입력하세요.
       </div>
     </div>
 
-    <!-- ═══ Sync Progress Modal ═══ -->
-    <div id="sync-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="sync-modal-title">
-      <div class="install-modal-backdrop" id="sync-modal-backdrop"></div>
-      <div class="install-modal-box" style="max-width: 700px; width: 90%;">
-        <div class="install-modal-header">
-          <div class="install-modal-icon">🔄</div>
-          <div>
-            <h3 id="sync-modal-title">깃허브 스킬 동기화</h3>
-            <p style="color: var(--text-secondary); margin: 0; font-size: 0.85rem;">전 세계의 Claude Code 스킬 저장소로부터 최신 스킬을 수집하고 자동 번역합니다.</p>
-          </div>
-          <button class="install-modal-close" id="sync-modal-close">✕</button>
-        </div>
-
-        <div class="install-modal-body">
-          <div class="log-container" id="sync-log-container" style="height: 300px; background: rgba(15, 23, 42, 0.6); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; padding: 1rem; border-radius: var(--radius-md); overflow-y: auto; white-space: pre-wrap; border: 1px solid var(--border-primary); margin-bottom: 1rem; color: var(--text-primary);"></div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">※ 깃허브 API 및 구글 번역 연동으로 인해 약 1~2분의 시간이 소요될 수 있습니다. 창을 닫아도 동기화는 백그라운드에서 계속 실행됩니다.</p>
-        </div>
-
-        <div class="install-modal-footer">
-          <button class="btn btn-primary" id="sync-modal-ok">확인</button>
-        </div>
-      </div>
-    </div>
-
     <!-- ═══ AI Recommend Modal ═══ -->
     <div id="ai-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="ai-modal-title">
       <div class="install-modal-backdrop" id="ai-modal-backdrop"></div>
@@ -378,7 +184,7 @@ description: 스킬 설명을 입력하세요.
           
           <div id="ai-loading" style="display: none; align-items: center; gap: 1rem; color: var(--accent-indigo); font-weight: 500;">
             <div class="spinner" style="border-top-color: var(--accent-indigo);"></div>
-            <span>AI가 400여 개의 스킬 중 가장 적합한 스킬을 분석 중입니다...</span>
+            <span>AI가 등록된 스킬 중 가장 적합한 스킬을 분석 중입니다...</span>
           </div>
         </div>
 
