@@ -25,58 +25,6 @@
     {
       "id": "life",
       "name": "일상/유틸"
-    },
-    {
-      "id": "saas-ui",
-      "name": "SaaS: UI/Frontend"
-    },
-    {
-      "id": "saas-react",
-      "name": "SaaS: React/Next.js"
-    },
-    {
-      "id": "saas-ts",
-      "name": "SaaS: TypeScript"
-    },
-    {
-      "id": "saas-backend",
-      "name": "SaaS: Backend"
-    },
-    {
-      "id": "saas-db",
-      "name": "SaaS: Database"
-    },
-    {
-      "id": "saas-supabase",
-      "name": "SaaS: Supabase"
-    },
-    {
-      "id": "saas-payments",
-      "name": "SaaS: Payments"
-    },
-    {
-      "id": "saas-test",
-      "name": "SaaS: Testing"
-    },
-    {
-      "id": "saas-quality",
-      "name": "SaaS: Quality"
-    },
-    {
-      "id": "saas-deploy",
-      "name": "SaaS: Deployment"
-    },
-    {
-      "id": "saas-seo",
-      "name": "SaaS: SEO & Marketing"
-    },
-    {
-      "id": "saas-architecture",
-      "name": "SaaS: Architecture"
-    },
-    {
-      "id": "saas-master",
-      "name": "웹에이전시급 SaaS 개발"
     }
   ],
   "skills": [
@@ -390,7 +338,7 @@
     },
     {
       "id": "ui-ux-pro-max",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "UI/UX Pro Max",
       "nameEn": "ui-ux-pro-max",
       "description": "UI/UX 전문가 수준의 디자인 검토 및 개선 스킬",
@@ -408,7 +356,7 @@
     },
     {
       "id": "tailwind-design-system",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "Tailwind Design System",
       "nameEn": "tailwind-design-system",
       "description": "Tailwind CSS 기반 디자인 시스템 구축 스킬",
@@ -425,7 +373,7 @@
     },
     {
       "id": "canvas-design",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "Canvas Design",
       "nameEn": "canvas-design",
       "description": "HTML5 Canvas 기반 그래픽 디자인 및 애니메이션 스킬",
@@ -443,7 +391,7 @@
     },
     {
       "id": "algorithmic-art",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "Algorithmic Art",
       "nameEn": "algorithmic-art",
       "description": "알고리즘 기반 제너러티브 아트 생성 스킬",
@@ -461,7 +409,7 @@
     },
     {
       "id": "design-review",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "Design Review",
       "nameEn": "design-review",
       "description": "디자인 리뷰 및 피드백 자동화 스킬",
@@ -478,7 +426,7 @@
     },
     {
       "id": "react-native-skills",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "React Native Skills",
       "nameEn": "react-native-skills",
       "description": "React Native 모바일 앱 개발 스킬",
@@ -495,7 +443,7 @@
     },
     {
       "id": "expo-app-design",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "Expo App Design",
       "nameEn": "expo-app-design",
       "description": "Expo 기반 모바일 앱 디자인 스킬",
@@ -513,7 +461,7 @@
     },
     {
       "id": "server-components-expert",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "Server Components Expert",
       "nameEn": "server-components-expert",
       "description": "React Server Components(RSC) 최적화 스킬",
@@ -531,7 +479,7 @@
     },
     {
       "id": "refactoring-expert",
-      "categoryId": "saas-architecture",
+      "categoryId": "01-development",
       "name": "Refactoring Expert",
       "nameEn": "refactoring-expert",
       "description": "레거시 코드 리팩토링 및 클린 코드 최적화 스킬",
@@ -548,7 +496,7 @@
     },
     {
       "id": "clean-architecture",
-      "categoryId": "saas-architecture",
+      "categoryId": "01-development",
       "name": "Clean Architecture",
       "nameEn": "clean-architecture",
       "description": "클린 아키텍처 및 디자인 패턴 적용 스킬",
@@ -565,7 +513,7 @@
     },
     {
       "id": "monorepo-architect",
-      "categoryId": "saas-architecture",
+      "categoryId": "01-development",
       "name": "Monorepo Architect",
       "nameEn": "monorepo-architect",
       "description": "Turborepo, Nx 등 모노레포 아키텍처 설계 스킬",
@@ -583,7 +531,7 @@
     },
     {
       "id": "auth-security-audit",
-      "categoryId": "saas-quality",
+      "categoryId": "03-test-qa",
       "name": "Auth Security Audit",
       "nameEn": "auth-security-audit",
       "description": "인증 및 인가 보안 취약점 감사 스킬",
@@ -601,7 +549,7 @@
     },
     {
       "id": "visual-regression-testing",
-      "categoryId": "saas-test",
+      "categoryId": "03-test-qa",
       "name": "Visual Regression Testing",
       "nameEn": "visual-regression-testing",
       "description": "시각적 회귀 테스트 자동화 스킬",
@@ -619,7 +567,7 @@
     },
     {
       "id": "supabase-architect",
-      "categoryId": "saas-supabase",
+      "categoryId": "01-development",
       "name": "Supabase Architect",
       "nameEn": "supabase-architect",
       "description": "Supabase 데이터베이스 및 서버리스 아키텍처 설계 스킬",
@@ -637,7 +585,7 @@
     },
     {
       "id": "stripe-billing-expert",
-      "categoryId": "saas-payments",
+      "categoryId": "01-development",
       "name": "Stripe Billing Expert",
       "nameEn": "stripe-billing-expert",
       "description": "Stripe 결제 및 SaaS 구독 모델 구축 스킬",
@@ -655,7 +603,7 @@
     },
     {
       "id": "ui-ux-audit",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "ui-ux-audit",
       "nameEn": "ui-ux-audit",
       "description": "UI/UX 오딧 스킬",
@@ -675,7 +623,7 @@
     },
     {
       "id": "owasp-security",
-      "categoryId": "saas-quality",
+      "categoryId": "03-test-qa",
       "name": "owasp-security",
       "nameEn": "owasp-security",
       "description": "OWASP 보안 스킬",
@@ -695,7 +643,7 @@
     },
     {
       "id": "shadcn-ui",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "shadcn-ui",
       "nameEn": "shadcn-ui",
       "description": "shadcn/ui 스킬",
@@ -715,7 +663,7 @@
     },
     {
       "id": "tailwind-expert",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "tailwind-expert",
       "nameEn": "tailwind-expert",
       "description": "Tailwind CSS 전문가 스킬",
@@ -735,7 +683,7 @@
     },
     {
       "id": "prisma-expert",
-      "categoryId": "saas-db",
+      "categoryId": "01-development",
       "name": "prisma-expert",
       "nameEn": "prisma-expert",
       "description": "Prisma 전문가 스킬",
@@ -755,7 +703,7 @@
     },
     {
       "id": "code-review",
-      "categoryId": "saas-quality",
+      "categoryId": "03-test-qa",
       "name": "code-review",
       "nameEn": "code-review",
       "description": "코드 리뷰 스킬",
@@ -775,7 +723,7 @@
     },
     {
       "id": "react-performance",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "반응 성능",
       "nameEn": "react-performance",
       "description": "React 성능 최적화 스킬",
@@ -795,7 +743,7 @@
     },
     {
       "id": "supabase-auth",
-      "categoryId": "saas-supabase",
+      "categoryId": "01-development",
       "name": "supabase-auth",
       "nameEn": "supabase-auth",
       "description": "Supabase 인증 스킬",
@@ -815,7 +763,7 @@
     },
     {
       "id": "supabase-rbac",
-      "categoryId": "saas-supabase",
+      "categoryId": "01-development",
       "name": "supabase-rbac",
       "nameEn": "supabase-rbac",
       "description": "Supabase RBAC 스킬",
@@ -835,7 +783,7 @@
     },
     {
       "id": "nodejs-api-design",
-      "categoryId": "saas-backend",
+      "categoryId": "01-development",
       "name": "nodejs-api-디자인",
       "nameEn": "nodejs-api-design",
       "description": "Node.js API 설계 스킬",
@@ -855,7 +803,7 @@
     },
     {
       "id": "vercel-deployment",
-      "categoryId": "saas-deploy",
+      "categoryId": "06-devops",
       "name": "버전 배포",
       "nameEn": "vercel-deployment",
       "description": "Vercel 배포 스킬",
@@ -875,7 +823,7 @@
     },
     {
       "id": "landing-page-builder",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "랜딩 페이지 작성기",
       "nameEn": "landing-page-builder",
       "description": "랜딩 페이지 빌더 스킬",
@@ -895,7 +843,7 @@
     },
     {
       "id": "firecrawl-integration",
-      "categoryId": "saas-backend",
+      "categoryId": "01-development",
       "name": "Firecrawl Integration",
       "nameEn": "firecrawl-integration",
       "description": "웹 크롤링, 경쟁사 분석, 데이터 수집 자동화 스킬",
@@ -915,7 +863,7 @@
     },
     {
       "id": "frontend-design",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "frontend-design",
       "nameEn": "frontend-design",
       "description": "프론트엔드 디자인 스킬",
@@ -935,7 +883,7 @@
     },
     {
       "id": "type-safety-audit",
-      "categoryId": "saas-ts",
+      "categoryId": "01-development",
       "name": "유형 안전 감사",
       "nameEn": "type-safety-audit",
       "description": "타입 안정성 검사 스킬",
@@ -955,7 +903,7 @@
     },
     {
       "id": "nextjs-seo",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "nextjs-seo",
       "nameEn": "nextjs-seo",
       "description": "Next.js SEO 스킬",
@@ -975,7 +923,7 @@
     },
     {
       "id": "nextjs-performance",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "nextjs 성능",
       "nameEn": "nextjs-performance",
       "description": "Next.js 성능 최적화 스킬",
@@ -995,7 +943,7 @@
     },
     {
       "id": "accessibility-a11y",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "Accessibility (a11y)",
       "nameEn": "accessibility-a11y",
       "description": "WCAG 웹 접근성 가이드 준수 및 접근성 검사 스킬",
@@ -1015,7 +963,7 @@
     },
     {
       "id": "nextjs-server-actions",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "nextjs-서버-작업",
       "nameEn": "nextjs-server-actions",
       "description": "Next.js Server Actions 스킬",
@@ -1035,7 +983,7 @@
     },
     {
       "id": "database-architect",
-      "categoryId": "saas-db",
+      "categoryId": "01-development",
       "name": "데이터베이스 설계자",
       "nameEn": "database-architect",
       "description": "데이터베이스 아키텍트 스킬",
@@ -1055,7 +1003,7 @@
     },
     {
       "id": "admin-dashboard",
-      "categoryId": "saas-architecture",
+      "categoryId": "01-development",
       "name": "admin-dashboard",
       "nameEn": "admin-dashboard",
       "description": "어드민 대시보드 스킬",
@@ -1075,7 +1023,7 @@
     },
     {
       "id": "backend-architecture",
-      "categoryId": "saas-backend",
+      "categoryId": "01-development",
       "name": "백엔드 아키텍처",
       "nameEn": "backend-architecture",
       "description": "백엔드 아키텍처 스킬",
@@ -1095,7 +1043,7 @@
     },
     {
       "id": "rest-api-designer",
-      "categoryId": "saas-backend",
+      "categoryId": "01-development",
       "name": "나머지 API 디자이너",
       "nameEn": "rest-api-designer",
       "description": "REST API 설계자 스킬",
@@ -1115,7 +1063,7 @@
     },
     {
       "id": "stripe-webhooks",
-      "categoryId": "saas-payments",
+      "categoryId": "01-development",
       "name": "stripe-webhooks",
       "nameEn": "stripe-webhooks",
       "description": "Stripe 웹훅 스킬",
@@ -1135,7 +1083,7 @@
     },
     {
       "id": "typescript-refactoring",
-      "categoryId": "saas-ts",
+      "categoryId": "01-development",
       "name": "타이프스크립트 리팩토링",
       "nameEn": "typescript-refactoring",
       "description": "TypeScript 리팩토링 스킬",
@@ -1155,7 +1103,7 @@
     },
     {
       "id": "supabase-storage",
-      "categoryId": "saas-supabase",
+      "categoryId": "01-development",
       "name": "초염기 저장",
       "nameEn": "supabase-storage",
       "description": "Supabase 스토리지 스킬",
@@ -1175,7 +1123,7 @@
     },
     {
       "id": "openapi-generator",
-      "categoryId": "saas-backend",
+      "categoryId": "01-development",
       "name": "openapi 생성기",
       "nameEn": "openapi-generator",
       "description": "OpenAPI 생성기 스킬",
@@ -1195,7 +1143,7 @@
     },
     {
       "id": "security-review",
-      "categoryId": "saas-quality",
+      "categoryId": "03-test-qa",
       "name": "security-review",
       "nameEn": "security-review",
       "description": "보안 리뷰 스킬",
@@ -1215,7 +1163,7 @@
     },
     {
       "id": "analytics-setup",
-      "categoryId": "saas-seo",
+      "categoryId": "07-business",
       "name": "analytics-setup",
       "nameEn": "analytics-setup",
       "description": "애널리틱스 설정 스킬",
@@ -1235,7 +1183,7 @@
     },
     {
       "id": "multi-tenant-saas",
-      "categoryId": "saas-architecture",
+      "categoryId": "01-development",
       "name": "다중 테넌트 SaaS",
       "nameEn": "multi-tenant-saas",
       "description": "멀티테넌트 SaaS 스킬",
@@ -1255,7 +1203,7 @@
     },
     {
       "id": "saas-builder",
-      "categoryId": "saas-architecture",
+      "categoryId": "01-development",
       "name": "웹에이전시급 SaaS 개발",
       "nameEn": "saas-builder",
       "description": "SaaS 빌더 스킬",
@@ -1275,7 +1223,7 @@
     },
     {
       "id": "responsive-design",
-      "categoryId": "saas-ui",
+      "categoryId": "05-design-ui",
       "name": "반응형 디자인",
       "nameEn": "responsive-design",
       "description": "반응형 디자인 스킬",
@@ -1295,7 +1243,7 @@
     },
     {
       "id": "stripe-saas-billing",
-      "categoryId": "saas-payments",
+      "categoryId": "01-development",
       "name": "스트라이프-SAAS-청구",
       "nameEn": "stripe-saas-billing",
       "description": "Stripe SaaS 빌링 스킬",
@@ -1315,7 +1263,7 @@
     },
     {
       "id": "systematic-debugging",
-      "categoryId": "saas-quality",
+      "categoryId": "03-test-qa",
       "name": "체계적인 디버깅",
       "nameEn": "systematic-debugging",
       "description": "체계적인 디버깅 스킬",
@@ -1335,7 +1283,7 @@
     },
     {
       "id": "nextjs-app-router",
-      "categoryId": "saas-react",
+      "categoryId": "01-development",
       "name": "nextjs-앱-라우터",
       "nameEn": "nextjs-app-router",
       "description": "Next.js App Router 스킬",
@@ -1355,7 +1303,7 @@
     },
     {
       "id": "seo-optimizer",
-      "categoryId": "saas-seo",
+      "categoryId": "07-business",
       "name": "seo-optimizer",
       "nameEn": "seo-optimizer",
       "description": "SEO 최적화 스킬",
@@ -1375,7 +1323,7 @@
     },
     {
       "id": "stripe-subscriptions",
-      "categoryId": "saas-payments",
+      "categoryId": "01-development",
       "name": "스트라이프 구독",
       "nameEn": "stripe-subscriptions",
       "description": "Stripe 구독 스킬",
@@ -1395,7 +1343,7 @@
     },
     {
       "id": "cloudflare-pages",
-      "categoryId": "saas-deploy",
+      "categoryId": "06-devops",
       "name": "cloudflare 페이지",
       "nameEn": "cloudflare-pages",
       "description": "Cloudflare Pages 스킬",
@@ -1415,7 +1363,7 @@
     },
     {
       "id": "postgresql-expert",
-      "categoryId": "saas-db",
+      "categoryId": "01-development",
       "name": "postgresql 전문가",
       "nameEn": "postgresql-expert",
       "description": "PostgreSQL 전문가 스킬",
@@ -1435,7 +1383,7 @@
     },
     {
       "id": "cloudflare-workers",
-      "categoryId": "saas-deploy",
+      "categoryId": "06-devops",
       "name": "cloudflare 작업자",
       "nameEn": "cloudflare-workers",
       "description": "Cloudflare Workers 스킬",
@@ -1455,7 +1403,7 @@
     },
     {
       "id": "playwright-testing",
-      "categoryId": "saas-test",
+      "categoryId": "03-test-qa",
       "name": "극작가 테스트",
       "nameEn": "playwright-testing",
       "description": "Playwright 테스트 스킬",
@@ -1475,7 +1423,7 @@
     },
     {
       "id": "typescript-expert",
-      "categoryId": "saas-ts",
+      "categoryId": "01-development",
       "name": "타이프스크립트 전문가",
       "nameEn": "typescript-expert",
       "description": "TypeScript 전문가 스킬",
@@ -1495,7 +1443,7 @@
     },
     {
       "id": "saas-master-prompt",
-      "categoryId": "saas-master",
+      "categoryId": "01-development",
       "name": "웹에이전시급 SaaS 개발 마스터",
       "nameEn": "saas-master-prompt",
       "description": "프로젝트 시작 시 사용하는 통합 마스터 프롬프트입니다.",
@@ -1516,7 +1464,7 @@
     },
     {
       "id": "tdd-development",
-      "categoryId": "saas-test",
+      "categoryId": "03-test-qa",
       "name": "tdd-development",
       "nameEn": "tdd-development",
       "description": "TDD 개발 스킬",
