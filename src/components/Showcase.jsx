@@ -23,41 +23,41 @@ export default function Showcase() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
           {/* Mock Top Pick Card 1 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html'}>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html?category=dev&highlight=error-solver'}>
             <div className="flex justify-between items-start mb-4">
               <span className="bg-gradient-to-r from-amber-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">🔥 에디터 추천</span>
               <span className="text-slate-400 text-sm">★ 5.0</span>
             </div>
-            <h3 className="font-extrabold text-xl mb-2 text-slate-900">Next.js + Tailwind 완벽 보일러플레이트 세팅</h3>
-            <p className="text-sm text-slate-500 mb-4 line-clamp-2">단 한 번의 명령어로 글로벌 스탠다드 프론트엔드 환경을 구축합니다.</p>
+            <h3 className="font-extrabold text-xl mb-2 text-slate-900">코드 에러 해결사</h3>
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">마주친 오류 메시지나 스택 트레이스를 입력하면, 문제의 원인을 진단하고 수정된 코드를 제안합니다.</p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#dev</span>
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#nextjs</span>
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#coding</span>
             </div>
           </div>
           
           {/* Mock Top Pick Card 2 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html'}>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html?category=business&highlight=marketing-writer'}>
             <div className="flex justify-between items-start mb-4">
               <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">✨ 신규 업데이트</span>
               <span className="text-slate-400 text-sm">★ 4.9</span>
             </div>
-            <h3 className="font-extrabold text-xl mb-2 text-slate-900">10년 차 카피라이터의 SEO 블로그 포스팅</h3>
-            <p className="text-sm text-slate-500 mb-4 line-clamp-2">구글 검색 1페이지 노출을 위한 완벽한 SEO 최적화 글쓰기 에이전트.</p>
+            <h3 className="font-extrabold text-xl mb-2 text-slate-900">마케팅 블로그 글쓰기</h3>
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">SEO에 최적화된 마케팅용 블로그 포스팅 초안을 작성합니다.</p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#business</span>
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#seo</span>
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#writing</span>
             </div>
           </div>
           
           {/* Mock Top Pick Card 3 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html'}>
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html?category=design&highlight=ux-advisor'}>
             <div className="flex justify-between items-start mb-4">
               <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">🚀 베스트셀러</span>
               <span className="text-slate-400 text-sm">★ 5.0</span>
             </div>
-            <h3 className="font-extrabold text-xl mb-2 text-slate-900">시니어 디자이너의 UI/UX 색상 팔레트 추출기</h3>
-            <p className="text-sm text-slate-500 mb-4 line-clamp-2">브랜드 키워드만 입력하면 완벽한 배색 조합과 CSS 변수를 뽑아줍니다.</p>
+            <h3 className="font-extrabold text-xl mb-2 text-slate-900">UI/UX 개선 요정</h3>
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">현재 앱의 화면 구성, 색상 팔레트, 사용자 흐름 등을 검토하고 개선할 점을 피드백합니다.</p>
             <div className="flex flex-wrap gap-2">
               <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#design</span>
               <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#ui</span>

@@ -152,8 +152,34 @@ async function loadMarketplaceData() {
     const data = await res.json();
     marketState.data = data;
     marketState.loaded = true;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('category');
+    const highlightParam = urlParams.get('highlight');
+    if (catParam) {
+      marketState.activeCategory = catParam;
+    }
+
     renderCategories();
     renderMarketSkills();
+
+    if (highlightParam) {
+      const targetSkill = data.skills.find(s => s.id === highlightParam);
+      if (targetSkill) {
+        setTimeout(() => {
+          const rating = parseFloat(targetSkill.rating) || 4.5;
+          const aiInstalled = getInstallState(targetSkill.id);
+          const tagsHtml = targetSkill.tags.map(t => `<span class="market-tag">#${t}</span>`).join('');
+          let authorBadgeHtml = '';
+          if (targetSkill.author === 'AI Super Skill') {
+            authorBadgeHtml = `<span class="market-tag" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); color: white; border: none; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">👑 공식 인증 스킬</span>`;
+          } else {
+            authorBadgeHtml = `<span class="market-tag" style="background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-primary); margin-bottom: 0.5rem; display: inline-block; font-size: 0.75rem;">🛡️ 검증된 스킬</span>`;
+          }
+          showSkillDetail(targetSkill, aiInstalled, rating, '', authorBadgeHtml, '', tagsHtml);
+        }, 100);
+      }
+    }
 
     // 검색창 실시간 필터링 및 버튼 이벤트 연동
     const searchInput = document.getElementById('search-input');
