@@ -4,7 +4,8 @@ export const dailySkill = {
   description: "500줄이 넘어가는 스파게티 코드를 넣었더니, 단 10초 만에 5개의 깔끔한 파일로 분리되었습니다. 프론트엔드 개발자라면 무조건 설치해야 할 마법의 주문입니다.",
   expertQuote: "\"이 스킬의 핵심은 파일명 컨벤션을 강제하는 정규식 프롬프트에 있습니다. 유지보수가 생명인 대규모 프로젝트에 필수적으로 도입해야 합니다.\"",
   rating: "⭐️ 5.0 (설치 후기 142건)",
-  buttonText: "바로 설치하기"
+  buttonText: "바로 설치하기",
+  link: "/marketplace.html?category=dev&highlight=react-tutor"
 };
 
 export const weeklyTrends = [
@@ -15,16 +16,18 @@ export const weeklyTrends = [
     title: "\"Next.js 16 라우팅, 손으로 치지 마세요\"",
     description: "이 스킬 하나면 AI가 App Router 구조를 완벽하게 잡아줍니다. 주니어 개발자의 하루 치 작업량을 1시간으로 단축시킨 비결을 공개합니다.",
     rating: "⭐️ 4.9 리뷰 보기",
-    buttonText: "설치하기"
+    buttonText: "설치하기",
+    link: "/marketplace.html?category=dev&highlight=nextjs-seo"
   },
   {
     id: 2,
     category: "보안/인프라",
     categoryColor: "text-pink-500",
-    title: "Supabase RLS 정책, 완벽하게 짜는 마법",
-    description: "데이터베이스 보안 설정하다가 머리 아프셨나요? 이 프롬프트를 설치하고 AI에게 \"유저 테이블 만들어줘\" 라고만 하세요. 철벽 보안을 세웁니다.",
+    title: "에러 로그만 넣으면 알아서 고쳐주는 마법",
+    description: "서버 배포하다가 에러 나셨나요? 이 프롬프트를 설치하고 AI에게 에러 로그만 붙여넣으세요. 알아서 원인을 찾고 코드를 수정해 줍니다.",
     rating: "⭐️ 4.8 리뷰 보기",
-    buttonText: "설치하기"
+    buttonText: "설치하기",
+    link: "/marketplace.html?category=dev&highlight=error-solver"
   }
 ];
 

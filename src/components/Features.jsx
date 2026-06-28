@@ -13,7 +13,10 @@ const Features = () => {
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight m-0">오늘의 스킬 큐레이션</h2>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 md:p-12 flex flex-col gap-8 cursor-pointer shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.02)] transition-transform duration-200 hover:-translate-y-1">
+        <div 
+          className="bg-white rounded-3xl p-8 md:p-12 flex flex-col gap-8 cursor-pointer shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.02)] transition-transform duration-200 hover:-translate-y-1"
+          onClick={() => window.location.href = dailySkill.link}
+        >
           <div>
             <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight mb-4 text-slate-900">
               {dailySkill.title}
@@ -44,7 +47,11 @@ const Features = () => {
         <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-slate-900 tracking-tight">🔥 주간 트렌드 피드</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {weeklyTrends.map((trend) => (
-            <div key={trend.id} className="bg-white rounded-2xl p-8 cursor-pointer shadow-[0_10px_30px_rgba(0,0,0,0.04),0_0_0_1px_rgba(0,0,0,0.02)] transition-transform duration-200 hover:-translate-y-1 flex flex-col">
+            <div 
+              key={trend.id} 
+              className="bg-white rounded-2xl p-8 cursor-pointer shadow-[0_10px_30px_rgba(0,0,0,0.04),0_0_0_1px_rgba(0,0,0,0.02)] transition-transform duration-200 hover:-translate-y-1 flex flex-col"
+              onClick={() => window.location.href = trend.link}
+            >
               <div className={`text-sm font-bold mb-2 ${trend.categoryColor}`}>{trend.category}</div>
               <h3 className="text-xl md:text-2xl font-extrabold mb-4 leading-snug text-slate-900">
                 {trend.title}
