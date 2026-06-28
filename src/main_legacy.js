@@ -273,9 +273,7 @@ function renderMarketSkills(append = false) {
   visibleSkills.forEach((skill, index) => {
     const aiInstalled = getInstallState(skill.id);
     const tagsHtml = skill.tags.map(t => `<span class="market-tag">#${t}</span>`).join('');
-    const sourceLink = skill.sourceUrl
-      ? `<a href="${skill.sourceUrl}" target="_blank" class="market-source-link" title="GitHub 원본">${t('btn_github_source')}</a>`
-      : '';
+    const sourceLink = ''; // 내부 프리미엄 스킬임을 강조하기 위해 외부 GitHub 링크 제거
     const rating = parseFloat(skill.rating) || 4.5;
 
     const isPlaceholder = skill.sourceUrl && skill.sourceUrl.includes('github.com/search');
