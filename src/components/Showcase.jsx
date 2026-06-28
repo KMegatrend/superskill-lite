@@ -8,6 +8,69 @@ export default function Showcase() {
 
   return (
     <div className="flex flex-col gap-16 py-16">
+
+      {/* Top Picks / New Updates Section */}
+      <section className="text-center mb-8">
+        <span className="inline-block px-4 py-1.5 rounded-full text-sm font-bold bg-amber-50 text-amber-600 border border-amber-200 mb-6 shadow-sm">
+          🔥 이번 주 Top Picks
+        </span>
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900 tracking-tight">
+          새롭게 업데이트된 베스트 스킬
+        </h2>
+        <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
+          AI SuperSkill에서 가장 높은 평가를 받은 프리미엄 큐레이션 스킬들을 만나보세요.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          {/* Mock Top Pick Card 1 */}
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html'}>
+            <div className="flex justify-between items-start mb-4">
+              <span className="bg-gradient-to-r from-amber-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">🔥 에디터 추천</span>
+              <span className="text-slate-400 text-sm">★ 5.0</span>
+            </div>
+            <h3 className="font-extrabold text-xl mb-2 text-slate-900">Next.js + Tailwind 완벽 보일러플레이트 세팅</h3>
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">단 한 번의 명령어로 글로벌 스탠다드 프론트엔드 환경을 구축합니다.</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#dev</span>
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#nextjs</span>
+            </div>
+          </div>
+          
+          {/* Mock Top Pick Card 2 */}
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html'}>
+            <div className="flex justify-between items-start mb-4">
+              <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">✨ 신규 업데이트</span>
+              <span className="text-slate-400 text-sm">★ 4.9</span>
+            </div>
+            <h3 className="font-extrabold text-xl mb-2 text-slate-900">10년 차 카피라이터의 SEO 블로그 포스팅</h3>
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">구글 검색 1페이지 노출을 위한 완벽한 SEO 최적화 글쓰기 에이전트.</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#business</span>
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#seo</span>
+            </div>
+          </div>
+          
+          {/* Mock Top Pick Card 3 */}
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html'}>
+            <div className="flex justify-between items-start mb-4">
+              <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">🚀 베스트셀러</span>
+              <span className="text-slate-400 text-sm">★ 5.0</span>
+            </div>
+            <h3 className="font-extrabold text-xl mb-2 text-slate-900">시니어 디자이너의 UI/UX 색상 팔레트 추출기</h3>
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">브랜드 키워드만 입력하면 완벽한 배색 조합과 CSS 변수를 뽑아줍니다.</p>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#design</span>
+              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#ui</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-8">
+          <a href="/marketplace.html" className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-700 transition-colors">
+            전체 큐레이션 스킬 둘러보기 <span>→</span>
+          </a>
+        </div>
+      </section>
       
       {/* Zig-Zag Section 1: Ideation (was Designer) */}
       <section id="ideation" className="flex flex-col md:flex-row items-center justify-between gap-16">

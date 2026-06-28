@@ -332,6 +332,55 @@ function renderMarketSkills(append = false) {
     container.appendChild(card);
   });
 
+  const topPicksSection = document.getElementById('top-picks-section');
+  const topPicksContainer = document.getElementById('top-picks-container');
+  if (topPicksSection && topPicksContainer) {
+    if (marketState.activeCategory === 'all' && marketState.searchQuery === '' && !append) {
+      const topSkills = [...marketState.data.skills].sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, 3);
+      topPicksContainer.innerHTML = '';
+      topSkills.forEach((skill, index) => {
+        const rating = parseFloat(skill.rating) || 4.5;
+        const aiInstalled = getInstallState(skill.id);
+        const tagsHtml = skill.tags.map(t => `<span class="market-tag">#${t}</span>`).join('');
+        const badgeHtml = `<span class="market-tag" style="background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; border: none; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">🔥 에디터 추천</span>`;
+        let authorBadgeHtml = '';
+        if (skill.author === 'AI Super Skill') {
+          authorBadgeHtml = `<span class="market-tag" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); color: white; border: none; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">👑 공식 인증 스킬</span>`;
+        } else {
+          authorBadgeHtml = `<span class="market-tag" style="background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border-primary); margin-bottom: 0.5rem; display: inline-block; font-size: 0.75rem;">🛡️ 검증된 스킬</span>`;
+        }
+        
+        const card = document.createElement('div');
+        card.className = 'market-card';
+        card.style.cursor = 'pointer';
+        card.style.border = '1px solid #f59e0b';
+        card.innerHTML = `
+          <div class="market-card-header">
+            <div>
+              ${badgeHtml}
+              ${authorBadgeHtml}
+              <div class="market-card-title">${skill.name}</div>
+              <div class="market-card-author">${t('skill_author')} ${skill.author} | v${skill.version}</div>
+            </div>
+            <div class="market-card-rating">★ ${rating.toFixed(1)}</div>
+          </div>
+          <div class="market-card-desc">${skill.description}</div>
+          <div class="market-card-tags">${tagsHtml}</div>
+          <div class="market-card-footer">
+            <div style="font-size: 0.75rem; color: var(--text-muted);">⬇️ ${skill.downloads.toLocaleString()}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml, '', tagsHtml);
+        });
+        topPicksContainer.appendChild(card);
+      });
+      topPicksSection.style.display = 'block';
+    } else if (!append) {
+      topPicksSection.style.display = 'none';
+    }
+  }
+
   // 더보기 버튼 추가
   if (filtered.length > marketState.visibleCount) {
     const loadMoreBtn = document.createElement('button');
@@ -363,7 +412,8 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
 
   // 디테일 뷰 채우기
   const detailView = document.getElementById('skill-detail-view');
-  document.getElementById('detail-badges').innerHTML = `${badgeHtml} ${authorBadgeHtml} ${statusBadge}`;
+  const roleBadge = skill.role ? `<span class="market-tag" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: bold; margin-bottom: 0.5rem; display: inline-block; margin-right: 0.5rem;">${skill.role}</span>` : '';
+  document.getElementById('detail-badges').innerHTML = `${badgeHtml} ${authorBadgeHtml} ${roleBadge} ${statusBadge}`;
   document.getElementById('detail-title').textContent = skill.name;
   document.getElementById('detail-meta').innerHTML = `
     <span>${t('skill_author')} ${skill.author}</span>
@@ -429,6 +479,47 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
   document.getElementById('detail-manual-content').innerHTML = skill.manual || defaultManual;
   document.getElementById('detail-expert-review').innerHTML = skill.expertReview || defaultReview;
   document.getElementById('detail-tags').innerHTML = tagsHtml;
+
+  const startersSection = document.getElementById('detail-starters-section');
+  if (skill.starterPrompts && skill.starterPrompts.length > 0) {
+    const promptsContainer = document.getElementById('detail-starter-prompts');
+    promptsContainer.innerHTML = skill.starterPrompts.map(p => 
+      `<button class="starter-prompt-btn" style="text-align: left; background: var(--bg-card); border: 1px solid var(--border-primary); padding: 0.8rem 1rem; border-radius: var(--radius-md); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'; this.style.borderColor='var(--accent-indigo)';" onmouseout="this.style.background='var(--bg-card)'; this.style.borderColor='var(--border-primary)';">
+         ${p}
+       </button>`
+    ).join('');
+    
+    // Add click event for copying
+    const btns = promptsContainer.querySelectorAll('.starter-prompt-btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(btn.textContent.trim());
+          const original = btn.innerHTML;
+          btn.innerHTML = '✅ 클립보드에 복사되었습니다!';
+          btn.style.color = '#10b981';
+          setTimeout(() => {
+            btn.innerHTML = original;
+            btn.style.color = 'var(--text-secondary)';
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy', err);
+        }
+      });
+    });
+    startersSection.style.display = 'block';
+  } else {
+    startersSection.style.display = 'none';
+  }
+
+  const beforeAfterSection = document.getElementById('detail-before-after-section');
+  if (skill.beforeAfter) {
+    document.getElementById('detail-before-text').textContent = skill.beforeAfter.before;
+    document.getElementById('detail-after-text').textContent = skill.beforeAfter.after;
+    beforeAfterSection.style.display = 'grid';
+  } else {
+    beforeAfterSection.style.display = 'none';
+  }
 
   // 디테일 뷰 보이기
   detailView.style.display = 'flex';

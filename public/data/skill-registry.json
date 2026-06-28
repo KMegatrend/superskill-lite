@@ -42,7 +42,17 @@
         "글쓰기"
       ],
       "downloads": 24500,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "error-solver",
@@ -57,7 +67,17 @@
         "초보자"
       ],
       "downloads": 48200,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "email-translator",
@@ -73,7 +93,17 @@
         "업무"
       ],
       "downloads": 31200,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "react-tutor",
@@ -88,7 +118,17 @@
         "과외"
       ],
       "downloads": 18400,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "sql-maker",
@@ -103,7 +143,17 @@
         "쿼리"
       ],
       "downloads": 15600,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "security-checker",
@@ -118,7 +168,17 @@
         "점검"
       ],
       "downloads": 9800,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "meeting-summary",
@@ -133,7 +193,17 @@
         "문서정리"
       ],
       "downloads": 27500,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "📝 테크니컬 라이터 & 문서화 전문가",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "python-auto",
@@ -148,7 +218,17 @@
         "엑셀"
       ],
       "downloads": 22100,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "ux-advisor",
@@ -164,7 +244,17 @@
         "프론트엔드"
       ],
       "downloads": 19300,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "git-helper",
@@ -179,7 +269,17 @@
         "버전관리"
       ],
       "downloads": 21000,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "insta-reels",
@@ -195,7 +295,17 @@
         "대본"
       ],
       "downloads": 35400,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "copywriter-pro",
@@ -210,7 +320,17 @@
         "쇼핑몰"
       ],
       "downloads": 18900,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "ppt-structure",
@@ -225,7 +345,17 @@
         "기획"
       ],
       "downloads": 14200,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "📝 테크니컬 라이터 & 문서화 전문가",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "resume-reviewer",
@@ -241,7 +371,17 @@
         "첨삭"
       ],
       "downloads": 29800,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "🚀 AI 자동화 스페셜리스트",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "travel-planner",
@@ -256,7 +396,17 @@
         "계획"
       ],
       "downloads": 17600,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "🚀 AI 자동화 스페셜리스트",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "regex-generator",
@@ -271,7 +421,17 @@
         "개발툴"
       ],
       "downloads": 8500,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "color-palette",
@@ -287,7 +447,17 @@
         "팔레트"
       ],
       "downloads": 12400,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "seo-keyword",
@@ -303,7 +473,17 @@
         "트래픽"
       ],
       "downloads": 26700,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "code-refactor",
@@ -318,7 +498,17 @@
         "개발"
       ],
       "downloads": 19900,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "contract-reader",
@@ -334,7 +524,17 @@
         "유틸"
       ],
       "downloads": 11300,
-      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
+      "role": "🚀 AI 자동화 스페셜리스트",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "ui-ux-pro-max",
@@ -352,7 +552,17 @@
       ],
       "downloads": 2200,
       "rating": 5,
-      "skillContent": "---\nname: \"UI/UX Pro Max\"\ndescription: \"UI/UX 전문가 수준의 디자인 검토 및 개선 스킬\"\n---\n\n# UI/UX Pro Max\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"UI/UX Pro Max\"\ndescription: \"UI/UX 전문가 수준의 디자인 검토 및 개선 스킬\"\n---\n\n# UI/UX Pro Max\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "tailwind-design-system",
@@ -369,7 +579,17 @@
       ],
       "downloads": 4078,
       "rating": 5,
-      "skillContent": "---\nname: \"Tailwind Design System\"\ndescription: \"Tailwind CSS 기반 디자인 시스템 구축 스킬\"\n---\n\n# Tailwind Design System\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Tailwind Design System\"\ndescription: \"Tailwind CSS 기반 디자인 시스템 구축 스킬\"\n---\n\n# Tailwind Design System\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "canvas-design",
@@ -387,7 +607,17 @@
       ],
       "downloads": 1207,
       "rating": 5,
-      "skillContent": "---\nname: \"Canvas Design\"\ndescription: \"HTML5 Canvas 기반 그래픽 디자인 및 애니메이션 스킬\"\n---\n\n# Canvas Design\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Canvas Design\"\ndescription: \"HTML5 Canvas 기반 그래픽 디자인 및 애니메이션 스킬\"\n---\n\n# Canvas Design\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "algorithmic-art",
@@ -405,7 +635,17 @@
       ],
       "downloads": 4789,
       "rating": 5,
-      "skillContent": "---\nname: \"Algorithmic Art\"\ndescription: \"알고리즘 기반 제너러티브 아트 생성 스킬\"\n---\n\n# Algorithmic Art\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Algorithmic Art\"\ndescription: \"알고리즘 기반 제너러티브 아트 생성 스킬\"\n---\n\n# Algorithmic Art\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "design-review",
@@ -422,7 +662,17 @@
       ],
       "downloads": 4493,
       "rating": 5,
-      "skillContent": "---\nname: \"Design Review\"\ndescription: \"디자인 리뷰 및 피드백 자동화 스킬\"\n---\n\n# Design Review\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Design Review\"\ndescription: \"디자인 리뷰 및 피드백 자동화 스킬\"\n---\n\n# Design Review\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "react-native-skills",
@@ -439,7 +689,17 @@
       ],
       "downloads": 4278,
       "rating": 5,
-      "skillContent": "---\nname: \"React Native Skills\"\ndescription: \"React Native 모바일 앱 개발 스킬\"\n---\n\n# React Native Skills\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"React Native Skills\"\ndescription: \"React Native 모바일 앱 개발 스킬\"\n---\n\n# React Native Skills\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "expo-app-design",
@@ -457,7 +717,17 @@
       ],
       "downloads": 2225,
       "rating": 5,
-      "skillContent": "---\nname: \"Expo App Design\"\ndescription: \"Expo 기반 모바일 앱 디자인 스킬\"\n---\n\n# Expo App Design\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Expo App Design\"\ndescription: \"Expo 기반 모바일 앱 디자인 스킬\"\n---\n\n# Expo App Design\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "server-components-expert",
@@ -475,7 +745,17 @@
       ],
       "downloads": 3765,
       "rating": 5,
-      "skillContent": "---\nname: \"Server Components Expert\"\ndescription: \"React Server Components(RSC) 최적화 스킬\"\n---\n\n# Server Components Expert\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Server Components Expert\"\ndescription: \"React Server Components(RSC) 최적화 스킬\"\n---\n\n# Server Components Expert\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "refactoring-expert",
@@ -492,7 +772,17 @@
       ],
       "downloads": 3537,
       "rating": 5,
-      "skillContent": "---\nname: \"Refactoring Expert\"\ndescription: \"레거시 코드 리팩토링 및 클린 코드 최적화 스킬\"\n---\n\n# Refactoring Expert\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Refactoring Expert\"\ndescription: \"레거시 코드 리팩토링 및 클린 코드 최적화 스킬\"\n---\n\n# Refactoring Expert\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "clean-architecture",
@@ -509,7 +799,17 @@
       ],
       "downloads": 4829,
       "rating": 5,
-      "skillContent": "---\nname: \"Clean Architecture\"\ndescription: \"클린 아키텍처 및 디자인 패턴 적용 스킬\"\n---\n\n# Clean Architecture\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Clean Architecture\"\ndescription: \"클린 아키텍처 및 디자인 패턴 적용 스킬\"\n---\n\n# Clean Architecture\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "monorepo-architect",
@@ -527,7 +827,17 @@
       ],
       "downloads": 1230,
       "rating": 5,
-      "skillContent": "---\nname: \"Monorepo Architect\"\ndescription: \"Turborepo, Nx 등 모노레포 아키텍처 설계 스킬\"\n---\n\n# Monorepo Architect\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Monorepo Architect\"\ndescription: \"Turborepo, Nx 등 모노레포 아키텍처 설계 스킬\"\n---\n\n# Monorepo Architect\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "auth-security-audit",
@@ -545,7 +855,17 @@
       ],
       "downloads": 3780,
       "rating": 5,
-      "skillContent": "---\nname: \"Auth Security Audit\"\ndescription: \"인증 및 인가 보안 취약점 감사 스킬\"\n---\n\n# Auth Security Audit\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Auth Security Audit\"\ndescription: \"인증 및 인가 보안 취약점 감사 스킬\"\n---\n\n# Auth Security Audit\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "visual-regression-testing",
@@ -563,7 +883,17 @@
       ],
       "downloads": 3671,
       "rating": 5,
-      "skillContent": "---\nname: \"Visual Regression Testing\"\ndescription: \"시각적 회귀 테스트 자동화 스킬\"\n---\n\n# Visual Regression Testing\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Visual Regression Testing\"\ndescription: \"시각적 회귀 테스트 자동화 스킬\"\n---\n\n# Visual Regression Testing\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "supabase-architect",
@@ -581,7 +911,17 @@
       ],
       "downloads": 4832,
       "rating": 5,
-      "skillContent": "---\nname: \"Supabase Architect\"\ndescription: \"Supabase 데이터베이스 및 서버리스 아키텍처 설계 스킬\"\n---\n\n# Supabase Architect\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Supabase Architect\"\ndescription: \"Supabase 데이터베이스 및 서버리스 아키텍처 설계 스킬\"\n---\n\n# Supabase Architect\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "stripe-billing-expert",
@@ -599,7 +939,17 @@
       ],
       "downloads": 2519,
       "rating": 5,
-      "skillContent": "---\nname: \"Stripe Billing Expert\"\ndescription: \"Stripe 결제 및 SaaS 구독 모델 구축 스킬\"\n---\n\n# Stripe Billing Expert\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n"
+      "skillContent": "---\nname: \"Stripe Billing Expert\"\ndescription: \"Stripe 결제 및 SaaS 구독 모델 구축 스킬\"\n---\n\n# Stripe Billing Expert\n\n이 스킬에 대한 구체적인 내용은 향후 업데이트될 예정입니다. SaaS 프로젝트 빌딩에 활용하세요.\n",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "ui-ux-audit",
@@ -619,7 +969,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"ui-ux-audit\"\ndescription: \"UI/UX 및 디자인 시스템 마스터를 위한 시각적 완벽주의 가이드라인\"\ntags:\n  - ui\n  - ux\n  - design\n---\n\n# 🚀 ui-ux-audit 디자인 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **ui-ux-audit** 관련 디자인 시스템, CSS 마크업, UI 컴포넌트 작업을 할 때 사용자가 한눈에 \"Wow!\" 할 수 있는 에이전시급 하이엔드 퀄리티를 만들어내기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Design)\n1. **일관된 디자인 토큰**: 하드코딩된 색상값(#FFF)이나 픽셀(14px)을 피하고, Tailwind의 설정 파일(tailwind.config.js)이나 CSS 변수를 활용한 시맨틱 토큰(primary, spacing-4 등)을 사용하세요.\n2. **마이크로 인터랙션 (Micro-interactions)**: 버튼 호버, 팝업 등장, 페이지 전환 시 부드러운 트랜지션(transition-all duration-200)과 애니메이션을 적극 활용하여 앱이 \"살아있는 느낌\"을 주도록 하세요.\n3. **타이포그래피 및 여백 (Typography & Spacing)**: 가독성이 UI의 생명입니다. 행간(leading), 자간(tracking), 여백(margin/padding)의 리듬감을 수학적으로 계산하여 화면의 여백을 우아하게 관리하세요.\n4. **접근성과 다크모드**: 색상 대비(Contrast Ratio)를 검증하고, 모든 컴포넌트가 다크모드(dark: prefix)에서도 완벽하게 아름답도록 설계하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- UI를 구현할 때 단순한 \"작동하는 수준\"에 만족하지 마세요. \"Glassmorphism\", \"부드러운 그라데이션\", \"입체적인 그림자(Shadows)\" 등을 사용하여 퀄리티를 극한으로 끌어올리세요.\n- shadcn/ui나 Radix UI 등의 Headless UI를 사용할 경우, 프로젝트의 메인 테마에 맞춰 디자인을 세련되게 덮어씌우세요(Override).\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 데스크톱, 태블릿, 모바일 뷰(Responsive)에서 모두 레이아웃이 깨지지 않는가?\n- [ ] 포커스(focus-visible) 상태가 명확히 보여서 키보드 탐색이 가능한가?\n- [ ] 빈 상태(Empty State)나 로딩 스켈레톤(Skeleton) UI가 매끄럽게 디자인되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "owasp-security",
@@ -639,7 +999,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"owasp-security\"\ndescription: \"테스트, 품질 보증(QA) 및 보안 검증을 위한 무결성 가이드라인\"\ntags:\n  - testing\n  - qa\n  - security\n---\n\n# 🚀 owasp-security 품질/보안 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **owasp-security** 관련 테스트 코드 작성, 보안 감사, CI/CD 구축 시 버그 발생 확률을 0%에 수렴시키고 해킹 공격으로부터 시스템을 방어하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Testing & Security)\n1. **TDD 및 테스트 커버리지**: 비즈니스 핵심 로직과 유틸리티 함수에 대해 우선적으로 단위 테스트(Unit Test)를 작성하세요. (Jest, Vitest 활용)\n2. **E2E 테스트 (Playwright/Cypress)**: 사용자의 핵심 흐름(회원가입, 결제 등)은 브라우저 렌더링 레벨에서 철저히 E2E 테스트를 작성하여 회귀 버그(Regression)를 방어하세요.\n3. **OWASP Top 10 방어**: SQL Injection, XSS, CSRF 공격을 방지하기 위한 보안 처리(Sanitization, CSRF Token, Secure Cookie 등)를 코드 레벨에서 강제하세요.\n4. **정적 분석 (Static Analysis)**: ESLint, Prettier, TypeScript의 strict 모드를 활성화하여 컴파일/빌드 타임에 에러를 최대한 잡아내세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 기능을 추가한 후 \"테스트 코드를 작성하라\"는 명령이 없어도 스스로 어떤 테스트가 필요한지 사용자에게 제안하세요.\n- 비밀번호 등 민감 정보는 절대로 평문으로 저장하거나 로그(console.log)에 남기지 말고 철저히 마스킹/해싱 처리하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 엣지 케이스(Edge case - null, undefined, 빈 배열, 아주 큰 값 등)에 대한 테스트가 포함되었는가?\n- [ ] 입력 폼(Form)에서 발생할 수 있는 악의적인 스크립트 주입(XSS)을 방어했는가?\n- [ ] API Rate Limiting이나 인증 재시도 공격(Brute Force)에 대한 방어 로직이 있는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "shadcn-ui",
@@ -659,7 +1029,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"shadcn-ui\"\ndescription: \"UI/UX 및 디자인 시스템 마스터를 위한 시각적 완벽주의 가이드라인\"\ntags:\n  - ui\n  - ux\n  - design\n---\n\n# 🚀 shadcn-ui 디자인 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **shadcn-ui** 관련 디자인 시스템, CSS 마크업, UI 컴포넌트 작업을 할 때 사용자가 한눈에 \"Wow!\" 할 수 있는 에이전시급 하이엔드 퀄리티를 만들어내기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Design)\n1. **일관된 디자인 토큰**: 하드코딩된 색상값(#FFF)이나 픽셀(14px)을 피하고, Tailwind의 설정 파일(tailwind.config.js)이나 CSS 변수를 활용한 시맨틱 토큰(primary, spacing-4 등)을 사용하세요.\n2. **마이크로 인터랙션 (Micro-interactions)**: 버튼 호버, 팝업 등장, 페이지 전환 시 부드러운 트랜지션(transition-all duration-200)과 애니메이션을 적극 활용하여 앱이 \"살아있는 느낌\"을 주도록 하세요.\n3. **타이포그래피 및 여백 (Typography & Spacing)**: 가독성이 UI의 생명입니다. 행간(leading), 자간(tracking), 여백(margin/padding)의 리듬감을 수학적으로 계산하여 화면의 여백을 우아하게 관리하세요.\n4. **접근성과 다크모드**: 색상 대비(Contrast Ratio)를 검증하고, 모든 컴포넌트가 다크모드(dark: prefix)에서도 완벽하게 아름답도록 설계하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- UI를 구현할 때 단순한 \"작동하는 수준\"에 만족하지 마세요. \"Glassmorphism\", \"부드러운 그라데이션\", \"입체적인 그림자(Shadows)\" 등을 사용하여 퀄리티를 극한으로 끌어올리세요.\n- shadcn/ui나 Radix UI 등의 Headless UI를 사용할 경우, 프로젝트의 메인 테마에 맞춰 디자인을 세련되게 덮어씌우세요(Override).\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 데스크톱, 태블릿, 모바일 뷰(Responsive)에서 모두 레이아웃이 깨지지 않는가?\n- [ ] 포커스(focus-visible) 상태가 명확히 보여서 키보드 탐색이 가능한가?\n- [ ] 빈 상태(Empty State)나 로딩 스켈레톤(Skeleton) UI가 매끄럽게 디자인되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "tailwind-expert",
@@ -679,7 +1059,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"tailwind-expert\"\ndescription: \"UI/UX 및 디자인 시스템 마스터를 위한 시각적 완벽주의 가이드라인\"\ntags:\n  - ui\n  - ux\n  - design\n---\n\n# 🚀 tailwind-expert 디자인 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **tailwind-expert** 관련 디자인 시스템, CSS 마크업, UI 컴포넌트 작업을 할 때 사용자가 한눈에 \"Wow!\" 할 수 있는 에이전시급 하이엔드 퀄리티를 만들어내기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Design)\n1. **일관된 디자인 토큰**: 하드코딩된 색상값(#FFF)이나 픽셀(14px)을 피하고, Tailwind의 설정 파일(tailwind.config.js)이나 CSS 변수를 활용한 시맨틱 토큰(primary, spacing-4 등)을 사용하세요.\n2. **마이크로 인터랙션 (Micro-interactions)**: 버튼 호버, 팝업 등장, 페이지 전환 시 부드러운 트랜지션(transition-all duration-200)과 애니메이션을 적극 활용하여 앱이 \"살아있는 느낌\"을 주도록 하세요.\n3. **타이포그래피 및 여백 (Typography & Spacing)**: 가독성이 UI의 생명입니다. 행간(leading), 자간(tracking), 여백(margin/padding)의 리듬감을 수학적으로 계산하여 화면의 여백을 우아하게 관리하세요.\n4. **접근성과 다크모드**: 색상 대비(Contrast Ratio)를 검증하고, 모든 컴포넌트가 다크모드(dark: prefix)에서도 완벽하게 아름답도록 설계하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- UI를 구현할 때 단순한 \"작동하는 수준\"에 만족하지 마세요. \"Glassmorphism\", \"부드러운 그라데이션\", \"입체적인 그림자(Shadows)\" 등을 사용하여 퀄리티를 극한으로 끌어올리세요.\n- shadcn/ui나 Radix UI 등의 Headless UI를 사용할 경우, 프로젝트의 메인 테마에 맞춰 디자인을 세련되게 덮어씌우세요(Override).\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 데스크톱, 태블릿, 모바일 뷰(Responsive)에서 모두 레이아웃이 깨지지 않는가?\n- [ ] 포커스(focus-visible) 상태가 명확히 보여서 키보드 탐색이 가능한가?\n- [ ] 빈 상태(Empty State)나 로딩 스켈레톤(Skeleton) UI가 매끄럽게 디자인되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "prisma-expert",
@@ -699,7 +1089,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"prisma-expert\"\ndescription: \"데이터베이스 및 Supabase 전문가를 위한 데이터 모델링 가이드라인\"\ntags:\n  - database\n  - supabase\n  - sql\n---\n\n# 🚀 prisma-expert 마스터 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **prisma-expert** (DB 스키마 설계, Supabase 연동, 마이그레이션 등) 관련 작업을 할 때 데이터 무결성과 압도적인 읽기/쓰기 성능을 달성하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Database)\n1. **정규화 및 반정규화**: 중복 데이터를 최소화하기 위해 기본적으로 3정규화(3NF)를 따르되, 읽기 성능이 매우 중요한 지점에서는 의도적인 반정규화나 Materialized View를 활용하세요.\n2. **인덱스 최적화**: WHERE 조건, JOIN, ORDER BY에 자주 사용되는 컬럼에는 반드시 적절한 인덱스(B-Tree, GIN 등)를 생성하세요. 단, 과도한 인덱스는 쓰기 성능을 저하시키므로 균형을 맞추세요.\n3. **Supabase & RLS (Row Level Security)**: Supabase를 사용할 경우 데이터베이스 접근을 클라이언트에서 직접 허용할 수 있으므로, 반드시 모든 테이블에 엄격한 RLS 정책을 설정하여 타인의 데이터 접근을 차단하세요.\n4. **외래키(FK) 및 제약조건**: 데이터 무결성을 위해 참조 무결성(ON DELETE CASCADE/SET NULL 등)과 필수 제약조건(NOT NULL, UNIQUE, CHECK)을 데이터베이스 레벨에서 강제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 테이블을 설계할 때는 사용자에게 ERD(개체 관계도) 개념의 마크다운 표를 먼저 제시하여 승인을 받은 후 마이그레이션 스크립트를 작성하세요.\n- ORM(Prisma, Drizzle 등)을 사용할 때는 생성되는 실제 SQL 쿼리가 무엇인지 예측하고 비효율적인 쿼리가 발생하지 않도록 주의하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 삭제 로직은 Hard Delete가 아닌 Soft Delete(deleted_at 컬럼)를 고려했는가?\n- [ ] RLS 정책이 인증된 사용자(auth.uid())에게만 안전하게 열려 있는가?\n- [ ] 타임존(Timezone) 처리는 항상 UTC 기준으로 저장되도록 설계했는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "code-review",
@@ -719,7 +1119,17 @@
       "rating": 5,
       "skillContent": "---\nname: code-review\ndescription: Review a pull request or a set of code changes for bugs, logic errors, and project-convention violations using a confidence-filtered, multi-agent process. Use this skill when the user asks to review a PR, audit pending changes, or inspect a diff for problems before merging.\nlicense: MIT (ported from anthropics/claude-code/plugins/code-review)\n---\n\n# Code Review\n\nProvide a high-signal code review for a pull request or set of pending changes. The goal is to surface only issues that are clearly real and actionable, while filtering out noise, nitpicks, and false positives.\n\n## When to use this skill\n\nTrigger on phrases like \"review this PR\", \"code review\", \"check my diff\", \"audit the pending changes on this branch\", or when the user asks for a security/quality pass before merging.\n\n## High-level process\n\nFollow these steps in order. Use OpenCode's parallel sub-task dispatch where the original Claude Code workflow used parallel agents.\n\n### 1. Pre-flight check\n\nBefore doing any review work, verify the PR (or change set) is worth reviewing. Skip the review and stop early if any of the following hold:\n\n- The PR is closed\n- The PR is a draft\n- The change is trivial (single-line typo, formatting, automated dependency bump) and obviously correct\n- A previous review by the agent already exists on this PR\n\nUse `gh pr view <PR>` (or the local `git diff` for non-PR review) to gather state.\n\n### 2. Identify project conventions\n\nBuild a list of all project-convention files relevant to the change:\n\n- The repository root `CLAUDE.md` / `AGENTS.md` (whichever exists)\n- Any nested `CLAUDE.md` / `AGENTS.md` in directories containing modified files\n\nYou only need the file paths at this stage, not the contents.\n\n### 3. Summarize the change\n\nRead `gh pr view --json title,body` and `gh pr diff` (or `git diff`) and produce a one-paragraph summary of what the PR is doing and why. This grounds the rest of the review.\n\n### 4. Parallel issue detection (deep mode)\n\nDispatch **seven independent reviewers** in parallel. Each returns a list of candidate issues, where each issue includes a description, a reason category, an initial confidence (0–100), and a one-sentence failure scenario explaining how this would manifest in practice.\n\n- **Reviewer 1 + Reviewer 2 — Convention compliance.** Audit the diff against the relevant `CLAUDE.md` / `AGENTS.md` rules. Only consider rule files that apply to the file being reviewed (same path or ancestor directory). Quote the exact rule being violated.\n- **Reviewer 3 — Diff-only bug scan.** Scan the diff for obvious bugs without reading surrounding files. Flag only clear issues that do not need unseen context.\n- **Reviewer 4 — Deep-context bug scan.** Read the **full file(s)** for each changed function, not just the diff hunks. Trace data flow into and out of the changed code. Flag bugs that depend on context the diff alone does not show (e.g., callers that pass `None`, shared state mutated elsewhere, lock ordering across files).\n- **Reviewer 5 — Concurrency, ordering & state.** Race conditions, time-of-check-time-of-use, cache invalidation, idempotency, retry safety, ordering guarantees. Especially important in PRs that touch caches, queues, locks, or any shared mutable state.\n- **Reviewer 6 — Error handling & edge cases.** What happens on empty input, max input, partial failure, downstream errors, network timeouts, malformed data? Is failure logged, swallowed, or propagated? Are exceptions caught at the right layer?\n- **Reviewer 7 — Test coverage gap.** What scenarios in the changed code are *not* covered by existing tests? List them concretely (no generic \"needs more tests\"). Especially flag changed branches with no test exercising them.\n\nEach reviewer must receive the PR title, description, and the relevant project rules. Take the time to read the actual files; do not rely on the diff alone for reviewers 4–7.\n\n**Critical: only HIGH-SIGNAL issues should be flagged.** Do flag:\n- Code that will fail to compile or parse (syntax, type errors, missing imports)\n- Code that will definitely produce wrong results regardless of inputs\n- Clear, unambiguous convention violations (must quote the exact rule)\n- Concrete edge cases that are reachable in production with a specific trigger\n- Scope creep — code that adds abstractions, configurability, or features that do not trace to the change's stated goal\n\nDo NOT flag:\n- Style or quality concerns that aren't in the project rules\n- Potential issues that depend on specific runtime state or inputs\n- Subjective suggestions\n- Anything a linter would catch — you are not the linter\n- Pre-existing issues\n- Issues silenced via lint-ignore comments\n\nWhen uncertain, do not flag. False positives erode trust.\n\n### 5. Cross-check pass\n\nBefore validation, dispatch a **second-pass reviewer** that explicitly tries to **break** each candidate finding:\n\n- For each candidate, ask: \"What is the strongest argument this is *not* a real issue?\" Write that argument out.\n- If the strongest counter-argument holds, drop the finding before validation (it is likely a false positive).\n- If the candidate survives, keep it for validation in step 6.\n\nThis pass exists to catch the failure mode of \"looks suspicious but is actually correct in this codebase\".\n\n### 6. Validate each surviving issue\n\nFor each candidate from step 5, dispatch a validator sub-task. Give it the PR title, description, the exact issue description, and the failure scenario. Its job is to verify with high confidence that the issue is real:\n\n- For \"variable not defined\" → verify it is actually undefined in the relevant scope by reading the imports and surrounding code.\n- For convention violations → verify the rule applies to the file's path and is genuinely violated. Quote the rule.\n- For concurrency / state issues → trace the state through at least two callers and confirm the unsafe interleaving is reachable.\n- For edge cases → identify the specific input or condition that triggers the failure.\n\nFor each validated issue, the validator must produce:\n1. A re-stated confidence score (0–100). Drop anything below 80.\n2. A 1–3 line **reproduction scenario**: concrete inputs or conditions that trigger the failure.\n3. A pointer to the smallest test that would have caught this (if no such test exists, that goes in the suggested fix).\n\nDrop any issue the validator cannot confirm with confidence ≥ 80 *and* a concrete reproduction scenario.\n\n### 7. Output\n\nOutput a summary to the terminal. For each validated issue include:\n\n- File path and line number\n- Severity (Critical / Important)\n- Confidence (0–100)\n- One-sentence problem statement\n- 1–3 line reproduction scenario from step 6\n- Concrete fix suggestion (or path to add a missing test)\n- The exact rule or bug category\n\nGroup by severity. If no issues were validated, output exactly: `No issues found. Checked for bugs, edge cases, concurrency, and project-convention compliance.`\n\nThis review is expected to take multiple minutes when run on a non-trivial PR. Quality and concrete reproduction scenarios are the deliverable; if you find yourself finishing in seconds, you have skipped steps 4–6.\n\n### 8. Optional GitHub posting\n\nIf the user invoked the review with a `--comment` style instruction (i.e. \"post the review on the PR\"):\n\n- If no issues found, post the summary as a single PR comment via `gh pr comment`\n- If issues found, post one inline comment per issue using the GitHub inline-comment API. Do not duplicate comments. Include a link to the relevant code with the format:\n  ```\n  https://github.com/<owner>/<repo>/blob/<full-sha>/<path>#L<start>-L<end>\n  ```\n  Always provide the full SHA (no shell substitution), include 1+ line of context above and below, and use `L<start>-L<end>` format.\n\nFor small, self-contained fixes, include a committable suggestion block. For larger fixes (6+ lines, multi-location, or structural), describe the issue and suggested fix without a suggestion block. Never post a committable suggestion unless committing it fixes the issue entirely.\n\n## Notes\n\n- Use `gh` CLI for all GitHub interactions; do not use web fetch\n- Keep a todo list for the steps above\n- Cite each issue with a link when posting\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "react-performance",
@@ -739,7 +1149,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"react-performance\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 react-performance 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **react-performance** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "supabase-auth",
@@ -759,7 +1179,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"supabase-auth\"\ndescription: \"데이터베이스 및 Supabase 전문가를 위한 데이터 모델링 가이드라인\"\ntags:\n  - database\n  - supabase\n  - sql\n---\n\n# 🚀 supabase-auth 마스터 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **supabase-auth** (DB 스키마 설계, Supabase 연동, 마이그레이션 등) 관련 작업을 할 때 데이터 무결성과 압도적인 읽기/쓰기 성능을 달성하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Database)\n1. **정규화 및 반정규화**: 중복 데이터를 최소화하기 위해 기본적으로 3정규화(3NF)를 따르되, 읽기 성능이 매우 중요한 지점에서는 의도적인 반정규화나 Materialized View를 활용하세요.\n2. **인덱스 최적화**: WHERE 조건, JOIN, ORDER BY에 자주 사용되는 컬럼에는 반드시 적절한 인덱스(B-Tree, GIN 등)를 생성하세요. 단, 과도한 인덱스는 쓰기 성능을 저하시키므로 균형을 맞추세요.\n3. **Supabase & RLS (Row Level Security)**: Supabase를 사용할 경우 데이터베이스 접근을 클라이언트에서 직접 허용할 수 있으므로, 반드시 모든 테이블에 엄격한 RLS 정책을 설정하여 타인의 데이터 접근을 차단하세요.\n4. **외래키(FK) 및 제약조건**: 데이터 무결성을 위해 참조 무결성(ON DELETE CASCADE/SET NULL 등)과 필수 제약조건(NOT NULL, UNIQUE, CHECK)을 데이터베이스 레벨에서 강제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 테이블을 설계할 때는 사용자에게 ERD(개체 관계도) 개념의 마크다운 표를 먼저 제시하여 승인을 받은 후 마이그레이션 스크립트를 작성하세요.\n- ORM(Prisma, Drizzle 등)을 사용할 때는 생성되는 실제 SQL 쿼리가 무엇인지 예측하고 비효율적인 쿼리가 발생하지 않도록 주의하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 삭제 로직은 Hard Delete가 아닌 Soft Delete(deleted_at 컬럼)를 고려했는가?\n- [ ] RLS 정책이 인증된 사용자(auth.uid())에게만 안전하게 열려 있는가?\n- [ ] 타임존(Timezone) 처리는 항상 UTC 기준으로 저장되도록 설계했는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "supabase-rbac",
@@ -779,7 +1209,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"supabase-rbac\"\ndescription: \"데이터베이스 및 Supabase 전문가를 위한 데이터 모델링 가이드라인\"\ntags:\n  - database\n  - supabase\n  - sql\n---\n\n# 🚀 supabase-rbac 마스터 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **supabase-rbac** (DB 스키마 설계, Supabase 연동, 마이그레이션 등) 관련 작업을 할 때 데이터 무결성과 압도적인 읽기/쓰기 성능을 달성하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Database)\n1. **정규화 및 반정규화**: 중복 데이터를 최소화하기 위해 기본적으로 3정규화(3NF)를 따르되, 읽기 성능이 매우 중요한 지점에서는 의도적인 반정규화나 Materialized View를 활용하세요.\n2. **인덱스 최적화**: WHERE 조건, JOIN, ORDER BY에 자주 사용되는 컬럼에는 반드시 적절한 인덱스(B-Tree, GIN 등)를 생성하세요. 단, 과도한 인덱스는 쓰기 성능을 저하시키므로 균형을 맞추세요.\n3. **Supabase & RLS (Row Level Security)**: Supabase를 사용할 경우 데이터베이스 접근을 클라이언트에서 직접 허용할 수 있으므로, 반드시 모든 테이블에 엄격한 RLS 정책을 설정하여 타인의 데이터 접근을 차단하세요.\n4. **외래키(FK) 및 제약조건**: 데이터 무결성을 위해 참조 무결성(ON DELETE CASCADE/SET NULL 등)과 필수 제약조건(NOT NULL, UNIQUE, CHECK)을 데이터베이스 레벨에서 강제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 테이블을 설계할 때는 사용자에게 ERD(개체 관계도) 개념의 마크다운 표를 먼저 제시하여 승인을 받은 후 마이그레이션 스크립트를 작성하세요.\n- ORM(Prisma, Drizzle 등)을 사용할 때는 생성되는 실제 SQL 쿼리가 무엇인지 예측하고 비효율적인 쿼리가 발생하지 않도록 주의하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 삭제 로직은 Hard Delete가 아닌 Soft Delete(deleted_at 컬럼)를 고려했는가?\n- [ ] RLS 정책이 인증된 사용자(auth.uid())에게만 안전하게 열려 있는가?\n- [ ] 타임존(Timezone) 처리는 항상 UTC 기준으로 저장되도록 설계했는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "nodejs-api-design",
@@ -799,7 +1239,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"nodejs-api-design\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 nodejs-api-design 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **nodejs-api-design** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "vercel-deployment",
@@ -819,7 +1269,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"vercel-deployment\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 vercel-deployment 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **vercel-deployment** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "landing-page-builder",
@@ -839,7 +1299,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"landing-page-builder\"\ndescription: \"UI/UX 및 디자인 시스템 마스터를 위한 시각적 완벽주의 가이드라인\"\ntags:\n  - ui\n  - ux\n  - design\n---\n\n# 🚀 landing-page-builder 디자인 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **landing-page-builder** 관련 디자인 시스템, CSS 마크업, UI 컴포넌트 작업을 할 때 사용자가 한눈에 \"Wow!\" 할 수 있는 에이전시급 하이엔드 퀄리티를 만들어내기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Design)\n1. **일관된 디자인 토큰**: 하드코딩된 색상값(#FFF)이나 픽셀(14px)을 피하고, Tailwind의 설정 파일(tailwind.config.js)이나 CSS 변수를 활용한 시맨틱 토큰(primary, spacing-4 등)을 사용하세요.\n2. **마이크로 인터랙션 (Micro-interactions)**: 버튼 호버, 팝업 등장, 페이지 전환 시 부드러운 트랜지션(transition-all duration-200)과 애니메이션을 적극 활용하여 앱이 \"살아있는 느낌\"을 주도록 하세요.\n3. **타이포그래피 및 여백 (Typography & Spacing)**: 가독성이 UI의 생명입니다. 행간(leading), 자간(tracking), 여백(margin/padding)의 리듬감을 수학적으로 계산하여 화면의 여백을 우아하게 관리하세요.\n4. **접근성과 다크모드**: 색상 대비(Contrast Ratio)를 검증하고, 모든 컴포넌트가 다크모드(dark: prefix)에서도 완벽하게 아름답도록 설계하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- UI를 구현할 때 단순한 \"작동하는 수준\"에 만족하지 마세요. \"Glassmorphism\", \"부드러운 그라데이션\", \"입체적인 그림자(Shadows)\" 등을 사용하여 퀄리티를 극한으로 끌어올리세요.\n- shadcn/ui나 Radix UI 등의 Headless UI를 사용할 경우, 프로젝트의 메인 테마에 맞춰 디자인을 세련되게 덮어씌우세요(Override).\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 데스크톱, 태블릿, 모바일 뷰(Responsive)에서 모두 레이아웃이 깨지지 않는가?\n- [ ] 포커스(focus-visible) 상태가 명확히 보여서 키보드 탐색이 가능한가?\n- [ ] 빈 상태(Empty State)나 로딩 스켈레톤(Skeleton) UI가 매끄럽게 디자인되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "firecrawl-integration",
@@ -859,7 +1329,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"Firecrawl Integration\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 Firecrawl Integration 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **Firecrawl Integration** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "frontend-design",
@@ -879,7 +1359,17 @@
       "rating": 5,
       "skillContent": "---\nname: frontend-design\ndescription: Create distinctive, production-grade frontend interfaces with high design quality and accessible markup. Use this skill when the user asks to build or beautify web components, pages, applications, landing pages, dashboards, artifacts, or React/HTML/CSS UI. Generates creative, polished code that avoids generic AI aesthetics, then self-checks it against an objective accessibility and quality rubric.\nlicense: MIT (adapted from anthropics/claude-code/plugins/frontend-design)\n---\n\nThis skill guides creation of distinctive, production-grade frontend interfaces that avoid generic \"AI slop\" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices, then audit it against the self-critique rubric before returning.\n\nThe user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.\n\n## Design Thinking\n\nBefore coding, understand the context and commit to a BOLD aesthetic direction:\n\n- **Purpose**: What problem does this interface solve? Who uses it?\n- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.\n- **Constraints**: Technical requirements (framework, performance, accessibility).\n- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?\n\n**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work — the key is intentionality, not intensity.\n\nThen implement working code (HTML/CSS/JS, React, Vue, etc.) that is:\n\n- Production-grade and functional\n- Visually striking and memorable\n- Cohesive with a clear aesthetic point-of-view\n- Meticulously refined in every detail\n\n## Frontend Aesthetics Guidelines\n\nFocus on:\n\n- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.\n- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.\n- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.\n- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.\n- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, and grain overlays.\n\nNEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.\n\nInterpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.\n\n**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.\n\nRemember: the model is capable of extraordinary creative work. Don't hold back; show what can truly be created when thinking outside the box and committing fully to a distinctive vision.\n\n## Concrete moves (counter the defaults)\n\nLeft to its own devices a model drifts to the statistical center — white background, a blue or purple button, the Inter typeface, a single centered card or a three-column grid. Counter each default on purpose:\n\n- **Typography**: commit to one distinctive family that fits the direction — editorial → Fraunces, Playfair Display, Crimson Pro; product → Clash Display, Satoshi, Cabinet Grotesk; technical → IBM Plex, Source Sans 3; code → JetBrains Mono, Fira Code. Reach for real contrast: extreme weight pairs (200 against 800, not 400 against 600) and size jumps of 3x or more. Avoid Space Grotesk — good, but a known convergence trap.\n- **Layout**: name an archetype before you build — bento grid, split-screen, asymmetric or broken grid, magazine, sidebar — rather than letting it fall back to a centered column. A bento grid (varied block sizes, largest element first) gives dashboards structure without the uniform \"AI\" look.\n- **Color**: a dominant color with one sharp accent beats a timid, evenly spread palette. Anchor it to a concrete reference — an IDE theme, a cultural or era aesthetic — not generic brand-blue, and give color semantic meaning where it helps.\n- **Tokens and theming**: route every color, space, radius, and shadow value through CSS custom properties; never scatter magic numbers. Implement dark mode by redefining those variables under `.dark`, not by restyling. If the user already has a brand or design system, inject its tokens and skip your defaults entirely.\n- **Inspiration over adjectives**: anchor the work to a specific source — a material, an era, a piece of software — instead of \"modern and clean\", which collapses straight back to the default.\n- **Vary across generations**: the font and layout lists above are seeds, not a menu to pick from every time — treat them as starting points and rotate. Do not reach for the same direction, type pairing, or palette twice; if a brief resembles one handled before, deliberately diverge. Two interfaces for different products should not be recognizably the same template. Sameness across outputs is itself a failure, even when each one looks fine on its own.\n\n## Self-critique before returning\n\nModels tend to confidently praise their own mediocre output, so do not ask yourself \"does this look good?\" Instead run the concrete pass/fail checks below and fix every failure before returning the code. These target WCAG 2.2 AA and basic craft — things checkable from the markup, not matters of taste.\n\nAccessibility:\n\n- Body-text contrast is at least 4.5:1; large text (24px+, or 18.66px+ bold) and the borders of UI controls and meaningful icons are at least 3:1. Meaning is never carried by color alone.\n- Semantics are native: `<button>` for actions, `<a href>` for navigation, real `<label>`s for inputs; exactly one `<h1>` with headings in order; `<header>`, `<nav>`, `<main>`, and `<footer>` landmarks.\n- Every `<img>` has an `alt` attribute (empty `alt=\"\"` when decorative); icon-only controls carry an accessible name.\n- First rule of ARIA: prefer a native element over an ARIA role — no ARIA beats wrong ARIA.\n- Every interactive element is keyboard-operable and shows a visible focus indicator; the default outline is never removed without a stronger replacement.\n- A `<meta name=\"viewport\">` is present and zoom is not disabled; content reflows to a single column with no horizontal scrolling down to 320px wide.\n\nCraft:\n\n- Type follows a deliberate scale; body `line-height` is at least 1.5; line length stays near 45-75 characters; sizes use `rem`/`em`.\n- Spacing follows one consistent scale (4/8px steps or tokens), not ad-hoc values.\n- A `@media (prefers-reduced-motion: reduce)` block softens or removes non-essential motion, and nothing flashes more than three times per second.\n- No generic-default tells survive: not Inter/Roboto/Arial, not a purple-on-white gradient, not a lone centered card when the brief deserves more.\n- The result does not read as a default template, nor like a previous generation. If it resembles a common pattern or something already produced, diverge — change the layout archetype, type pairing, or palette — and regenerate.\n\n## Optional validation\n\nOptional, and cross-platform via npm (Windows, Linux, macOS). Use what is present and skip the rest gracefully — never make these hard requirements.\n\n- **Static, no browser**: `npx html-validate <file>` catches invalid markup, missing `alt`, unlabeled controls, and broken or redundant ARIA, fully offline. The cheapest first gate.\n- **Rendered DOM (needs a headless browser)**: `npx pa11y --standard WCAG2AA <url>` (or axe-core) covers computed-contrast and accessible-name checks that only surface once the page is rendered.\n- **Vision-only self-critique loop (opt-in)**: under a vision-capable model with a headless browser available, render the result with Playwright — its bundled, isolated Chromium, Firefox, or WebKit, never the user's system browser — screenshot it, and critique the image against the rubric above, iterating until it holds. On a text-only model, skip the screenshot and review the code directly.\n\n## Notes\n\nGuidance here is synthesized and reworded from Anthropic's frontend-aesthetics cookbook and the generator/evaluator pattern in [\"Harness design for long-running application development\"](https://www.anthropic.com/engineering/harness-design-long-running-apps) (2026-03-24), plus Vercel v0 and shadcn/ui theming. Accessibility thresholds come from WCAG 2.2 — contrast [1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and [1.4.11](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html), reflow [1.4.10](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html), text spacing [1.4.12](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html), focus visible [2.4.7](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) — and MDN. Verified 2026-05-27.\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "type-safety-audit",
@@ -899,7 +1389,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"type-safety-audit\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 type-safety-audit 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **type-safety-audit** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "nextjs-seo",
@@ -919,7 +1419,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"nextjs-seo\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 nextjs-seo 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **nextjs-seo** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "nextjs-performance",
@@ -939,7 +1449,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"nextjs-performance\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 nextjs-performance 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **nextjs-performance** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "accessibility-a11y",
@@ -959,7 +1479,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"Accessibility (a11y)\"\ndescription: \"UI/UX 및 디자인 시스템 마스터를 위한 시각적 완벽주의 가이드라인\"\ntags:\n  - ui\n  - ux\n  - design\n---\n\n# 🚀 Accessibility (a11y) 디자인 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **Accessibility (a11y)** 관련 디자인 시스템, CSS 마크업, UI 컴포넌트 작업을 할 때 사용자가 한눈에 \"Wow!\" 할 수 있는 에이전시급 하이엔드 퀄리티를 만들어내기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Design)\n1. **일관된 디자인 토큰**: 하드코딩된 색상값(#FFF)이나 픽셀(14px)을 피하고, Tailwind의 설정 파일(tailwind.config.js)이나 CSS 변수를 활용한 시맨틱 토큰(primary, spacing-4 등)을 사용하세요.\n2. **마이크로 인터랙션 (Micro-interactions)**: 버튼 호버, 팝업 등장, 페이지 전환 시 부드러운 트랜지션(transition-all duration-200)과 애니메이션을 적극 활용하여 앱이 \"살아있는 느낌\"을 주도록 하세요.\n3. **타이포그래피 및 여백 (Typography & Spacing)**: 가독성이 UI의 생명입니다. 행간(leading), 자간(tracking), 여백(margin/padding)의 리듬감을 수학적으로 계산하여 화면의 여백을 우아하게 관리하세요.\n4. **접근성과 다크모드**: 색상 대비(Contrast Ratio)를 검증하고, 모든 컴포넌트가 다크모드(dark: prefix)에서도 완벽하게 아름답도록 설계하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- UI를 구현할 때 단순한 \"작동하는 수준\"에 만족하지 마세요. \"Glassmorphism\", \"부드러운 그라데이션\", \"입체적인 그림자(Shadows)\" 등을 사용하여 퀄리티를 극한으로 끌어올리세요.\n- shadcn/ui나 Radix UI 등의 Headless UI를 사용할 경우, 프로젝트의 메인 테마에 맞춰 디자인을 세련되게 덮어씌우세요(Override).\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 데스크톱, 태블릿, 모바일 뷰(Responsive)에서 모두 레이아웃이 깨지지 않는가?\n- [ ] 포커스(focus-visible) 상태가 명확히 보여서 키보드 탐색이 가능한가?\n- [ ] 빈 상태(Empty State)나 로딩 스켈레톤(Skeleton) UI가 매끄럽게 디자인되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "nextjs-server-actions",
@@ -979,7 +1509,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"nextjs-server-actions\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 nextjs-server-actions 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **nextjs-server-actions** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "database-architect",
@@ -999,7 +1539,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"database-architect\"\ndescription: \"데이터베이스 및 Supabase 전문가를 위한 데이터 모델링 가이드라인\"\ntags:\n  - database\n  - supabase\n  - sql\n---\n\n# 🚀 database-architect 마스터 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **database-architect** (DB 스키마 설계, Supabase 연동, 마이그레이션 등) 관련 작업을 할 때 데이터 무결성과 압도적인 읽기/쓰기 성능을 달성하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Database)\n1. **정규화 및 반정규화**: 중복 데이터를 최소화하기 위해 기본적으로 3정규화(3NF)를 따르되, 읽기 성능이 매우 중요한 지점에서는 의도적인 반정규화나 Materialized View를 활용하세요.\n2. **인덱스 최적화**: WHERE 조건, JOIN, ORDER BY에 자주 사용되는 컬럼에는 반드시 적절한 인덱스(B-Tree, GIN 등)를 생성하세요. 단, 과도한 인덱스는 쓰기 성능을 저하시키므로 균형을 맞추세요.\n3. **Supabase & RLS (Row Level Security)**: Supabase를 사용할 경우 데이터베이스 접근을 클라이언트에서 직접 허용할 수 있으므로, 반드시 모든 테이블에 엄격한 RLS 정책을 설정하여 타인의 데이터 접근을 차단하세요.\n4. **외래키(FK) 및 제약조건**: 데이터 무결성을 위해 참조 무결성(ON DELETE CASCADE/SET NULL 등)과 필수 제약조건(NOT NULL, UNIQUE, CHECK)을 데이터베이스 레벨에서 강제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 테이블을 설계할 때는 사용자에게 ERD(개체 관계도) 개념의 마크다운 표를 먼저 제시하여 승인을 받은 후 마이그레이션 스크립트를 작성하세요.\n- ORM(Prisma, Drizzle 등)을 사용할 때는 생성되는 실제 SQL 쿼리가 무엇인지 예측하고 비효율적인 쿼리가 발생하지 않도록 주의하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 삭제 로직은 Hard Delete가 아닌 Soft Delete(deleted_at 컬럼)를 고려했는가?\n- [ ] RLS 정책이 인증된 사용자(auth.uid())에게만 안전하게 열려 있는가?\n- [ ] 타임존(Timezone) 처리는 항상 UTC 기준으로 저장되도록 설계했는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "admin-dashboard",
@@ -1019,7 +1569,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"admin-dashboard\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 admin-dashboard 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **admin-dashboard** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "backend-architecture",
@@ -1039,7 +1599,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"backend-architecture\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 backend-architecture 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **backend-architecture** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "rest-api-designer",
@@ -1059,7 +1629,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"rest-api-designer\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 rest-api-designer 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **rest-api-designer** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "stripe-webhooks",
@@ -1079,7 +1659,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"stripe-webhooks\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 stripe-webhooks 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **stripe-webhooks** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "typescript-refactoring",
@@ -1099,7 +1689,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"typescript-refactoring\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 typescript-refactoring 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **typescript-refactoring** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "supabase-storage",
@@ -1119,7 +1719,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"supabase-storage\"\ndescription: \"데이터베이스 및 Supabase 전문가를 위한 데이터 모델링 가이드라인\"\ntags:\n  - database\n  - supabase\n  - sql\n---\n\n# 🚀 supabase-storage 마스터 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **supabase-storage** (DB 스키마 설계, Supabase 연동, 마이그레이션 등) 관련 작업을 할 때 데이터 무결성과 압도적인 읽기/쓰기 성능을 달성하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Database)\n1. **정규화 및 반정규화**: 중복 데이터를 최소화하기 위해 기본적으로 3정규화(3NF)를 따르되, 읽기 성능이 매우 중요한 지점에서는 의도적인 반정규화나 Materialized View를 활용하세요.\n2. **인덱스 최적화**: WHERE 조건, JOIN, ORDER BY에 자주 사용되는 컬럼에는 반드시 적절한 인덱스(B-Tree, GIN 등)를 생성하세요. 단, 과도한 인덱스는 쓰기 성능을 저하시키므로 균형을 맞추세요.\n3. **Supabase & RLS (Row Level Security)**: Supabase를 사용할 경우 데이터베이스 접근을 클라이언트에서 직접 허용할 수 있으므로, 반드시 모든 테이블에 엄격한 RLS 정책을 설정하여 타인의 데이터 접근을 차단하세요.\n4. **외래키(FK) 및 제약조건**: 데이터 무결성을 위해 참조 무결성(ON DELETE CASCADE/SET NULL 등)과 필수 제약조건(NOT NULL, UNIQUE, CHECK)을 데이터베이스 레벨에서 강제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 테이블을 설계할 때는 사용자에게 ERD(개체 관계도) 개념의 마크다운 표를 먼저 제시하여 승인을 받은 후 마이그레이션 스크립트를 작성하세요.\n- ORM(Prisma, Drizzle 등)을 사용할 때는 생성되는 실제 SQL 쿼리가 무엇인지 예측하고 비효율적인 쿼리가 발생하지 않도록 주의하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 삭제 로직은 Hard Delete가 아닌 Soft Delete(deleted_at 컬럼)를 고려했는가?\n- [ ] RLS 정책이 인증된 사용자(auth.uid())에게만 안전하게 열려 있는가?\n- [ ] 타임존(Timezone) 처리는 항상 UTC 기준으로 저장되도록 설계했는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "openapi-generator",
@@ -1139,7 +1749,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"openapi-generator\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 openapi-generator 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **openapi-generator** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "security-review",
@@ -1159,7 +1779,17 @@
       "rating": 5,
       "skillContent": "---\nname: security-review\ndescription: Perform a focused security review of pending git changes to identify high-confidence security vulnerabilities with real exploitation potential. Use this skill when the user asks for a security review, security audit, vulnerability scan, or wants to check pending changes on a branch for security issues before merging. This is NOT a general code review.\nlicense: MIT (ported from anthropics/claude-code-security-review/.claude/commands/security-review.md)\n---\n\n# Security Review\n\nYou are a senior security engineer conducting a focused security review of the changes on a git branch. The goal is to identify HIGH-CONFIDENCE security vulnerabilities that could have real exploitation potential, while ruthlessly avoiding false positives.\n\n## When to use this skill\n\nTrigger on phrases like \"security review\", \"security audit\", \"check for vulnerabilities\", \"vuln scan on this branch\", or when the user asks to review pending changes specifically for security implications.\n\nThis is **not** a general code review skill. Use the `code-review` skill for general PR review. Use this one only when the user is asking specifically about security.\n\n## Gather context\n\nBefore any analysis, run these commands to understand the change set:\n\n```bash\ngit status\ngit diff --name-only origin/HEAD...\ngit log --no-decorate origin/HEAD...\ngit diff --merge-base origin/HEAD\n```\n\nIf any command fails (no `origin/HEAD`, not a git repo, no commits ahead of base), stop and report what is missing rather than fabricating results.\n\n## Objective\n\nPerform a security-focused code review to identify HIGH-CONFIDENCE security vulnerabilities introduced by the changes. Focus only on security implications **newly added** by this branch. Do not comment on pre-existing security concerns.\n\n## Critical rules\n\n1. **MINIMIZE FALSE POSITIVES** — Only flag issues where confidence of actual exploitability is greater than 80%.\n2. **AVOID NOISE** — Skip theoretical issues, style concerns, or low-impact findings.\n3. **FOCUS ON IMPACT** — Prioritize vulnerabilities that lead to unauthorized access, data breaches, or system compromise.\n4. **EXCLUSIONS** — Do NOT report:\n   - Denial of Service (DoS), even if real\n   - Secrets / sensitive data on disk (handled separately)\n   - Rate-limiting / resource-exhaustion concerns\n\n## Categories to examine\n\n**Input validation:** SQL injection, command injection, XXE, template injection, NoSQL injection, path traversal.\n\n**Authentication & authorization:** Auth bypass, privilege escalation, session management flaws, JWT vulnerabilities, authorization-logic bypasses.\n\n**Crypto & secrets:** Hardcoded keys/passwords/tokens, weak cryptographic algorithms, improper key storage, randomness issues, certificate-validation bypasses.\n\n**Injection & code execution:** RCE via deserialization, pickle injection (Python), YAML deserialization, eval injection, XSS (reflected, stored, DOM-based).\n\n**Data exposure:** Sensitive data logged or stored, PII handling violations, API endpoint leakage, debug-information exposure.\n\nNote: even if a vulnerability is only exploitable from the local network, it can still be HIGH severity.\n\n## Analysis methodology\n\n### Phase 1 — Repository context\n\nUse file-search tools to:\n\n- Identify existing security frameworks and libraries in use.\n- Look for established secure-coding patterns in the codebase.\n- Examine existing sanitization and validation patterns.\n- Understand the project's threat model.\n\n### Phase 2 — Comparative analysis\n\n- Compare the new code against existing security patterns.\n- Identify deviations from established secure practices.\n- Look for inconsistent security implementations.\n- Flag code that introduces new attack surfaces.\n\n### Phase 3 — Vulnerability assessment\n\n- Examine each modified file for security implications.\n- Trace data flow from user inputs to sensitive operations.\n- Look for privilege boundaries crossed unsafely.\n- Identify injection points and unsafe deserialization.\n\n## Mandatory category coverage\n\nPass 1 below is **not** a single \"look for security issues\" sweep. It is one parallel sub-task **per category**, dispatched independently. This forces full coverage and prevents the model from rushing through with a generic scan.\n\nYou must dispatch the following sub-tasks in parallel, each with the diff and the category-specific instructions:\n\n| # | Category | Examples |\n|---|---|---|\n| 1 | Input validation | SQL/command/XXE/template/NoSQL injection, path traversal, deserialization |\n| 2 | Authentication & authorization | Auth bypass, privilege escalation, IDOR, session/JWT flaws |\n| 3 | Crypto & secrets | Hardcoded keys, weak algorithms, improper key storage, randomness, cert validation |\n| 4 | Code execution | RCE via deserialization, pickle/eval, YAML loaders, dynamic exec |\n| 5 | Data exposure | Sensitive logging, PII handling, debug info, API leakage |\n| 6 | Concurrency & state | TOCTOU, race conditions on auth checks, cache invalidation that affects sandbox/allowlist behavior |\n| 7 | Trust boundaries | What inputs cross from untrusted to trusted? Are they validated at the boundary? Are sandbox / allowlist decisions cached past their validity? |\n\nEach sub-task returns its own candidate list. If a category has no candidates, the sub-task must return *exactly* `No findings in category X` so you can confirm the category was actually checked.\n\n## Three-stage filtering\n\nAfter pass 1's parallel category sub-tasks return, run **two more passes** before reporting. Do not skip stages even if a finding looks obvious.\n\n2. **Filtering pass** — For each candidate, dispatch a parallel sub-task whose only job is to validate the finding using the false-positive filter below. Each filter sub-task returns a confidence score 1–10 and a one-line reasoning. Drop anything below 8.\n\n3. **Exploit-scenario pass** — For each candidate that survived the filter, dispatch a final sub-task whose job is to write a **concrete attack scenario / PoC sketch**:\n   - Who is the attacker (unauthenticated, low-priv user, peer tenant, network-adjacent, etc.)?\n   - What input or action do they control?\n   - What is the exact request, payload, or sequence?\n   - What is the resulting impact (data read, code executed, auth bypassed, privilege gained)?\n\n   The scenario must reference real entry points in the changed code, not \"imagine an attacker who...\". If no concrete attack path can be written, **drop the finding**. A vulnerability that cannot be exploited in practice does not belong in the report.\n\nDoing all three passes on a non-trivial PR will take multiple minutes. That is expected. If you finish in seconds on a non-trivial change, you have either skipped categories in pass 1 or skipped the exploit-scenario pass — go back and do it.\n\n### False-positive filter\n\nDo not run commands to reproduce vulnerabilities; read the code only.\n\n**Hard exclusions** — automatically exclude findings matching any of these patterns:\n\n1. Denial of Service / resource exhaustion attacks.\n2. Secrets or credentials stored on disk if otherwise secured.\n3. Rate-limiting concerns or service-overload scenarios.\n4. Memory or CPU exhaustion issues.\n5. Lack of input validation on non-security-critical fields without proven security impact.\n6. Input-sanitization concerns for GitHub Action workflows unless clearly triggerable via untrusted input.\n7. Lack of hardening measures. Code is not expected to implement all security best practices; only flag concrete vulnerabilities.\n8. Theoretical race conditions or timing attacks. Only report a race condition if concretely problematic.\n9. Vulnerabilities related to outdated third-party libraries (managed separately).\n10. Memory-safety issues in memory-safe languages (Rust, Go, etc.).\n11. Files that are only unit tests or only used during tests.\n12. Log-spoofing concerns. Outputting unsanitized user input to logs is not a vulnerability.\n13. SSRF that only controls the path. SSRF is a concern only if it can control host or protocol.\n14. Including user-controlled content in AI system prompts is not a vulnerability.\n15. Regex injection.\n16. Regex DoS.\n17. Insecure documentation. Do not flag findings in markdown or other docs.\n18. Lack of audit logs.\n\n**Precedents:**\n\n- Logging high-value secrets in plaintext IS a vulnerability. Logging URLs is assumed safe.\n- UUIDs can be assumed unguessable and do not need validation.\n- Environment variables and CLI flags are trusted. Attacks that rely on controlling them are invalid.\n- Resource-management issues (memory leaks, FD leaks) are not valid security findings.\n- Subtle web vulnerabilities (tabnabbing, XS-Leaks, prototype pollution, open redirects) should only be reported with extremely high confidence.\n- React and Angular are generally XSS-safe unless using `dangerouslySetInnerHTML`, `bypassSecurityTrustHtml`, or similar.\n- Most vulnerabilities in GitHub Action workflows are not exploitable in practice. Validate with a concrete attack path.\n- Include MEDIUM findings only if obvious and concrete.\n- Most vulnerabilities in `.ipynb` notebooks are not exploitable.\n- Logging non-PII data is not a vulnerability.\n- Command injection in shell scripts is generally not exploitable since shell scripts rarely run with untrusted user input. Validate concretely.\n\n**Signal-quality criteria:**\n\n1. Is there a concrete, exploitable vulnerability with a clear attack path?\n2. Is this a real security risk vs. theoretical best practice?\n3. Are there specific code locations and reproduction steps?\n4. Would a security team find this actionable?\n\n**Confidence score (1–10):**\n\n- 1–3: Low — likely false positive or noise.\n- 4–6: Medium — needs investigation.\n- 7–10: High — likely true vulnerability.\n\n## Output format\n\nOutput your findings in markdown only. Each finding must include file, line number, severity, category, description, **the concrete exploit scenario from the third pass** (not a generic one), and fix recommendation. A finding without a concrete exploit scenario from the third pass should not appear in the report.\n\nExample:\n\n```markdown\n# Vuln 1: XSS — `foo.py:42`\n\n* Severity: High\n* Category: xss\n* Description: User input from the `username` parameter is directly interpolated into HTML without escaping, allowing reflected XSS.\n* Exploit Scenario: An attacker crafts a URL like `/bar?q=<script>alert(document.cookie)</script>` to execute JavaScript in the victim's browser, enabling session hijacking.\n* Recommendation: Use Flask's `escape()` or Jinja2 templates with auto-escaping enabled for all user inputs rendered in HTML.\n```\n\n**Severity guidelines:**\n\n- **HIGH** — Directly exploitable: RCE, data breach, auth bypass.\n- **MEDIUM** — Requires specific conditions but with significant impact.\n- **LOW** — Defense-in-depth or lower-impact issues. Generally do not report unless concrete.\n\n## Final reminder\n\nBetter to miss some theoretical issues than flood the report with false positives. Each finding should be something a security engineer would confidently raise in a PR review. Your final reply must contain the markdown report and nothing else.\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "analytics-setup",
@@ -1179,7 +1809,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"analytics-setup\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 analytics-setup 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **analytics-setup** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "multi-tenant-saas",
@@ -1199,7 +1839,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"multi-tenant-saas\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 multi-tenant-saas 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **multi-tenant-saas** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "saas-builder",
@@ -1219,7 +1869,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"웹에이전시급 SaaS 개발\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 웹에이전시급 SaaS 개발 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **웹에이전시급 SaaS 개발** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "responsive-design",
@@ -1239,7 +1899,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"responsive-design\"\ndescription: \"UI/UX 및 디자인 시스템 마스터를 위한 시각적 완벽주의 가이드라인\"\ntags:\n  - ui\n  - ux\n  - design\n---\n\n# 🚀 responsive-design 디자인 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **responsive-design** 관련 디자인 시스템, CSS 마크업, UI 컴포넌트 작업을 할 때 사용자가 한눈에 \"Wow!\" 할 수 있는 에이전시급 하이엔드 퀄리티를 만들어내기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Design)\n1. **일관된 디자인 토큰**: 하드코딩된 색상값(#FFF)이나 픽셀(14px)을 피하고, Tailwind의 설정 파일(tailwind.config.js)이나 CSS 변수를 활용한 시맨틱 토큰(primary, spacing-4 등)을 사용하세요.\n2. **마이크로 인터랙션 (Micro-interactions)**: 버튼 호버, 팝업 등장, 페이지 전환 시 부드러운 트랜지션(transition-all duration-200)과 애니메이션을 적극 활용하여 앱이 \"살아있는 느낌\"을 주도록 하세요.\n3. **타이포그래피 및 여백 (Typography & Spacing)**: 가독성이 UI의 생명입니다. 행간(leading), 자간(tracking), 여백(margin/padding)의 리듬감을 수학적으로 계산하여 화면의 여백을 우아하게 관리하세요.\n4. **접근성과 다크모드**: 색상 대비(Contrast Ratio)를 검증하고, 모든 컴포넌트가 다크모드(dark: prefix)에서도 완벽하게 아름답도록 설계하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- UI를 구현할 때 단순한 \"작동하는 수준\"에 만족하지 마세요. \"Glassmorphism\", \"부드러운 그라데이션\", \"입체적인 그림자(Shadows)\" 등을 사용하여 퀄리티를 극한으로 끌어올리세요.\n- shadcn/ui나 Radix UI 등의 Headless UI를 사용할 경우, 프로젝트의 메인 테마에 맞춰 디자인을 세련되게 덮어씌우세요(Override).\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 데스크톱, 태블릿, 모바일 뷰(Responsive)에서 모두 레이아웃이 깨지지 않는가?\n- [ ] 포커스(focus-visible) 상태가 명확히 보여서 키보드 탐색이 가능한가?\n- [ ] 빈 상태(Empty State)나 로딩 스켈레톤(Skeleton) UI가 매끄럽게 디자인되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "🎨 글로벌 에이전시 수석 디자이너",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "stripe-saas-billing",
@@ -1259,7 +1929,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"stripe-saas-billing\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 stripe-saas-billing 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **stripe-saas-billing** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-13"
+      "createdAt": "2026-06-13",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "systematic-debugging",
@@ -1279,7 +1959,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"systematic-debugging\"\ndescription: \"테스트, 품질 보증(QA) 및 보안 검증을 위한 무결성 가이드라인\"\ntags:\n  - testing\n  - qa\n  - security\n---\n\n# 🚀 systematic-debugging 품질/보안 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **systematic-debugging** 관련 테스트 코드 작성, 보안 감사, CI/CD 구축 시 버그 발생 확률을 0%에 수렴시키고 해킹 공격으로부터 시스템을 방어하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Testing & Security)\n1. **TDD 및 테스트 커버리지**: 비즈니스 핵심 로직과 유틸리티 함수에 대해 우선적으로 단위 테스트(Unit Test)를 작성하세요. (Jest, Vitest 활용)\n2. **E2E 테스트 (Playwright/Cypress)**: 사용자의 핵심 흐름(회원가입, 결제 등)은 브라우저 렌더링 레벨에서 철저히 E2E 테스트를 작성하여 회귀 버그(Regression)를 방어하세요.\n3. **OWASP Top 10 방어**: SQL Injection, XSS, CSRF 공격을 방지하기 위한 보안 처리(Sanitization, CSRF Token, Secure Cookie 등)를 코드 레벨에서 강제하세요.\n4. **정적 분석 (Static Analysis)**: ESLint, Prettier, TypeScript의 strict 모드를 활성화하여 컴파일/빌드 타임에 에러를 최대한 잡아내세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 기능을 추가한 후 \"테스트 코드를 작성하라\"는 명령이 없어도 스스로 어떤 테스트가 필요한지 사용자에게 제안하세요.\n- 비밀번호 등 민감 정보는 절대로 평문으로 저장하거나 로그(console.log)에 남기지 말고 철저히 마스킹/해싱 처리하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 엣지 케이스(Edge case - null, undefined, 빈 배열, 아주 큰 값 등)에 대한 테스트가 포함되었는가?\n- [ ] 입력 폼(Form)에서 발생할 수 있는 악의적인 스크립트 주입(XSS)을 방어했는가?\n- [ ] API Rate Limiting이나 인증 재시도 공격(Brute Force)에 대한 방어 로직이 있는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "nextjs-app-router",
@@ -1299,7 +1989,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"nextjs-app-router\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 nextjs-app-router 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **nextjs-app-router** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-12"
+      "createdAt": "2026-06-12",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "seo-optimizer",
@@ -1319,7 +2019,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"seo-optimizer\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 seo-optimizer 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **seo-optimizer** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "💼 유니콘 스타트업 그로스 해커 & 기획자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "stripe-subscriptions",
@@ -1339,7 +2049,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"stripe-subscriptions\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 stripe-subscriptions 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **stripe-subscriptions** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "cloudflare-pages",
@@ -1359,7 +2079,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"cloudflare-pages\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 cloudflare-pages 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **cloudflare-pages** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "postgresql-expert",
@@ -1379,7 +2109,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"postgresql-expert\"\ndescription: \"데이터베이스 및 Supabase 전문가를 위한 데이터 모델링 가이드라인\"\ntags:\n  - database\n  - supabase\n  - sql\n---\n\n# 🚀 postgresql-expert 마스터 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **postgresql-expert** (DB 스키마 설계, Supabase 연동, 마이그레이션 등) 관련 작업을 할 때 데이터 무결성과 압도적인 읽기/쓰기 성능을 달성하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Database)\n1. **정규화 및 반정규화**: 중복 데이터를 최소화하기 위해 기본적으로 3정규화(3NF)를 따르되, 읽기 성능이 매우 중요한 지점에서는 의도적인 반정규화나 Materialized View를 활용하세요.\n2. **인덱스 최적화**: WHERE 조건, JOIN, ORDER BY에 자주 사용되는 컬럼에는 반드시 적절한 인덱스(B-Tree, GIN 등)를 생성하세요. 단, 과도한 인덱스는 쓰기 성능을 저하시키므로 균형을 맞추세요.\n3. **Supabase & RLS (Row Level Security)**: Supabase를 사용할 경우 데이터베이스 접근을 클라이언트에서 직접 허용할 수 있으므로, 반드시 모든 테이블에 엄격한 RLS 정책을 설정하여 타인의 데이터 접근을 차단하세요.\n4. **외래키(FK) 및 제약조건**: 데이터 무결성을 위해 참조 무결성(ON DELETE CASCADE/SET NULL 등)과 필수 제약조건(NOT NULL, UNIQUE, CHECK)을 데이터베이스 레벨에서 강제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 테이블을 설계할 때는 사용자에게 ERD(개체 관계도) 개념의 마크다운 표를 먼저 제시하여 승인을 받은 후 마이그레이션 스크립트를 작성하세요.\n- ORM(Prisma, Drizzle 등)을 사용할 때는 생성되는 실제 SQL 쿼리가 무엇인지 예측하고 비효율적인 쿼리가 발생하지 않도록 주의하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 삭제 로직은 Hard Delete가 아닌 Soft Delete(deleted_at 컬럼)를 고려했는가?\n- [ ] RLS 정책이 인증된 사용자(auth.uid())에게만 안전하게 열려 있는가?\n- [ ] 타임존(Timezone) 처리는 항상 UTC 기준으로 저장되도록 설계했는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-11"
+      "createdAt": "2026-06-11",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "cloudflare-workers",
@@ -1399,7 +2139,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"cloudflare-workers\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 cloudflare-workers 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **cloudflare-workers** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "playwright-testing",
@@ -1419,7 +2169,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"playwright-testing\"\ndescription: \"테스트, 품질 보증(QA) 및 보안 검증을 위한 무결성 가이드라인\"\ntags:\n  - testing\n  - qa\n  - security\n---\n\n# 🚀 playwright-testing 품질/보안 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **playwright-testing** 관련 테스트 코드 작성, 보안 감사, CI/CD 구축 시 버그 발생 확률을 0%에 수렴시키고 해킹 공격으로부터 시스템을 방어하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Testing & Security)\n1. **TDD 및 테스트 커버리지**: 비즈니스 핵심 로직과 유틸리티 함수에 대해 우선적으로 단위 테스트(Unit Test)를 작성하세요. (Jest, Vitest 활용)\n2. **E2E 테스트 (Playwright/Cypress)**: 사용자의 핵심 흐름(회원가입, 결제 등)은 브라우저 렌더링 레벨에서 철저히 E2E 테스트를 작성하여 회귀 버그(Regression)를 방어하세요.\n3. **OWASP Top 10 방어**: SQL Injection, XSS, CSRF 공격을 방지하기 위한 보안 처리(Sanitization, CSRF Token, Secure Cookie 등)를 코드 레벨에서 강제하세요.\n4. **정적 분석 (Static Analysis)**: ESLint, Prettier, TypeScript의 strict 모드를 활성화하여 컴파일/빌드 타임에 에러를 최대한 잡아내세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 기능을 추가한 후 \"테스트 코드를 작성하라\"는 명령이 없어도 스스로 어떤 테스트가 필요한지 사용자에게 제안하세요.\n- 비밀번호 등 민감 정보는 절대로 평문으로 저장하거나 로그(console.log)에 남기지 말고 철저히 마스킹/해싱 처리하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 엣지 케이스(Edge case - null, undefined, 빈 배열, 아주 큰 값 등)에 대한 테스트가 포함되었는가?\n- [ ] 입력 폼(Form)에서 발생할 수 있는 악의적인 스크립트 주입(XSS)을 방어했는가?\n- [ ] API Rate Limiting이나 인증 재시도 공격(Brute Force)에 대한 방어 로직이 있는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-14"
+      "createdAt": "2026-06-14",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "typescript-expert",
@@ -1439,7 +2199,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"typescript-expert\"\ndescription: \"백엔드 및 API 아키텍처를 위한 최고 수준의 가이드라인\"\ntags:\n  - backend\n  - api\n  - architecture\n---\n\n# 🚀 typescript-expert 백엔드 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **typescript-expert** 관련 백엔드/API 작업을 수행할 때, 안정성, 확장성, 보안성이 담보된 엔터프라이즈급 코드를 생성하기 위한 엄격한 규칙입니다.\n\n## 📋 핵심 아키텍처 원칙 (Backend)\n1. **RESTful/GraphQL 표준 준수**: 명확한 리소스 명명 규칙과 올바른 HTTP 메서드(GET, POST, PUT, DELETE) 및 상태 코드(200, 201, 400, 401, 403, 404, 500)를 엄격하게 사용하세요.\n2. **레이어드 아키텍처(Layered Architecture)**: 라우터(Controller), 비즈니스 로직(Service), 데이터베이스 접근(Repository) 계층을 분리하여 결합도를 낮추세요.\n3. **데이터 유효성 검사 (Validation)**: Zod, Joi 등을 활용해 클라이언트로부터 들어오는 모든 입력값을 최상단 라우터 레벨에서 검증하세요. (절대 DB 쿼리까지 잘못된 값이 도달하게 하지 마세요.)\n4. **에러 핸들링**: 모든 에러는 중앙 집중식 에러 핸들러(Middleware)를 통해 처리하고, 클라이언트에게 내부 서버의 스택 트레이스(Stack trace)가 노출되지 않도록 안전하게 정제하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 데이터베이스 쿼리를 작성할 때는 N+1 문제를 방지하고, 쿼리 실행 계획(인덱스 등)을 고려하여 최적화하세요.\n- 트랜잭션(Transaction)이 필요한 로직(결제, 재고 차감 등)은 반드시 ACID 속성을 보장하도록 작성하세요.\n- 비동기 작업(Promise) 처리 시 `try-catch` 블록을 꼼꼼하게 구성하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 모든 API 엔드포인트에 인증/인가(Auth/Role) 로직이 적용되어 있는가?\n- [ ] 대량의 데이터를 응답할 때 페이지네이션(Pagination)이 적용되었는가?\n- [ ] API 응답 속도를 높이기 위한 캐싱(Redis 등) 전략이 고려되었는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "saas-master-prompt",
@@ -1460,7 +2230,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"웹에이전시급 SaaS 개발 마스터\"\ndescription: \"프론트엔드 및 React/Next.js 전문가를 위한 최고 수준의 가이드라인\"\ntags:\n  - frontend\n  - react\n  - nextjs\n---\n\n# 🚀 웹에이전시급 SaaS 개발 마스터 전문가 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **웹에이전시급 SaaS 개발 마스터** 관련 프론트엔드 작업을 수행할 때, AI(Claude)가 반드시 지켜야 할 웹에이전시급 프로덕션 표준을 강제합니다. 단순한 동작을 넘어 유지보수성과 성능이 극대화된 코드를 작성해야 합니다.\n\n## 📋 핵심 아키텍처 원칙 (Frontend)\n1. **컴포넌트 분리**: 하나의 파일이 150줄을 넘지 않도록 논리적으로 분리합니다. UI 컴포넌트와 비즈니스 로직(Custom Hook)을 철저히 분리하세요.\n2. **Server/Client 컴포넌트**: Next.js App Router 환경에서는 기본적으로 Server Component를 사용하고, 상호작용(onClick, useState 등)이 필요한 최소한의 하위 트리만 `\"use client\"`로 선언합니다.\n3. **상태 관리 최적화**: 전역 상태(Zustand 등)의 남용을 피하고, 로컬 상태와 서버 상태(SWR/React Query 등)를 명확히 구분하세요.\n4. **렌더링 성능**: 불필요한 리렌더링을 막기 위해 `useMemo`, `useCallback`, `React.memo`를 적재적소에 사용하고, 의존성 배열(deps)을 완벽하게 관리하세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 코드를 작성하기 전에 사용자에게 \"이 컴포넌트가 어디서 재사용될지\" 먼저 물어보고 설계를 확정하세요.\n- 접근성(a11y) 속성(aria-*, role 등)을 기본적으로 포함하세요.\n- 에러 바운더리(Error Boundary)와 서스펜스(Suspense)를 활용한 로딩/에러 상태 UI를 반드시 구현하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 반응형(Mobile-first) 디자인이 고려되었는가?\n- [ ] 하드코딩된 문자열 대신 상수(Constants) 파일이나 다국어(i18n) 대응 구조를 썼는가?\n- [ ] 콘솔 에러나 React 경고(Warning)를 유발할 요소는 없는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-10"
+      "createdAt": "2026-06-10",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     },
     {
       "id": "tdd-development",
@@ -1480,7 +2260,17 @@
       "rating": 5,
       "skillContent": "---\nname: \"tdd-development\"\ndescription: \"테스트, 품질 보증(QA) 및 보안 검증을 위한 무결성 가이드라인\"\ntags:\n  - testing\n  - qa\n  - security\n---\n\n# 🚀 tdd-development 품질/보안 가이드라인\n\n## 🎯 스킬 목적\n이 스킬은 **tdd-development** 관련 테스트 코드 작성, 보안 감사, CI/CD 구축 시 버그 발생 확률을 0%에 수렴시키고 해킹 공격으로부터 시스템을 방어하기 위한 지침입니다.\n\n## 📋 핵심 아키텍처 원칙 (Testing & Security)\n1. **TDD 및 테스트 커버리지**: 비즈니스 핵심 로직과 유틸리티 함수에 대해 우선적으로 단위 테스트(Unit Test)를 작성하세요. (Jest, Vitest 활용)\n2. **E2E 테스트 (Playwright/Cypress)**: 사용자의 핵심 흐름(회원가입, 결제 등)은 브라우저 렌더링 레벨에서 철저히 E2E 테스트를 작성하여 회귀 버그(Regression)를 방어하세요.\n3. **OWASP Top 10 방어**: SQL Injection, XSS, CSRF 공격을 방지하기 위한 보안 처리(Sanitization, CSRF Token, Secure Cookie 등)를 코드 레벨에서 강제하세요.\n4. **정적 분석 (Static Analysis)**: ESLint, Prettier, TypeScript의 strict 모드를 활성화하여 컴파일/빌드 타임에 에러를 최대한 잡아내세요.\n\n## 🛠️ 실행 지침 (AI Prompt)\n- 새로운 기능을 추가한 후 \"테스트 코드를 작성하라\"는 명령이 없어도 스스로 어떤 테스트가 필요한지 사용자에게 제안하세요.\n- 비밀번호 등 민감 정보는 절대로 평문으로 저장하거나 로그(console.log)에 남기지 말고 철저히 마스킹/해싱 처리하세요.\n\n## 💡 필수 자가 검토 (Self-Review)\n- [ ] 엣지 케이스(Edge case - null, undefined, 빈 배열, 아주 큰 값 등)에 대한 테스트가 포함되었는가?\n- [ ] 입력 폼(Form)에서 발생할 수 있는 악의적인 스크립트 주입(XSS)을 방어했는가?\n- [ ] API Rate Limiting이나 인증 재시도 공격(Brute Force)에 대한 방어 로직이 있는가?\n",
       "sourceUrl": "",
-      "createdAt": "2026-06-15"
+      "createdAt": "2026-06-15",
+      "role": "👨‍💻 10년 차 시니어 백엔드/프론트엔드 개발자",
+      "starterPrompts": [
+        "이 프로젝트에 적합한 보일러플레이트와 초기 환경을 세팅해 줘.",
+        "현재 작성된 코드를 분석하고 개선점을 찾아줘.",
+        "이 기능을 구현하기 위한 최적의 아키텍처를 추천해 줘."
+      ],
+      "beforeAfter": {
+        "before": "수많은 문서를 뒤지며 환경 세팅과 디버깅에 3시간 낭비",
+        "after": "명령어 한 줄로 전문가 수준의 완벽한 결과물을 5분 만에 완성"
+      }
     }
   ]
 }

@@ -59,6 +59,14 @@
             </div>
           </div>
           
+          <!-- Top Picks Section (Shown only in "All" view) -->
+          <div id="top-picks-section" style="display: none; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-indigo);">🔥 주간 Top Picks</h3>
+            <div id="top-picks-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+              <!-- Top Picks injected here -->
+            </div>
+          </div>
+          
           <!-- Skill Grid -->
           <div class="skill-grid" id="market-skill-grid">
             <!-- Skills will be rendered here -->
@@ -88,6 +96,26 @@
                 </h3>
                 <div id="detail-manual-content" style="line-height: 1.7; color: var(--text-primary); font-size: 1.05rem; background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md);">
                   <!-- Manual content injected here -->
+                </div>
+              </section>
+
+              <section id="detail-starters-section" style="display: none;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+                  <span>💬</span> 대화 시작 팁 (클릭 시 복사)
+                </h3>
+                <div id="detail-starter-prompts" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                  <!-- Starter prompts injected here -->
+                </div>
+              </section>
+
+              <section id="detail-before-after-section" style="display: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: var(--radius-md); padding: 1.5rem;">
+                  <div style="color: #ef4444; font-weight: bold; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.3rem;"><span>❌</span> 스킬 사용 전</div>
+                  <div id="detail-before-text" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;"></div>
+                </div>
+                <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-md); padding: 1.5rem;">
+                  <div style="color: #10b981; font-weight: bold; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.3rem;"><span>✨</span> 스킬 사용 후</div>
+                  <div id="detail-after-text" style="color: var(--text-primary); font-size: 0.95rem; line-height: 1.5; font-weight: 500;"></div>
                 </div>
               </section>
 
