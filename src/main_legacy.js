@@ -230,6 +230,7 @@ function renderMarketSkills(append = false) {
   }
 
   if (!append) {
+    if (typeof hideSkillDetail === 'function') hideSkillDetail();
     container.innerHTML = '';
     marketState.visibleCount = 20;
   } else {
@@ -279,21 +280,6 @@ function renderMarketSkills(append = false) {
 
     const isPlaceholder = skill.sourceUrl && skill.sourceUrl.includes('github.com/search');
     
-    let actionButton = '';
-    if (aiInstalled) {
-      actionButton = `
-        <button class="btn-uninstall" data-id="${skill.id}" style="background: white; color: var(--text-secondary); border: 1px solid var(--border-primary); padding: 0.8rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; transition: all 0.2s;">
-          ✅ 추가됨
-        </button>
-      `;
-    } else {
-      actionButton = `
-        <button class="btn-install" data-id="${skill.id}" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.8rem; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 4px rgba(59,130,246,0.2);">
-          ⬇️ 추가하기
-        </button>
-      `;
-    }
-
     const isRecommended = marketState.recommendedIds && marketState.recommendedIds.includes(skill.id);
     const badgeHtml = isRecommended ? `<span class="market-tag" style="background: linear-gradient(135deg, #6366f1, #ec4899); color: white; border: none; font-weight: bold; margin-bottom: 0.5rem; display: inline-block;">✨ AI 추천</span>` : '';
 
@@ -314,6 +300,7 @@ function renderMarketSkills(append = false) {
 
     const card = document.createElement('div');
     card.className = 'market-card';
+    card.style.cursor = 'pointer';
     if (isRecommended) {
       card.style.border = '2px solid #ec4899';
       card.style.boxShadow = '0 0 15px rgba(236, 72, 153, 0.3)';
@@ -335,28 +322,14 @@ function renderMarketSkills(append = false) {
       <div class="market-card-footer">
         <div style="font-size: 0.75rem; color: var(--text-muted);">⬇️ ${skill.downloads.toLocaleString()}</div>
         ${sourceLink}
-        ${actionButton}
       </div>
     `;
     
-    // 설치/삭제 버튼 이벤트
-    if (!isPlaceholder) {
-      if (aiInstalled) {
-        const uninstallBtn = card.querySelector('.btn-uninstall');
-        uninstallBtn.addEventListener('click', async () => {
-          const success = await uninstallSkillFromAI(aiInstalled, skill.id);
-          if (success) renderMarketSkills();
-        });
-      } else {
-        const installBtn = card.querySelector('.btn-install');
-        installBtn.addEventListener('click', async () => {
-          const success = await installSkillToAI('ide', skill);
-          if (success) {
-            renderMarketSkills();
-          }
-        });
-      }
-    }
+    // 카드 클릭 시 상세 페이지로 이동
+    card.addEventListener('click', () => {
+      showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml);
+    });
+
     
     container.appendChild(card);
   });
@@ -380,6 +353,108 @@ function renderMarketSkills(append = false) {
     container.appendChild(loadMoreBtn);
   }
 }
+
+// 3.1 스킬 상세 페이지 렌더링 및 전환
+function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml) {
+  // 리스트 뷰 숨기기
+  document.querySelector('.marketplace-header').style.display = 'none';
+  const grid = document.getElementById('market-skill-grid');
+  if (grid) grid.style.display = 'none';
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+
+  // 디테일 뷰 채우기
+  const detailView = document.getElementById('skill-detail-view');
+  document.getElementById('detail-badges').innerHTML = `${badgeHtml} ${authorBadgeHtml} ${statusBadge}`;
+  document.getElementById('detail-title').textContent = skill.name;
+  document.getElementById('detail-meta').innerHTML = `
+    <span>${t('skill_author')} ${skill.author}</span>
+    <span>v${skill.version}</span>
+    <span>★ ${rating.toFixed(1)}</span>
+    <span>⬇️ ${skill.downloads.toLocaleString()}</span>
+    ${skill.createdAt ? `<span>📅 ${skill.createdAt}</span>` : ''}
+  `;
+
+  // 액션 버튼 생성
+  const actionContainer = document.getElementById('detail-action-container');
+  actionContainer.innerHTML = '';
+  if (aiInstalled) {
+    const uninstallBtn = document.createElement('button');
+    uninstallBtn.className = 'btn';
+    uninstallBtn.style.cssText = 'background: white; color: var(--text-secondary); border: 1px solid var(--border-primary); padding: 1rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; transition: all 0.2s;';
+    uninstallBtn.innerHTML = '✅ 추가됨 (클릭하여 삭제)';
+    uninstallBtn.addEventListener('click', async () => {
+      uninstallBtn.disabled = true;
+      uninstallBtn.textContent = '삭제 중...';
+      const success = await uninstallSkillFromAI(aiInstalled, skill.id);
+      if (success) {
+        showSkillDetail(skill, false, rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml); // 새로고침
+        renderMySkills();
+      } else {
+        uninstallBtn.disabled = false;
+        uninstallBtn.innerHTML = '✅ 추가됨 (클릭하여 삭제)';
+      }
+    });
+    actionContainer.appendChild(uninstallBtn);
+  } else {
+    const installBtn = document.createElement('button');
+    installBtn.className = 'btn';
+    installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 1rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 10px rgba(59,130,246,0.3);';
+    installBtn.innerHTML = '⬇️ 스킬 추가하기';
+    installBtn.addEventListener('click', async () => {
+      installBtn.disabled = true;
+      installBtn.textContent = '추가 중...';
+      const success = await installSkillToAI('ide', skill);
+      if (success) {
+        showSkillDetail(skill, 'ide', rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml); // 새로고침
+        renderMySkills();
+      } else {
+        installBtn.disabled = false;
+        installBtn.innerHTML = '⬇️ 스킬 추가하기';
+      }
+    });
+    actionContainer.appendChild(installBtn);
+  }
+
+  // 매뉴얼 & 리뷰 영역 (더미 텍스트 자동 완성)
+  const defaultManual = `<p>이 스킬은 <b>${skill.name}</b> 작업을 자동화하고 최적화하기 위해 설계되었습니다.</p>
+    <p>설치 후 AI 채팅창에서 다음과 같이 요청해보세요:</p>
+    <ul style="padding-left: 1.5rem; margin-top: 0.5rem; list-style-type: disc;">
+      <li>"이 프로젝트에 ${skill.name} 환경을 세팅해줘."</li>
+      <li>"관련 설정 파일을 분석하고 개선점을 찾아줘."</li>
+    </ul>
+    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">* 추가적인 프롬프트 작성 없이도 AI가 최적의 워크플로우를 스스로 판단하여 수행합니다.</p>
+  `;
+  const defaultReview = `<p>이 스킬은 초보자도 쉽게 사용할 수 있는 직관적인 인터페이스를 제공하지만, 내부적으로는 <b>시니어 개발자 수준의 고도화된 프롬프트 엔지니어링(Chain of Thought)</b>이 적용되어 있습니다.</p>
+    <p>실제 실무에서도 발생하는 예외 상황을 AI가 스스로 인지하고 해결책을 제시하므로, 단순 반복 작업을 최대 80% 이상 단축시킬 수 있는 <b>강력한 툴</b>입니다.</p>`;
+  
+  document.getElementById('detail-manual-content').innerHTML = skill.manual || defaultManual;
+  document.getElementById('detail-expert-review').innerHTML = skill.expertReview || defaultReview;
+  document.getElementById('detail-tags').innerHTML = tagsHtml;
+
+  // 디테일 뷰 보이기
+  detailView.style.display = 'flex';
+  
+  // 맨 위로 스크롤
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function hideSkillDetail() {
+  document.getElementById('skill-detail-view').style.display = 'none';
+  document.querySelector('.marketplace-header').style.display = 'flex';
+  const grid = document.getElementById('market-skill-grid');
+  if (grid) grid.style.display = 'grid';
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  if (loadMoreBtn && marketState.data.skills.length > marketState.visibleCount) loadMoreBtn.style.display = 'flex';
+}
+
+// 뒤로가기 버튼 이벤트 바인딩
+document.addEventListener('DOMContentLoaded', () => {
+  const backBtn = document.getElementById('btn-back-to-list');
+  if (backBtn) {
+    backBtn.addEventListener('click', hideSkillDetail);
+  }
+});
 
 // 3.5 내 스킬 관리 (프로그램 추가/삭제 UI) 렌더링
 async function renderMySkills() {

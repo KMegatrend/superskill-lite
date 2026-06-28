@@ -63,6 +63,50 @@
           <div class="skill-grid" id="market-skill-grid">
             <!-- Skills will be rendered here -->
           </div>
+          
+          <!-- ═══ Skill Detail View (Hidden by default) ═══ -->
+          <div id="skill-detail-view" style="display: none; flex-direction: column; gap: 2rem; background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-primary); box-shadow: 0 4px 20px rgba(0,0,0,0.05); min-height: 500px; margin-top: 1rem;">
+            <button id="btn-back-to-list" class="btn btn-ghost" style="align-self: flex-start; padding: 0.5rem 1rem; color: var(--text-secondary); margin-bottom: -1rem;">
+              ← 목록으로 돌아가기
+            </button>
+            
+            <div class="detail-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-primary); padding-bottom: 2rem;">
+              <div style="flex: 1; min-width: 300px;">
+                <div id="detail-badges" style="margin-bottom: 1rem;"></div>
+                <h1 id="detail-title" style="font-size: 2rem; margin: 0 0 0.5rem 0; color: var(--text-primary);"></h1>
+                <div id="detail-meta" style="color: var(--text-muted); font-size: 0.95rem; display: flex; gap: 1rem; align-items: center;"></div>
+              </div>
+              <div id="detail-action-container" style="flex-shrink: 0; min-width: 200px; display: flex; flex-direction: column; gap: 0.8rem;">
+                <!-- Install button injected here -->
+              </div>
+            </div>
+
+            <div class="detail-body" style="display: flex; flex-direction: column; gap: 2.5rem;">
+              <section>
+                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-indigo); display: flex; align-items: center; gap: 0.5rem;">
+                  <span>📖</span> 사용 매뉴얼
+                </h3>
+                <div id="detail-manual-content" style="line-height: 1.7; color: var(--text-primary); font-size: 1.05rem; background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md);">
+                  <!-- Manual content injected here -->
+                </div>
+              </section>
+
+              <section>
+                <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-pink); display: flex; align-items: center; gap: 0.5rem;">
+                  <span>💡</span> 전문가 리뷰
+                </h3>
+                <div id="detail-expert-review" style="line-height: 1.7; color: var(--text-primary); font-size: 1.05rem; border-left: 4px solid var(--accent-pink); padding: 1rem 1.5rem; background: rgba(236, 72, 153, 0.05); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                  <!-- Review injected here -->
+                </div>
+              </section>
+
+              <section>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-secondary);">태그 및 기술 스택</h4>
+                <div id="detail-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+              </section>
+            </div>
+          </div>
+          
         </main>
       </div>
     </div>
@@ -88,7 +132,7 @@
           </div>
         </div>
       </div>
-    </div> <!-- End View: My Skills -->
+    </div>
 
     <!-- ═══ Footer ═══ -->
     <footer class="footer">
