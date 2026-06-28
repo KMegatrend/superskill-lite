@@ -83,7 +83,7 @@ export default function Hero({ onGetStarted }) {
         </button>
         <button 
           className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 font-bold py-4 px-8 rounded-full text-lg shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1)] transition-all cursor-pointer"
-          onClick={() => document.getElementById('designer')?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() => window.location.href='/marketplace.html'}
         >
           스킬 둘러보기
         </button>

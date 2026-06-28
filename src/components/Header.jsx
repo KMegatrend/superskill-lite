@@ -8,9 +8,9 @@ export default function Header({ onSignIn }) {
         Super <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Skill</span>
       </div>
       <div className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
-        <a href="#designer" className="hover:text-slate-900 transition-colors">Designer</a>
-        <a href="#wizard" className="hover:text-slate-900 transition-colors">Web Wizard</a>
-        <a href="#pm" className="hover:text-slate-900 transition-colors">PM/Planner</a>
+        <a href="/marketplace.html?category=dev" className="hover:text-slate-900 transition-colors">코딩/개발</a>
+        <a href="/marketplace.html?category=business" className="hover:text-slate-900 transition-colors">비즈니스/마케팅</a>
+        <a href="/marketplace.html?category=design" className="hover:text-slate-900 transition-colors">디자인/UI</a>
       </div>
       <button 
         className="bg-slate-900 text-white font-semibold py-2 px-5 rounded-full text-sm hover:bg-slate-800 transition-colors cursor-pointer"
