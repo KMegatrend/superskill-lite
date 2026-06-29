@@ -6,6 +6,14 @@ export default function Showcase() {
   const productivityPack = packFeatures.find(p => p.id === 'productivity');
   const writingPack = packFeatures.find(p => p.id === 'writing');
 
+  const topSkills = [
+    { id: 'error-solver', cat: 'dev', badge: '🔥 에디터 추천', badgeBg: 'from-amber-500 to-red-500', rating: '5.0', title: '코드 에러 해결사', desc: '마주친 오류 메시지나 스택 트레이스를 입력하면, 문제의 원인을 진단하고 수정된 코드를 제안합니다.', tags: ['dev', 'coding'] },
+    { id: 'marketing-writer', cat: 'business', badge: '✨ 신규 업데이트', badgeBg: 'from-indigo-500 to-purple-500', rating: '4.9', title: '마케팅 블로그 글쓰기', desc: 'SEO에 최적화된 마케팅용 블로그 포스팅 초안을 작성합니다.', tags: ['business', 'writing'] },
+    { id: 'ux-advisor', cat: 'design', badge: '🚀 베스트셀러', badgeBg: 'from-emerald-500 to-teal-500', rating: '5.0', title: 'UI/UX 개선 요정', desc: '현재 앱의 화면 구성, 색상 팔레트, 사용자 흐름 등을 검토하고 개선할 점을 피드백합니다.', tags: ['design', 'ui'] },
+    { id: 'email-translator', cat: 'business', badge: '💼 직장인 필수', badgeBg: 'from-blue-500 to-cyan-500', rating: '4.8', title: '영문 비즈니스 이메일', desc: '한국어로 대충 쓴 내용을 세련되고 프로페셔널한 비즈니스 영어 이메일로 다듬어 줍니다.', tags: ['business', 'email'] },
+    { id: 'sql-maker', cat: 'dev', badge: '🛠️ 개발 능률 UP', badgeBg: 'from-gray-700 to-slate-900', rating: '4.9', title: 'SQL 쿼리 마법사', desc: '원하는 데이터 추출 조건을 자연어로 말하면 완벽한 SQL 쿼리문으로 변환해 줍니다.', tags: ['dev', 'sql'] }
+  ];
+
   return (
     <div className="flex flex-col gap-16 py-16">
 
@@ -21,47 +29,22 @@ export default function Showcase() {
           AI SuperSkill에서 가장 높은 평가를 받은 프리미엄 큐레이션 스킬들을 만나보세요.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-          {/* Mock Top Pick Card 1 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html?category=dev&highlight=error-solver'}>
-            <div className="flex justify-between items-start mb-4">
-              <span className="bg-gradient-to-r from-amber-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">🔥 에디터 추천</span>
-              <span className="text-slate-400 text-sm">★ 5.0</span>
-            </div>
-            <h3 className="font-extrabold text-xl mb-2 text-slate-900">코드 에러 해결사</h3>
-            <p className="text-sm text-slate-500 mb-4 line-clamp-2">마주친 오류 메시지나 스택 트레이스를 입력하면, 문제의 원인을 진단하고 수정된 코드를 제안합니다.</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#dev</span>
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#coding</span>
-            </div>
-          </div>
-          
-          {/* Mock Top Pick Card 2 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html?category=business&highlight=marketing-writer'}>
-            <div className="flex justify-between items-start mb-4">
-              <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">✨ 신규 업데이트</span>
-              <span className="text-slate-400 text-sm">★ 4.9</span>
-            </div>
-            <h3 className="font-extrabold text-xl mb-2 text-slate-900">마케팅 블로그 글쓰기</h3>
-            <p className="text-sm text-slate-500 mb-4 line-clamp-2">SEO에 최적화된 마케팅용 블로그 포스팅 초안을 작성합니다.</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#business</span>
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#writing</span>
-            </div>
-          </div>
-          
-          {/* Mock Top Pick Card 3 */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer" onClick={() => window.location.href='/marketplace.html?category=design&highlight=ux-advisor'}>
-            <div className="flex justify-between items-start mb-4">
-              <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">🚀 베스트셀러</span>
-              <span className="text-slate-400 text-sm">★ 5.0</span>
-            </div>
-            <h3 className="font-extrabold text-xl mb-2 text-slate-900">UI/UX 개선 요정</h3>
-            <p className="text-sm text-slate-500 mb-4 line-clamp-2">현재 앱의 화면 구성, 색상 팔레트, 사용자 흐름 등을 검토하고 개선할 점을 피드백합니다.</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#design</span>
-              <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#ui</span>
-            </div>
+        <div className="relative overflow-hidden w-full py-4 -mx-4 px-4 md:mx-0 md:px-0">
+          <div className="flex gap-6 animate-marquee hover-pause w-max">
+            {/* Duplicate array for seamless infinite scroll */}
+            {[...topSkills, ...topSkills].map((skill, idx) => (
+              <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow cursor-pointer min-w-[320px] max-w-[320px] flex-shrink-0 text-left" onClick={() => window.location.href=`/marketplace.html?category=${skill.cat}&highlight=${skill.id}`}>
+                <div className="flex justify-between items-start mb-4">
+                  <span className={`bg-gradient-to-r ${skill.badgeBg} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>{skill.badge}</span>
+                  <span className="text-slate-400 text-sm">★ {skill.rating}</span>
+                </div>
+                <h3 className="font-extrabold text-xl mb-2 text-slate-900">{skill.title}</h3>
+                <p className="text-sm text-slate-500 mb-4 line-clamp-2">{skill.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {skill.tags.map(t => <span key={`${idx}-${t}`} className="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded">#{t}</span>)}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         
