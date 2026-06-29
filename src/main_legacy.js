@@ -362,7 +362,7 @@ function renderMarketSkills(append = false) {
   const topPicksContainer = document.getElementById('top-picks-container');
   if (topPicksSection && topPicksContainer) {
     if (marketState.activeCategory === 'all' && marketState.searchQuery === '' && !append) {
-      const topSkills = [...marketState.data.skills].sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, 3);
+      const topSkills = [...marketState.data.skills].sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, 4);
       topPicksContainer.innerHTML = '';
       topSkills.forEach((skill, index) => {
         const rating = parseFloat(skill.rating) || 4.5;
