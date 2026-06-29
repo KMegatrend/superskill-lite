@@ -5,6 +5,8 @@ export default function AdminPanel({ onBack }) {
   const [users, setUsers] = useState([]);
   const [inquiries, setInquiries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedInquiry, setSelectedInquiry] = useState(null);
+  const [replyText, setReplyText] = useState('');
 
   useEffect(() => {
     try {
@@ -27,6 +29,30 @@ export default function AdminPanel({ onBack }) {
       .catch(() => toast.error('서버 통신 오류'))
       .finally(() => setIsLoading(false));
   }, []);
+
+  const handleReplySubmit = (e) => {
+    e.preventDefault();
+    if (!selectedInquiry || !replyText.trim()) return;
+
+    try {
+      const stored = JSON.parse(localStorage.getItem('support_inquiries') || '[]');
+      const updated = stored.map(iq => {
+        if (iq.id === selectedInquiry.id) {
+          return { ...iq, status: '답변 완료', adminReply: replyText, replyDate: new Date().toLocaleDateString('ko-KR') };
+        }
+        return iq;
+      });
+      localStorage.setItem('support_inquiries', JSON.stringify(updated));
+      
+      updated.sort((a, b) => b.id - a.id);
+      setInquiries(updated);
+      setSelectedInquiry(null);
+      setReplyText('');
+      toast.success('답변이 등록되었습니다.');
+    } catch (e) {
+      toast.error('오류가 발생했습니다.');
+    }
+  };
 
   const totalUsers = users.length;
   const paidUsers = users.filter(u => u.data.plan.type === 'PRO' || u.data.plan.type === 'PREMIUM').length;
@@ -139,7 +165,11 @@ export default function AdminPanel({ onBack }) {
               </thead>
               <tbody>
                 {inquiries.map((iq) => (
-                  <tr key={iq.id} className="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
+                  <tr 
+                    key={iq.id} 
+                    className="border-b border-slate-700/50 hover:bg-slate-700/50 transition-colors cursor-pointer"
+                    onClick={() => { setSelectedInquiry(iq); setReplyText(iq.adminReply || ''); }}
+                  >
                     <td className="p-4">
                       <span className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs font-bold">
                         {iq.category}
@@ -168,6 +198,47 @@ export default function AdminPanel({ onBack }) {
           </div>
         </div>
       </div>
+
+      {/* 문의 답변 모달 */}
+      {selectedInquiry && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-slate-800 rounded-2xl w-full max-w-2xl border border-slate-700 overflow-hidden shadow-2xl">
+            <div className="p-6 border-b border-slate-700 flex justify-between items-center">
+              <h2 className="text-xl font-bold text-white">문의 내용 및 답변</h2>
+              <button onClick={() => setSelectedInquiry(null)} className="text-slate-400 hover:text-white transition-colors text-2xl leading-none">
+                &times;
+              </button>
+            </div>
+            <div className="p-6">
+              <div className="mb-6 bg-slate-900/50 p-5 rounded-xl border border-slate-700/50">
+                <div className="flex gap-2 items-center mb-3">
+                  <span className="px-2.5 py-1 bg-slate-700 text-slate-300 rounded-md text-xs font-bold">{selectedInquiry.category}</span>
+                  <span className="text-sm font-mono text-slate-400">{selectedInquiry.email}</span>
+                  <span className="text-xs text-slate-500 ml-auto">{selectedInquiry.date}</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{selectedInquiry.title}</h3>
+                <p className="text-slate-300 whitespace-pre-wrap text-sm leading-relaxed">{selectedInquiry.content}</p>
+              </div>
+
+              <form onSubmit={handleReplySubmit}>
+                <label className="block text-sm font-bold text-slate-300 mb-2">관리자 답변</label>
+                <textarea 
+                  className="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors mb-4 resize-none"
+                  rows="5"
+                  placeholder="사용자에게 전달할 답변을 작성하세요."
+                  value={replyText}
+                  onChange={(e) => setReplyText(e.target.value)}
+                  required
+                ></textarea>
+                <div className="flex justify-end gap-3">
+                  <button type="button" onClick={() => setSelectedInquiry(null)} className="px-5 py-2.5 rounded-xl text-slate-400 hover:bg-slate-700 transition-colors font-bold text-sm">취소</button>
+                  <button type="submit" className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition-colors font-bold text-sm">답변 등록</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

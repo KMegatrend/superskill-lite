@@ -622,6 +622,17 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
                       <p className="text-sm text-slate-600 mb-3 bg-slate-50 p-4 rounded-lg border border-slate-100 whitespace-pre-wrap leading-relaxed">
                         {inq.content}
                       </p>
+                      {inq.adminReply && (
+                        <div className="mb-3 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">관리자 답변</span>
+                            <span className="text-xs text-slate-500">{inq.replyDate || ''}</span>
+                          </div>
+                          <p className="text-sm text-slate-800 whitespace-pre-wrap leading-relaxed font-medium">
+                            {inq.adminReply}
+                          </p>
+                        </div>
+                      )}
                       <div className="text-xs text-slate-400 text-right font-medium">
                         접수일: {inq.date}
                       </div>
