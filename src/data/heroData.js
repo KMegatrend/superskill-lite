@@ -1,8 +1,8 @@
 export const heroContents = [
   {
     id: 1,
-    title1: "Unlock Your Agent's",
-    title2: "True Potential",
+    title1: "숨겨진 AI의 능력,",
+    title2: "100% 끌어올리기",
     description: "AI Super Skill에 내장된 12개의 프리미엄 스킬로\n기획부터 디자인, 코드 구현까지 전문가 수준으로 자동화하세요.",
     highlightText: "12개의 프리미엄 스킬"
   },
