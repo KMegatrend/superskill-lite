@@ -574,37 +574,6 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               </form>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-              <h3 className="text-lg font-bold text-slate-900 mb-6">내 문의 내역</h3>
-              {myInquiries.length === 0 ? (
-                <div className="text-sm text-slate-500 py-8 text-center bg-slate-50 rounded-xl border border-slate-100">
-                  접수된 문의 내역이 없습니다.
-                </div>
-              ) : (
-                <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 scrollbar-hide">
-                  {myInquiries.map((inq, idx) => (
-                    <div key={inq.id || idx} className="border border-slate-200 rounded-xl p-5 hover:border-blue-200 transition-colors">
-                      <div className="flex justify-between items-start mb-3">
-                        <div className="flex items-center gap-2">
-                          <span className="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-1 rounded">{inq.category}</span>
-                          <span className="font-bold text-slate-900">{inq.title}</span>
-                        </div>
-                        <span className={`text-xs font-bold px-2 py-1 rounded ${inq.status === '답변 완료' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
-                          {inq.status}
-                        </span>
-                      </div>
-                      <p className="text-sm text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg border border-slate-100 whitespace-pre-wrap">
-                        {inq.content}
-                      </p>
-                      <div className="text-xs text-slate-400 text-right font-medium">
-                        접수일: {inq.date}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
             <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Danger Zone (위험 구역)</h3>
               <p className="text-sm text-slate-500 mb-6">계정을 삭제하면 모든 스킬 설정과 데이터가 영구적으로 삭제되며 복구할 수 없습니다.</p>
@@ -614,6 +583,52 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               >
                 회원 탈퇴하기
               </button>
+            </div>
+          </>
+        );
+
+      case 'support':
+        return (
+          <>
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-xl font-bold text-slate-900">🎧 고객센터 (문의 내역)</h2>
+              <button 
+                onClick={() => window.location.href = '/support.html'}
+                className="bg-blue-600 text-white hover:bg-blue-500 font-bold py-2.5 px-5 rounded-xl text-sm border-none transition-colors cursor-pointer shadow-lg shadow-blue-500/30"
+              >
+                + 새 문의하기
+              </button>
+            </div>
+            
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+              {myInquiries.length === 0 ? (
+                <div className="text-sm text-slate-500 py-12 text-center bg-slate-50 rounded-xl border border-slate-100 flex flex-col items-center gap-3">
+                  <span className="text-3xl">📭</span>
+                  접수된 문의 내역이 없습니다.<br/>도움이 필요하시면 새 문의하기를 이용해 주세요.
+                </div>
+              ) : (
+                <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 scrollbar-hide">
+                  {myInquiries.map((inq, idx) => (
+                    <div key={inq.id || idx} className="border border-slate-200 rounded-xl p-5 hover:border-blue-200 transition-colors bg-white">
+                      <div className="flex justify-between items-start mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-1 rounded">{inq.category}</span>
+                          <span className="font-bold text-slate-900">{inq.title}</span>
+                        </div>
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${inq.status === '답변 완료' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                          {inq.status}
+                        </span>
+                      </div>
+                      <p className="text-sm text-slate-600 mb-3 bg-slate-50 p-4 rounded-lg border border-slate-100 whitespace-pre-wrap leading-relaxed">
+                        {inq.content}
+                      </p>
+                      <div className="text-xs text-slate-400 text-right font-medium">
+                        접수일: {inq.date}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </>
         );
@@ -743,6 +758,12 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
             <span>⚙️</span> 계정 설정
           </button>
 
+          <button 
+            onClick={() => setActiveTab('support')}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'support' ? 'bg-orange-50 text-orange-600' : 'text-slate-600 hover:bg-slate-50'}`}
+          >
+            <span>🎧</span> 고객센터
+          </button>
         </nav>
         <div className="p-4 border-t border-slate-200 flex flex-row md:flex-col gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
           {typeof localStorage !== 'undefined' && localStorage.getItem('site_role') === 'master' && (
