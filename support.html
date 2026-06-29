@@ -96,8 +96,8 @@
         body: JSON.stringify(newInquiry)
       }).catch(console.error);
 
-      alert('성공적으로 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.');
-      e.target.reset();
+      alert('성공적으로 접수되었습니다. 대시보드의 [계정 설정] 탭에서 문의 진행사항을 확인하실 수 있습니다.');
+      window.location.href = '/#dashboard';
     }
   </script>
 </body>
