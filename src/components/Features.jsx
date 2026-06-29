@@ -111,9 +111,9 @@ const Features = () => {
         </div>
       </div>
 
-      {/* 🔥 주간 트렌드 피드 (Weekly Best) */}
+      {/* 🔥 주간 베스트 스킬 (Weekly Best) */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-slate-900 tracking-tight">🔥 주간 트렌드 피드</h2>
+        <h2 className="text-2xl md:text-3xl font-extrabold mb-6 text-slate-900 tracking-tight">🔥 주간 베스트 스킬</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {weeklys.map((trend, idx) => (
             <div 
