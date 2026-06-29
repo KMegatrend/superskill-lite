@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Showcase from './components/Showcase';
+import HowItWorks from './components/HowItWorks';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
@@ -41,6 +42,7 @@ export default function App() {
             <Hero onGetStarted={handleGoToMarketplace} />
             <Features />
             <Showcase />
+            <HowItWorks />
             <FAQ />
           </main>
           <Footer />
@@ -49,9 +51,12 @@ export default function App() {
         <AdminPanel onBack={() => setCurrentView('dashboard')} />
       ) : (
         <Dashboard 
-          onSignOut={() => {
-            window.location.hash = '';
-            setCurrentView('landing');
+          onSignOut={async () => {
+            try { await fetch('/api/logout', { method: 'POST' }); } catch(e){}
+            localStorage.removeItem('site_role');
+            localStorage.removeItem('user_plan');
+            alert('로그아웃 되었습니다.');
+            window.location.href = '/';
           }} 
           onAdmin={() => setCurrentView('admin')}
           onMarketplace={handleGoToMarketplace}

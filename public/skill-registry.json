@@ -6,7 +6,7 @@
     { "id": "business", "name": "비즈니스/마케팅" },
     { "id": "dev", "name": "코딩/개발" },
     { "id": "design", "name": "디자인/UI" },
-    { "id": "docs", "name": "문서/기획" },
+    { "id": "docs", "name": "기획/문서" },
     { "id": "life", "name": "일상/유틸" }
   ],
   "skills": [

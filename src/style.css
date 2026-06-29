@@ -21,7 +21,7 @@
 
   --text-primary: #e8e8f2;
   --text-secondary: #8888a4;
-  --text-muted: #555570;
+  --text-muted: #8888a4; /* Updated to match --text-secondary for better readability */
 
   /* Accent Colors */
   --accent-indigo: #6366f1;

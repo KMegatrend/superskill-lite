@@ -3,7 +3,16 @@ import toast from 'react-hot-toast';
 
 export default function AdminPanel({ onBack }) {
   const [users, setUsers] = useState([]);
+  const [inquiries, setInquiries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    try {
+      const stored = JSON.parse(localStorage.getItem('support_inquiries') || '[]');
+      stored.sort((a, b) => b.id - a.id);
+      setInquiries(stored);
+    } catch (e) {}
+  }, []);
 
   useEffect(() => {
     fetch('/api/admin-data')
@@ -62,7 +71,7 @@ export default function AdminPanel({ onBack }) {
         </div>
 
         {/* 사용자 테이블 */}
-        <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden">
+        <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden mb-10">
           <div className="p-6 border-b border-slate-700">
             <h2 className="text-xl font-bold text-white">가입자 상세 목록</h2>
           </div>
@@ -105,6 +114,53 @@ export default function AdminPanel({ onBack }) {
                 {users.length === 0 && (
                   <tr>
                     <td colSpan="5" className="p-8 text-center text-slate-500">가입된 사용자가 없습니다.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* 고객센터 게시판 */}
+        <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden">
+          <div className="p-6 border-b border-slate-700">
+            <h2 className="text-xl font-bold text-white">고객센터 문의 내역</h2>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-slate-900/50 text-slate-400 text-sm">
+                  <th className="p-4 font-bold">분류</th>
+                  <th className="p-4 font-bold">이메일</th>
+                  <th className="p-4 font-bold">제목 / 내용</th>
+                  <th className="p-4 font-bold">상태</th>
+                  <th className="p-4 font-bold text-right">작성일</th>
+                </tr>
+              </thead>
+              <tbody>
+                {inquiries.map((iq) => (
+                  <tr key={iq.id} className="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
+                    <td className="p-4">
+                      <span className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs font-bold">
+                        {iq.category}
+                      </span>
+                    </td>
+                    <td className="p-4 font-mono text-slate-300">{iq.email}</td>
+                    <td className="p-4 text-white font-medium max-w-xs">
+                      <div className="truncate">{iq.title}</div>
+                      <div className="text-xs text-slate-500 mt-1 truncate">{iq.content}</div>
+                    </td>
+                    <td className="p-4">
+                      <span className="px-3 py-1 bg-yellow-500/20 text-yellow-500 rounded-full text-xs font-bold">
+                        {iq.status}
+                      </span>
+                    </td>
+                    <td className="p-4 text-right text-slate-400">{iq.date}</td>
+                  </tr>
+                ))}
+                {inquiries.length === 0 && (
+                  <tr>
+                    <td colSpan="5" className="p-8 text-center text-slate-500">접수된 문의가 없습니다.</td>
                   </tr>
                 )}
               </tbody>

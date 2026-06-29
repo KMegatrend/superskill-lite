@@ -344,7 +344,7 @@ function renderMarketSkills(append = false) {
       <div class="market-card-desc">${skill.description}</div>
       <div class="market-card-tags">${tagsHtml}</div>
       <div class="market-card-footer">
-        <div style="font-size: 0.75rem; color: var(--text-muted);">⬇️ ${skill.downloads.toLocaleString()}</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">⬇️ ${skill.downloads.toLocaleString()}</div>
         ${sourceLink}
       </div>
     `;
@@ -393,7 +393,7 @@ function renderMarketSkills(append = false) {
           <div class="market-card-desc">${skill.description}</div>
           <div class="market-card-tags">${tagsHtml}</div>
           <div class="market-card-footer">
-            <div style="font-size: 0.75rem; color: var(--text-muted);">⬇️ ${skill.downloads.toLocaleString()}</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary);">⬇️ ${skill.downloads.toLocaleString()}</div>
           </div>
         `;
         card.addEventListener('click', () => {
@@ -429,15 +429,19 @@ function renderMarketSkills(append = false) {
 
 // 3.1 스킬 상세 페이지 렌더링 및 전환
 function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml) {
-  // 리스트 뷰 숨기기
-  document.querySelector('.marketplace-header').style.display = 'none';
-  const grid = document.getElementById('market-skill-grid');
-  if (grid) grid.style.display = 'none';
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+  try {
+    console.log('showSkillDetail called for:', skill.name);
+    // 리스트 뷰 숨기기
+    document.querySelector('.marketplace-header').style.display = 'none';
+    const grid = document.getElementById('market-skill-grid');
+    if (grid) grid.style.display = 'none';
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+    const topPicks = document.getElementById('top-picks-section');
+    if (topPicks) topPicks.style.display = 'none';
 
-  // 디테일 뷰 채우기
-  const detailView = document.getElementById('skill-detail-view');
+    // 디테일 뷰 채우기
+    const detailView = document.getElementById('skill-detail-view');
   const roleBadge = skill.role ? `<span class="market-tag" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: bold; margin-bottom: 0.5rem; display: inline-block; margin-right: 0.5rem;">${skill.role}</span>` : '';
   document.getElementById('detail-badges').innerHTML = `${badgeHtml} ${authorBadgeHtml} ${roleBadge} ${statusBadge}`;
   document.getElementById('detail-title').textContent = skill.name;
@@ -476,15 +480,11 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
     installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 1rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 10px rgba(59,130,246,0.3);';
     installBtn.innerHTML = '⬇️ 스킬 추가하기';
     installBtn.addEventListener('click', async () => {
-      installBtn.disabled = true;
-      installBtn.textContent = '추가 중...';
-      const success = await installSkillToAI('ide', skill);
-      if (success) {
-        showSkillDetail(skill, 'ide', rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml); // 새로고침
-        renderMySkills();
-      } else {
-        installBtn.disabled = false;
-        installBtn.innerHTML = '⬇️ 스킬 추가하기';
+      if (typeof window.openInstallModal === 'function') {
+        window.openInstallModal(skill, () => {
+          showSkillDetail(skill, 'ide', rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml); // 새로고침
+          renderMySkills();
+        });
       }
     });
     actionContainer.appendChild(installBtn);
@@ -497,7 +497,7 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
       <li>"이 프로젝트에 ${skill.name} 환경을 세팅해줘."</li>
       <li>"관련 설정 파일을 분석하고 개선점을 찾아줘."</li>
     </ul>
-    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">* 추가적인 프롬프트 작성 없이도 AI가 최적의 워크플로우를 스스로 판단하여 수행합니다.</p>
+    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">* 추가적인 프롬프트 작성 없이도 AI가 최적의 워크플로우를 스스로 판단하여 수행합니다.</p>
   `;
   const defaultReview = `<p>이 스킬은 초보자도 쉽게 사용할 수 있는 직관적인 인터페이스를 제공하지만, 내부적으로는 <b>시니어 개발자 수준의 고도화된 프롬프트 엔지니어링(Chain of Thought)</b>이 적용되어 있습니다.</p>
     <p>실제 실무에서도 발생하는 예외 상황을 AI가 스스로 인지하고 해결책을 제시하므로, 단순 반복 작업을 최대 80% 이상 단축시킬 수 있는 <b>강력한 툴</b>입니다.</p>`;
@@ -510,7 +510,7 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
   if (skill.starterPrompts && skill.starterPrompts.length > 0) {
     const promptsContainer = document.getElementById('detail-starter-prompts');
     promptsContainer.innerHTML = skill.starterPrompts.map(p => 
-      `<button class="starter-prompt-btn" style="text-align: left; background: var(--bg-card); border: 1px solid var(--border-primary); padding: 0.8rem 1rem; border-radius: var(--radius-md); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'; this.style.borderColor='var(--accent-indigo)';" onmouseout="this.style.background='var(--bg-card)'; this.style.borderColor='var(--border-primary)';">
+      `<button class="starter-prompt-btn" style="font-size: 14px; text-align: left; background: var(--bg-card); border: 1px solid var(--border-primary); padding: 0.8rem 1rem; border-radius: var(--radius-md); color: var(--text-secondary); cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--bg-secondary)'; this.style.borderColor='var(--accent-indigo)';" onmouseout="this.style.background='var(--bg-card)'; this.style.borderColor='var(--border-primary)';">
          ${p}
        </button>`
     ).join('');
@@ -552,6 +552,10 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
   
   // 맨 위로 스크롤
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  } catch (err) {
+    console.error('Error in showSkillDetail:', err);
+    alert('상세 페이지를 여는 중 오류가 발생했습니다: ' + err.message);
+  }
 }
 
 function hideSkillDetail() {
@@ -561,6 +565,8 @@ function hideSkillDetail() {
   if (grid) grid.style.display = 'grid';
   const loadMoreBtn = document.getElementById('load-more-btn');
   if (loadMoreBtn && marketState.data.skills.length > marketState.visibleCount) loadMoreBtn.style.display = 'flex';
+  const topPicks = document.getElementById('top-picks-section');
+  if (topPicks && marketState.activeCategory === 'all' && marketState.searchQuery === '') topPicks.style.display = 'block';
 }
 
 // 뒤로가기 버튼 이벤트 바인딩
@@ -595,7 +601,7 @@ async function renderMySkills() {
     
     // Name col
     const nameCol = document.createElement('div');
-    nameCol.innerHTML = `<div style="font-weight: 500; margin-bottom: 4px;">${skill.name}</div><div style="font-size: 0.85rem; color: var(--text-muted); text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">${skill.description}</div>`;
+    nameCol.innerHTML = `<div style="font-weight: 500; margin-bottom: 4px;">${skill.name}</div><div style="font-size: 0.85rem; color: var(--text-secondary); text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">${skill.description}</div>`;
     
     // AI col
     const aiCol = document.createElement('div');
@@ -651,8 +657,11 @@ if (searchInput) {
 let currentInstallSkill = null;
 let currentInstallAiType = null;
 
-function openInstallModal(skill) {
+let currentInstallSuccessCb = null;
+
+window.openInstallModal = function(skill, onSuccessCb) {
   currentInstallSkill = skill;
+  currentInstallSuccessCb = onSuccessCb;
   
   // 모달 상단 '상품 요약부' 렌더링
   document.getElementById('modal-title').textContent = skill.name || skill.id;
@@ -671,7 +680,7 @@ function openInstallModal(skill) {
   okBtn.style.color = 'var(--text-muted)';
   
   document.getElementById('install-btn-icon').textContent = '📦';
-  document.getElementById('install-btn-text').textContent = '적용 방식을 선택하세요';
+  document.getElementById('install-btn-text').textContent = '어떻게 쓸지 위에서 골라주세요';
   
   document.querySelectorAll('.preset-btn').forEach(btn => {
     btn.style.borderColor = 'transparent';
@@ -704,14 +713,14 @@ document.querySelectorAll('.preset-btn').forEach(btn => {
     
     if (currentInstallAiType === 'clipboard') {
       iconEl.textContent = '📋';
-      textEl.textContent = '프롬프트 즉시 복사하기';
+      textEl.textContent = '마법 주문(프롬프트) 복사하기';
     } else {
       let ideName = 'IDE';
       if (currentInstallAiType === 'cursor') ideName = 'Cursor';
       if (currentInstallAiType === 'windsurf') ideName = 'Windsurf';
       if (currentInstallAiType === 'copilot') ideName = 'Copilot';
       iconEl.textContent = '🚀';
-      textEl.textContent = `${ideName} 스킬 폴더 지정하기`;
+      textEl.textContent = `${ideName}에 스킬 설치하기`;
     }
   });
 });
@@ -729,6 +738,7 @@ document.getElementById('install-modal-ok')?.addEventListener('click', async () 
   document.getElementById('install-modal').style.display = 'none';
   const success = await installSkillToAI(currentInstallAiType, currentInstallSkill);
   if (success) {
+    if (currentInstallSuccessCb) currentInstallSuccessCb();
     renderMarketSkills();
   }
 });

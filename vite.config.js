@@ -216,16 +216,22 @@ const localSkillInstallerPlugin = () => ({
                 'Content-Type': 'application/json',
                 'Set-Cookie': 'site_auth=local-mock-token; Path=/; HttpOnly'
               });
-              res.end(JSON.stringify({ success: true }));
+              res.end(JSON.stringify({ success: true, role: 'admin' }));
             } else if (data.id === 'master' && data.password === 'admin1234!') {
+              res.writeHead(200, {
+                'Content-Type': 'application/json',
+                'Set-Cookie': 'site_auth=master-token; Path=/; HttpOnly'
+              });
+              res.end(JSON.stringify({ success: true, role: 'master' }));
+            } else if (data.id === 'member' && data.password === '1234!') {
               res.writeHead(200, {
                 'Content-Type': 'application/json',
                 'Set-Cookie': 'site_auth=local-mock-token; Path=/; HttpOnly'
               });
-              res.end(JSON.stringify({ success: true }));
+              res.end(JSON.stringify({ success: true, role: 'user', plan: 'PRO' }));
             } else {
               res.writeHead(401, { 'Content-Type': 'application/json' });
-              res.end(JSON.stringify({ success: false, error: '아이디 또는 비밀번호가 틀립니다. (admin/1234)' }));
+              res.end(JSON.stringify({ success: false, error: '아이디 또는 비밀번호가 틀립니다.' }));
             }
           } catch (err) {
             res.writeHead(500, { 'Content-Type': 'application/json' });
@@ -233,10 +239,53 @@ const localSkillInstallerPlugin = () => ({
           }
         });
       }
+      // 4-1. 로그아웃 API
+      else if (req.url === '/api/logout' && req.method === 'POST') {
+        res.writeHead(200, { 
+          'Content-Type': 'application/json',
+          'Set-Cookie': 'site_auth=; Path=/; HttpOnly; Expires=Thu, 01 Jan 1970 00:00:00 GMT'
+        });
+        res.end(JSON.stringify({ success: true }));
+      }
       // 5. 로컬 테스트용 인증 확인 API
       else if (req.url === '/api/check-auth' && req.method === 'GET') {
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ authenticated: req.headers.cookie && req.headers.cookie.includes('site_auth=local-mock-token') }));
+        res.end(JSON.stringify({ authenticated: req.headers.cookie && req.headers.cookie.includes('site_auth=') }));
+      }
+      // 6. 메일 발송 API (Nodemailer + Ethereal Mail)
+      else if (req.url === '/api/send-mail' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => { body += chunk.toString(); });
+        req.on('end', async () => {
+          try {
+            const data = JSON.parse(body);
+            const nodemailer = (await import('nodemailer')).default;
+            let testAccount = await nodemailer.createTestAccount();
+            let transporter = nodemailer.createTransport({
+              host: "smtp.ethereal.email",
+              port: 587,
+              secure: false,
+              auth: { user: testAccount.user, pass: testAccount.pass },
+            });
+            let info = await transporter.sendMail({
+              from: '"AI Super Skill" <system@aisuperskill.com>',
+              to: "admin@aisuperskill.com",
+              subject: `[${data.category || '문의'}] ${data.title || '새로운 문의가 접수되었습니다.'}`,
+              text: `작성자: ${data.email || '익명'}\n\n${data.content}`,
+              html: `<p><b>카테고리:</b> ${data.category || '문의'}</p><p><b>작성자:</b> ${data.email || '익명'}</p><p><b>제목:</b> ${data.title || '새로운 문의'}</p><hr/><p>${(data.content||'').replace(/\n/g, '<br/>')}</p>`
+            });
+            console.log("-----------------------------------------");
+            console.log("📧 메일이 발송되었습니다!");
+            console.log("미리보기 URL: %s", nodemailer.getTestMessageUrl(info));
+            console.log("-----------------------------------------");
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: true, previewUrl: nodemailer.getTestMessageUrl(info) }));
+          } catch (err) {
+            console.error('Send Mail Error:', err);
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: false, error: err.message }));
+          }
+        });
       }
       else {
         next();

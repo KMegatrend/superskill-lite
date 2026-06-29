@@ -42,11 +42,17 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
   // AI Settings State
   const [aiApiKey, setAiApiKey] = useState('');
 
+  // User Inquiries
+  const [myInquiries, setMyInquiries] = useState([]);
+
   // Load from API on mount
   useEffect(() => {
     // Load local storage AI key
     const key = localStorage.getItem('gemini_api_key');
     if (key) setAiApiKey(key);
+
+    const inquiries = JSON.parse(localStorage.getItem('support_inquiries') || '[]');
+    setMyInquiries(inquiries);
 
     const fetchData = async () => {
       try {
@@ -568,6 +574,37 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               </form>
             </div>
 
+            <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+              <h3 className="text-lg font-bold text-slate-900 mb-6">내 문의 내역</h3>
+              {myInquiries.length === 0 ? (
+                <div className="text-sm text-slate-500 py-8 text-center bg-slate-50 rounded-xl border border-slate-100">
+                  접수된 문의 내역이 없습니다.
+                </div>
+              ) : (
+                <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 scrollbar-hide">
+                  {myInquiries.map((inq, idx) => (
+                    <div key={inq.id || idx} className="border border-slate-200 rounded-xl p-5 hover:border-blue-200 transition-colors">
+                      <div className="flex justify-between items-start mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-1 rounded">{inq.category}</span>
+                          <span className="font-bold text-slate-900">{inq.title}</span>
+                        </div>
+                        <span className={`text-xs font-bold px-2 py-1 rounded ${inq.status === '답변 완료' ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                          {inq.status}
+                        </span>
+                      </div>
+                      <p className="text-sm text-slate-600 mb-3 bg-slate-50 p-3 rounded-lg border border-slate-100 whitespace-pre-wrap">
+                        {inq.content}
+                      </p>
+                      <div className="text-xs text-slate-400 text-right font-medium">
+                        접수일: {inq.date}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Danger Zone (위험 구역)</h3>
               <p className="text-sm text-slate-500 mb-6">계정을 삭제하면 모든 스킬 설정과 데이터가 영구적으로 삭제되며 복구할 수 없습니다.</p>
@@ -705,12 +742,13 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
           >
             <span>⚙️</span> 계정 설정
           </button>
+
         </nav>
         <div className="p-4 border-t border-slate-200 flex flex-row md:flex-col gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
-          {userId === 'master' && (
+          {typeof localStorage !== 'undefined' && localStorage.getItem('site_role') === 'master' && (
             <button 
               onClick={onAdmin}
-              className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold rounded-xl text-sm border border-purple-200 cursor-pointer transition-colors md:mb-2 shadow-sm whitespace-nowrap"
+              className="flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors text-slate-600 hover:bg-slate-50 md:mt-2 bg-blue-50/50 hover:bg-blue-50"
             >
               <span>👑</span> 마스터 관리자 패널
             </button>
@@ -722,18 +760,13 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
             🛒 마켓플레이스
           </button>
           <button 
-            onClick={onSignOut}
+            onClick={() => window.location.href = '/'}
             className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-blue-50 hover:bg-blue-100 text-blue-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors md:mb-2 whitespace-nowrap"
           >
             랜딩 페이지로
           </button>
           <button 
-            onClick={async () => {
-              if (window.confirm("보안 허브에서 완전히 로그아웃 하시겠습니까?")) {
-                try { await fetch('/api/logout', { method: 'POST' }); } catch(e){}
-                window.location.reload();
-              }
-            }}
+            onClick={onSignOut}
             className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors whitespace-nowrap"
           >
             로그아웃

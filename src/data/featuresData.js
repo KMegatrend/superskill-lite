@@ -33,7 +33,7 @@ export const weeklyTrends = [
 
 export const howItWorks = {
   title: "단 3번의 클릭으로 🚀",
-  subtitle: "복잡한 코딩 없이, 평소 쓰는 IDE에 전문가의 두뇌를 이식하세요.",
+  subtitle: "복잡한 코딩 없이, 평소 쓰는 AI에 전문가의 두뇌를 이식하세요.",
   steps: [
     {
       id: 1,

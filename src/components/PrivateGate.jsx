@@ -39,6 +39,10 @@ export default function PrivateGate({ children }) {
       const data = await res.json();
       
       if (res.ok && data.success) {
+        localStorage.setItem('site_role', data.role || 'user');
+        if (data.plan === 'PRO') {
+          localStorage.setItem('user_plan', JSON.stringify({ type: 'PRO', status: 'ACTIVE', cycle: 'yearly' }));
+        }
         setIsAuthenticated(true);
       } else {
         setError(data.error || '처리 중 오류가 발생했습니다.');

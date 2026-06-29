@@ -11,6 +11,7 @@ export default function Header({ onSignIn }) {
         <a href="/marketplace.html?category=dev" className="hover:text-slate-900 transition-colors">코딩/개발</a>
         <a href="/marketplace.html?category=business" className="hover:text-slate-900 transition-colors">비즈니스/마케팅</a>
         <a href="/marketplace.html?category=design" className="hover:text-slate-900 transition-colors">디자인/UI</a>
+        <a href="/marketplace.html?category=docs" className="hover:text-slate-900 transition-colors">기획/문서</a>
       </div>
       <button 
         className="bg-slate-900 text-white font-semibold py-2 px-5 rounded-full text-sm hover:bg-slate-800 transition-colors cursor-pointer"

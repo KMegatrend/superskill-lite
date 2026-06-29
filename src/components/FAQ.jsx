@@ -7,16 +7,42 @@ export default function FAQ() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [csText, setCsText] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (csText.trim().length < 10) {
       toast.error('상세한 답변을 위해 10자 이상 입력해 주세요.');
       return;
     }
-    // Simulate API call
+    
     setIsModalOpen(false);
-    setCsText('');
     toast.success('소중한 의견이 접수되었습니다! 담당자가 확인 후 연락드리겠습니다.', { duration: 4000 });
+
+    const newInquiry = {
+      id: Date.now(),
+      category: '의견/피드백',
+      email: '익명 사용자 (랜딩페이지)',
+      title: '랜딩페이지 의견 접수',
+      content: csText,
+      status: '대기중',
+      date: new Date().toLocaleDateString('ko-KR')
+    };
+
+    // 로컬 스토리지에 저장 (관리자 페이지 연동)
+    const existing = JSON.parse(localStorage.getItem('support_inquiries') || '[]');
+    localStorage.setItem('support_inquiries', JSON.stringify([newInquiry, ...existing]));
+
+    // 메일 발송 API 호출
+    try {
+      await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newInquiry)
+      });
+    } catch (err) {
+      console.error('메일 발송 실패:', err);
+    }
+
+    setCsText('');
   };
 
   return (

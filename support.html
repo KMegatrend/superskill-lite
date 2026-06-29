@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객센터 - AI Super Skill</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-slate-900 text-slate-200">
+  <div class="layout" style="display: block; max-width: 800px; margin: 0 auto; padding: 2rem;">
+    <!-- Header -->
+    <header style="margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/marketplace.html" style="color: var(--text-primary); text-decoration: none; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
+        <div style="background: linear-gradient(to bottom right, #3b82f6, #8b5cf6); color: white; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900;">AI</div>
+        Super Skill
+      </a>
+    </header>
+
+    <!-- Main Content -->
+    <main style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-xl); padding: 3rem;">
+      <h1 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 2rem; text-align: center;">무엇을 도와드릴까요?</h1>
+      <p style="color: var(--text-secondary); text-align: center; margin-bottom: 3rem;">궁금한 점이나 제안하실 사항이 있다면 아래 양식을 통해 문의해 주세요.</p>
+      
+      <form id="support-form" onsubmit="submitInquiry(event)" style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto;">
+        
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">문의 분류</label>
+          <select id="inquiry-category" required style="width: 100%; padding: 0.8rem; background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); outline: none;">
+            <option value="" disabled selected>분류를 선택해주세요</option>
+            <option value="사용문의">사용문의</option>
+            <option value="사업제휴">사업제휴</option>
+            <option value="결제/취소문의">결제/취소문의</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">이메일 주소</label>
+          <input type="email" id="inquiry-email" required placeholder="답변 받으실 이메일 주소" style="width: 100%; padding: 0.8rem; background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); outline: none; box-sizing: border-box;">
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">제목</label>
+          <input type="text" id="inquiry-title" required placeholder="문의 제목을 입력해주세요" style="width: 100%; padding: 0.8rem; background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); outline: none; box-sizing: border-box;">
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">문의 내용</label>
+          <textarea id="inquiry-content" required rows="6" placeholder="문의하실 내용을 상세히 적어주세요" style="width: 100%; padding: 0.8rem; background: var(--bg-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); outline: none; box-sizing: border-box; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet)); color: white; border: none; border-radius: var(--radius-md); font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 1rem;">
+          문의 접수하기
+        </button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 3rem 2rem; border-top: 1px solid var(--border-primary); margin-top: 4rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+      <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
+        <a href="/about.html" style="color: var(--text-secondary); text-decoration: none;">회사소개</a>
+        <a href="/terms.html" style="color: var(--text-secondary); text-decoration: none;">이용약관</a>
+        <a href="/privacy.html" style="color: var(--text-secondary); text-decoration: none;">개인정보처리방침</a>
+        <a href="/support.html" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;">고객센터</a>
+      </div>
+      <p style="margin: 0;">© 2026 AI Super Skill. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function submitInquiry(e) {
+      e.preventDefault();
+      
+      const category = document.getElementById('inquiry-category').value;
+      const email = document.getElementById('inquiry-email').value;
+      const title = document.getElementById('inquiry-title').value;
+      const content = document.getElementById('inquiry-content').value;
+
+      const newInquiry = {
+        id: Date.now(),
+        category,
+        email,
+        title,
+        content,
+        status: '대기중',
+        date: new Date().toLocaleDateString('ko-KR')
+      };
+
+      const existingInquiries = JSON.parse(localStorage.getItem('support_inquiries') || '[]');
+      existingInquiries.push(newInquiry);
+      localStorage.setItem('support_inquiries', JSON.stringify(existingInquiries));
+
+      fetch('/api/send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newInquiry)
+      }).catch(console.error);
+
+      alert('성공적으로 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

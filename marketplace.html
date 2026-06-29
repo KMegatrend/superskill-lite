@@ -81,8 +81,8 @@
             <div class="detail-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-primary); padding-bottom: 2rem;">
               <div style="flex: 1; min-width: 300px;">
                 <div id="detail-badges" style="margin-bottom: 1rem;"></div>
-                <h1 id="detail-title" style="font-size: 2rem; margin: 0 0 0.5rem 0; color: var(--text-primary);"></h1>
-                <div id="detail-meta" style="color: var(--text-muted); font-size: 0.95rem; display: flex; gap: 1rem; align-items: center;"></div>
+                <h1 id="detail-title" style="font-size: 28px; margin: 0 0 0.5rem 0; color: var(--text-primary);"></h1>
+                <div id="detail-meta" style="color: var(--text-secondary); font-size: 0.95rem; display: flex; gap: 1rem; align-items: center;"></div>
               </div>
               <div id="detail-action-container" style="flex-shrink: 0; min-width: 200px; display: flex; flex-direction: column; gap: 0.8rem;">
                 <!-- Install button injected here -->
@@ -92,16 +92,16 @@
             <div class="detail-body" style="display: flex; flex-direction: column; gap: 2.5rem;">
               <section>
                 <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-indigo); display: flex; align-items: center; gap: 0.5rem;">
-                  <span>📖</span> 사용 매뉴얼
+                  <span style="transform: translateY(2px);">📖</span> 사용 매뉴얼
                 </h3>
-                <div id="detail-manual-content" style="line-height: 1.7; color: var(--text-primary); font-size: 1.05rem; background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md);">
+                <div id="detail-manual-content" style="line-height: 1.7; color: var(--text-primary); font-size: 15px; background: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md);">
                   <!-- Manual content injected here -->
                 </div>
               </section>
 
               <section id="detail-starters-section" style="display: none;">
                 <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
-                  <span>💬</span> 대화 시작 팁 (클릭 시 복사)
+                  <span style="transform: translateY(2px);">💬</span> 대화 시작 팁 (클릭 시 복사)
                 </h3>
                 <div id="detail-starter-prompts" style="display: flex; flex-direction: column; gap: 0.5rem;">
                   <!-- Starter prompts injected here -->
@@ -121,9 +121,9 @@
 
               <section>
                 <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-pink); display: flex; align-items: center; gap: 0.5rem;">
-                  <span>💡</span> 전문가 리뷰
+                  <span style="transform: translateY(2px);">💡</span> 전문가 리뷰
                 </h3>
-                <div id="detail-expert-review" style="line-height: 1.7; color: var(--text-primary); font-size: 1.05rem; border-left: 4px solid var(--accent-pink); padding: 1rem 1.5rem; background: rgba(236, 72, 153, 0.05); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                <div id="detail-expert-review" style="line-height: 1.7; color: var(--text-primary); font-size: 15px; border-left: 4px solid var(--accent-pink); padding: 1rem 1.5rem; background: rgba(236, 72, 153, 0.05); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
                   <!-- Review injected here -->
                 </div>
               </section>
@@ -163,8 +163,14 @@
     </div>
 
     <!-- ═══ Footer ═══ -->
-    <footer class="footer">
-      <p>Built with ❤️ for the Antigravity IDE community</p>
+    <footer class="footer" style="padding: 3rem 2rem; border-top: 1px solid var(--border-primary); margin-top: 4rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+      <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
+        <a href="/about.html" style="color: var(--text-secondary); text-decoration: none;">회사소개</a>
+        <a href="/terms.html" style="color: var(--text-secondary); text-decoration: none;">이용약관</a>
+        <a href="/privacy.html" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;">개인정보처리방침</a>
+        <a href="/support.html" style="color: var(--text-secondary); text-decoration: none;">고객센터</a>
+      </div>
+      <p style="margin: 0;">© 2026 AI Super Skill. All rights reserved.</p>
     </footer>
 
   </div>
@@ -183,7 +189,7 @@
 
         <div class="install-modal-body">
           <div class="install-path-preset">
-            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">🌐 직접 복사해서 쓰기 (웹 기반)</h4>
+            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">🌐 웹사이트(ChatGPT / Claude / Gemini)에서 바로 쓰기</h4>
             <div class="preset-btns" style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 2rem;" id="ai-selector-web">
               <button class="preset-btn" data-ai="clipboard" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
                 <div style="flex: 1;">
@@ -199,35 +205,42 @@
                       <img src="/assets/claude-ai-symbol.svg" width="23" height="23" alt="Claude Logo" style="object-fit: contain;">
                       Claude
                     </span>
-                    <span style="margin-left: 4px;">(클립보드 복사)</span>
+                    <span style="color: var(--text-muted);">/</span>
+                    <span style="display: flex; align-items: center; gap: 6px;">
+                      <!-- Gemini Image -->
+                      <img src="/assets/gemini-logo.svg" width="23" height="23" alt="Gemini Logo" style="object-fit: contain;">
+                      Gemini
+                    </span>
+                    <span style="margin-left: 4px; color: var(--text-secondary); font-size: 0.9rem; font-weight: normal;">(프롬프트 복사하기)</span>
                   </div>
-                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">프롬프트를 복사하여 대화창에 직접 붙여넣으세요</div>
+                  <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">마법 주문(프롬프트)을 복사해서 AI와 대화할 때 붙여넣기만 하면 스킬이 발동돼요!</div>
                 </div>
               </button>
             </div>
 
-            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">💻 내 컴퓨터에 자동 설치 (로컬 IDE)</h4>
+            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">💻 내 컴퓨터 개발 프로그램에 자동 설치하기</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; margin-top: -0.5rem;">Cursor, Windsurf 같은 개발 프로그램에 버튼 한 번으로 스킬을 쏙 넣어드려요.</p>
             <div class="preset-btns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;" id="ai-selector-local">
               <button class="preset-btn" data-ai="cursor" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
                 <span style="font-size: 1.5rem; display: flex; align-items: center; color: var(--text-primary);">
                   <!-- Cursor Image -->
                   <img src="/assets/cursor-logo.png" width="24" height="24" alt="Cursor Logo" style="object-fit: contain;">
                 </span>
-                <div><div style="font-weight: bold; color: var(--text-primary);">Cursor</div><div style="font-size: 0.8rem; color: var(--text-muted);">.cursorrules</div></div>
+                <div><div style="font-weight: bold; color: var(--text-primary);">Cursor</div><div style="font-size: 0.8rem; color: var(--text-secondary);">.cursorrules</div></div>
               </button>
               <button class="preset-btn" data-ai="windsurf" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
                 <span style="font-size: 1.5rem; display: flex; align-items: center; color: var(--text-primary);">
                   <!-- Windsurf Image -->
                   <img src="/assets/windsurf-logo.png" width="28" height="28" alt="Windsurf Logo" style="object-fit: contain;">
                 </span>
-                <div><div style="font-weight: bold; color: var(--text-primary);">Windsurf</div><div style="font-size: 0.8rem; color: var(--text-muted);">.windsurfrules</div></div>
+                <div><div style="font-weight: bold; color: var(--text-primary);">Windsurf</div><div style="font-size: 0.8rem; color: var(--text-secondary);">.windsurfrules</div></div>
               </button>
               <button class="preset-btn" data-ai="copilot" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
                 <span style="font-size: 1.5rem; display: flex; align-items: center; color: var(--text-primary);">
                   <!-- GitHub Copilot Image -->
                   <img src="/assets/copilot-logo.svg" width="24" height="24" alt="GitHub Copilot Logo" style="object-fit: contain;">
                 </span>
-                <div><div style="font-weight: bold; color: var(--text-primary);">Copilot</div><div style="font-size: 0.8rem; color: var(--text-muted);">.github/copilot-instructions.md</div></div>
+                <div><div style="font-weight: bold; color: var(--text-primary);">Copilot</div><div style="font-size: 0.8rem; color: var(--text-secondary);">.github/copilot-instructions.md</div></div>
               </button>
             </div>
           </div>
@@ -237,7 +250,7 @@
           <button class="btn btn-secondary" id="install-modal-cancel" style="padding: 12px 24px; font-size: 1rem;">취소</button>
           <button class="btn btn-primary" id="install-modal-ok" style="padding: 12px 24px; font-size: 1rem; display: flex; align-items: center; gap: 8px;" disabled>
             <span id="install-btn-icon">📦</span>
-            <span id="install-btn-text">적용 방식을 선택하세요</span>
+            <span id="install-btn-text">어떻게 쓸지 위에서 골라주세요</span>
           </button>
         </div>
       </div>
@@ -291,7 +304,7 @@
             <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 500;">Google Gemini API Key</label>
             <input type="text" name="dummy-username-for-chrome" style="display:none;" autocomplete="username">
             <input type="password" id="ai-apikey-input" autocomplete="new-password" placeholder="AIzaSy..." style="width: 100%; padding: 0.8rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-md); color: var(--text-primary); outline: none; box-sizing: border-box;">
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">* Google AI Studio에서 무료로 발급받을 수 있으며 브라우저 로컬에만 안전하게 보관됩니다.</p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">* Google AI Studio에서 무료로 발급받을 수 있으며 브라우저 로컬에만 안전하게 보관됩니다.</p>
           </div>
         </div>
 
