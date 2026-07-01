@@ -1897,6 +1897,14 @@ textarea.input-field {
   animation: float-badge 3s ease-in-out infinite;
 }
 
+#detail-badges .skill-badge {
+  position: static;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  vertical-align: middle;
+}
+
 .skill-badge.updated {
   background: linear-gradient(135deg, #10b981, #06b6d4);
   box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
