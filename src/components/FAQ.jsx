@@ -57,13 +57,13 @@ export default function FAQ() {
         ))}
         
         {/* CTA Box */}
-        <div className="bg-slate-50 rounded-2xl py-6 px-8 border border-black/5 flex justify-between items-center mt-4">
+        <div className="bg-slate-50 rounded-2xl py-6 px-4 md:px-8 border border-black/5 flex flex-col md:flex-row justify-between items-start md:items-center mt-4 gap-4 md:gap-0">
           <div>
             <h4 className="text-lg font-extrabold mb-1 text-slate-900">원하는 답변을 찾지 못하셨나요?</h4>
             <p className="text-slate-500 m-0">저희 팀에게 궁금한 점을 직접 남겨주시면 빠르게 답변해 드리겠습니다!</p>
           </div>
           <button 
-            className="bg-slate-900 text-white border-none rounded-full py-2.5 px-6 font-semibold cursor-pointer transition-transform duration-200"
+            className="w-full md:w-auto bg-slate-900 text-white border-none rounded-full py-2.5 px-6 font-semibold cursor-pointer transition-transform duration-200"
             onMouseEnter={() => setHoveredIndex('cta')}
             onMouseLeave={() => setHoveredIndex(null)}
             onClick={() => setIsModalOpen(true)}

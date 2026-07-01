@@ -72,7 +72,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="max-w-5xl mx-auto px-8 py-12 flex flex-col gap-24">
+    <section className="max-w-5xl mx-auto px-4 md:px-8 py-8 md:py-12 flex flex-col gap-12 md:gap-24">
       {/* 🌟 오늘의 스킬 (Daily Card News) */}
       <div>
         <div className="flex items-center gap-3 mb-6">
@@ -83,7 +83,7 @@ const Features = () => {
         </div>
 
         <div 
-          className="bg-white rounded-3xl p-8 md:p-12 flex flex-col gap-8 cursor-pointer shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.02)] transition-transform duration-200 hover:-translate-y-1"
+          className="bg-white rounded-3xl p-6 md:p-12 flex flex-col gap-8 cursor-pointer shadow-[0_20px_60px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.02)] transition-transform duration-200 hover:-translate-y-1"
           onClick={() => window.location.href = daily.link}
         >
           <div>
@@ -102,9 +102,9 @@ const Features = () => {
             </p>
           </div>
 
-          <div className="flex justify-between items-center pt-4 border-t border-slate-100 mt-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center pt-4 border-t border-slate-100 mt-4 gap-4 md:gap-0">
             <span className="text-base text-slate-500 font-semibold">{daily.rating}</span>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white border-none rounded-full px-6 py-3 font-semibold text-lg cursor-pointer transition-colors shadow-lg shadow-blue-500/30">
+            <button className="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white border-none rounded-full px-6 py-3 font-semibold text-lg cursor-pointer transition-colors shadow-lg shadow-blue-500/30">
               {daily.buttonText}
             </button>
           </div>

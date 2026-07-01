@@ -550,8 +550,17 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
   // 디테일 뷰 보이기
   detailView.style.display = 'flex';
   
-  // 맨 위로 스크롤
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // 상세 뷰 시작 부분으로 부드럽게 스크롤 (헤더 높이 고려)
+  setTimeout(() => {
+    const headerOffset = 80;
+    const elementPosition = detailView.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }, 50);
   } catch (err) {
     console.error('Error in showSkillDetail:', err);
     alert('상세 페이지를 여는 중 오류가 발생했습니다: ' + err.message);

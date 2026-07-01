@@ -1796,9 +1796,32 @@ textarea.input-field {
     margin: 1rem auto;
   }
 
+  .install-modal-header,
+  .install-modal-body,
+  .install-modal-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .install-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .install-modal-footer .btn {
+    width: 100%;
+  }
+
   .detail-header {
     flex-direction: column;
     align-items: flex-start !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .detail-body {
+    gap: 1.5rem !important;
   }
 
   #detail-action-container {

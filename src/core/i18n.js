@@ -44,7 +44,7 @@ export const translations = {
     "nav_translator": "Skill Translator",
     
     // Marketplace Header
-    "market_title": "Explore Skills",
+    "market_title": "스킬 둘러보기",
     "market_search_placeholder": "Search skills... (e.g. Next.js, Security)",
     "market_sync_btn": "🔄 Sync GitHub Skills",
     "market_ai_recommend_btn": "✨ AI Recommendation",
