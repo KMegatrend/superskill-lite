@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/src/style.css">
 </head>
 <body class="bg-slate-900 text-slate-200">
-  <div class="layout" style="display: block; max-width: 800px; margin: 0 auto; padding: 2rem;">
+  <div class="layout" style="display: block; max-width: 800px; margin: 0 auto; padding: clamp(1rem, 4vw, 2rem);">
     <!-- Header -->
     <header style="margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between;">
       <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
@@ -20,8 +20,8 @@
     </header>
 
     <!-- Main Content -->
-    <main style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-xl); padding: 3rem;">
-      <h1 style="color: var(--text-primary); margin-bottom: 2rem; font-size: 2rem; text-align: center;">개인정보처리방침</h1>
+    <main style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-xl); padding: clamp(1.5rem, 5vw, 3rem);">
+      <h1 style="color: var(--text-primary); margin-bottom: 2rem; font-size: clamp(1.5rem, 6vw, 2rem); text-align: center;">개인정보처리방침</h1>
       
       <div style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
         <p>AI Super Skill(이하 '회사')은(는) 사용자의 개인정보 보호를 매우 중요하게 생각하며, 「개인정보 보호법」 등 관련 법규를 준수하고 있습니다.</p>
@@ -43,7 +43,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" style="padding: 3rem 2rem; border-top: 1px solid var(--border-primary); margin-top: 4rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+    <footer class="footer" style="padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem); border-top: 1px solid var(--border-primary); margin-top: 4rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
       <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
         <a href="/about.html" style="color: var(--text-secondary); text-decoration: none;">회사소개</a>
         <a href="/terms.html" style="color: var(--text-secondary); text-decoration: none;">이용약관</a>

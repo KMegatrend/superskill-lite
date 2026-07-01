@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/src/style.css">
 </head>
 <body class="bg-slate-900 text-slate-200">
-  <div class="layout" style="display: block; max-width: 800px; margin: 0 auto; padding: 2rem;">
+  <div class="layout" style="display: block; max-width: 800px; margin: 0 auto; padding: clamp(1rem, 4vw, 2rem);">
     <!-- Header -->
     <header style="margin-bottom: 3rem; display: flex; align-items: center; justify-content: space-between;">
       <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
@@ -20,19 +20,19 @@
     </header>
 
     <!-- Main Content -->
-    <main style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-xl); padding: 3rem;">
+    <main style="background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-xl); padding: clamp(1.5rem, 5vw, 3rem);">
       <div style="text-align: center; margin-bottom: 3rem;">
         <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 16px; margin-bottom: 1.5rem;">
           <span style="color: white; font-size: 1.8rem; font-weight: 900;">AI</span>
         </div>
-        <h1 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 2.2rem; font-weight: 800;">개발의 패러다임을 바꿉니다</h1>
+        <h1 style="color: var(--text-primary); margin-bottom: 1rem; font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 800;">개발의 패러다임을 바꿉니다</h1>
         <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
           AI Super Skill은 누구나 버튼 클릭 한 번으로<br>시니어 개발자의 노하우를 내 프로젝트에 이식할 수 있는 혁신적인 마켓플레이스입니다.
         </p>
       </div>
       
       <div style="display: flex; flex-direction: column; gap: 2rem;">
-        <div style="background: var(--bg-primary); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+        <div style="background: var(--bg-primary); padding: clamp(1.2rem, 5vw, 2rem); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
           <h3 style="color: #3b82f6; font-size: 1.3rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>💡</span> 압도적인 전문성 (Expertise)
           </h3>
@@ -41,7 +41,7 @@
           </p>
         </div>
 
-        <div style="background: var(--bg-primary); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+        <div style="background: var(--bg-primary); padding: clamp(1.2rem, 5vw, 2rem); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
           <h3 style="color: #10b981; font-size: 1.3rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>🔒</span> 완벽한 보안성 (Security)
           </h3>
@@ -50,7 +50,7 @@
           </p>
         </div>
 
-        <div style="background: var(--bg-primary); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
+        <div style="background: var(--bg-primary); padding: clamp(1.2rem, 5vw, 2rem); border-radius: var(--radius-lg); border: 1px solid var(--border-primary);">
           <h3 style="color: #8b5cf6; font-size: 1.3rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>⚡</span> 검증된 성능 (Proven Performance)
           </h3>
@@ -62,7 +62,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" style="padding: 3rem 2rem; border-top: 1px solid var(--border-primary); margin-top: 4rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+    <footer class="footer" style="padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem); border-top: 1px solid var(--border-primary); margin-top: 4rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
       <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem;">
         <a href="/about.html" style="color: var(--text-secondary); text-decoration: none; font-weight: bold;">회사소개</a>
         <a href="/terms.html" style="color: var(--text-secondary); text-decoration: none;">이용약관</a>
