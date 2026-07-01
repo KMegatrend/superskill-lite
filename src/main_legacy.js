@@ -332,14 +332,16 @@ function renderMarketSkills(append = false) {
     
     card.innerHTML = `
       ${statusBadge}
-      <div class="market-card-header">
-        <div>
-          ${badgeHtml}
-          ${authorBadgeHtml}
-          <div class="market-card-title">${skill.name}</div>
-          <div class="market-card-author">${t('skill_author')} ${skill.author} | v${skill.version}${skill.createdAt ? ` | 📅 ${skill.createdAt}` : ''}</div>
+      <div class="market-card-header" style="display: block;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem;">
+          <div>
+            ${badgeHtml}
+            ${authorBadgeHtml}
+          </div>
+          <div class="market-card-rating">★ ${rating.toFixed(1)}</div>
         </div>
-        <div class="market-card-rating">★ ${rating.toFixed(1)}</div>
+        <div class="market-card-title">${skill.name}</div>
+        <div class="market-card-author">${t('skill_author')} ${skill.author} | v${skill.version}${skill.createdAt ? ` | 📅 ${skill.createdAt}` : ''}</div>
       </div>
       <div class="market-card-desc">${skill.description}</div>
       <div class="market-card-tags">${tagsHtml}</div>
@@ -381,14 +383,16 @@ function renderMarketSkills(append = false) {
         card.style.cursor = 'pointer';
         card.style.border = '1px solid #f59e0b';
         card.innerHTML = `
-          <div class="market-card-header">
-            <div>
-              ${badgeHtml}
-              ${authorBadgeHtml}
-              <div class="market-card-title">${skill.name}</div>
-              <div class="market-card-author">${t('skill_author')} ${skill.author} | v${skill.version}</div>
+          <div class="market-card-header" style="display: block;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem;">
+              <div>
+                ${badgeHtml}
+                ${authorBadgeHtml}
+              </div>
+              <div class="market-card-rating">★ ${rating.toFixed(1)}</div>
             </div>
-            <div class="market-card-rating">★ ${rating.toFixed(1)}</div>
+            <div class="market-card-title">${skill.name}</div>
+            <div class="market-card-author">${t('skill_author')} ${skill.author} | v${skill.version}</div>
           </div>
           <div class="market-card-desc">${skill.description}</div>
           <div class="market-card-tags">${tagsHtml}</div>
