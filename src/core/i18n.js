@@ -77,8 +77,7 @@ export const translations = {
   }
 };
 
-let currentLang = localStorage.getItem('app_lang') || 
-                 (navigator.language.startsWith('ko') ? 'ko' : 'en');
+let currentLang = 'ko'; // 임시로 한국어 강제 적용 (다국어 지원 완벽해질 때까지)
 
 export function getLang() {
   return currentLang;
