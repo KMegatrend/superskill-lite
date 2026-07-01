@@ -1788,6 +1788,31 @@ textarea.input-field {
     width: 100%;
     justify-content: center;
   }
+
+  .install-modal-box {
+    width: 95% !important;
+    max-width: 100% !important;
+    padding: 1rem !important;
+    margin: 1rem auto;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  #detail-action-container {
+    width: 100%;
+  }
+
+  #detail-before-after-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .glass-card, .app-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 /* ─── Cross-Browser Fallbacks ─── */
