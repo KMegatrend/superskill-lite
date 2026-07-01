@@ -327,7 +327,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               </div>
             )}
 
-            <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+            <div className="bg-white border border-slate-200 rounded-2xl overflow-x-auto shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200">
@@ -387,7 +387,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
             
             {plan.type === 'PRO' ? (
               /* PRO Member Dashboard */
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white mb-8 shadow-xl">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-5 md:p-8 text-white mb-8 shadow-xl">
                 <div className="flex justify-between items-start mb-6">
                   <div>
                     <h3 className="text-blue-400 font-bold text-sm mb-1">CURRENT PLAN</h3>
@@ -445,9 +445,9 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:p-8 max-w-4xl mx-auto">
                   {/* Basic Plan */}
-                  <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+                  <div className="bg-white border border-slate-200 rounded-3xl p-5 md:p-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
                     <h4 className="text-xl font-bold text-slate-900 mb-2">BASIC</h4>
                     <p className="text-slate-500 text-sm h-10">서비스를 체험해보기 위한 기본 요금제</p>
                     <div className="my-6">
@@ -471,7 +471,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
                   </div>
 
                   {/* Pro Plan */}
-                  <div className="bg-gradient-to-b from-slate-900 to-slate-800 rounded-3xl p-8 text-white shadow-xl relative border border-slate-700 transform md:-translate-y-4">
+                  <div className="bg-gradient-to-b from-slate-900 to-slate-800 rounded-3xl p-5 md:p-8 text-white shadow-xl relative border border-slate-700 transform md:-translate-y-4">
                     <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-black shadow-lg">
                       MOST POPULAR
                     </div>
@@ -544,7 +544,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
           <>
             <h2 className="text-xl font-bold text-slate-900 mb-6">계정 및 보안 설정</h2>
             
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 md:p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               <h3 className="text-lg font-bold text-slate-900 mb-6">내 프로필</h3>
               <form onSubmit={handleProfileSubmit} className="flex flex-col gap-6 max-w-lg">
                 <div>
@@ -574,7 +574,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               </form>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 md:p-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Danger Zone (위험 구역)</h3>
               <p className="text-sm text-slate-500 mb-6">계정을 삭제하면 모든 스킬 설정과 데이터가 영구적으로 삭제되며 복구할 수 없습니다.</p>
               <button 
@@ -600,7 +600,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               </button>
             </div>
             
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 md:p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               {myInquiries.length === 0 ? (
                 <div className="text-sm text-slate-500 py-12 text-center bg-slate-50 rounded-xl border border-slate-100 flex flex-col items-center gap-3">
                   <span className="text-3xl">📭</span>
@@ -649,7 +649,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
           <>
             <h2 className="text-xl font-bold text-slate-900 mb-6">🤖 AI 설정</h2>
             
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+            <div className="bg-white border border-slate-200 rounded-2xl p-5 md:p-8 mb-8 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Google Gemini API 키 관리</h3>
               <p className="text-sm text-slate-500 mb-6">
                 입력하신 키는 서버로 전송되지 않으며, 현재 사용 중인 브라우저(로컬 스토리지)에만 안전하게 보관됩니다.
@@ -828,7 +828,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
           </div>
         </header>
 
-        <div className="p-8 max-w-5xl mx-auto w-full">
+        <div className="p-4 md:p-8 max-w-5xl mx-auto w-full">
           {renderContent()}
         </div>
       </main>
@@ -901,7 +901,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
 
             {/* Step 2: QR & Processing Simulation */}
             {paymentStep === 'qr' && (
-              <div className="p-8 text-center flex flex-col items-center">
+              <div className="p-5 md:p-8 text-center flex flex-col items-center">
                 <div className="mb-2 font-bold text-slate-900 text-lg">
                   {selectedMethod === 'Toss' && '토스앱'}
                   {selectedMethod === 'Kakao' && '카카오톡'}
@@ -943,7 +943,7 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
       {/* Account Deletion Modal Overlay */}
       {showDeleteModal && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 animate-in fade-in zoom-in-95 duration-200">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-5 md:p-8 animate-in fade-in zoom-in-95 duration-200">
             <h3 className="text-2xl font-extrabold text-red-600 mb-2">정말 계정을 삭제하시겠습니까?</h3>
             <p className="text-slate-500 mb-6 text-sm">
               이 작업은 되돌릴 수 없으며, 모든 결제 내역과 스킬 정보가 영구적으로 삭제됩니다. 계속 진행하시려면 아래 입력창에 <strong>'탈퇴 확인'</strong>이라고 입력해 주세요.
