@@ -176,7 +176,7 @@ function renderStarterPacks() {
             ${pack.skills.map(skillId => {
               const skillData = marketState.data.skills.find(s => s.id === skillId);
               const skillName = skillData ? skillData.name : skillId;
-              return \`<span class="market-tag">#\${skillName}</span>\`;
+              return `<span class="market-tag">#${skillName}</span>`;
             }).join('')}
           </div>
         </div>
@@ -201,7 +201,7 @@ window.openStarterPackModal = function(packId) {
   document.getElementById('sp-modal-desc').textContent = pack.desc;
   
   // 마케팅 문구 볼드처리 렌더링
-  const mkHtml = pack.marketing.replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>');
+  const mkHtml = pack.marketing.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   document.getElementById('sp-modal-marketing').innerHTML = mkHtml;
   
   // 스킬 리스트
@@ -209,15 +209,15 @@ window.openStarterPackModal = function(packId) {
   skillsContainer.innerHTML = pack.skills.map(skillId => {
     const skillData = marketState.data.skills.find(s => s.id === skillId);
     if (!skillData) return '';
-    return \`
+    return `
       <label style="display: flex; align-items: flex-start; gap: 12px; background: var(--bg-card); padding: 1rem; border: 1px solid var(--border-primary); border-radius: 8px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-indigo)'" onmouseout="this.style.borderColor='var(--border-primary)'">
-        <input type="checkbox" class="sp-skill-checkbox" value="\${skillId}" checked style="margin-top: 4px; width: 18px; height: 18px; cursor: pointer;">
+        <input type="checkbox" class="sp-skill-checkbox" value="${skillId}" checked style="margin-top: 4px; width: 18px; height: 18px; cursor: pointer;">
         <div>
-          <div style="font-weight: bold; color: var(--text-primary); font-size: 1.05rem; margin-bottom: 4px;">\${skillData.name}</div>
-          <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">\${skillData.description}</div>
+          <div style="font-weight: bold; color: var(--text-primary); font-size: 1.05rem; margin-bottom: 4px;">${skillData.name}</div>
+          <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">${skillData.description}</div>
         </div>
       </label>
-    \`;
+    `;
   }).join('');
   
   // 버튼 초기화
@@ -254,7 +254,7 @@ document.querySelectorAll('.sp-ai-btn').forEach(btn => {
     let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                   currentSpAiType === 'cursor' ? 'Cursor에' : 
                   currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
-    installBtn.textContent = \`🚀 선택한 \${selectedCount}개 스킬 \${envName} 즉시 설치\`;
+    installBtn.textContent = `🚀 선택한 ${selectedCount}개 스킬 ${envName} 즉시 설치`;
   });
 });
 
@@ -265,7 +265,7 @@ document.addEventListener('change', (e) => {
       let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                     currentSpAiType === 'cursor' ? 'Cursor에' : 
                     currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
-      document.getElementById('sp-modal-install').textContent = \`🚀 선택한 \${selectedCount}개 스킬 \${envName} 즉시 설치\`;
+      document.getElementById('sp-modal-install').textContent = `🚀 선택한 ${selectedCount}개 스킬 ${envName} 즉시 설치`;
     }
   }
 });
