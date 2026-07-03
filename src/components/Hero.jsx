@@ -6,8 +6,8 @@ export default function Hero({ onGetStarted }) {
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    // 첫 번째 카피(index 0)는 3초 더 길게(7500ms), 나머지는 4500ms
-    const duration = currentIndex === 0 ? 7500 : 4500;
+    // 첫 번째 카피(index 0)는 총 5초 더 길게(9500ms), 나머지는 4500ms
+    const duration = currentIndex === 0 ? 9500 : 4500;
 
     const timer = setTimeout(() => {
       setFade(false);
