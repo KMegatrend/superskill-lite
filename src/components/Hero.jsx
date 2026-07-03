@@ -6,16 +6,19 @@ export default function Hero({ onGetStarted }) {
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    // 첫 번째 카피(index 0)는 3초 더 길게(7500ms), 나머지는 4500ms
+    const duration = currentIndex === 0 ? 7500 : 4500;
+
+    const timer = setTimeout(() => {
       setFade(false);
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % heroContents.length);
         setFade(true);
       }, 500); 
-    }, 4500);
+    }, duration);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
 
   const currentContent = heroContents[currentIndex];
 
