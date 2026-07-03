@@ -6,7 +6,7 @@
 import './style.css';
 import { fetchAiRecommendation } from './core/ai-client.js';
 import { t, setLang, getLang, applyTranslations } from './core/i18n.js';
-import { installSkillToAI, uninstallSkillFromAI, getInstallState, showCustomAlert } from './core/installer.js';
+import { installSkillToAI, installSkillsBatchToAI, uninstallSkillFromAI, getInstallState, showCustomAlert } from './core/installer.js';
 
 // ─── 상태 관리 ───
 let currentResults = null;
@@ -292,17 +292,30 @@ document.getElementById('sp-modal-install')?.addEventListener('click', async () 
   installBtn.disabled = true;
   installBtn.textContent = '설치 중...';
   
+  const skillsToInstall = [];
   for (let box of checkboxes) {
     const skillId = box.value;
     const skillData = marketState.data.skills.find(s => s.id === skillId);
     if (skillData) {
-      await installSkillToAI(currentSpAiType, skillData);
+      skillsToInstall.push(skillData);
+    }
+  }
+  
+  if (skillsToInstall.length > 0) {
+    const success = await installSkillsBatchToAI(currentSpAiType, skillsToInstall);
+    if (!success) {
+      // 설치 실패 또는 취소 시 버튼 원상복구
+      installBtn.disabled = false;
+      let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+                    currentSpAiType === 'cursor' ? 'Cursor에' : 
+                    currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
+      installBtn.textContent = `🚀 선택한 ${skillsToInstall.length}개 스킬 ${envName} 즉시 설치`;
+      return;
     }
   }
   
   document.getElementById('starter-pack-modal').style.display = 'none';
   renderMarketSkills();
-  showCustomAlert('🎁 스타터 팩 설치가 완료되었습니다!');
 });
 
 

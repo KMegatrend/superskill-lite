@@ -113,6 +113,79 @@ export async function installSkillToAI(aiType, skill, onProgress) {
   }
 }
 
+export async function installSkillsBatchToAI(aiType, skills) {
+  if (!skills || skills.length === 0) return true;
+
+  if (aiType === 'clipboard') {
+    let combinedText = '';
+    skills.forEach(skill => {
+      combinedText += `[Skill: ${skill.name}]\n\n${skill.skillContent || ''}\n\n`;
+    });
+    await navigator.clipboard.writeText(combinedText.trim());
+    await showCustomAlert(`선택하신 ${skills.length}개의 스킬이 클립보드에 모두 복사되었습니다.`, '일괄 복사 완료', '📋');
+    return true;
+  }
+
+  try {
+    await showCustomAlert(`${skills.length}개의 스킬을 한 번에 설치합니다!\n\n👉 확인을 누르신 후, 스킬을 적용할 "프로젝트 폴더"를 선택해 주세요.\n(상단에 권한 알림이 뜨면 "허용"을 눌러주세요)`, '일괄 설치 안내', '🚀');
+    
+    const dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    
+    const forbiddenNames = ['desktop', 'downloads', 'documents', 'windows', 'system32', 'program files', 'users'];
+    const selectedName = dirHandle.name.toLowerCase();
+    
+    if (forbiddenNames.some(name => selectedName.includes(name)) || selectedName.length <= 1) {
+      await showCustomAlert('바탕화면이나 다운로드 폴더 전체를 선택할 수 없습니다!\n안전을 위해 스킬을 적용할 "진짜 코딩 프로젝트 폴더"를 선택해 주세요.', '접근 차단됨', '🚫');
+      return false;
+    }
+
+    let fileHandle;
+    let pathLabel = '';
+
+    if (aiType === 'cursor') {
+      fileHandle = await dirHandle.getFileHandle('.cursorrules', { create: true });
+      pathLabel = '.cursorrules';
+    } else if (aiType === 'windsurf') {
+      fileHandle = await dirHandle.getFileHandle('.windsurfrules', { create: true });
+      pathLabel = '.windsurfrules';
+    } else if (aiType === 'copilot') {
+      const githubDir = await dirHandle.getDirectoryHandle('.github', { create: true });
+      fileHandle = await githubDir.getFileHandle('copilot-instructions.md', { create: true });
+      pathLabel = '.github/copilot-instructions.md';
+    } else {
+      throw new Error("Unsupported AI Type");
+    }
+
+    const file = await fileHandle.getFile();
+    let content = await file.text();
+
+    for (const skill of skills) {
+      content = removeSkillBlock(content, skill.id);
+      const contentToInstall = skill.skillContent || '';
+      const skillBlock = `${MARKER_BEGIN(skill.id)}${contentToInstall}${MARKER_END(skill.id)}`;
+      content += skillBlock;
+    }
+
+    const writable = await fileHandle.createWritable();
+    await writable.write(content);
+    await writable.close();
+
+    for (const skill of skills) {
+      saveInstallState(skill.id, aiType);
+      await saveDirHandle(skill.id, dirHandle);
+    }
+    
+    await showCustomAlert(`선택하신 ${skills.length}개의 스킬이 성공적으로 일괄 설치되었습니다!\n(${pathLabel})`, '일괄 설치 성공!', '🎉');
+    return true;
+
+  } catch (err) {
+    if (err.name === 'AbortError') return false;
+    console.error(err);
+    await showCustomAlert('일괄 설치 중 오류가 발생했습니다.\n' + err.message, '설치 오류', '❌');
+    return false;
+  }
+}
+
 export async function uninstallSkillFromAI(aiType, skillId) {
   if (aiType === 'clipboard') return true; // 클립보드는 삭제 개념 없음
 
