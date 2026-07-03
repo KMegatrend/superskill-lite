@@ -55,6 +55,15 @@
             </div>
           </div>
           
+          <!-- Skill Load Banner (Proactive Warning) -->
+          <div id="skill-load-banner" style="display: none; align-items: center; justify-content: space-between; padding: 0.8rem 1.2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 500; margin-bottom: 1.5rem; transition: all 0.3s ease;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span id="skill-load-icon" style="font-size: 1.2rem;"></span>
+              <span id="skill-load-text"></span>
+            </div>
+            <div style="font-weight: bold; background: rgba(0,0,0,0.1); padding: 0.3rem 0.8rem; border-radius: 12px; font-size: 0.85rem;" id="skill-load-count-badge"></div>
+          </div>
+          
           <!-- Starter Packs Section -->
           <div id="starter-packs-section" style="display: none; margin-bottom: 3rem;">
             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem;">
@@ -393,7 +402,27 @@
       </div>
     </div>
 
-  <script type="module" src="/src/main_legacy.js"></script>
+  <!-- Over-install Warning Modal -->
+  <div id="over-install-warning-modal" class="modal-backdrop" style="display: none; z-index: 9999;">
+    <div class="modal-content" style="max-width: 450px; text-align: center; padding: 2.5rem 2rem;">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🚨</div>
+      <h3 style="font-size: 1.4rem; color: #ef4444; margin-bottom: 1rem; font-weight: 800;">스킬 과적재 경고!</h3>
+      <p style="color: var(--text-primary); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
+        현재 <strong>10개 이상</strong>의 스킬을 설치하려고 합니다.<br><br>
+        너무 많은 스킬이 한 번에 설치되면 AI가 지시어를 혼동하여 성능이 심각하게 저하될 수 있습니다.<br>
+        프로젝트 목적에 꼭 맞는 <strong>핵심 스킬만 남기는 것</strong>을 강력히 권장합니다.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+        <button id="warning-modal-cancel" class="btn btn-primary" style="padding: 1rem; font-size: 1.05rem; background: #ef4444; border: none; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);">
+          👈 돌아가기 (추천)
+        </button>
+        <button id="warning-modal-proceed" class="btn btn-ghost" style="padding: 1rem; color: var(--text-secondary); text-decoration: underline;">
+          무시하고 설치하기
+        </button>
+      </div>
+    </div>
+  </div>
 
+  <script type="module" src="/src/main_legacy.js"></script>
 </body>
 </html>

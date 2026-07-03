@@ -8,24 +8,34 @@ const MARKER_END = (id) => `\n# --- END AI SKILL: ${id} ---\n`;
 
 export function showCustomAlert(message, title = '알림', icon = '💡') {
   return new Promise((resolve) => {
-    const modal = document.getElementById('custom-alert-modal');
-    const titleEl = document.getElementById('custom-alert-title');
-    const msgEl = document.getElementById('custom-alert-message');
-    const okBtn = document.getElementById('custom-alert-ok');
-    const iconEl = document.getElementById('custom-alert-icon');
-
+    let modal = document.getElementById('custom-alert-modal');
     if (!modal) {
-      alert(message);
-      resolve();
-      return;
+      modal = document.createElement('div');
+      modal.id = 'custom-alert-modal';
+      modal.className = 'install-modal';
+      modal.style.cssText = 'display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);';
+      modal.innerHTML = `
+        <div class="install-modal-box" style="max-width: 450px; width: 90%; background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); padding: 2rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+          <div class="modal-icon" style="font-size: 3rem; margin-bottom: 1rem;">${icon}</div>
+          <h3 class="modal-title" style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem;">${title}</h3>
+          <p class="modal-message" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; word-break: keep-all; margin-bottom: 1.5rem; white-space: pre-line;">${message}</p>
+          <button class="btn btn-primary" id="custom-alert-ok" style="width: 100%; padding: 12px; font-size: 1rem;">확인</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
     }
 
-    if (titleEl) titleEl.textContent = title;
-    if (msgEl) msgEl.textContent = message;
-    if (iconEl) iconEl.textContent = icon;
+    const titleEl = modal.querySelector('.modal-title');
+    const messageEl = modal.querySelector('.modal-message');
+    const iconEl = modal.querySelector('.modal-icon');
     
+    if (titleEl) titleEl.textContent = title;
+    if (messageEl) messageEl.textContent = message;
+    if (iconEl) iconEl.textContent = icon;
+
     modal.style.display = 'flex';
 
+    const okBtn = modal.querySelector('#custom-alert-ok');
     const handleOk = () => {
       modal.style.display = 'none';
       okBtn.removeEventListener('click', handleOk);
@@ -62,15 +72,26 @@ export async function installSkillToAI(aiType, skill, onProgress) {
     let fileHandle;
     let pathLabel = '';
 
-    // 2. AI 타입별 파일 접근
+    // 2. AI 타입별 파일 접근 및 내용 구성
+    let contentToInstall = skill.skillContent || '';
+    let content = '';
+
     if (aiType === 'cursor') {
-      fileHandle = await dirHandle.getFileHandle('.cursorrules', { create: true });
-      pathLabel = '.cursorrules';
+      const cursorDir = await dirHandle.getDirectoryHandle('.cursor', { create: true });
+      const rulesDir = await cursorDir.getDirectoryHandle('rules', { create: true });
+      fileHandle = await rulesDir.getFileHandle(`${skill.id}.mdc`, { create: true });
+      pathLabel = `.cursor/rules/${skill.id}.mdc`;
+      
+      // Cursor는 개별 파일 덮어쓰기 (Frontmatter 포함)
+      content = `---
+description: ${skill.description || skill.name}
+globs: *
+---
+${contentToInstall}`;
     } else if (aiType === 'windsurf') {
       fileHandle = await dirHandle.getFileHandle('.windsurfrules', { create: true });
       pathLabel = '.windsurfrules';
     } else if (aiType === 'copilot') {
-      // .github 폴더 안에 생성해야 함
       const githubDir = await dirHandle.getDirectoryHandle('.github', { create: true });
       fileHandle = await githubDir.getFileHandle('copilot-instructions.md', { create: true });
       pathLabel = '.github/copilot-instructions.md';
@@ -78,17 +99,18 @@ export async function installSkillToAI(aiType, skill, onProgress) {
       throw new Error("Unsupported AI Type");
     }
 
-    // 3. 파일 읽기
-    const file = await fileHandle.getFile();
-    let content = await file.text();
+    if (aiType !== 'cursor') {
+      // 3. 기존 파일 읽기
+      const file = await fileHandle.getFile();
+      content = await file.text();
 
-    // 4. 중복 체크 및 삭제 (기존에 설치된 버전이 있다면 먼저 삭제)
-    content = removeSkillBlock(content, skill.id);
+      // 4. 중복 체크 및 삭제
+      content = removeSkillBlock(content, skill.id);
 
-    // 5. 스킬 블록 추가
-    const contentToInstall = skill.skillContent || '';
-    const skillBlock = `${MARKER_BEGIN(skill.id)}${contentToInstall}${MARKER_END(skill.id)}`;
-    content += skillBlock;
+      // 5. 스킬 블록 추가
+      const skillBlock = `${MARKER_BEGIN(skill.id)}${contentToInstall}${MARKER_END(skill.id)}`;
+      content += skillBlock;
+    }
 
     // 6. 파일 쓰기
     const writable = await fileHandle.createWritable();
@@ -139,36 +161,52 @@ export async function installSkillsBatchToAI(aiType, skills) {
       return false;
     }
 
-    let fileHandle;
     let pathLabel = '';
 
     if (aiType === 'cursor') {
-      fileHandle = await dirHandle.getFileHandle('.cursorrules', { create: true });
-      pathLabel = '.cursorrules';
-    } else if (aiType === 'windsurf') {
-      fileHandle = await dirHandle.getFileHandle('.windsurfrules', { create: true });
-      pathLabel = '.windsurfrules';
-    } else if (aiType === 'copilot') {
-      const githubDir = await dirHandle.getDirectoryHandle('.github', { create: true });
-      fileHandle = await githubDir.getFileHandle('copilot-instructions.md', { create: true });
-      pathLabel = '.github/copilot-instructions.md';
+      const cursorDir = await dirHandle.getDirectoryHandle('.cursor', { create: true });
+      const rulesDir = await cursorDir.getDirectoryHandle('rules', { create: true });
+      pathLabel = '.cursor/rules/ 폴더';
+      
+      for (const skill of skills) {
+        const fileHandle = await rulesDir.getFileHandle(`${skill.id}.mdc`, { create: true });
+        let contentToInstall = skill.skillContent || '';
+        let content = `---
+description: ${skill.description || skill.name}
+globs: *
+---
+${contentToInstall}`;
+        const writable = await fileHandle.createWritable();
+        await writable.write(content);
+        await writable.close();
+      }
     } else {
-      throw new Error("Unsupported AI Type");
+      let fileHandle;
+      if (aiType === 'windsurf') {
+        fileHandle = await dirHandle.getFileHandle('.windsurfrules', { create: true });
+        pathLabel = '.windsurfrules';
+      } else if (aiType === 'copilot') {
+        const githubDir = await dirHandle.getDirectoryHandle('.github', { create: true });
+        fileHandle = await githubDir.getFileHandle('copilot-instructions.md', { create: true });
+        pathLabel = '.github/copilot-instructions.md';
+      } else {
+        throw new Error("Unsupported AI Type");
+      }
+
+      const file = await fileHandle.getFile();
+      let content = await file.text();
+
+      for (const skill of skills) {
+        content = removeSkillBlock(content, skill.id);
+        const contentToInstall = skill.skillContent || '';
+        const skillBlock = `${MARKER_BEGIN(skill.id)}${contentToInstall}${MARKER_END(skill.id)}`;
+        content += skillBlock;
+      }
+
+      const writable = await fileHandle.createWritable();
+      await writable.write(content);
+      await writable.close();
     }
-
-    const file = await fileHandle.getFile();
-    let content = await file.text();
-
-    for (const skill of skills) {
-      content = removeSkillBlock(content, skill.id);
-      const contentToInstall = skill.skillContent || '';
-      const skillBlock = `${MARKER_BEGIN(skill.id)}${contentToInstall}${MARKER_END(skill.id)}`;
-      content += skillBlock;
-    }
-
-    const writable = await fileHandle.createWritable();
-    await writable.write(content);
-    await writable.close();
 
     for (const skill of skills) {
       saveInstallState(skill.id, aiType);
@@ -212,7 +250,9 @@ export async function uninstallSkillFromAI(aiType, skillId) {
 
     try {
       if (aiType === 'cursor') {
-        fileHandle = await dirHandle.getFileHandle('.cursorrules', { create: false });
+        const cursorDir = await dirHandle.getDirectoryHandle('.cursor', { create: false });
+        const rulesDir = await cursorDir.getDirectoryHandle('rules', { create: false });
+        await rulesDir.removeEntry(`${skillId}.mdc`);
       } else if (aiType === 'windsurf') {
         fileHandle = await dirHandle.getFileHandle('.windsurfrules', { create: false });
       } else if (aiType === 'copilot') {
@@ -226,7 +266,7 @@ export async function uninstallSkillFromAI(aiType, skillId) {
       return true;
     }
 
-    if (fileHandle) {
+    if (aiType !== 'cursor' && fileHandle) {
       const file = await fileHandle.getFile();
       let content = await file.text();
       
@@ -261,6 +301,11 @@ function removeSkillBlock(content, id) {
 export function getInstallState(skillId) {
   const states = JSON.parse(localStorage.getItem('installed_skills') || '{}');
   return states[skillId]; // returns aiType or undefined
+}
+
+export function getInstalledSkillsCount() {
+  const states = JSON.parse(localStorage.getItem('installed_skills') || '{}');
+  return Object.keys(states).length;
 }
 
 function saveInstallState(skillId, aiType) {

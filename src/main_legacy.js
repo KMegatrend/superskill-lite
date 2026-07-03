@@ -6,7 +6,7 @@
 import './style.css';
 import { fetchAiRecommendation } from './core/ai-client.js';
 import { t, setLang, getLang, applyTranslations } from './core/i18n.js';
-import { installSkillToAI, installSkillsBatchToAI, uninstallSkillFromAI, getInstallState, showCustomAlert } from './core/installer.js';
+import { installSkillToAI, installSkillsBatchToAI, uninstallSkillFromAI, getInstallState, showCustomAlert, getInstalledSkillsCount } from './core/installer.js';
 
 // ─── 상태 관리 ───
 let currentResults = null;
@@ -19,6 +19,73 @@ const elements = {
 // ─── 초기화 ───
 console.log('🔄 Claude → Antigravity 스킬 변환기 로드 완료');
 applyTranslations(); // 초기 언어 적용
+
+// ─── 스킬 과적재 경고 기능 ───
+export function showWarningModal() {
+  return new Promise((resolve) => {
+    const modal = document.getElementById('over-install-warning-modal');
+    if (!modal) return resolve(true); // 모달이 없으면 통과
+    
+    const content = modal.querySelector('.modal-content');
+    content.classList.remove('shake-animation');
+    void content.offsetWidth; // 리플로우 강제 발생
+    content.classList.add('shake-animation');
+    
+    modal.style.display = 'flex';
+    
+    const btnCancel = document.getElementById('warning-modal-cancel');
+    const btnProceed = document.getElementById('warning-modal-proceed');
+    
+    const handleCancel = () => {
+      modal.style.display = 'none';
+      cleanup();
+      resolve(false);
+    };
+    const handleProceed = () => {
+      modal.style.display = 'none';
+      cleanup();
+      resolve(true);
+    };
+    
+    const cleanup = () => {
+      btnCancel.removeEventListener('click', handleCancel);
+      btnProceed.removeEventListener('click', handleProceed);
+    };
+    
+    btnCancel.addEventListener('click', handleCancel);
+    btnProceed.addEventListener('click', handleProceed);
+  });
+}
+
+export function updateSkillLoadIndicator() {
+  const banner = document.getElementById('skill-load-banner');
+  const icon = document.getElementById('skill-load-icon');
+  const text = document.getElementById('skill-load-text');
+  const badge = document.getElementById('skill-load-count-badge');
+  if (!banner) return;
+  
+  const count = getInstalledSkillsCount();
+  
+  if (count < 5) {
+    banner.style.display = 'none';
+  } else if (count < 10) {
+    banner.style.display = 'flex';
+    banner.style.background = 'rgba(245, 158, 11, 0.1)';
+    banner.style.border = '1px solid rgba(245, 158, 11, 0.2)';
+    banner.style.color = 'var(--accent-amber)';
+    icon.textContent = '🟡';
+    text.innerHTML = `현재 <strong>${count}개</strong>의 스킬이 설치되었습니다. 핵심 스킬 위주로 구성하는 것을 권장합니다.`;
+    badge.textContent = `${count} / 10`;
+  } else {
+    banner.style.display = 'flex';
+    banner.style.background = 'rgba(239, 68, 68, 0.1)';
+    banner.style.border = '1px solid rgba(239, 68, 68, 0.2)';
+    banner.style.color = 'var(--accent-red)';
+    icon.textContent = '🔴';
+    text.innerHTML = `너무 많은 스킬이 설치되었습니다! (<strong>${count}개</strong>) 불필요한 스킬을 삭제해주세요.`;
+    badge.textContent = `${count} / 10`;
+  }
+}
 
 // ─── 로그인(접근 제어) 로직 ───
 const validUsers = {
@@ -290,7 +357,7 @@ document.getElementById('sp-modal-install')?.addEventListener('click', async () 
   
   const installBtn = document.getElementById('sp-modal-install');
   installBtn.disabled = true;
-  installBtn.textContent = '설치 중...';
+  installBtn.textContent = '폴더 선택 대기 중...';
   
   const skillsToInstall = [];
   for (let box of checkboxes) {
@@ -302,6 +369,19 @@ document.getElementById('sp-modal-install')?.addEventListener('click', async () 
   }
   
   if (skillsToInstall.length > 0) {
+    const count = getInstalledSkillsCount();
+    if (count + skillsToInstall.length >= 10 && currentSpAiType !== 'clipboard') {
+      const proceed = await showWarningModal();
+      if (!proceed) {
+        installBtn.disabled = false;
+        let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+                      currentSpAiType === 'cursor' ? 'Cursor에' : 
+                      currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
+        installBtn.textContent = `🚀 선택한 ${skillsToInstall.length}개 스킬 ${envName} 즉시 설치`;
+        return;
+      }
+    }
+    
     const success = await installSkillsBatchToAI(currentSpAiType, skillsToInstall);
     if (!success) {
       // 설치 실패 또는 취소 시 버튼 원상복구
@@ -316,6 +396,7 @@ document.getElementById('sp-modal-install')?.addEventListener('click', async () 
   
   document.getElementById('starter-pack-modal').style.display = 'none';
   renderMarketSkills();
+  updateSkillLoadIndicator();
 });
 
 
@@ -388,6 +469,8 @@ async function loadMarketplaceData() {
     if (btnSearch) {
       if (btnSearch) btnSearch.addEventListener('click', handleSearch);
     }
+    
+    updateSkillLoadIndicator();
   } catch (err) {
     console.error('스킬 데이터 로드 실패:', err);
     grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:2rem;display:flex;flex-direction:column;align-items:center;gap:1rem;"><div class="spinner"></div><div>로딩중입니다...</div></div>';
@@ -661,6 +744,7 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
       if (success) {
         showSkillDetail(skill, false, rating, badgeHtml, authorBadgeHtml, statusBadge, tagsHtml); // 새로고침
         renderMySkills();
+        updateSkillLoadIndicator();
       } else {
         uninstallBtn.disabled = false;
         uninstallBtn.innerHTML = '✅ 추가됨 (클릭하여 삭제)';
@@ -825,6 +909,7 @@ async function renderMySkills() {
       if (success) {
         renderMySkills();
         renderMarketSkills();
+        updateSkillLoadIndicator();
       } else {
         btnDel.disabled = false;
         btnDel.textContent = '삭제';
@@ -939,10 +1024,20 @@ document.getElementById('install-modal-close')?.addEventListener('click', () => 
 document.getElementById('install-modal-ok')?.addEventListener('click', async () => {
   if (!currentInstallSkill || !currentInstallAiType) return;
   document.getElementById('install-modal').style.display = 'none';
+
+  const count = getInstalledSkillsCount();
+  if (count >= 10 && currentInstallAiType !== 'clipboard') {
+    const proceed = await showWarningModal();
+    if (!proceed) {
+      return;
+    }
+  }
+
   const success = await installSkillToAI(currentInstallAiType, currentInstallSkill);
   if (success) {
     if (currentInstallSuccessCb) currentInstallSuccessCb();
     renderMarketSkills();
+    updateSkillLoadIndicator();
   }
 });
 

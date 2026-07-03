@@ -788,6 +788,21 @@ textarea.input-field {
   }
 }
 
+@keyframes progress-animation {
+  0% { background-position: 1rem 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes shakeWarning {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+  20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+.shake-animation {
+  animation: shakeWarning 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }

@@ -335,6 +335,18 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
               </button>
             </div>
             
+            {/* Onboarding Banner: What is a Skill? */}
+            <div className="bg-gradient-to-r from-fuchsia-50 to-cyan-50 dark:from-fuchsia-900/20 dark:to-cyan-900/20 border border-fuchsia-100 dark:border-fuchsia-500/30 rounded-2xl p-5 mb-6 flex items-start gap-4 shadow-sm dark:shadow-[0_0_15px_rgba(217,70,239,0.1)]">
+              <div className="text-3xl drop-shadow-sm dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] mt-1">💡</div>
+              <div>
+                <h3 className="text-base font-bold text-slate-800 dark:text-white mb-1 drop-shadow-sm dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.2)]">스킬(Skill)이 무엇인가요?</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  스킬은 AI에게 특정 분야의 업무 능력을 부여하는 <strong className="text-fuchsia-600 dark:text-fuchsia-400 drop-shadow-sm dark:drop-shadow-[0_0_5px_rgba(217,70,239,0.5)]">전문가 자격증</strong>과 같습니다. <br className="hidden sm:block" />
+                  원하는 스킬을 활성화하면, 슈퍼스킬 AI가 해당 분야의 실무 전문가처럼 특화된 맞춤형 결과물을 만들어 냅니다!
+                </p>
+              </div>
+            </div>
+
             {plan.type === 'BASIC' && (
               <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-500/50 text-blue-800 dark:text-blue-300 p-4 rounded-xl mb-6 flex justify-between items-center shadow-[0_0_15px_rgba(59,130,246,0.1)]">
                 <div className="text-sm">
