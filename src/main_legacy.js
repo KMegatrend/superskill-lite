@@ -132,6 +132,180 @@ const marketState = {
   recommendedIds: []
 };
 
+// ─── 스타터 팩 로직 ───
+const starterPacks = [
+  {
+    id: "pack-frontend",
+    title: "나만의 멋진 웹사이트 만들기 팩",
+    desc: "복잡한 코딩 없이, 그림을 그리듯 화면을 꾸미고 버튼을 누르면 작동하게 만들어주는 마법 같은 도구 모음입니다. 초보자도 10분 만에 멋진 화면을 만들 수 있어요!",
+    marketing: "초등학생도 따라할 수 있을 만큼 쉽게 내 홈페이지를 만들 수 있습니다! 이 팩을 선택하면 알아서 화면을 조립해주는 **React 스킬**과 예쁜 옷을 입혀주는 **디자인 스킬**이 한 번에 설치됩니다.",
+    skills: ["react-tutor", "tailwind-expert", "ui-ux-pro-max"]
+  },
+  {
+    id: "pack-data",
+    title: "똑똑한 데이터 탐정 팩",
+    desc: "어려운 숫자와 표 대신, AI가 알아서 데이터를 분석하고 예쁜 차트로 그려줍니다. 수학이나 엑셀을 몰라도 누구나 데이터를 읽어내는 탐정이 될 수 있어요!",
+    marketing: "숫자만 보면 머리가 아프신가요? 이 팩을 사용하면 복잡한 데이터 속에서 꼭 필요한 정보만 콕 집어주는 똑똑한 비서가 생깁니다. 데이터를 알아서 분석하는 **Python 스킬**과 방대한 자료를 1초만에 검색하는 **SQL 마법사**가 함께 설치됩니다.",
+    skills: ["python-auto", "sql-maker"]
+  }
+];
+
+function renderStarterPacks() {
+  const container = document.getElementById('starter-packs-container');
+  const section = document.getElementById('starter-packs-section');
+  if (!container || !section) return;
+  
+  // 전체보기 & 검색어 없을 때만 보이기
+  if (marketState.activeCategory !== 'all' || marketState.searchQuery !== '') {
+    section.style.display = 'none';
+    return;
+  }
+  
+  container.innerHTML = starterPacks.map(pack => `
+    <div class="market-card" style="border: 2px solid #8b5cf6; cursor: pointer; display: flex; flex-direction: column; height: 100%; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);" onclick="openStarterPackModal('${pack.id}')" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1)); padding: 1.5rem; border-radius: 12px 12px 0 0; border-bottom: 1px solid rgba(139, 92, 246, 0.2); flex-shrink: 0;">
+        <h4 style="font-size: 1.3rem; font-weight: 800; color: var(--accent-indigo); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
+          <span>🎁</span> ${pack.title}
+        </h4>
+        <p style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; margin: 0; word-break: keep-all;">${pack.desc}</p>
+      </div>
+      <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-weight: bold; color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.8rem;">📦 핵심 스킬 (${pack.skills.length}개)</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+            ${pack.skills.map(skillId => {
+              const skillData = marketState.data.skills.find(s => s.id === skillId);
+              const skillName = skillData ? skillData.name : skillId;
+              return \`<span class="market-tag">#\${skillName}</span>\`;
+            }).join('')}
+          </div>
+        </div>
+        <button class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; padding: 1rem; font-size: 1.05rem;">✨ 마법의 패키지 열어보기</button>
+      </div>
+    </div>
+  `).join('');
+  
+  section.style.display = 'block';
+}
+
+let currentStarterPack = null;
+let currentSpAiType = null;
+
+window.openStarterPackModal = function(packId) {
+  const pack = starterPacks.find(p => p.id === packId);
+  if (!pack) return;
+  currentStarterPack = pack;
+  currentSpAiType = null;
+  
+  document.getElementById('sp-modal-title').textContent = pack.title;
+  document.getElementById('sp-modal-desc').textContent = pack.desc;
+  
+  // 마케팅 문구 볼드처리 렌더링
+  const mkHtml = pack.marketing.replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>');
+  document.getElementById('sp-modal-marketing').innerHTML = mkHtml;
+  
+  // 스킬 리스트
+  const skillsContainer = document.getElementById('sp-modal-skills');
+  skillsContainer.innerHTML = pack.skills.map(skillId => {
+    const skillData = marketState.data.skills.find(s => s.id === skillId);
+    if (!skillData) return '';
+    return \`
+      <label style="display: flex; align-items: flex-start; gap: 12px; background: var(--bg-card); padding: 1rem; border: 1px solid var(--border-primary); border-radius: 8px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-indigo)'" onmouseout="this.style.borderColor='var(--border-primary)'">
+        <input type="checkbox" class="sp-skill-checkbox" value="\${skillId}" checked style="margin-top: 4px; width: 18px; height: 18px; cursor: pointer;">
+        <div>
+          <div style="font-weight: bold; color: var(--text-primary); font-size: 1.05rem; margin-bottom: 4px;">\${skillData.name}</div>
+          <div style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.4;">\${skillData.description}</div>
+        </div>
+      </label>
+    \`;
+  }).join('');
+  
+  // 버튼 초기화
+  document.querySelectorAll('.sp-ai-btn').forEach(btn => {
+    btn.style.borderColor = 'transparent';
+    btn.style.background = 'var(--bg-secondary)';
+  });
+  const installBtn = document.getElementById('sp-modal-install');
+  installBtn.disabled = true;
+  installBtn.style.background = 'var(--bg-secondary)';
+  installBtn.style.color = 'var(--text-muted)';
+  installBtn.textContent = '어디에 설치할지 선택해주세요';
+  
+  document.getElementById('starter-pack-modal').style.display = 'flex';
+};
+
+document.querySelectorAll('.sp-ai-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sp-ai-btn').forEach(b => {
+      b.style.borderColor = 'transparent';
+      b.style.background = 'var(--bg-secondary)';
+    });
+    btn.style.borderColor = 'var(--accent-indigo)';
+    btn.style.background = 'rgba(99, 102, 241, 0.1)';
+    
+    currentSpAiType = btn.dataset.ai;
+    
+    const installBtn = document.getElementById('sp-modal-install');
+    installBtn.disabled = false;
+    installBtn.style.background = 'linear-gradient(135deg, #3b82f6, #a855f7)';
+    installBtn.style.color = 'white';
+    
+    const selectedCount = document.querySelectorAll('.sp-skill-checkbox:checked').length;
+    let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+                  currentSpAiType === 'cursor' ? 'Cursor에' : 
+                  currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
+    installBtn.textContent = \`🚀 선택한 \${selectedCount}개 스킬 \${envName} 즉시 설치\`;
+  });
+});
+
+document.addEventListener('change', (e) => {
+  if (e.target.classList.contains('sp-skill-checkbox')) {
+    if (currentSpAiType) {
+      const selectedCount = document.querySelectorAll('.sp-skill-checkbox:checked').length;
+      let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+                    currentSpAiType === 'cursor' ? 'Cursor에' : 
+                    currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
+      document.getElementById('sp-modal-install').textContent = \`🚀 선택한 \${selectedCount}개 스킬 \${envName} 즉시 설치\`;
+    }
+  }
+});
+
+document.getElementById('starter-pack-close')?.addEventListener('click', () => {
+  document.getElementById('starter-pack-modal').style.display = 'none';
+});
+document.getElementById('sp-modal-cancel')?.addEventListener('click', () => {
+  document.getElementById('starter-pack-modal').style.display = 'none';
+});
+document.getElementById('starter-pack-backdrop')?.addEventListener('click', () => {
+  document.getElementById('starter-pack-modal').style.display = 'none';
+});
+
+document.getElementById('sp-modal-install')?.addEventListener('click', async () => {
+  if (!currentStarterPack || !currentSpAiType) return;
+  const checkboxes = document.querySelectorAll('.sp-skill-checkbox:checked');
+  if (checkboxes.length === 0) {
+    alert('설치할 스킬을 하나 이상 선택해주세요.');
+    return;
+  }
+  
+  const installBtn = document.getElementById('sp-modal-install');
+  installBtn.disabled = true;
+  installBtn.textContent = '설치 중...';
+  
+  for (let box of checkboxes) {
+    const skillId = box.value;
+    const skillData = marketState.data.skills.find(s => s.id === skillId);
+    if (skillData) {
+      await installSkillToAI(currentSpAiType, skillData);
+    }
+  }
+  
+  document.getElementById('starter-pack-modal').style.display = 'none';
+  renderMarketSkills();
+  showCustomAlert('🎁 스타터 팩 설치가 완료되었습니다!');
+});
+
+
 // 1. JSON에서 데이터 로드
 async function loadMarketplaceData() {
   const grid = document.getElementById('market-skill-grid');
@@ -162,6 +336,7 @@ async function loadMarketplaceData() {
 
     renderCategories();
     renderMarketSkills();
+    renderStarterPacks();
 
     if (highlightParam) {
       const targetSkill = data.skills.find(s => s.id === highlightParam);
@@ -230,6 +405,7 @@ function renderCategories() {
       marketState.activeCategory = el.dataset.id;
       // 카테고리를 직접 클릭했다는 것은 추천 필터를 해제하고 전체를 보겠다는 의미이므로 초기화
       marketState.recommendedIds = [];
+      renderStarterPacks();
       renderMarketSkills();
     });
   });
@@ -662,6 +838,7 @@ if (searchInput) {
       marketState.activeCategory = 'all'; // 검색 시 무조건 전체 카테고리에서 찾기
       renderCategories(); // 탭 UI 업데이트
     }
+    renderStarterPacks();
     renderMarketSkills();
   });
 }

@@ -55,6 +55,19 @@
             </div>
           </div>
           
+          <!-- Starter Packs Section -->
+          <div id="starter-packs-section" style="display: none; margin-bottom: 3rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem;">
+              <div>
+                <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.3rem;">🎁 초보자를 위한 맞춤형 스타터 팩</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">어떤 것부터 설치해야 할지 막막하신가요? 목적에 꼭 맞는 필수 스킬들만 모아둔 팩을 클릭해보세요!</p>
+              </div>
+            </div>
+            <div id="starter-packs-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+              <!-- Starter Packs injected here -->
+            </div>
+          </div>
+
           <!-- Top Picks Section (Shown only in "All" view) -->
           <div id="top-picks-section" style="display: none; margin-bottom: 2rem;">
             <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-indigo);">🔥 주간 Top Picks</h3>
@@ -316,7 +329,69 @@
       </div>
     </div>
 
+    <!-- ═══ Starter Pack Detail Modal ═══ -->
+    <div id="starter-pack-modal" class="install-modal" style="display:none;" role="dialog" aria-modal="true">
+      <div class="install-modal-backdrop" id="starter-pack-backdrop"></div>
+      <div class="install-modal-box" style="max-width: 650px; width: 95%;">
+        <!-- header -->
+        <div class="install-modal-header" style="border-bottom: 1px solid var(--border-primary); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <div id="sp-modal-icon" style="font-size: 2.5rem; background: var(--bg-secondary); border-radius: 12px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">🎁</div>
+              <div>
+                <h3 id="sp-modal-title" style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.4rem 0;">스타터 팩 이름</h3>
+                <p id="sp-modal-desc" style="color: var(--text-secondary); margin: 0; font-size: 0.95rem; line-height: 1.4; word-break: keep-all;"></p>
+              </div>
+            </div>
+            <button class="install-modal-close" id="starter-pack-close" style="font-size: 1.5rem;">✕</button>
+          </div>
+        </div>
 
+        <!-- body -->
+        <div class="install-modal-body">
+          <div style="background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px; padding: 1.2rem; margin-bottom: 1.5rem;">
+            <strong style="color: #3b82f6; display: flex; align-items: center; gap: 8px; font-size: 1.05rem; margin-bottom: 0.8rem;">
+              <span>💡</span> 이 팩을 선택하면 얻게 되는 엄청난 변화!
+            </strong>
+            <div id="sp-modal-marketing" style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; word-break: keep-all;"></div>
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); display: flex; align-items: center; justify-content: space-between;">
+            <span>📦 패키지에 포함된 핵심 스킬</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">*원치 않는 스킬은 체크 해제 가능합니다.</span>
+          </h4>
+          <div id="sp-modal-skills" style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
+            <!-- Skills injected here -->
+          </div>
+
+          <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary);">🚀 어디에 바로 설치하시겠어요?</h4>
+          <div class="preset-btns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px;" id="sp-ai-selector">
+            <button class="preset-btn sp-ai-btn" data-ai="clipboard" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <span style="font-size: 1.5rem;">📋</span>
+              <span style="font-weight: bold; color: var(--text-primary);">웹 복사</span>
+            </button>
+            <button class="preset-btn sp-ai-btn" data-ai="cursor" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <img src="/assets/cursor-logo.png" width="24" height="24">
+              <span style="font-weight: bold; color: var(--text-primary);">Cursor</span>
+            </button>
+            <button class="preset-btn sp-ai-btn" data-ai="windsurf" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <img src="/assets/windsurf-logo.png" width="28" height="28">
+              <span style="font-weight: bold; color: var(--text-primary);">Windsurf</span>
+            </button>
+            <button class="preset-btn sp-ai-btn" data-ai="copilot" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <img src="/assets/copilot-logo.svg" width="24" height="24">
+              <span style="font-weight: bold; color: var(--text-primary);">Copilot</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div class="install-modal-footer" style="display: flex; gap: 10px; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-primary);">
+          <button class="btn btn-secondary" id="sp-modal-cancel" style="flex: 1; padding: 14px;">취소</button>
+          <button class="btn btn-primary" id="sp-modal-install" style="flex: 2; padding: 14px; background: var(--bg-secondary); color: var(--text-muted); border: none; font-weight: bold; font-size: 1.05rem; transition: all 0.2s;" disabled>어디에 설치할지 선택해주세요</button>
+        </div>
+      </div>
+    </div>
 
   <script type="module" src="/src/main_legacy.js"></script>
 
