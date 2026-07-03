@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
+import { LayoutDashboard, Wrench, CreditCard, Bot, Settings, Headphones, Crown, ShoppingCart, Home, LogOut } from 'lucide-react';
 
 const INITIAL_SKILLS = [
   { id: 1, name: 'ui-ux-pro-max', category: 'Designer Pack', usage: 14, status: true },
@@ -267,37 +268,54 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
         return (
           <>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-                <h3 className="text-slate-500 text-sm font-semibold mb-2">활성화된 스킬</h3>
-                <p className="text-3xl font-black text-slate-900 m-0">{activeSkillCount}<span className="text-lg font-semibold text-slate-400 ml-1">개</span></p>
+              <div className="bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-default relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <LayoutDashboard size={80} />
+                </div>
+                <h3 className="text-slate-500 text-sm font-semibold mb-2 flex items-center gap-2">
+                  <Wrench size={16} className="text-blue-500" /> 활성화된 스킬
+                </h3>
+                <p className="text-3xl font-black bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent m-0">{activeSkillCount}<span className="text-lg font-semibold text-slate-400 ml-1">개</span></p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-                <h3 className="text-slate-500 text-sm font-semibold mb-2">이번 달 사용량</h3>
-                <p className="text-3xl font-black text-slate-900 m-0">{totalUsage}<span className="text-lg font-semibold text-slate-400 ml-1">회</span></p>
+              <div className="bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-default relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <Bot size={80} />
+                </div>
+                <h3 className="text-slate-500 text-sm font-semibold mb-2 flex items-center gap-2">
+                  <LayoutDashboard size={16} className="text-indigo-500" /> 이번 달 사용량
+                </h3>
+                <p className="text-3xl font-black bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent m-0">{totalUsage}<span className="text-lg font-semibold text-slate-400 ml-1">회</span></p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-                <h3 className="text-slate-500 text-sm font-semibold mb-2">멤버십 등급</h3>
-                <p className={`text-xl font-black m-0 mt-1 ${plan.type === 'PRO' ? 'text-blue-600' : 'text-slate-600'}`}>
-                  {plan.type} Plan
+              <div className="bg-white/60 backdrop-blur-md p-6 rounded-2xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 group cursor-default relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
+                  <Crown size={80} />
+                </div>
+                <h3 className="text-slate-500 text-sm font-semibold mb-2 flex items-center gap-2">
+                  <CreditCard size={16} className="text-purple-500" /> 멤버십 등급
+                </h3>
+                <p className={`text-xl font-black m-0 mt-1 flex items-center gap-2 ${plan.type === 'PRO' ? 'text-blue-600' : 'text-slate-600'}`}>
+                  {plan.type === 'PRO' && <Crown size={20} className="text-blue-500" />} {plan.type} Plan
                 </p>
               </div>
             </div>
 
-            <h2 className="text-xl font-bold text-slate-900 mb-4">최근 사용 내역</h2>
-            <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-              <div className="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <Bot size={20} className="text-indigo-500" /> 최근 사용 내역
+            </h2>
+            <div className="bg-white/60 backdrop-blur-md border border-white/60 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+              <div className="p-4 border-b border-white/40 flex justify-between items-center bg-white/40 hover:bg-white/60 transition-colors duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <span className="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded">react-patterns</span>
-                  <span className="text-sm text-slate-600 font-medium">로그인 페이지 리팩토링</span>
+                  <span className="bg-blue-100/80 text-blue-600 text-xs font-bold px-2.5 py-1.5 rounded-md shadow-sm border border-blue-200/50">react-patterns</span>
+                  <span className="text-sm text-slate-700 font-medium group-hover:text-blue-700 transition-colors">로그인 페이지 리팩토링</span>
                 </div>
-                <span className="text-xs text-slate-400 font-semibold">10분 전</span>
+                <span className="text-xs text-slate-400 font-semibold bg-white/50 px-2 py-1 rounded-full">10분 전</span>
               </div>
-              <div className="p-4 flex justify-between items-center bg-slate-50/50">
+              <div className="p-4 flex justify-between items-center bg-white/40 hover:bg-white/60 transition-colors duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <span className="bg-purple-100 text-purple-600 text-xs font-bold px-2 py-1 rounded">ui-ux-pro-max</span>
-                  <span className="text-sm text-slate-600 font-medium">대시보드 와이어프레임 디자인</span>
+                  <span className="bg-purple-100/80 text-purple-600 text-xs font-bold px-2.5 py-1.5 rounded-md shadow-sm border border-purple-200/50">ui-ux-pro-max</span>
+                  <span className="text-sm text-slate-700 font-medium group-hover:text-purple-700 transition-colors">대시보드 와이어프레임 디자인</span>
                 </div>
-                <span className="text-xs text-slate-400 font-semibold">2시간 전</span>
+                <span className="text-xs text-slate-400 font-semibold bg-white/50 px-2 py-1 rounded-full">2시간 전</span>
               </div>
             </div>
           </>
@@ -728,100 +746,100 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-purple-50/20 flex flex-col md:flex-row relative">
       {/* Sidebar */}
-      <aside className="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-slate-200 flex flex-col static md:fixed h-auto md:h-full z-10">
-        <div className="p-6 border-b border-slate-200">
+      <aside className="w-full md:w-64 bg-white/70 backdrop-blur-xl border-b md:border-b-0 md:border-r border-white/50 shadow-[4px_0_24px_rgba(0,0,0,0.02)] flex flex-col static md:fixed h-auto md:h-full z-20">
+        <div className="p-6 border-b border-white/50">
           <div className="text-xl font-extrabold tracking-tight flex items-center gap-2 text-slate-900">
-            <div className="bg-blue-500 text-white w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-black">AI</div>
+            <div className="bg-gradient-to-br from-blue-500 to-indigo-600 shadow-md text-white w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-black">AI</div>
             Super <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Skill</span>
           </div>
         </div>
         <nav className="flex-1 p-4 flex flex-row md:flex-col gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
           <button 
             onClick={() => setActiveTab('home')}
-            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'home' ? 'bg-blue-50 text-blue-600' : 'text-slate-600 hover:bg-slate-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 ${activeTab === 'home' ? 'bg-blue-50 text-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.15)]' : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900'}`}
           >
-            <span>📊</span> 대시보드 홈
+            <LayoutDashboard size={18} className={activeTab === 'home' ? 'text-blue-500' : 'text-slate-400'} /> 대시보드 홈
           </button>
           <button 
             onClick={() => setActiveTab('skills')}
-            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'skills' ? 'bg-blue-50 text-blue-600' : 'text-slate-600 hover:bg-slate-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 ${activeTab === 'skills' ? 'bg-blue-50 text-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.15)]' : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900'}`}
           >
-            <span>🎨</span> 내 스킬 관리
+            <Wrench size={18} className={activeTab === 'skills' ? 'text-blue-500' : 'text-slate-400'} /> 내 스킬 관리
           </button>
           <button 
             onClick={() => setActiveTab('billing')}
-            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'billing' ? 'bg-blue-50 text-blue-600' : 'text-slate-600 hover:bg-slate-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 ${activeTab === 'billing' ? 'bg-blue-50 text-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.15)]' : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900'}`}
           >
-            <span>💳</span> 결제 및 구독
+            <CreditCard size={18} className={activeTab === 'billing' ? 'text-blue-500' : 'text-slate-400'} /> 결제 및 구독
           </button>
           <button 
             onClick={() => setActiveTab('ai-settings')}
-            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'ai-settings' ? 'bg-blue-50 text-blue-600' : 'text-slate-600 hover:bg-slate-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 ${activeTab === 'ai-settings' ? 'bg-blue-50 text-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.15)]' : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900'}`}
           >
-            <span>🤖</span> AI 설정
+            <Bot size={18} className={activeTab === 'ai-settings' ? 'text-blue-500' : 'text-slate-400'} /> AI 설정
           </button>
           <button 
             onClick={() => setActiveTab('account')}
-            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'account' ? 'bg-blue-50 text-blue-600' : 'text-slate-600 hover:bg-slate-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 ${activeTab === 'account' ? 'bg-blue-50 text-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.15)]' : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900'}`}
           >
-            <span>⚙️</span> 계정 설정
+            <Settings size={18} className={activeTab === 'account' ? 'text-blue-500' : 'text-slate-400'} /> 계정 설정
           </button>
-
           <button 
             onClick={() => setActiveTab('support')}
-            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors ${activeTab === 'support' ? 'bg-orange-50 text-orange-600' : 'text-slate-600 hover:bg-slate-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 ${activeTab === 'support' ? 'bg-orange-50 text-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.15)]' : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900'}`}
           >
-            <span>🎧</span> 고객센터
+            <Headphones size={18} className={activeTab === 'support' ? 'text-orange-500' : 'text-slate-400'} /> 고객센터
           </button>
         </nav>
-        <div className="p-4 border-t border-slate-200 flex flex-row md:flex-col gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
+        <div className="p-4 border-t border-white/50 flex flex-row md:flex-col gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
           {typeof localStorage !== 'undefined' && localStorage.getItem('site_role') === 'master' && (
             <button 
               onClick={onAdmin}
-              className="flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors text-slate-600 hover:bg-slate-50 md:mt-2 bg-blue-50/50 hover:bg-blue-50"
+              className="flex items-center gap-3 px-4 py-3 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 text-slate-600 hover:bg-slate-50/80 md:mt-2 bg-blue-50/30 hover:bg-blue-50/60"
             >
-              <span>👑</span> 마스터 관리자 패널
+              <Crown size={18} className="text-amber-500" /> 마스터 관리자 패널
             </button>
           )}
           <button 
             onClick={onMarketplace}
-            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors md:mb-2 whitespace-nowrap"
+            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-indigo-50/80 hover:bg-indigo-100 text-indigo-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 md:mb-2 whitespace-nowrap shadow-sm"
           >
-            🛒 마켓플레이스
+            <ShoppingCart size={16} /> 마켓플레이스
           </button>
           <button 
             onClick={() => window.location.href = '/'}
-            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-blue-50 hover:bg-blue-100 text-blue-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors md:mb-2 whitespace-nowrap"
+            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-blue-50/80 hover:bg-blue-100 text-blue-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 md:mb-2 whitespace-nowrap shadow-sm"
           >
-            랜딩 페이지로
+            <Home size={16} /> 랜딩 페이지로
           </button>
           <button 
             onClick={onSignOut}
-            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-colors whitespace-nowrap"
+            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-3 bg-slate-100/50 hover:bg-slate-200 text-slate-600 font-bold rounded-xl text-sm border-none cursor-pointer transition-all duration-300 whitespace-nowrap"
           >
-            로그아웃
+            <LogOut size={16} /> 로그아웃
           </button>
         </div>
       </aside>
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col ml-0 md:ml-64 min-h-screen">
-        <header className="bg-white border-b border-slate-200 px-4 md:px-8 py-5 flex justify-between items-center sticky top-0 z-10 flex-wrap gap-4">
+        <header className="bg-white/60 backdrop-blur-xl border-b border-white/50 px-4 md:px-8 py-5 flex justify-between items-center sticky top-0 z-10 flex-wrap gap-4 shadow-sm">
           <h1 className="text-xl md:text-2xl font-extrabold text-slate-900 m-0">
             {activeTab === 'home' && '대시보드 홈'}
             {activeTab === 'skills' && '내 스킬 관리'}
             {activeTab === 'billing' && '결제 및 구독'}
             {activeTab === 'ai-settings' && 'AI 설정'}
             {activeTab === 'account' && '계정 설정'}
+            {activeTab === 'support' && '고객센터'}
           </h1>
           <div className="flex items-center gap-4">
             <span className="text-sm font-semibold text-slate-500 cursor-pointer hover:text-slate-800 transition-colors">이용약관</span>
             <div className="h-4 w-px bg-slate-300"></div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-bold text-slate-700">{profile.name}</span>
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 text-white flex items-center justify-center font-black text-sm shadow-md cursor-pointer hover:shadow-lg transition-shadow uppercase">
+            <div className="flex items-center gap-3 group cursor-pointer">
+              <span className="text-sm font-bold text-slate-700 group-hover:text-blue-600 transition-colors">{profile.name}</span>
+              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white flex items-center justify-center font-black text-sm shadow-md group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all uppercase ring-2 ring-white/50">
                 {profile.name.charAt(0)}
               </div>
             </div>
