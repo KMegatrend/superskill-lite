@@ -59,23 +59,32 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
     const fetchData = async () => {
       try {
         // 1. Fetch user profile from API
-        const res = await fetch('/api/user-data');
-        const json = await res.json();
-        
-        const localPlanStr = localStorage.getItem('user_plan');
-        const localPlan = localPlanStr ? JSON.parse(localPlanStr) : null;
+        try {
+          const res = await fetch('/api/user-data');
+          if (res.ok) {
+            const json = await res.json();
+            const localPlanStr = localStorage.getItem('user_plan');
+            const localPlan = localPlanStr ? JSON.parse(localPlanStr) : null;
 
-        if (json.success && json.data) {
-          if (json.userId) setUserId(json.userId);
-          if (json.data.profile && Object.keys(json.data.profile).length > 0) setProfile(json.data.profile);
-          
-          if (json.data.plan && Object.keys(json.data.plan).length > 0 && json.data.plan.type !== 'BASIC') {
-            setPlan(json.data.plan);
-          } else if (localPlan) {
-            setPlan(localPlan);
+            if (json.success && json.data) {
+              if (json.userId) setUserId(json.userId);
+              if (json.data.profile && Object.keys(json.data.profile).length > 0) setProfile(json.data.profile);
+              
+              if (json.data.plan && Object.keys(json.data.plan).length > 0 && json.data.plan.type !== 'BASIC') {
+                setPlan(json.data.plan);
+              } else if (localPlan) {
+                setPlan(localPlan);
+              }
+            } else if (localPlan) {
+               setPlan(localPlan);
+            }
+          } else {
+            throw new Error('API fetch not ok');
           }
-        } else if (localPlan) {
-           setPlan(localPlan);
+        } catch (apiErr) {
+          console.warn('API fetch failed, falling back to local user data', apiErr);
+          const localPlanStr = localStorage.getItem('user_plan');
+          if (localPlanStr) setPlan(JSON.parse(localPlanStr));
         }
 
         // 2. Sync Skills from Local Storage & Registry (Marketplace Sync)

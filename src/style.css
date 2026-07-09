@@ -1177,7 +1177,7 @@ textarea.input-field {
   display: flex;
   flex-direction: column;
   margin: var(--space-md);
-  background: var(--bg-secondary);
+  background: #0c0c14;
   border: 1px solid var(--border-hover);
   border-radius: var(--radius-xl);
   overflow: hidden;

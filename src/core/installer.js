@@ -15,7 +15,7 @@ export function showCustomAlert(message, title = '알림', icon = '💡') {
       modal.className = 'install-modal';
       modal.style.cssText = 'display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);';
       modal.innerHTML = `
-        <div class="install-modal-box" style="max-width: 450px; width: 90%; background: var(--bg-card); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); padding: 2rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div class="install-modal-box" style="max-width: 450px; width: 90%; background: #0c0c14; border: 1px solid var(--border-primary); border-radius: var(--radius-lg); padding: 2rem; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
           <div class="modal-icon" style="font-size: 3rem; margin-bottom: 1rem;">${icon}</div>
           <h3 class="modal-title" style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem;">${title}</h3>
           <p class="modal-message" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; word-break: keep-all; margin-bottom: 1.5rem; white-space: pre-line;">${message}</p>

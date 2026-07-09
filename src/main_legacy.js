@@ -247,7 +247,7 @@ function renderStarterPacks() {
             }).join('')}
           </div>
         </div>
-        <button class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; padding: 1rem; font-size: 1.05rem;">✨ 마법의 패키지 열어보기</button>
+        <button class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; padding: 1rem; font-size: 1.05rem;">✨ 슈퍼 패키지 열어보기</button>
       </div>
     </div>
   `).join('');
