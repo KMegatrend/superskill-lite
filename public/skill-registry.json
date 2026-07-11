@@ -338,8 +338,8 @@
     },
     {
       "id": "claude-code-superpower",
-      "name": "클로드 코드(Claude Code) 클론",
-      "description": "일반 LLM을 자율적인 에이전트(Agentic AI)로 각성시킵니다. 터미널 명령어를 실행하고, 파일을 탐색하며 스스로 에러를 디버깅하는 능력을 부여합니다.",
+      "name": "자율형 AI 에이전트 각성 팩 (Claude Code Edition)",
+      "description": "일반 AI를 스스로 터미널을 조작하고 에러를 디버깅하는 '최상위 자율형 에이전트'로 진화시킵니다. Claude Code의 강력한 자율 루프 성능을 경험하세요.",
       "author": "AI Super Skill",
       "version": "1.0.0",
       "categoryId": "dev",

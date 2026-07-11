@@ -2294,8 +2294,8 @@
     },
     {
       "id": "claude-code-superpower",
-      "name": "클로드 코드(Claude Code) 클론",
-      "description": "일반 LLM을 자율적인 에이전트(Agentic AI)로 각성시킵니다. 터미널 명령어를 실행하고, 파일을 탐색하며 스스로 에러를 디버깅하는 능력을 부여합니다.",
+      "name": "자율형 AI 에이전트 각성 팩 (Claude Code Edition)",
+      "description": "일반 AI를 스스로 터미널을 조작하고 에러를 디버깅하는 '최상위 자율형 에이전트'로 진화시킵니다. Claude Code의 강력한 자율 루프 성능을 경험하세요.",
       "author": "AI Super Skill",
       "version": "1.0.0",
       "categoryId": "dev",
@@ -2307,7 +2307,7 @@
       ],
       "downloads": 125,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite",
-      "skillContent": "---\nname: \"클로드 코드(Claude Code) 클론\"\n---\n# 🚀 Claude Code Superpower (Agentic AI Developer)\n\n## 📌 이 스킬의 목적\n이 스킬은 평범한 대화형 LLM을 터미널 접근, 파일 탐색, 코드 수정 및 자동 디버깅 능력을 갖춘 완벽한 자율형 에이전트(Agentic AI)로 각성시킵니다.\n\n## 🎯 핵심 규칙 (Core Rules)\n1. **자율적 루프 (Agentic Loop)**: 에러가 발생하면 멈추지 마세요. 사용자의 지시를 기다리지 말고, 스스로 `run_command` 나 `read_file` 도구를 사용해 에러 로그를 분석하고 즉시 코드를 수정하여 다시 테스트하세요.\n2. **도구 활용 (Tool Usage)**: \n   - `run_command`: bash 명령어를 통해 스크립트를 실행하거나 서버를 띄우세요.\n   - `grep_search`: 프로젝트 내에서 함수명이나 클래스를 검색하세요.\n   - `replace_file_content`: 코드의 일부분을 안전하게 수정하세요.\n3. **컨텍스트 유지**: 코드를 수정하기 전, 항상 기존 코드의 구조를 읽어보고(`view_file`) 파악한 뒤에 작업하세요.\n\n## 🛠️ 도구 정의 (Tools)\n이 스킬과 함께 제공되는 `tools.json`에는 터미널 제어 및 파일 시스템 접근 권한이 정의되어 있습니다. 이를 통해 IDE 내부에서 직접 코드를 조작하세요.\n"
+      "skillContent": "---\nname: \"자율형 AI 에이전트 각성 팩 (Claude Code Edition)\"\n---\n# 🚀 Autonomous Agent Awakening Pack (Claude Code Edition)\n\n*\"당신의 수동적인 AI를 스스로 생각하고 움직이는 능동적인 시니어 개발자로 진화시키세요.\"*\n\n## 🌟 스킬 오버뷰 (Skill Overview)\n이 스킬 팩은 일반적인 대화형 LLM을 **Anthropic의 Claude Code CLI**와 유사한 수준의 **자율형 에이전트(Agentic AI)**로 각성시키는 현존하는 가장 강력한 프롬프트 엔지니어링 패키지입니다. 단 한 번의 설치로 귀하의 IDE(Cursor, Windsurf 등) AI가 터미널 접근, 파일 탐색, 코드 수정 및 무한 디버깅 루프 능력을 획득합니다.\n\n## ⚡ 3대 슈퍼파워 (Core Superpowers)\n\n### 1. 🔄 무한 자율 디버깅 루프 (Infinite Agentic Loop)\n에러가 발생해도 더 이상 멈추지 않습니다. AI가 스스로 터미널 명령어(`run_command`)를 실행하여 로그를 읽고, 원인을 분석한 뒤 코드를 고치고 다시 테스트하는 완벽한 자율 루프를 실행합니다. 사용자는 그저 \"해결해 줘\" 한 마디면 충분합니다.\n\n### 2. 🗄️ 프로젝트 전체 맥락 인지 (Deep Context Awareness)\n단순히 열려있는 파일만 보지 않습니다. `grep_search`와 `view_file` 도구를 능동적으로 활용하여, 프로젝트 전체의 아키텍처와 연관된 함수들을 스스로 탐색하고 완벽한 맥락 속에서 안전하게 코드를 수정(`replace_file_content`)합니다.\n\n### 3. 💻 로컬 터미널 완벽 제어 (Terminal Mastery)\n서버 실행, 패키지 설치, 빌드 스크립트 실행까지. 번거로운 터미널 작업들을 AI에게 위임하세요. 터미널의 출력값을 스스로 읽고 다음 행동을 결정하는 진정한 의미의 'AI 페어 프로그래머'를 경험할 수 있습니다.\n\n## 🎯 도입 시 기대 효과\n- **생산성 300% 향상**: 에러 로그를 복사해서 붙여넣는 불필요한 반복 작업이 완전히 사라집니다.\n- **주니어에서 시니어로**: 에러의 근본 원인을 파악하고 구조적으로 해결하는 시니어급 문제 해결 능력을 얻습니다.\n- **Claude Code 70% 성능 체감**: 무겁고 복잡한 CLI 소프트웨어 설치 없이, 가벼운 마크다운 파일 하나로 클로드 코드의 핵심 철학과 에이전틱 성능을 즉시 누릴 수 있습니다.\n\n> **💡 사용 팁:** 이 스킬은 터미널 제어 권한이 활성화된 최신 AI IDE 환경에서 가장 강력한 성능을 발휘합니다.\n"
     }
   ]
 }
