@@ -772,9 +772,13 @@ export default function Dashboard({ onSignOut, onAdmin, onMarketplace }) {
       {/* Sidebar */}
       <aside className="w-full md:w-64 bg-white/80 dark:bg-slate-900/50 backdrop-blur-xl border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 shadow-[4px_0_24px_rgba(0,0,0,0.1)] dark:shadow-[4px_0_24px_rgba(0,0,0,0.5)] flex flex-col static md:fixed h-auto md:h-full z-20 transition-colors duration-300">
         <div className="p-6 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
-          <div className="text-xl font-extrabold tracking-tight flex items-center gap-2 text-slate-900 dark:text-white">
-            <div className="bg-gradient-to-br from-cyan-400 to-blue-600 shadow-[0_0_15px_rgba(34,211,238,0.5)] text-white dark:text-slate-950 w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-black">AI</div>
-            Super <span className="bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]">Skill</span>
+          <div className="flex items-center">
+            <img 
+              src={isDarkMode ? "/logo_superskill_white.svg" : "/logo_superskill_black.svg"} 
+              alt="AI Super Skill Logo" 
+              className="w-[140px] h-[50px] object-contain" 
+              style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', WebkitFontSmoothing: 'antialiased' }} 
+            />
           </div>
         </div>
         <nav className="flex-1 p-4 flex flex-row md:flex-col gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
