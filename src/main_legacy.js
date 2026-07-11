@@ -883,7 +883,7 @@ async function renderMySkills() {
     const skill = marketState.data.skills.find(s => s.id === id) || { id, name: id, description: 'Unknown Skill' };
     
     const row = document.createElement('div');
-    row.style.cssText = 'padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-primary); display: grid; grid-template-columns: 2fr 1fr 80px; align-items: center;';
+    row.style.cssText = 'padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-primary); display: grid; grid-template-columns: 4fr 1fr 80px; align-items: center;';
     
     // Name col
     const nameCol = document.createElement('div');
@@ -892,7 +892,6 @@ async function renderMySkills() {
     // AI col
     const aiCol = document.createElement('div');
     aiCol.style.color = 'var(--accent-indigo)';
-    aiCol.style.textAlign = 'center';
     aiCol.innerHTML = `<span>${aiType}</span>`;
     
     // Action col
