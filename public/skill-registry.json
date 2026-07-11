@@ -45,6 +45,134 @@
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
     {
+      "id": "multi-agent-orchestrator",
+      "name": "👑 [최상위] 멀티 에이전트 오케스트레이터 (팀장 AI)",
+      "description": "복잡한 프로젝트를 기획/디자인/개발 에이전트로 역할을 쪼개고 작업 지시서를 만들어 병렬로 업무를 처리하는 팀장급 AI입니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "dev",
+      "tags": [
+        "에이전트",
+        "팀장",
+        "자동화",
+        "기획"
+      ],
+      "downloads": 999998,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "skill-qa-tester",
+      "name": "⚖️ [검증관] 스킬/프롬프트 품질 보증 AI",
+      "description": "새로 만든 프롬프트나 스킬이 잘 작동하는지 평가하고, 극단적인 예외 상황(Edge Case)을 던져 버그를 잡아내는 LLM-as-a-Judge AI입니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "dev",
+      "tags": [
+        "QA",
+        "테스트",
+        "검증",
+        "프롬프트엔지니어링"
+      ],
+      "downloads": 999997,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "excel-macro-wizard",
+      "name": "📗 엑셀/구글시트 매크로 함수 마법사",
+      "description": "1시간 걸리던 엑셀 노가다를 1초 만에 끝내주는 복잡한 VLOOKUP, INDEX/MATCH 함수와 앱스스크립트를 짜줍니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "life",
+      "tags": [
+        "엑셀",
+        "스프레드시트",
+        "업무자동화",
+        "직장인"
+      ],
+      "downloads": 125000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "notion-architect",
+      "name": "🧠 완벽한 세컨드 브레인, 노션 템플릿 설계자",
+      "description": "업무/개인 일정을 체계적으로 관리할 수 있도록 노션(Notion)의 관계형 데이터베이스와 수식 구조를 완벽하게 설계합니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "life",
+      "tags": [
+        "노션",
+        "생산성",
+        "세컨드브레인",
+        "관리"
+      ],
+      "downloads": 112000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "monthly-report",
+      "name": "📊 주간/월간 실적 보고서 자동 생성기",
+      "description": "두서없는 실적 메모를 상사가 좋아하는 '두괄식/결과 중심'의 깔끔한 텍스트 표/보고서 포맷으로 완벽하게 재구성합니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "docs",
+      "tags": [
+        "보고서",
+        "직장인",
+        "자동화",
+        "문서작성"
+      ],
+      "downloads": 92000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "ir-pitch-deck",
+      "name": "💰 투자 유치 100% IR 피치덱 설계자",
+      "description": "핵심 지표와 비즈니스 모델을 넣으면 투자자를 설득할 논리적인 스토리라인과 슬라이드별 핵심 문구를 도출합니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "docs",
+      "tags": [
+        "IR",
+        "피치덱",
+        "스타트업",
+        "기획"
+      ],
+      "downloads": 85000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "proposal-writer",
+      "name": "📝 수주 성공률 99% 사업계획서 대필가",
+      "description": "정부지원사업 및 외주 입찰에서 심사위원의 눈길을 끄는 페인포인트(Pain Point)와 해결책 중심의 제안서를 씁니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "docs",
+      "tags": [
+        "제안서",
+        "사업계획서",
+        "B2B",
+        "기획"
+      ],
+      "downloads": 78000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "youtube-translator",
+      "name": "🎥 유튜브 영상 다국어 자막 번역기",
+      "description": "어색한 직역 대신, 영미권/일본 등 현지 밈(Meme)과 유튜브 감성에 맞게 찰지게 의역하는 자막 전문 번역가입니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "life",
+      "tags": [
+        "유튜브",
+        "번역",
+        "크리에이터",
+        "영상"
+      ],
+      "downloads": 64000,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
       "id": "error-solver",
       "name": "🔥 1초 컷 에러 디버깅 마스터",
       "description": "알 수 없는 붉은색 에러 메시지? 복붙 한 번이면 근본 원인 분석부터 완벽한 수정 코드까지 즉시 제공합니다.",
