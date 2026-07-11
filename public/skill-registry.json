@@ -2,12 +2,30 @@
   "lastUpdated": "2026-06-28T00:00:00.000Z",
   "source": "superskill-lite-curation",
   "categories": [
-    { "id": "all", "name": "전체보기" },
-    { "id": "business", "name": "비즈니스/마케팅" },
-    { "id": "dev", "name": "코딩/개발" },
-    { "id": "design", "name": "디자인/UI" },
-    { "id": "docs", "name": "기획/문서" },
-    { "id": "life", "name": "일상/유틸" }
+    {
+      "id": "all",
+      "name": "전체보기"
+    },
+    {
+      "id": "business",
+      "name": "비즈니스/마케팅"
+    },
+    {
+      "id": "dev",
+      "name": "코딩/개발"
+    },
+    {
+      "id": "design",
+      "name": "디자인/UI"
+    },
+    {
+      "id": "docs",
+      "name": "기획/문서"
+    },
+    {
+      "id": "life",
+      "name": "일상/유틸"
+    }
   ],
   "skills": [
     {
@@ -17,7 +35,12 @@
       "author": "AI Super Skill",
       "version": "1.2.0",
       "categoryId": "business",
-      "tags": ["블로그", "마케팅", "SEO", "글쓰기"],
+      "tags": [
+        "블로그",
+        "마케팅",
+        "SEO",
+        "글쓰기"
+      ],
       "downloads": 24500,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -28,7 +51,11 @@
       "author": "AI Super Skill",
       "version": "2.1.0",
       "categoryId": "dev",
-      "tags": ["에러해결", "디버깅", "초보자"],
+      "tags": [
+        "에러해결",
+        "디버깅",
+        "초보자"
+      ],
       "downloads": 48200,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -39,7 +66,12 @@
       "author": "AI Super Skill",
       "version": "1.0.5",
       "categoryId": "business",
-      "tags": ["이메일", "번역", "영어", "업무"],
+      "tags": [
+        "이메일",
+        "번역",
+        "영어",
+        "업무"
+      ],
       "downloads": 31200,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -50,7 +82,11 @@
       "author": "AI Super Skill",
       "version": "1.5.0",
       "categoryId": "dev",
-      "tags": ["React", "프론트엔드", "과외"],
+      "tags": [
+        "React",
+        "프론트엔드",
+        "과외"
+      ],
       "downloads": 18400,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -61,7 +97,11 @@
       "author": "AI Super Skill",
       "version": "1.1.2",
       "categoryId": "dev",
-      "tags": ["SQL", "데이터베이스", "쿼리"],
+      "tags": [
+        "SQL",
+        "데이터베이스",
+        "쿼리"
+      ],
       "downloads": 15600,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -72,7 +112,11 @@
       "author": "AI Super Skill",
       "version": "1.0.0",
       "categoryId": "dev",
-      "tags": ["보안", "해킹방지", "점검"],
+      "tags": [
+        "보안",
+        "해킹방지",
+        "점검"
+      ],
       "downloads": 9800,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -83,7 +127,11 @@
       "author": "AI Super Skill",
       "version": "2.0.1",
       "categoryId": "docs",
-      "tags": ["요약", "회의록", "문서정리"],
+      "tags": [
+        "요약",
+        "회의록",
+        "문서정리"
+      ],
       "downloads": 27500,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -94,7 +142,11 @@
       "author": "AI Super Skill",
       "version": "1.3.0",
       "categoryId": "dev",
-      "tags": ["파이썬", "자동화", "엑셀"],
+      "tags": [
+        "파이썬",
+        "자동화",
+        "엑셀"
+      ],
       "downloads": 22100,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -105,7 +157,12 @@
       "author": "AI Super Skill",
       "version": "1.1.5",
       "categoryId": "design",
-      "tags": ["UI", "UX", "디자인", "프론트엔드"],
+      "tags": [
+        "UI",
+        "UX",
+        "디자인",
+        "프론트엔드"
+      ],
       "downloads": 19300,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -116,7 +173,11 @@
       "author": "AI Super Skill",
       "version": "1.0.8",
       "categoryId": "dev",
-      "tags": ["Git", "GitHub", "버전관리"],
+      "tags": [
+        "Git",
+        "GitHub",
+        "버전관리"
+      ],
       "downloads": 21000,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -127,7 +188,12 @@
       "author": "AI Super Skill",
       "version": "1.4.0",
       "categoryId": "business",
-      "tags": ["인스타그램", "릴스", "쇼츠", "대본"],
+      "tags": [
+        "인스타그램",
+        "릴스",
+        "쇼츠",
+        "대본"
+      ],
       "downloads": 35400,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -138,7 +204,11 @@
       "author": "AI Super Skill",
       "version": "1.2.5",
       "categoryId": "business",
-      "tags": ["카피라이팅", "광고", "쇼핑몰"],
+      "tags": [
+        "카피라이팅",
+        "광고",
+        "쇼핑몰"
+      ],
       "downloads": 18900,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -149,7 +219,11 @@
       "author": "AI Super Skill",
       "version": "1.1.0",
       "categoryId": "docs",
-      "tags": ["PPT", "발표", "기획"],
+      "tags": [
+        "PPT",
+        "발표",
+        "기획"
+      ],
       "downloads": 14200,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -160,7 +234,12 @@
       "author": "AI Super Skill",
       "version": "1.3.2",
       "categoryId": "life",
-      "tags": ["취업", "이력서", "자소서", "첨삭"],
+      "tags": [
+        "취업",
+        "이력서",
+        "자소서",
+        "첨삭"
+      ],
       "downloads": 29800,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -171,7 +250,11 @@
       "author": "AI Super Skill",
       "version": "1.0.0",
       "categoryId": "life",
-      "tags": ["여행", "일정", "계획"],
+      "tags": [
+        "여행",
+        "일정",
+        "계획"
+      ],
       "downloads": 17600,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -182,7 +265,11 @@
       "author": "AI Super Skill",
       "version": "1.0.4",
       "categoryId": "dev",
-      "tags": ["정규식", "Regex", "개발툴"],
+      "tags": [
+        "정규식",
+        "Regex",
+        "개발툴"
+      ],
       "downloads": 8500,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -193,7 +280,12 @@
       "author": "AI Super Skill",
       "version": "1.1.1",
       "categoryId": "design",
-      "tags": ["컬러", "색상", "디자인", "팔레트"],
+      "tags": [
+        "컬러",
+        "색상",
+        "디자인",
+        "팔레트"
+      ],
       "downloads": 12400,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -204,7 +296,12 @@
       "author": "AI Super Skill",
       "version": "1.5.2",
       "categoryId": "business",
-      "tags": ["SEO", "키워드", "마케팅", "트래픽"],
+      "tags": [
+        "SEO",
+        "키워드",
+        "마케팅",
+        "트래픽"
+      ],
       "downloads": 26700,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -215,7 +312,11 @@
       "author": "AI Super Skill",
       "version": "2.0.0",
       "categoryId": "dev",
-      "tags": ["리팩토링", "클린코드", "개발"],
+      "tags": [
+        "리팩토링",
+        "클린코드",
+        "개발"
+      ],
       "downloads": 19900,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     },
@@ -226,8 +327,29 @@
       "author": "AI Super Skill",
       "version": "1.0.1",
       "categoryId": "life",
-      "tags": ["법률", "계약서", "해석", "유틸"],
+      "tags": [
+        "법률",
+        "계약서",
+        "해석",
+        "유틸"
+      ],
       "downloads": 11300,
+      "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
+    },
+    {
+      "id": "claude-code-superpower",
+      "name": "클로드 코드(Claude Code) 클론",
+      "description": "일반 LLM을 자율적인 에이전트(Agentic AI)로 각성시킵니다. 터미널 명령어를 실행하고, 파일을 탐색하며 스스로 에러를 디버깅하는 능력을 부여합니다.",
+      "author": "AI Super Skill",
+      "version": "1.0.0",
+      "categoryId": "dev",
+      "tags": [
+        "에이전트",
+        "클로드코드",
+        "자동화",
+        "개발"
+      ],
+      "downloads": 125,
       "sourceUrl": "https://github.com/KMegatrend/superskill-lite"
     }
   ]
