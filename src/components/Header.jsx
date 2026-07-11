@@ -6,7 +6,7 @@ export default function Header({ onSignIn }) {
   return (
     <nav className="flex justify-between items-center px-6 md:px-12 py-4 sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-black/5 relative">
       <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-        <img src="/logo_superskill_black.svg" alt="AI Super Skill Logo" className="w-auto h-[40px] md:h-[60px] object-contain" />
+        <img src="/logo_superskill_black.svg" alt="AI Super Skill Logo" className="w-[140px] md:w-[180px] h-[46px] md:h-[60px] object-contain" />
       </div>
       
       <div className="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
