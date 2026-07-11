@@ -892,6 +892,7 @@ async function renderMySkills() {
     // AI col
     const aiCol = document.createElement('div');
     aiCol.style.color = 'var(--accent-indigo)';
+    aiCol.style.textAlign = 'center';
     aiCol.innerHTML = `<span>${aiType}</span>`;
     
     // Action col
