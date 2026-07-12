@@ -104,7 +104,7 @@ const Features = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center pt-4 border-t border-slate-100 mt-4 gap-4 md:gap-0">
             <span className="text-base text-slate-500 font-semibold">{daily.rating}</span>
-            <button className="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white border-none rounded-full px-6 py-3 font-semibold text-lg cursor-pointer transition-colors shadow-lg shadow-blue-500/30">
+            <button className="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white border-none rounded-full py-2.5 px-5 md:px-6 font-semibold text-sm md:text-base cursor-pointer transition-colors shadow-lg shadow-blue-500/30">
               {daily.buttonText}
             </button>
           </div>

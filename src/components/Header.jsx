@@ -18,7 +18,7 @@ export default function Header({ onSignIn }) {
       
       <div className="flex items-center gap-3">
         <button 
-          className="bg-slate-900 text-white font-semibold py-2 px-4 md:px-5 rounded-full text-xs md:text-sm hover:bg-slate-800 transition-colors cursor-pointer"
+          className="bg-slate-900 text-white font-semibold py-2.5 px-5 md:px-6 rounded-full text-sm md:text-base hover:bg-slate-800 transition-colors cursor-pointer"
           onClick={onSignIn}
         >
           마켓플레이스

@@ -36,7 +36,7 @@ export default function App() {
     <PrivateGate>
       <Toaster position="bottom-right" toastOptions={{ style: { background: '#1e293b', color: '#fff', borderRadius: '12px' } }} />
       {currentView === 'landing' ? (
-        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-500 selection:text-white pb-20 relative">
+        <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-500 selection:text-white relative">
           <Header onSignIn={handleGoToMarketplace} />
           <main className="max-w-6xl mx-auto px-6 w-full">
             <Hero onGetStarted={handleGoToMarketplace} />

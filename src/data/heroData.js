@@ -3,7 +3,7 @@ export const heroContents = [
     id: 1,
     title1: "AI에게 부여하는",
     title2: "나만의 '전문가 자격증'",
-    description: "스킬(Skill)이란 평범한 AI를 각 분야의 실무 전문가로 만들어주는 특별한 능력입니다.\n웹 개발부터 데이터 분석까지, 필요한 스킬을 클릭 한 번으로 설치해 보세요.",
+    description: "평범한 AI를 실무 전문가로 만들어주는 특별한 능력, 스킬(Skill).\n클릭 한 번으로 필요한 스킬을 쉽게 설치해 보세요.",
     highlightText: "실무 전문가로 만들어주는"
   },
   {
