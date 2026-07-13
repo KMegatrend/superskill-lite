@@ -66,13 +66,13 @@ export default function PrivateGate({ children }) {
         <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
         
         <div className="text-center mb-8 mt-2">
-          <div className="flex items-center justify-center gap-2 mb-6 text-xl font-extrabold tracking-tight text-slate-900">
-            <div className="bg-blue-500 text-white w-7 h-7 rounded-md flex items-center justify-center text-[10px] font-black shadow-lg shadow-blue-500/30">
-              AI
-            </div>
-            <span>
-              Super <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Skill</span>
-            </span>
+          <div className="flex items-center justify-center mb-6">
+            <img 
+              src="/logo_superskill_black.svg" 
+              alt="AI Super Skill Logo" 
+              className="w-[160px] h-[55px] object-contain" 
+              style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', WebkitFontSmoothing: 'antialiased' }} 
+            />
           </div>
           <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
             회원 로그인
