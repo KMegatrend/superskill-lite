@@ -70,7 +70,7 @@ export default function PrivateGate({ children }) {
             <img 
               src="/logo_superskill_black.svg" 
               alt="AI Super Skill Logo" 
-              className="w-[160px] h-[55px] object-contain" 
+              className="w-[320px] h-[110px] object-contain" 
               style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', WebkitFontSmoothing: 'antialiased' }} 
             />
           </div>
