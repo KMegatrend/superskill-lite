@@ -71,7 +71,7 @@ export default function PrivateGate({ children }) {
               src="/logo_superskill_black.svg" 
               alt="AI Super Skill Logo" 
               className="w-[140px] h-[50px] object-contain" 
-              style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden', WebkitFontSmoothing: 'antialiased' }} 
+              style={{ transform: 'translateZ(0) scale(2.2)', backfaceVisibility: 'hidden', WebkitFontSmoothing: 'antialiased' }} 
             />
           </div>
           <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
