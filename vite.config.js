@@ -388,7 +388,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        marketplace: path.resolve(__dirname, 'marketplace.html')
+        marketplace: path.resolve(__dirname, 'marketplace.html'),
+        about: path.resolve(__dirname, 'about.html'),
+        terms: path.resolve(__dirname, 'terms.html'),
+        privacy: path.resolve(__dirname, 'privacy.html'),
+        support: path.resolve(__dirname, 'support.html')
       }
     }
   },
