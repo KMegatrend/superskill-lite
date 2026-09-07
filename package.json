@@ -20,6 +20,7 @@
     "iconv-lite": "^0.7.2",
     "js-yaml": "^4.1.0",
     "jsonwebtoken": "^9.0.3",
+    "jszip": "^3.10.1",
     "lucide-react": "^1.21.0",
     "marked": "^15.0.0",
     "nodemailer": "^9.0.1",
