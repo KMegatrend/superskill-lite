@@ -754,8 +754,8 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
   } else {
     const installBtn = document.createElement('button');
     installBtn.className = 'btn';
-    installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 1rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 10px rgba(59,130,246,0.3);';
-    installBtn.innerHTML = '⬇️ 스킬 추가하기';
+    installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.9rem 1.4rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(59,130,246,0.3); display: flex; align-items: center; gap: 8px;';
+    installBtn.innerHTML = '⚡ 스킬 설치 / 적용하기';
     installBtn.addEventListener('click', async () => {
       if (typeof window.openInstallModal === 'function') {
         window.openInstallModal(skill, () => {
@@ -765,6 +765,38 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
       }
     });
     actionContainer.appendChild(installBtn);
+
+    const zipBtn = document.createElement('button');
+    zipBtn.className = 'btn';
+    zipBtn.style.cssText = 'background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.9rem 1.4rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(16,185,129,0.25); display: flex; align-items: center; gap: 8px;';
+    zipBtn.innerHTML = '📦 풀 패키지 (.zip)';
+    zipBtn.title = '에이전트용 풀 패키지 ZIP 즉시 다운로드';
+    zipBtn.addEventListener('click', () => {
+      downloadSkillZip(skill);
+    });
+    actionContainer.appendChild(zipBtn);
+  }
+
+  // CLI 터미널 배너 바인딩
+  const cliCodeEl = document.getElementById('detail-cli-code');
+  if (cliCodeEl) cliCodeEl.textContent = `npx superskill add ${skill.id}`;
+
+  const copyCliBtn = document.getElementById('btn-copy-detail-cli');
+  if (copyCliBtn) {
+    copyCliBtn.onclick = async () => {
+      try {
+        await navigator.clipboard.writeText(`npx superskill add ${skill.id}`);
+        const originalText = copyCliBtn.innerHTML;
+        copyCliBtn.innerHTML = '✅ 복사됨!';
+        copyCliBtn.style.background = '#10b981';
+        setTimeout(() => {
+          copyCliBtn.innerHTML = originalText;
+          copyCliBtn.style.background = '#2563eb';
+        }, 2000);
+      } catch (e) {
+        console.error('CLI 복사 실패', e);
+      }
+    };
   }
 
   // 매뉴얼 & 리뷰 영역 (더미 텍스트 자동 완성)
@@ -941,6 +973,94 @@ if (searchInput) {
   });
 }
 
+// 4.5 스킬 풀 패키지 ZIP 다운로드 함수
+async function downloadSkillZip(skill) {
+  if (!skill) return;
+  if (!window.JSZip) {
+    alert("ZIP 다운로드 라이브러리를 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
+    return;
+  }
+  
+  try {
+    const zip = new window.JSZip();
+    const folder = zip.folder(skill.id);
+    
+    // 1. SKILL.md
+    let skillMdContent = skill.skillContent;
+    if (!skillMdContent) {
+      skillMdContent = `---
+name: "${skill.name}"
+description: "${skill.description || ''}"
+tags:${(skill.tags || []).map(t => '\n  - ' + t).join('')}
+---
+
+# ${skill.name}
+
+${skill.description || ''}
+
+${skill.role ? `> **역할**: ${skill.role}\n` : ''}
+
+## 🎯 실행 지침
+1. 사용자의 요구사항을 파악하고 최적의 결과를 도출합니다.
+2. 예외 케이스를 방어하고 완성도 높은 결과물을 제시합니다.
+`;
+    }
+    folder.file("SKILL.md", skillMdContent);
+    
+    // 2. manifest.json
+    const manifest = {
+      name: skill.id,
+      version: skill.version || "1.0.0",
+      description: skill.description || "",
+      author: skill.author || "AI Super Skill",
+      role: skill.role || "",
+      tags: skill.tags || [],
+      starterPrompts: skill.starterPrompts || [],
+      beforeAfter: skill.beforeAfter || null,
+      superskill: {
+        downloadedAt: new Date().toISOString(),
+        registryVersion: "2.0.0"
+      }
+    };
+    folder.file("manifest.json", JSON.stringify(manifest, null, 2));
+    
+    // 3. README.md
+    const readmeContent = `# ${skill.name}
+
+> 슈퍼스킬 패키지 매니저(SuperSkill Package Manager)에서 제공하는 에이전트 전용 풀 패키지입니다.
+
+## 🚀 에이전트 설치 및 사용 방법
+
+### 1. Antigravity IDE / Cursor / Claude Code
+본 폴더(\`${skill.id}\`)를 프로젝트의 에이전트 스킬 디렉토리에 배치하세요:
+- **Antigravity**: \`.agents/skills/${skill.id}/\`
+- **Cursor**: \`.cursor/skills/${skill.id}/\` 또는 \`.cursorrules\`
+- **Claude Code**: \`~/.claude/skills/${skill.id}/\`
+
+### 2. 점진적 탐색 (Progressive Disclosure)
+에이전트가 \`SKILL.md\`를 인식하여 작업 시 100% 지능으로 지침을 자동 수행합니다.
+`;
+    folder.file("README.md", readmeContent);
+
+    // ZIP 생성 및 다운로드
+    const blob = await zip.generateAsync({ type: "blob" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${skill.id}-skill-package.zip`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    alert(`📦 [${skill.name}] 풀 패키지 ZIP 다운로드가 완료되었습니다!\n\n압축을 해제하여 프로젝트의 .agents/skills/ 폴더에 넣으시면 에이전트가 100% 지능으로 작동합니다.`);
+  } catch (err) {
+    console.error('ZIP 생성 실패:', err);
+    alert('ZIP 다운로드 생성 중 오류가 발생했습니다.');
+  }
+}
+window.downloadSkillZip = downloadSkillZip;
+
 // 5. 멀티 AI 설치 모달 로직
 let currentInstallSkill = null;
 let currentInstallAiType = null;
@@ -958,6 +1078,36 @@ window.openInstallModal = function(skill, onSuccessCb) {
   const dateAuthor = document.getElementById('modal-date-author');
   if (dateAuthor) {
     dateAuthor.textContent = skill.createdAt || '최근 등록됨';
+  }
+
+  // 모달 내 CLI 명령어 바인딩
+  const modalCliCode = document.getElementById('modal-cli-code');
+  if (modalCliCode) modalCliCode.textContent = `npx superskill add ${skill.id}`;
+
+  const btnModalCopyCli = document.getElementById('btn-modal-copy-cli');
+  if (btnModalCopyCli) {
+    btnModalCopyCli.onclick = async () => {
+      try {
+        await navigator.clipboard.writeText(`npx superskill add ${skill.id}`);
+        const orig = btnModalCopyCli.innerHTML;
+        btnModalCopyCli.innerHTML = '✅ 복사됨!';
+        btnModalCopyCli.style.background = '#10b981';
+        setTimeout(() => {
+          btnModalCopyCli.innerHTML = orig;
+          btnModalCopyCli.style.background = '#2563eb';
+        }, 2000);
+      } catch (e) {
+        console.error('CLI 복사 실패', e);
+      }
+    };
+  }
+
+  // 모달 내 ZIP 다운로드 바인딩
+  const btnModalDownloadZip = document.getElementById('btn-modal-download-zip');
+  if (btnModalDownloadZip) {
+    btnModalDownloadZip.onclick = () => {
+      downloadSkillZip(skill);
+    };
   }
   
   document.getElementById('install-modal').style.display = 'flex';

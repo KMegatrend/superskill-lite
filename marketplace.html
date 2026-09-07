@@ -21,6 +21,7 @@
     body { background-color: #06060b; color: #e8e8f2; margin: 0; }
     input, button, textarea, select { background-color: #0c0c14; color: #e8e8f2; border: 1px solid rgba(255, 255, 255, 0.06); }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 <body>
   <!-- Chrome Autofill Trap: 강제 자동완성 방지용 가짜 입력창 -->
@@ -117,10 +118,32 @@
                   <h1 id="detail-title" style="font-size: clamp(1.1rem, 3.5vw, 1.45rem); margin: 0 0 0.5rem 0; color: var(--text-primary); word-break: keep-all; line-height: 1.35;"></h1>
                   <div id="detail-meta" style="color: var(--text-secondary); font-size: 0.95rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;"></div>
                 </div>
-                <div id="detail-action-container" style="flex: 0 0 auto; display: flex; flex-direction: column; gap: 0.8rem;">
-                  <!-- Install button injected here -->
+                <div id="detail-action-container" style="flex: 0 0 auto; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                  <!-- Install buttons injected here -->
                 </div>
               </div>
+            </div>
+
+            <!-- ═══ SuperSkill CLI Quick Install Banner ═══ -->
+            <div id="detail-cli-banner" style="background: #0b1120; border: 1px solid rgba(59, 130, 246, 0.4); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 1.2rem;">⚡</span>
+                  <strong style="color: #60a5fa; font-size: 1rem;">터미널 1초 자동 설치 (CLI)</strong>
+                  <span style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.4);">지능 100% 해금</span>
+                </div>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">복사-붙여넣기 없이 터미널 한 줄로 설치</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; background: rgba(0, 0, 0, 0.6); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">
+                <span style="color: #10b981; font-weight: bold; user-select: none;">$</span>
+                <code id="detail-cli-code" style="color: #f8fafc; font-size: 0.95rem; flex: 1; word-break: break-all;">npx superskill add skill-id</code>
+                <button id="btn-copy-detail-cli" class="btn" style="padding: 6px 14px; background: #2563eb; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 0.85rem; cursor: pointer; white-space: nowrap; transition: all 0.2s;">
+                  📋 복사
+                </button>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">
+                * 터미널에 붙여넣으면 프로젝트의 <code>.agents/skills/</code>에 온전한 파일 구조로 자동 설치됩니다.
+              </p>
             </div>
 
             <div class="detail-body" style="display: flex; flex-direction: column; gap: 2.5rem;">
@@ -224,6 +247,33 @@
         </div>
 
         <div class="install-modal-body">
+          <!-- ⚡ SuperSkill Package Manager: CLI & ZIP Section -->
+          <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(16, 185, 129, 0.08)); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-size: 0.95rem; font-weight: 800; color: #60a5fa; display: flex; align-items: center; gap: 6px;">
+                <span>⚡</span> 에이전트 패키지 매니저 (추천)
+              </span>
+              <span style="font-size: 0.75rem; background: rgba(59, 130, 246, 0.2); color: #93c5fd; padding: 2px 8px; border-radius: 9999px; font-weight: 700;">지능 100% 해금</span>
+            </div>
+
+            <!-- Terminal CLI Copy Box -->
+            <div style="background: #090d16; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; gap: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; margin-bottom: 0.8rem;">
+              <span style="color: #10b981; font-weight: bold; user-select: none;">$</span>
+              <code id="modal-cli-code" style="color: #f8fafc; font-size: 0.95rem; flex: 1; word-break: break-all;">npx superskill add skill-id</code>
+              <button id="btn-modal-copy-cli" class="btn" style="padding: 6px 14px; background: #2563eb; color: white; border: none; border-radius: 6px; font-size: 0.85rem; font-weight: bold; cursor: pointer; white-space: nowrap; transition: all 0.2s;">
+                📋 복사
+              </button>
+            </div>
+
+            <!-- ZIP Download Button -->
+            <button id="btn-modal-download-zip" class="btn" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); transition: all 0.2s;">
+              <span>📦</span> 에이전트 풀 패키지 다운로드 (.zip)
+            </button>
+            <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin: 0.5rem 0 0 0;">
+              * <code>SKILL.md</code>와 전체 참조문서가 포함된 공식 에이전트 번들을 즉시 다운로드합니다.
+            </p>
+          </div>
+
           <div class="install-path-preset">
             <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">🌐 웹사이트(ChatGPT / Claude / Gemini)에서 바로 쓰기</h4>
             <div class="preset-btns" style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 2rem;" id="ai-selector-web">
