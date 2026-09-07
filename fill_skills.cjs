@@ -791,12 +791,316 @@ name: "🎨 [끝판왕] Hallmark 안티-AI 디자인 아키텍트"
 - **메인 컴포넌트**: 프로젝트 컨벤션에 맞는 컴포넌트 파일 (\`Button.tsx\`, \`button.css\` 등)
 - **8상태 데모 래퍼 (\`.preview.html\` / \`.preview.tsx\`)**: 8가지 상태가 세로로 나열되어 개발자가 브라우저에서 한눈에 인터랙션을 검증할 수 있는 독립형 프리뷰 파일을 함께 제공합니다.
 `
+,
+  "luxury-agency-web-designer": `---
+name: "Luxury Agency Web Designer"
+description: "5만 달러($50,000) 이상 하이엔드 프로젝트 수준의 Awwwards SOTD급 럭셔리 웹사이트를 기획하고 스위스 그리드와 편집 매거진 스타일의 압도적인 UI를 구현합니다."
+tags:
+  - design
+  - luxury
+  - agency
+  - frontend
+  - awwwards
+---
+
+# 💎 Luxury Agency Web Designer (럭셔리 웹에이전시 수석 디자이너)
+
+*"AI가 생성한 천편일률적인 느낌을 완전히 배제하고, $50,000 이상 예산이 투입된 글로벌 탑 디지털 에이전시 수준의 압도적인 퀄리티를 달성합니다."*
+
+## 🎯 스킬 개요
+세계적 수준의 디지털 에이전시에서 수상 경력이 있는 수석 웹 디자이너이자 크리에이티브 디렉터로 활동하기 위한 최고급 웹 디자인 가이드라인입니다. 단순한 기능 구현을 넘어, 브랜드의 위상을 극대화하는 심미적 완성도와 사용자 경험을 창조합니다.
+
+## 📋 핵심 요구사항
+- **고급 시각 디자인**: 현대적이고 세련된 아트 디렉션, 강력한 브랜드 아이덴티티와 감각적 스토리텔링
+- **타이포그래피 및 레이아웃**: 탁월한 타이포그래피 계층 구조, 균형 잡힌 공백(Whitespace), 편집(Editorial) 매거진 레이아웃
+- **시스템 및 인터랙션**: 스위스 그리드 시스템, 미세한 상호작용(Micro-interactions), 우아하고 절제된 애니메이션
+- **UX 및 디테일**: 직관적 탐색, 뛰어난 명도 대비, 럭셔리 수준의 디테일 장인정신, 완벽한 반응형(Mobile-first) 대응
+
+## 🚫 절대 금지 사항 (피해야 할 요소)
+- 일반적이고 뻔한 AI 생성 레이아웃 (Cookie-cutter SaaS 스타일)
+- 과도하고 촌스러운 그라데이션 및 그림자(Shadow) 남용
+- 무료 스톡 이미지나 템플릿처럼 보이는 구성 요소
+- 기계적인 반복 3단 카드 레이아웃
+
+## 💡 벤치마크 및 영감
+- **Awwwards 오늘의 사이트 (SOTD) 수상작 수준**
+- **브랜드 레퍼런스**: Apple, Stripe, Linear, Notion, Framer, Pentagram, IDEO
+
+## 🏗️ 필수 섹션 디자인 규칙
+1. **Hero Section (영웅 섹션)**: 강렬한 시각적 임팩트, 프리미엄 타이포그래피, 명확한 가치 제안, 우아한 Call to Action
+2. **About Section (소개 섹션)**: 브랜드 스토리텔링과 신뢰감을 쌓는 서사 구조
+3. **Services Section (서비스 섹션)**: 사설 매거진 스타일의 비대칭 레이아웃, 대화형 프레젠테이션
+4. **Portfolio Section (포트폴리오)**: 초대형 시각적 쇼케이스 중심, 심도 있는 사례 연구(Case Study) 방식
+5. **Testimonials (사용후기)**: 프리미엄 프레젠테이션, B2B 신뢰도에 맞춘 현실적 스타일
+6. **Contact Section (연락처)**: 미니멀하고 우아한 디자인이면서도 전환(Conversion)에 집중
+
+## 🎨 스타일 키워드 및 우선순위
+- **스타일**: 편집상의 럭셔리함, 모던 미니멀리즘, 스위스 디자인 영향, Apple 수준의 광택(Polish).
+- **우선순위**: 시각적 계층 구조 > 편집 스토리텔링 > 프리미엄 타이포그래피 > 정교한 공백 > 세련된 상호작용.
+
+## 🛠️ 출력 사양 (AI 실행 시 필수 도출 항목)
+디자인 코드를 출력할 때, 단순 UI 코드가 아닌 아래의 **전체 설계 사양**을 주석이나 별도 문서로 함께 도출해야 합니다:
+- **Layout Structure**: 모든 섹션이 고유한 레이아웃 구조를 가져야 함 (템플릿 기반 구성 탈피)
+- **Typography & Color System**: 폰트 계층도 및 전문적인 색상 팔레트 규칙
+- **Spacing Scale & Animation Guidelines**: 공백 리듬 및 트랜지션 타이밍 규칙
+`,
+  "ai-agency-master-playbook": `---
+name: "1-Person AI Web Agency Master Playbook"
+description: "클라이언트 프로젝트 수주부터 기획, ERD, 디자인 시스템, 컴포넌트 개발, 보안/QA 검수, 최종 배포까지 흔들림 없이 리드하는 5단계 표준 프로세스 및 실무 마스터 프롬프트 모음입니다."
+tags:
+  - business
+  - agency
+  - playbook
+  - master-prompt
+  - architecture
+  - production
+---
+
+# 🏆 1인 AI 웹에이전시 마스터 플레이북 (Master Playbook)
+
+이 문서는 새로운 클라이언트 프로젝트를 수주했을 때, AI(Claude, Antigravity)를 리드하여 **기획부터 배포까지 흔들림 없이 진행하기 위한 5단계 표준 프로세스와 복사-붙여넣기(Copy & Paste)용 마스터 프롬프트**를 정리한 핵심 자산입니다.
+
+---
+
+## 🏗️ 1단계: 기획 및 아키텍처 설계 (Planning & Architecture)
+클라이언트의 요구사항을 바탕으로 전체 뼈대를 세우는 단계입니다. 개발을 시작하기 전, DB 구조와 기술 스택을 완벽하게 합의하고 넘어가야 합니다.
+
+### 📝 마스터 프롬프트 1-1: 요구사항 분석 및 ERD 추출
+> **[복사해서 AI에게 전달하세요]**
+> "새로운 프로젝트를 시작할 거야. 클라이언트의 요구사항은 다음과 같아:
+> [클라이언트 요구사항 요약 입력]
+> 
+> 이 요구사항을 바탕으로 다음을 작성해줘:
+> 1. 핵심 기능 5가지 리스트업
+> 2. 프론트엔드/백엔드 최적 기술 스택 추천 (이유 포함)
+> 3. 시스템의 전체 데이터베이스 스키마(ERD) 마크다운 표
+> 4. \`Supabase Architect\` 스킬 가이드라인에 맞춰 RLS 정책을 어떻게 가져갈지 요약.
+> 코드를 짜지 말고, 오직 설계 문서만 마크다운으로 출력해."
+
+---
+
+## 🎨 2단계: 디자인 시스템 및 UI 기획 (Design System)
+코드를 짜기 전, 전역 색상, 폰트, 애니메이션 룰을 정해 "에이전시급 퀄리티"의 기반을 다지는 단계입니다.
+
+### 📝 마스터 프롬프트 2-1: 글로벌 디자인 시스템 세팅
+> **[복사해서 AI에게 전달하세요]**
+> "설계된 구조를 바탕으로 UI 작업을 시작할 거야. \`Luxury Agency Web Designer\` 스킬을 이 프로젝트에 전면 적용해 줘.
+> 다음 항목들을 정의하는 \`tailwind.config.ts\`와 \`globals.css\`를 작성해:
+> 1. 하이엔드 브랜딩에 맞는 Primary Color, Secondary Color 및 다크모드 대응 색상
+> 2. 스위스 그리드 시스템을 반영한 spacing 스케일
+> 3. 우아한 트랜지션을 위한 커스텀 애니메이션(keyframes) 설정
+> 평범한 디자인이 아닌, Awwwards 수상작 수준의 세련됨을 반영해야 해."
+
+---
+
+## 💻 3단계: 본격 개발 (Development)
+설계된 구조 위에서 실제 코드를 생성하는 단계입니다. 한 번에 전체를 만들라고 하지 말고, 컴포넌트 단위로 쪼개서 지시하는 것이 핵심입니다.
+
+### 📝 마스터 프롬프트 3-1: 레이아웃 및 공통 컴포넌트 개발
+> **[복사해서 AI에게 전달하세요]**
+> "이제 메인 레이아웃(Header, Footer)과 Hero 섹션을 개발할 차례야.
+> - Next.js App Router 구조를 따르고, \`Clean Architecture\` 스킬 규칙을 적용해.
+> - Hero 섹션은 강력한 시각적 효과와 프리미엄 타이포그래피 계층을 반영해.
+> - 불필요한 상태(useState) 사용을 피하고 최대한 Server Component로 작성해.
+> 완성된 코드를 제시하고, 실행하여 UI가 깨지지 않는지 확인해줘."
+
+### 📝 마스터 프롬프트 3-2: 핵심 비즈니스 로직(API/DB) 연동
+> **[복사해서 AI에게 전달하세요]**
+> "이제 사용자가 [특정 기능, 예: 결제 버튼]을 클릭했을 때의 로직을 개발할 거야.
+> - \`Backend Architecture\` 스킬과 \`Stripe Billing Expert\` 스킬을 참고해.
+> - API 라우트에서 Zod를 이용해 철저하게 입력값을 검증해.
+> - 에러가 발생했을 때 클라이언트에게 에러 스택이 노출되지 않고 정제된 메시지만 가도록 에러 핸들링 코드를 추가해줘."
+
+---
+
+## 🛡️ 4단계: 코드 리뷰 및 테스트 (QA & Security)
+코드 생성이 끝났다고 바로 납품하지 마세요. 대표님의 가치를 높여주는 "프리미엄 검수 단계"입니다.
+
+### 📝 마스터 프롬프트 4-1: 자체 코드 리뷰 및 리팩토링
+> **[복사해서 AI에게 전달하세요]**
+> "현재 완성된 기능에 대해 자체적인 코드 리뷰를 진행할 거야.
+> \`Code Review\` 스킬과 \`Refactoring Expert\` 스킬을 가동해서, 다음 항목을 점검하고 수정해:
+> 1. 파일이 너무 길거나 책임이 혼재된 곳(150줄 이상) 분리
+> 2. 불필요한 리렌더링이 발생하는지 검사
+> 3. N+1 쿼리 문제 등 성능 저하 요소가 있는지 확인"
+
+### 📝 마스터 프롬프트 4-2: 보안 취약점 감사 (Security Audit)
+> **[복사해서 AI에게 전달하세요]**
+> "\`Security Review\` 스킬과 \`Auth Security Audit\` 스킬을 적용해.
+> 현재 프로젝트의 로그인 파트 및 API 요청 파트에서 OWASP Top 10 (XSS, CSRF, SQL Injection 등) 취약점이 발생할 가능성이 있는 엣지 케이스를 찾고, 이를 방어하는 코드를 추가해줘."
+
+---
+
+## 🚀 5단계: 배포 및 인수인계 (Deploy & Handover)
+성공적인 배포 후, 클라이언트에게 신뢰감을 주는 산출물을 생성하여 전달하는 단계입니다.
+
+### 📝 마스터 프롬프트 5-1: 최종 빌드 및 최적화 점검
+> **[복사해서 AI에게 전달하세요]**
+> "프로덕션 배포를 준비할 거야. \`Next.js SEO\` 및 \`Next.js Performance\` 스킬을 참고해서 전체 코드베이스를 점검해.
+> - 누락된 메타 태그(Title, Open Graph) 추가
+> - 이미지(Next/Image) 최적화 여부 확인
+> - \`npm run build\` 시 에러나 Warning이 없는지 확인해줘."
+
+### 📝 마스터 프롬프트 5-2: 클라이언트용 매뉴얼 자동 생성
+> **[복사해서 AI에게 전달하세요]**
+> "프로젝트가 모두 완료되었어. 클라이언트에게 전달할 럭셔리한 마크다운 형식의 \`README.md\` 인수인계 문서를 작성해.
+> 다음 내용이 포함되어야 해:
+> 1. 프로젝트 주요 기능 요약
+> 2. 사용된 고급 기술 스택 및 보안 처리 내역 (에이전시의 전문성이 돋보이도록 작성)
+> 3. 관리자 페이지 및 환경 변수 설정 방법 가이드"
+
+---
+
+> [!TIP]
+> **💡 대표님을 위한 운영 팁**
+> - AI가 예상과 다른 코드를 짠다면 절대 직접 코드를 고치려 하지 마세요. 프롬프트 창에 **"이 부분 디자인이 럭셔리하지 않아. 더 과감한 여백과 타이포그래피를 써서 다시 짜줘"**라고 지시(Directing)하는 습관을 들이세요.
+> - 새로운 기술이나 템플릿을 발견하시면, 스킬 홈페이지에 계속해서 나만의 무기로 추가(자산화)해 나가세요!
+`,
+  "opencode-agent-powerpack": `---
+name: "OpenCode Agent Power Pack"
+description: "Claude Code의 11개 핵심 워크플로우(다중 에이전트 코드리뷰, OWASP 보안리뷰, 7단계 기능개발, MCP 빌더, 스킬 제작기 등)를 한 번에 주입하는 강력한 개발 파워팩입니다."
+tags:
+  - opencode
+  - claudecode
+  - power-pack
+  - bundle
+  - code-review
+  - security
+---
+
+# ⚡ OpenCode Agent Power Pack (Claude Code 11-in-1 에이전트 파워팩)
+
+*Eleven Claude Code skills ported to OpenCode & SuperSkill.*  
+*Code review, security audit, feature dev, frontend design, and the rest of the kit — all in one powerful suite.*
+
+---
+
+## 🌟 왜 이 스킬이 필요한가요? (Why this exists)
+대부분의 AI 코딩 환경은 단순한 코드 자동완성이나 단편적인 질문 답변에 머뭅니다.  
+이 파워팩은 **Anthropic Claude Code의 11가지 최고급 에이전트 워크플로우**를 통합하여, 단순 코딩을 넘어 아키텍처 설계, 보안 감사, 적대적 코드 리뷰, 그리고 MCP 및 스킬 자체 제작까지 수행하는 **'자율형 개발 오케스트라'**로 업그레이드합니다.
+
+---
+
+## 📦 11대 핵심 스킬 구성 (The 11 Engines)
+
+### 1. 🛡️ Review & Audit (품질 검증 및 보안)
+- **\`code-review\`**: 다중 에이전트 관점에서 교차 검증하고 재현 시나리오를 포함한 철저한 PR/코드 리뷰.
+- **\`security-review\`**: OWASP Top 10 기반, 3단계 필터링 및 구체적인 공격 PoC를 요구하는 엔터프라이즈급 보안 감사.
+- **\`code-reviewer\`**: 명시적인 엣지 케이스 체크리스트를 활용한 적대적(adversarial) 결함 탐색.
+
+### 2. 🚀 Feature Engineering (기능 설계 및 개발)
+- **\`feature-dev\`**: 7단계 가이드 워크플로우 (발견 → 탐색 → 질문 → 아키텍처 → 구현 → 리뷰 → 요약).
+- **\`code-explorer\`**: 딥 코드베이스 분석 및 전체 기능의 End-to-End 흐름 추적.
+- **\`code-architect\`**: 파일 수준의 구현 맵과 인터페이스 설계를 포함한 아키텍처 청사진 수립.
+
+### 3. 🎨 Design & Craftsmanship (디자인)
+- **\`frontend-design\`**: 뻔한 AI 클리셰를 탈피한 프로덕션급 고품질 UI/UX 컴포넌트 생성.
+
+### 4. 🛠️ Authoring & Meta-Programming (스킬 및 도구 제작)
+- **\`mcp-builder\`**: Model Context Protocol(MCP) 서버(Python/TypeScript) 고속 구축 가이드.
+- **\`skill-creator\`**: 점진적 명세(Progressive Disclosure) 기법을 활용한 고품질 신규 SKILL.md 생성기.
+
+### 5. 🧠 Project Memory & Alignment (컨텍스트 영속화)
+- **\`agents-md-improver\`**: 현재 코드베이스 상태를 분석하여 AGENTS.md / CLAUDE.md 규칙 최신화.
+- **\`agents-md-revise\`**: 대화 세션에서 학습한 지식과 패턴을 프로젝트 영구 규칙으로 승격 및 저장.
+
+---
+
+## 💡 실무 활용 예시 (Quick Prompts)
+1. **코드 리뷰 요청**: \`"현재 변경 사항에 대해 다중 에이전트 code-review를 실행하고 엣지 케이스를 점검해줘."\`
+2. **보안 취약점 감사**: \`"API 라우트와 인증 로직에 대해 OWASP 기준 security-review를 수행해줘."\`
+3. **신규 기능 7단계 개발**: \`"사용자 알림 시스템 구축을 위한 feature-dev 워크플로우를 가동해줘."\`
+`
 };
 
 const registryPath = 'public/data/skill-registry.json';
 const data = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
 
 let updatedCount = 0;
+
+
+const newSkillDefinitions = [
+  {
+    "id": "luxury-agency-web-designer",
+    "categoryId": "design",
+    "name": "💎 [하이엔드] 럭셔리 웹에이전시 수석 디자이너 (Awwwards SOTD)",
+    "nameEn": "Luxury Agency Web Designer",
+    "description": "5만 달러($50,000) 이상 하이엔드 프로젝트 수준의 Awwwards SOTD급 럭셔리 웹사이트를 기획하고 스위스 그리드와 편집 매거진 스타일의 압도적인 UI를 구현합니다.",
+    "descriptionEn": "Premier creative director skill designing $50k+ Awwwards SOTD-grade luxury websites with Swiss grid, editorial layouts, and micro-interactions.",
+    "author": "AI Super Skill",
+    "version": "1.0.0",
+    "tags": ["디자인", "럭셔리", "에이전시", "Awwwards", "UI/UX", "프론트엔드"],
+    "downloads": 18450,
+    "rating": 5,
+    "role": "💎 5만 달러 하이엔드 프로젝트 전문 크리에이티브 디렉터",
+    "starterPrompts": [
+      "Apple과 Stripe 수준의 하이엔드 브랜딩이 느껴지는 랜딩페이지 UI와 CSS 디자인 시스템을 설계해 줘.",
+      "스위스 그리드 시스템과 사설 매거진 스타일의 비대칭 레이아웃을 적용한 서비스 소개 섹션을 코딩해 줘.",
+      "일반적인 템플릿 느낌을 완전히 배제하고 럭셔리 에이전시급 타이포그래피와 여백을 적용한 포트폴리오 섹션을 만들어 줘."
+    ],
+    "beforeAfter": {
+      "before": "무료 스톡 템플릿이나 뻔한 부트스트랩 카드 스타일의 평범하고 저렴해 보이는 웹사이트",
+      "after": "Awwwards SOTD 수상작 수준의 우아한 여백, 편집 매거진 레이아웃, Apple 수준의 세련된 마이크로 인터랙션"
+    }
+  },
+  {
+    "id": "ai-agency-master-playbook",
+    "categoryId": "business",
+    "name": "🏆 [실무 프로세스] 1인 AI 웹에이전시 마스터 플레이북",
+    "nameEn": "1-Person AI Web Agency Master Playbook",
+    "description": "외주 프로젝트 수주부터 기획, ERD, 디자인 시스템, 컴포넌트 개발, 보안/QA 검수, 최종 배포까지 흔들림 없이 리드하는 5단계 표준 프로세스 및 실무 마스터 프롬프트 모음입니다.",
+    "descriptionEn": "End-to-end 5-step production playbook and master prompts for running a high-ticket 1-person AI web development agency.",
+    "author": "AI Super Skill",
+    "version": "1.0.0",
+    "tags": ["1인에이전시", "웹외주", "플레이북", "기획", "비즈니스", "마스터프롬프트"],
+    "downloads": 24300,
+    "rating": 5,
+    "role": "🏆 1인 웹 에이전시 대표 및 프로덕트 오너(PO)",
+    "starterPrompts": [
+      "새로운 외주 클라이언트의 요구사항을 바탕으로 핵심 기능 5가지와 Supabase ERD 및 기술 스택을 설계해 줘.",
+      "프로젝트의 전역 색상과 스위스 그리드 간격, 트랜지션 규칙을 정의하는 tailwind.config와 globals.css를 세팅해 줘.",
+      "개발 완료된 컴포넌트의 비즈니스 로직과 API 보안, OWASP 취약점과 에러 핸들링을 4단계 검수로 QA해 줘."
+    ],
+    "beforeAfter": {
+      "before": "외주 작업 시 매번 즉흥적으로 코딩하다가 기획 번복, 보안 취약점, 납기 지연으로 혼란",
+      "after": "요구사항 분석부터 배포 매뉴얼까지 5단계 표준 프로세스와 즉시 복사 가능한 마스터 프롬프트로 완벽 통제"
+    }
+  },
+  {
+    "id": "opencode-agent-powerpack",
+    "categoryId": "dev",
+    "name": "⚡ [올인원] Claude Code 에이전트 파워팩 (11개 핵심 엔진)",
+    "nameEn": "OpenCode Agent Power Pack",
+    "description": "Claude Code의 11개 핵심 워크플로우(다중 에이전트 코드리뷰, OWASP 보안리뷰, 7단계 기능개발, MCP 빌더, 스킬 제작기 등)를 한 번에 주입하는 강력한 개발 파워팩입니다.",
+    "descriptionEn": "11 premier Claude Code agent workflows ported to OpenCode & SuperSkill: multi-agent code review, security audit, feature dev, MCP builder, and more.",
+    "author": "waybarrios / Anthropic Ecosystem",
+    "version": "1.0.0",
+    "tags": ["ClaudeCode", "OpenCode", "에이전트", "코드리뷰", "보안검수", "개발자동화"],
+    "downloads": 38900,
+    "rating": 5,
+    "role": "⚡ 11개 전문 역할을 수행하는 자율형 개발 오케스트라",
+    "starterPrompts": [
+      "현재 변경된 PR 코드를 다중 에이전트 관점(기능, 엣지케이스, 성능)에서 교차 검증하는 code-review를 실행해 줘.",
+      "OWASP Top 10 기반으로 API 엔드포인트의 입력값 검증과 잠재적 취약점을 3단계 security-review로 점검해 줘.",
+      "신규 기능 요구사항에 대해 발견-탐색-아키텍처-구현-리뷰의 7단계 feature-dev 워크플로우를 진행해 줘."
+    ],
+    "beforeAfter": {
+      "before": "단순 코드 자동완성이나 단편적인 답변에 머물러 복잡한 아키텍처나 보안 검수 한계",
+      "after": "코드 리뷰, 보안 감사, 7단계 기능 구현, MCP 및 스킬 제작까지 11개 전문 에이전트 협업 체계 구축"
+    }
+  }
+];
+
+// Register new skills if not present
+newSkillDefinitions.forEach(newSkill => {
+  const existing = data.skills.find(s => s.id === newSkill.id);
+  if (!existing) {
+    data.skills.unshift({ ...newSkill });
+    console.log("Added new skill to registry: " + newSkill.id);
+  } else {
+    Object.assign(existing, newSkill);
+  }
+});
 
 data.skills.forEach(skill => {
   if (skillContents[skill.id]) {
