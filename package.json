@@ -10,6 +10,7 @@
     "sync:skills": "node scripts/build-registry.js"
   },
   "bin": {
+    "superskill": "./bin/superskill.js",
     "convert-claude-skills": "./bin/convert.js"
   },
   "dependencies": {
