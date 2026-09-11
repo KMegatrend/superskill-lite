@@ -114,6 +114,60 @@ ${starters}
 3. **즉시 준비 완료**: 위 지침을 완벽히 숙지했다면, "준비되었습니다! **${skill.name}** 전문 모드가 활성화되었습니다. 어떤 작업부터 시작할까요?"라고만 간결하게 첫 인사를 건네고 사용자의 입력을 대기하세요.`;
 }
 
+export function generateClaudeMasterPrompt(skill) {
+  const starters = (skill.starterPrompts && skill.starterPrompts.length > 0)
+    ? skill.starterPrompts.map((p, idx) => `${idx + 1}. "${p}"`).join('\n')
+    : `1. "이 프로젝트에 ${skill.name} 최적 워크플로우를 가동해줘."\n2. "현재 구현 상태를 점검하고 아티팩트(Artifact)로 작성해줘."`;
+
+  return `<skill_directive>
+<title>${skill.name}</title>
+<persona>${skill.role || skill.name + ' 전문 AI 에이전트'}</persona>
+<objective>${skill.description || '최고 수준의 전문 역량을 발휘하여 사용자의 요구사항을 완벽하게 해결합니다.'}</objective>
+
+<core_instructions>
+${skill.skillContent || skill.manual || '전문적인 분석과 최적화된 워크플로우에 따라 체계적으로 문제를 해결합니다.'}
+</core_instructions>
+
+<recommended_prompts>
+${starters}
+</recommended_prompts>
+
+<operational_rules>
+1. 사용자가 코드 또는 긴 산출물을 요청할 경우, Claude Artifacts를 적극적으로 활용하세요.
+2. 불필요한 서론을 줄이고, 정밀하고 검증된 해결책을 한국어로 친절히 제공하세요.
+3. 지침이 로드되면 "준비되었습니다! [${skill.name}] 모드가 활성화되었습니다. 어떤 작업을 시작할까요?"라고만 첫 인사를 건네세요.
+</operational_rules>
+</skill_directive>`;
+}
+
+export function generateGeminiMasterPrompt(skill) {
+  const starters = (skill.starterPrompts && skill.starterPrompts.length > 0)
+    ? skill.starterPrompts.map((p, idx) => `${idx + 1}. "${p}"`).join('\n')
+    : `1. "이 프로젝트에 ${skill.name} 최적 워크플로우를 가동해줘."\n2. "현재 구현 상태를 점검하고 개선 가이드를 제시해줘."`;
+
+  return `# ✨ [Google Gemini SuperSkill] ${skill.name} 전문 모드
+
+당신은 Google Gemini 기반의 최고 수준 전문가이자 실행 에이전트입니다.
+${skill.role ? `* **전문 분야/페르소나**: ${skill.role}\n` : ''}${skill.description ? `* **목표**: ${skill.description}\n` : ''}
+
+---
+
+## 🎯 핵심 지침 및 작업 원칙
+${skill.skillContent || skill.manual || '전문적인 분석과 최적화된 워크플로우에 따라 체계적으로 문제를 해결합니다.'}
+
+---
+
+## 💬 추천 시작 프롬프트
+${starters}
+
+---
+
+## ⚡ Gemini 실행 규칙
+1. 200만 토큰 컨텍스트를 활용하여 프로젝트의 전체 맥락을 폭넓게 파악하고 종합적인 솔루션을 제시하세요.
+2. 모든 답변은 명확한 마크다운 구조로 작성하고, 핵심 결론을 서두에 명시하세요.
+3. 지침 숙지가 완료되면 "준비되었습니다! ✨ [${skill.name}] 전문 모드가 로드되었습니다. 어떤 작업을 도와드릴까요?"라고만 짧게 응답하세요.`;
+}
+
 export function generateGptsInstructions(skill) {
   return `# Role & Persona
 You are a top-tier industry specialist acting as "${skill.name}".
@@ -141,6 +195,38 @@ export async function installSkillToAI(aiType, skill, onProgress) {
     });
     if (go) {
       window.open('https://chatgpt.com/', '_blank');
+    }
+    return true;
+  }
+
+  if (aiType === 'claude') {
+    const prompt = generateClaudeMasterPrompt(skill);
+    await navigator.clipboard.writeText(prompt);
+    const go = await showCustomConfirmModal({
+      title: 'Claude 맞춤 프롬프트 복사 완료!',
+      icon: '🧠',
+      message: `"${skill.name}" Claude 전용(Artifacts/XML 최적화) 프롬프트가 복사되었습니다.\n\n지금 Claude 대화창(claude.ai)으로 이동하여 붙여넣기(Ctrl+V)하시겠습니까?`,
+      confirmText: '🚀 Claude 대화창 열기',
+      cancelText: '닫기'
+    });
+    if (go) {
+      window.open('https://claude.ai/new', '_blank');
+    }
+    return true;
+  }
+
+  if (aiType === 'gemini') {
+    const prompt = generateGeminiMasterPrompt(skill);
+    await navigator.clipboard.writeText(prompt);
+    const go = await showCustomConfirmModal({
+      title: 'Gemini 맞춤 프롬프트 복사 완료!',
+      icon: '✨',
+      message: `"${skill.name}" Gemini 전용(대용량 컨텍스트 최적화) 프롬프트가 복사되었습니다.\n\n지금 Gemini 대화창(gemini.google.com)으로 이동하여 붙여넣기(Ctrl+V)하시겠습니까?`,
+      confirmText: '🚀 Gemini 대화창 열기',
+      cancelText: '닫기'
+    });
+    if (go) {
+      window.open('https://gemini.google.com/app', '_blank');
     }
     return true;
   }
@@ -268,6 +354,42 @@ export async function installSkillsBatchToAI(aiType, skills) {
       cancelText: '닫기'
     });
     if (go) window.open('https://chatgpt.com/', '_blank');
+    return true;
+  }
+
+  if (aiType === 'claude') {
+    let combinedPrompt = `<multi_skill_bundle count="${skills.length}">\n<system_directive>\nYou are equipped with the following ${skills.length} expert skills. Utilize them synergistically.\n</system_directive>\n\n`;
+    skills.forEach((skill, idx) => {
+      combinedPrompt += `<skill index="${idx + 1}" name="${skill.name}">\n${skill.role ? `<role>${skill.role}</role>\n` : ''}${skill.description ? `<objective>${skill.description}</objective>\n` : ''}<instructions>\n${skill.skillContent || skill.manual || ''}\n</instructions>\n</skill>\n\n`;
+    });
+    combinedPrompt += `</multi_skill_bundle>\n\n위 모든 스킬의 지침을 통합 수행할 준비가 완료되었으면, "선택하신 ${skills.length}개 통합 스킬 팩이 로드되었습니다. 어떤 작업을 시작할까요?"라고만 짧게 응답하세요.`;
+    await navigator.clipboard.writeText(combinedPrompt);
+    const go = await showCustomConfirmModal({
+      title: 'Claude 통합 프롬프트 복사 완료!',
+      icon: '🧠',
+      message: `선택하신 ${skills.length}개 스킬이 모두 통합된 Claude 맞춤 프롬프트가 복사되었습니다.\n\n지금 Claude 대화창(claude.ai)을 열어 바로 붙여넣으시겠습니까?`,
+      confirmText: '🚀 Claude 대화창 열기',
+      cancelText: '닫기'
+    });
+    if (go) window.open('https://claude.ai/new', '_blank');
+    return true;
+  }
+
+  if (aiType === 'gemini') {
+    let combinedPrompt = `# ✨ [Google Gemini] 통합 멀티 스킬 전문 에이전트 팩\n\n당신은 지금부터 아래 ${skills.length}개 전문 스킬을 통합 탑재한 슈퍼 에이전트로 작동합니다.\n\n`;
+    skills.forEach((skill, idx) => {
+      combinedPrompt += `## [스킬 ${idx + 1}] ${skill.name}\n${skill.role ? `* **역할**: ${skill.role}\n` : ''}${skill.description ? `* **목표**: ${skill.description}\n` : ''}\n### 핵심 지침:\n${skill.skillContent || skill.manual || ''}\n\n---\n\n`;
+    });
+    combinedPrompt += `\n위 모든 스킬의 지침을 통합 수행할 준비가 완료되었으면, "선택하신 ${skills.length}개 통합 스킬 팩이 Gemini에 로드되었습니다. 어떤 작업을 시작할까요?"라고만 짧게 응답하세요.`;
+    await navigator.clipboard.writeText(combinedPrompt);
+    const go = await showCustomConfirmModal({
+      title: 'Gemini 통합 프롬프트 복사 완료!',
+      icon: '✨',
+      message: `선택하신 ${skills.length}개 스킬이 모두 통합된 Gemini 맞춤 프롬프트가 복사되었습니다.\n\n지금 Gemini 대화창(gemini.google.com)을 열어 바로 붙여넣으시겠습니까?`,
+      confirmText: '🚀 Gemini 대화창 열기',
+      cancelText: '닫기'
+    });
+    if (go) window.open('https://gemini.google.com/app', '_blank');
     return true;
   }
 

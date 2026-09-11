@@ -14,22 +14,23 @@
 
 ---
 
-## 📅 [최신 회차 #006 요약] 90% 대중 흡수를 위한 ChatGPT 원클릭 프롬프트 & GPTs 맞춤지침 내보내기 완성
+## 📅 [최신 회차 #006 요약] 3대 웹 AI(ChatGPT·Claude·Gemini) 원클릭 프롬프트 & GPTs 맞춤지침 내보내기 완성
 
-### 1. ChatGPT 마스터 프롬프트 & GPTs 맞춤지침 엔진 구축
+### 1. 3대 웹 AI 맞춤 프롬프트 엔진 구축
 - **프롬프트 조립기 (`src/core/installer.js`)**:
-  - 스킬별 페르소나(`role`), 작업 지침, 시작 프롬프트 3선을 완벽 결합한 완성형 마스터 프롬프트 생성기(`generateChatGptMasterPrompt`) 개발.
-  - OpenAI Custom GPTs Instructions(맞춤 지침) 전용 시스템 지침 생성기(`generateGptsInstructions`) 개발.
-  - 원클릭 복사 후 `chatgpt.com` 자동 열기 안내 모달(`showCustomConfirmModal`) 탑재.
-  - 단일 스킬뿐 아니라 스타터 팩 다중 스킬 일괄 병합 프롬프트 지원.
+  - `generateChatGptMasterPrompt`: ChatGPT CoT 및 마스터 프롬프트 조립.
+  - `generateClaudeMasterPrompt`: Claude 3.5/3.7 Sonnet 맞춤형 XML/Artifacts 가이드라인 탑재.
+  - `generateGeminiMasterPrompt`: Google Gemini 200만 토큰 대용량 컨텍스트 및 마크다운 구조화 프롬프트 조립.
+  - `generateGptsInstructions`: OpenAI Custom GPTs 맞춤지침(Instructions) 전용 포맷 생성.
+  - 원클릭 복사 후 각 사 공식 대화창(`chatgpt.com`, `claude.ai/new`, `gemini.google.com/app`) 자동 열기 모달 연동.
 
 ### 2. 마켓플레이스 상세 뷰 및 설치 모달 전면 개편
-- **상세 뷰 헤더 액션**: `🤖 ChatGPT 즉시 실행` 및 `🧩 GPTs 지침 복사` 원클릭 버튼 탑재.
-- **전용 퀵 러너 배너**: CLI 배너 바로 아래에 `ChatGPT 원클릭 즉시 실행` 시각적 배너 신설.
-- **설치 모달 프리셋**: `ChatGPT 대화창 실행 (추천)`, `Custom GPTs 지침`, `전체 원문 복사` 전진 배치.
+- **상세 뷰 헤더 액션**: `🤖 ChatGPT`, `🧠 Claude`, `✨ Gemini`, `⚡ 개발툴(IDE)`, `📦 ZIP` 5대 액션 버튼 정렬.
+- **전용 퀵 러너 배너**: `ChatGPT로 실행`, `Claude로 실행`, `Gemini로 실행`, `🧩 GPTs 맞춤지침` 4개 브랜드 버튼 신설.
+- **설치 모달 프리셋**: `ChatGPT`, `Claude`, `Gemini`, `GPTs`, `전체 원문 복사` 카드형 구분 제공.
 
 ### 3. 브라우저 E2E 검증 통과
-- 브라우저 서브에이전트 실사용 테스트를 통해 스킬 상세 뷰의 ChatGPT 마스터 프롬프트 복사, 확인 모달, 설치 모달 프리셋 100% 정상 작동 검증.
+- 브라우저 서브에이전트 실사용 테스트를 통해 Claude 맞춤 프롬프트 복사/모달, Gemini 맞춤 프롬프트 복사/모달, 설치 모달 내 3대 AI 프리셋 100% 정상 작동 검증.
 
 ---
 

@@ -14,6 +14,8 @@ import {
   showCustomAlert, 
   showCustomConfirmModal,
   generateChatGptMasterPrompt,
+  generateClaudeMasterPrompt,
+  generateGeminiMasterPrompt,
   generateGptsInstructions,
   getInstalledSkillsCount 
 } from './core/installer.js';
@@ -329,6 +331,8 @@ document.querySelectorAll('.sp-ai-btn').forEach(btn => {
     
     const selectedCount = document.querySelectorAll('.sp-skill-checkbox:checked').length;
     let envName = currentSpAiType === 'chatgpt' ? 'ChatGPT 프롬프트로' :
+                  currentSpAiType === 'claude' ? 'Claude 프롬프트로' :
+                  currentSpAiType === 'gemini' ? 'Gemini 프롬프트로' :
                   currentSpAiType === 'gpts' ? 'Custom GPTs 지침으로' :
                   currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                   currentSpAiType === 'cursor' ? 'Cursor에' : 
@@ -342,6 +346,8 @@ document.addEventListener('change', (e) => {
     if (currentSpAiType) {
       const selectedCount = document.querySelectorAll('.sp-skill-checkbox:checked').length;
       let envName = currentSpAiType === 'chatgpt' ? 'ChatGPT 프롬프트로' :
+                    currentSpAiType === 'claude' ? 'Claude 프롬프트로' :
+                    currentSpAiType === 'gemini' ? 'Gemini 프롬프트로' :
                     currentSpAiType === 'gpts' ? 'Custom GPTs 지침으로' :
                     currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                     currentSpAiType === 'cursor' ? 'Cursor에' : 
@@ -384,11 +390,13 @@ document.getElementById('sp-modal-install')?.addEventListener('click', async () 
   
   if (skillsToInstall.length > 0) {
     const count = getInstalledSkillsCount();
-    if (count + skillsToInstall.length >= 10 && currentSpAiType !== 'clipboard' && currentSpAiType !== 'chatgpt' && currentSpAiType !== 'gpts') {
+    if (count + skillsToInstall.length >= 10 && currentSpAiType !== 'clipboard' && currentSpAiType !== 'chatgpt' && currentSpAiType !== 'claude' && currentSpAiType !== 'gemini' && currentSpAiType !== 'gpts') {
       const proceed = await showWarningModal();
       if (!proceed) {
         installBtn.disabled = false;
         let envName = currentSpAiType === 'chatgpt' ? 'ChatGPT 프롬프트로' :
+                      currentSpAiType === 'claude' ? 'Claude 프롬프트로' :
+                      currentSpAiType === 'gemini' ? 'Gemini 프롬프트로' :
                       currentSpAiType === 'gpts' ? 'Custom GPTs 지침으로' :
                       currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                       currentSpAiType === 'cursor' ? 'Cursor에' : 
@@ -768,32 +776,43 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
     });
     actionContainer.appendChild(uninstallBtn);
   } else {
-    // 🤖 ChatGPT 즉시 실행 버튼 (90% 대중 타깃)
+    // 🤖 ChatGPT 즉시 실행 버튼
     const chatGptBtn = document.createElement('button');
     chatGptBtn.className = 'btn';
-    chatGptBtn.style.cssText = 'background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.9rem 1.3rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 14px rgba(16,185,129,0.3); display: flex; align-items: center; gap: 8px;';
-    chatGptBtn.innerHTML = '<img src="/assets/chatgpt-logo-new.png" width="20" height="20" alt="ChatGPT"> <span>ChatGPT 즉시 실행</span>';
-    chatGptBtn.title = 'ChatGPT 전용 완성형 마스터 프롬프트 복사 & 대화창 바로가기';
+    chatGptBtn.style.cssText = 'background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); font-weight: bold; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(16,185,129,0.25); display: flex; align-items: center; gap: 7px;';
+    chatGptBtn.innerHTML = '<img src="/assets/chatgpt-logo-new.png" width="18" height="18" alt="ChatGPT"> <span>ChatGPT</span>';
+    chatGptBtn.title = 'ChatGPT 전용 마스터 프롬프트 복사 & 대화창 열기';
     chatGptBtn.addEventListener('click', async () => {
       await installSkillToAI('chatgpt', skill);
     });
     actionContainer.appendChild(chatGptBtn);
 
-    // 🧩 GPTs 지침 복사 버튼
-    const gptsBtn = document.createElement('button');
-    gptsBtn.className = 'btn';
-    gptsBtn.style.cssText = 'background: rgba(255, 255, 255, 0.08); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.18); padding: 0.9rem 1.2rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 7px;';
-    gptsBtn.innerHTML = '<span>🧩</span> <span>GPTs 지침 복사</span>';
-    gptsBtn.title = 'Custom GPTs Instructions(맞춤 지침) 설정용 시스템 프롬프트 복사';
-    gptsBtn.addEventListener('click', async () => {
-      await installSkillToAI('gpts', skill);
+    // 🧠 Claude 즉시 실행 버튼
+    const claudeBtn = document.createElement('button');
+    claudeBtn.className = 'btn';
+    claudeBtn.style.cssText = 'background: linear-gradient(135deg, #d97706, #b45309); color: white; border: none; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); font-weight: bold; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(217,119,6,0.25); display: flex; align-items: center; gap: 7px;';
+    claudeBtn.innerHTML = '<img src="/assets/claude-ai-symbol.svg" width="18" height="18" alt="Claude"> <span>Claude</span>';
+    claudeBtn.title = 'Claude 전용(Artifacts/XML 최적화) 프롬프트 복사 & 대화창 열기';
+    claudeBtn.addEventListener('click', async () => {
+      await installSkillToAI('claude', skill);
     });
-    actionContainer.appendChild(gptsBtn);
+    actionContainer.appendChild(claudeBtn);
+
+    // ✨ Gemini 즉시 실행 버튼
+    const geminiBtn = document.createElement('button');
+    geminiBtn.className = 'btn';
+    geminiBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; border: none; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); font-weight: bold; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(59,130,246,0.25); display: flex; align-items: center; gap: 7px;';
+    geminiBtn.innerHTML = '<img src="/assets/gemini-logo.svg" width="18" height="18" alt="Gemini"> <span>Gemini</span>';
+    geminiBtn.title = 'Google Gemini 전용(대용량 컨텍스트 최적화) 프롬프트 복사 & 대화창 열기';
+    geminiBtn.addEventListener('click', async () => {
+      await installSkillToAI('gemini', skill);
+    });
+    actionContainer.appendChild(geminiBtn);
 
     const installBtn = document.createElement('button');
     installBtn.className = 'btn';
-    installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.9rem 1.3rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(59,130,246,0.3); display: flex; align-items: center; gap: 8px;';
-    installBtn.innerHTML = '⚡ 개발툴/IDE 설치';
+    installBtn.style.cssText = 'background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 0.85rem 1.15rem; border-radius: var(--radius-md); font-weight: bold; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 7px;';
+    installBtn.innerHTML = '⚡ 개발툴(IDE)';
     installBtn.addEventListener('click', async () => {
       if (typeof window.openInstallModal === 'function') {
         window.openInstallModal(skill, () => {
@@ -806,8 +825,8 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
 
     const zipBtn = document.createElement('button');
     zipBtn.className = 'btn';
-    zipBtn.style.cssText = 'background: rgba(255, 255, 255, 0.06); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.12); padding: 0.9rem 1.2rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;';
-    zipBtn.innerHTML = '📦 풀 패키지 (.zip)';
+    zipBtn.style.cssText = 'background: rgba(255, 255, 255, 0.05); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.12); padding: 0.85rem 1.15rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 7px;';
+    zipBtn.innerHTML = '📦 ZIP';
     zipBtn.title = '에이전트용 풀 패키지 ZIP 즉시 다운로드';
     zipBtn.addEventListener('click', () => {
       downloadSkillZip(skill);
@@ -837,7 +856,7 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
     };
   }
 
-  // 🤖 ChatGPT 전용 배너 버튼 바인딩
+  // 🌐 웹 AI 배너 버튼 바인딩 (ChatGPT, Claude, Gemini, GPTs)
   const copyChatGptMasterBtn = document.getElementById('btn-copy-chatgpt-master');
   const copyChatGptText = document.getElementById('btn-copy-chatgpt-text');
   if (copyChatGptMasterBtn) {
@@ -845,10 +864,34 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
       await installSkillToAI('chatgpt', skill);
       if (copyChatGptText) {
         const origText = copyChatGptText.textContent;
-        copyChatGptText.textContent = '✅ 프롬프트 복사 완료!';
-        setTimeout(() => {
-          copyChatGptText.textContent = origText;
-        }, 2500);
+        copyChatGptText.textContent = '✅ 프롬프트 복사됨!';
+        setTimeout(() => { copyChatGptText.textContent = origText; }, 2500);
+      }
+    };
+  }
+
+  const copyClaudeMasterBtn = document.getElementById('btn-copy-claude-master');
+  const copyClaudeText = document.getElementById('btn-copy-claude-text');
+  if (copyClaudeMasterBtn) {
+    copyClaudeMasterBtn.onclick = async () => {
+      await installSkillToAI('claude', skill);
+      if (copyClaudeText) {
+        const origText = copyClaudeText.textContent;
+        copyClaudeText.textContent = '✅ 프롬프트 복사됨!';
+        setTimeout(() => { copyClaudeText.textContent = origText; }, 2500);
+      }
+    };
+  }
+
+  const copyGeminiMasterBtn = document.getElementById('btn-copy-gemini-master');
+  const copyGeminiText = document.getElementById('btn-copy-gemini-text');
+  if (copyGeminiMasterBtn) {
+    copyGeminiMasterBtn.onclick = async () => {
+      await installSkillToAI('gemini', skill);
+      if (copyGeminiText) {
+        const origText = copyGeminiText.textContent;
+        copyGeminiText.textContent = '✅ 프롬프트 복사됨!';
+        setTimeout(() => { copyGeminiText.textContent = origText; }, 2500);
       }
     };
   }
@@ -860,10 +903,8 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
       await installSkillToAI('gpts', skill);
       if (copyGptsText) {
         const origText = copyGptsText.textContent;
-        copyGptsText.textContent = '✅ GPTs 지침 복사 완료!';
-        setTimeout(() => {
-          copyGptsText.textContent = origText;
-        }, 2500);
+        copyGptsText.textContent = '✅ 지침 복사됨!';
+        setTimeout(() => { copyGptsText.textContent = origText; }, 2500);
       }
     };
   }
@@ -1221,6 +1262,12 @@ document.querySelectorAll('.preset-btn').forEach(btn => {
     if (currentInstallAiType === 'chatgpt') {
       iconEl.textContent = '🤖';
       textEl.textContent = 'ChatGPT 마스터 프롬프트 복사 & 대화창 열기';
+    } else if (currentInstallAiType === 'claude') {
+      iconEl.textContent = '🧠';
+      textEl.textContent = 'Claude 맞춤 프롬프트 복사 & 대화창 열기';
+    } else if (currentInstallAiType === 'gemini') {
+      iconEl.textContent = '✨';
+      textEl.textContent = 'Gemini 맞춤 프롬프트 복사 & 대화창 열기';
     } else if (currentInstallAiType === 'gpts') {
       iconEl.textContent = '🧩';
       textEl.textContent = 'Custom GPTs 맞춤지침(Instructions) 복사하기';
@@ -1251,7 +1298,7 @@ document.getElementById('install-modal-ok')?.addEventListener('click', async () 
   document.getElementById('install-modal').style.display = 'none';
 
   const count = getInstalledSkillsCount();
-  if (count >= 10 && currentInstallAiType !== 'clipboard' && currentInstallAiType !== 'chatgpt' && currentInstallAiType !== 'gpts') {
+  if (count >= 10 && currentInstallAiType !== 'clipboard' && currentInstallAiType !== 'chatgpt' && currentInstallAiType !== 'claude' && currentInstallAiType !== 'gemini' && currentInstallAiType !== 'gpts') {
     const proceed = await showWarningModal();
     if (!proceed) {
       return;
