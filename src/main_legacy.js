@@ -6,7 +6,17 @@
 import './style.css';
 import { fetchAiRecommendation } from './core/ai-client.js';
 import { t, setLang, getLang, applyTranslations } from './core/i18n.js';
-import { installSkillToAI, installSkillsBatchToAI, uninstallSkillFromAI, getInstallState, showCustomAlert, getInstalledSkillsCount } from './core/installer.js';
+import { 
+  installSkillToAI, 
+  installSkillsBatchToAI, 
+  uninstallSkillFromAI, 
+  getInstallState, 
+  showCustomAlert, 
+  showCustomConfirmModal,
+  generateChatGptMasterPrompt,
+  generateGptsInstructions,
+  getInstalledSkillsCount 
+} from './core/installer.js';
 
 // ─── 상태 관리 ───
 let currentResults = null;
@@ -318,7 +328,9 @@ document.querySelectorAll('.sp-ai-btn').forEach(btn => {
     installBtn.style.color = 'white';
     
     const selectedCount = document.querySelectorAll('.sp-skill-checkbox:checked').length;
-    let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+    let envName = currentSpAiType === 'chatgpt' ? 'ChatGPT 프롬프트로' :
+                  currentSpAiType === 'gpts' ? 'Custom GPTs 지침으로' :
+                  currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                   currentSpAiType === 'cursor' ? 'Cursor에' : 
                   currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
     installBtn.textContent = `🚀 선택한 ${selectedCount}개 스킬 ${envName} 즉시 설치`;
@@ -329,7 +341,9 @@ document.addEventListener('change', (e) => {
   if (e.target.classList.contains('sp-skill-checkbox')) {
     if (currentSpAiType) {
       const selectedCount = document.querySelectorAll('.sp-skill-checkbox:checked').length;
-      let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+      let envName = currentSpAiType === 'chatgpt' ? 'ChatGPT 프롬프트로' :
+                    currentSpAiType === 'gpts' ? 'Custom GPTs 지침으로' :
+                    currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                     currentSpAiType === 'cursor' ? 'Cursor에' : 
                     currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
       document.getElementById('sp-modal-install').textContent = `🚀 선택한 ${selectedCount}개 스킬 ${envName} 즉시 설치`;
@@ -370,11 +384,13 @@ document.getElementById('sp-modal-install')?.addEventListener('click', async () 
   
   if (skillsToInstall.length > 0) {
     const count = getInstalledSkillsCount();
-    if (count + skillsToInstall.length >= 10 && currentSpAiType !== 'clipboard') {
+    if (count + skillsToInstall.length >= 10 && currentSpAiType !== 'clipboard' && currentSpAiType !== 'chatgpt' && currentSpAiType !== 'gpts') {
       const proceed = await showWarningModal();
       if (!proceed) {
         installBtn.disabled = false;
-        let envName = currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
+        let envName = currentSpAiType === 'chatgpt' ? 'ChatGPT 프롬프트로' :
+                      currentSpAiType === 'gpts' ? 'Custom GPTs 지침으로' :
+                      currentSpAiType === 'clipboard' ? '웹 복사본으로' : 
                       currentSpAiType === 'cursor' ? 'Cursor에' : 
                       currentSpAiType === 'windsurf' ? 'Windsurf에' : 'Copilot에';
         installBtn.textContent = `🚀 선택한 ${skillsToInstall.length}개 스킬 ${envName} 즉시 설치`;
@@ -752,10 +768,32 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
     });
     actionContainer.appendChild(uninstallBtn);
   } else {
+    // 🤖 ChatGPT 즉시 실행 버튼 (90% 대중 타깃)
+    const chatGptBtn = document.createElement('button');
+    chatGptBtn.className = 'btn';
+    chatGptBtn.style.cssText = 'background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.9rem 1.3rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 14px rgba(16,185,129,0.3); display: flex; align-items: center; gap: 8px;';
+    chatGptBtn.innerHTML = '<img src="/assets/chatgpt-logo-new.png" width="20" height="20" alt="ChatGPT"> <span>ChatGPT 즉시 실행</span>';
+    chatGptBtn.title = 'ChatGPT 전용 완성형 마스터 프롬프트 복사 & 대화창 바로가기';
+    chatGptBtn.addEventListener('click', async () => {
+      await installSkillToAI('chatgpt', skill);
+    });
+    actionContainer.appendChild(chatGptBtn);
+
+    // 🧩 GPTs 지침 복사 버튼
+    const gptsBtn = document.createElement('button');
+    gptsBtn.className = 'btn';
+    gptsBtn.style.cssText = 'background: rgba(255, 255, 255, 0.08); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.18); padding: 0.9rem 1.2rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 7px;';
+    gptsBtn.innerHTML = '<span>🧩</span> <span>GPTs 지침 복사</span>';
+    gptsBtn.title = 'Custom GPTs Instructions(맞춤 지침) 설정용 시스템 프롬프트 복사';
+    gptsBtn.addEventListener('click', async () => {
+      await installSkillToAI('gpts', skill);
+    });
+    actionContainer.appendChild(gptsBtn);
+
     const installBtn = document.createElement('button');
     installBtn.className = 'btn';
-    installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.9rem 1.4rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(59,130,246,0.3); display: flex; align-items: center; gap: 8px;';
-    installBtn.innerHTML = '⚡ 스킬 설치 / 적용하기';
+    installBtn.style.cssText = 'background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.9rem 1.3rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(59,130,246,0.3); display: flex; align-items: center; gap: 8px;';
+    installBtn.innerHTML = '⚡ 개발툴/IDE 설치';
     installBtn.addEventListener('click', async () => {
       if (typeof window.openInstallModal === 'function') {
         window.openInstallModal(skill, () => {
@@ -768,7 +806,7 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
 
     const zipBtn = document.createElement('button');
     zipBtn.className = 'btn';
-    zipBtn.style.cssText = 'background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.9rem 1.4rem; border-radius: var(--radius-md); font-weight: bold; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(16,185,129,0.25); display: flex; align-items: center; gap: 8px;';
+    zipBtn.style.cssText = 'background: rgba(255, 255, 255, 0.06); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.12); padding: 0.9rem 1.2rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;';
     zipBtn.innerHTML = '📦 풀 패키지 (.zip)';
     zipBtn.title = '에이전트용 풀 패키지 ZIP 즉시 다운로드';
     zipBtn.addEventListener('click', () => {
@@ -795,6 +833,37 @@ function showSkillDetail(skill, aiInstalled, rating, badgeHtml, authorBadgeHtml,
         }, 2000);
       } catch (e) {
         console.error('CLI 복사 실패', e);
+      }
+    };
+  }
+
+  // 🤖 ChatGPT 전용 배너 버튼 바인딩
+  const copyChatGptMasterBtn = document.getElementById('btn-copy-chatgpt-master');
+  const copyChatGptText = document.getElementById('btn-copy-chatgpt-text');
+  if (copyChatGptMasterBtn) {
+    copyChatGptMasterBtn.onclick = async () => {
+      await installSkillToAI('chatgpt', skill);
+      if (copyChatGptText) {
+        const origText = copyChatGptText.textContent;
+        copyChatGptText.textContent = '✅ 프롬프트 복사 완료!';
+        setTimeout(() => {
+          copyChatGptText.textContent = origText;
+        }, 2500);
+      }
+    };
+  }
+
+  const copyGptsBtn = document.getElementById('btn-copy-gpts-instructions');
+  const copyGptsText = document.getElementById('btn-copy-gpts-text');
+  if (copyGptsBtn) {
+    copyGptsBtn.onclick = async () => {
+      await installSkillToAI('gpts', skill);
+      if (copyGptsText) {
+        const origText = copyGptsText.textContent;
+        copyGptsText.textContent = '✅ GPTs 지침 복사 완료!';
+        setTimeout(() => {
+          copyGptsText.textContent = origText;
+        }, 2500);
       }
     };
   }
@@ -1149,9 +1218,15 @@ document.querySelectorAll('.preset-btn').forEach(btn => {
     const iconEl = document.getElementById('install-btn-icon');
     const textEl = document.getElementById('install-btn-text');
     
-    if (currentInstallAiType === 'clipboard') {
+    if (currentInstallAiType === 'chatgpt') {
+      iconEl.textContent = '🤖';
+      textEl.textContent = 'ChatGPT 마스터 프롬프트 복사 & 대화창 열기';
+    } else if (currentInstallAiType === 'gpts') {
+      iconEl.textContent = '🧩';
+      textEl.textContent = 'Custom GPTs 맞춤지침(Instructions) 복사하기';
+    } else if (currentInstallAiType === 'clipboard') {
       iconEl.textContent = '📋';
-      textEl.textContent = '마법 주문(프롬프트) 복사하기';
+      textEl.textContent = '전체 마크다운 원문 복사하기';
     } else {
       let ideName = 'IDE';
       if (currentInstallAiType === 'cursor') ideName = 'Cursor';
@@ -1176,7 +1251,7 @@ document.getElementById('install-modal-ok')?.addEventListener('click', async () 
   document.getElementById('install-modal').style.display = 'none';
 
   const count = getInstalledSkillsCount();
-  if (count >= 10 && currentInstallAiType !== 'clipboard') {
+  if (count >= 10 && currentInstallAiType !== 'clipboard' && currentInstallAiType !== 'chatgpt' && currentInstallAiType !== 'gpts') {
     const proceed = await showWarningModal();
     if (!proceed) {
       return;

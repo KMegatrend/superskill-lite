@@ -146,6 +146,31 @@
               </p>
             </div>
 
+            <!-- ═══ ChatGPT & Web AI Quick Runner Banner (For 90% Web/GPT Users) ═══ -->
+            <div id="detail-chatgpt-banner" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(6, 78, 59, 0.2)); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.85rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <img src="/assets/chatgpt-logo-new.png" width="22" height="22" alt="ChatGPT" style="object-fit: contain;">
+                  <strong style="color: #34d399; font-size: 1rem;">ChatGPT 원클릭 즉시 실행</strong>
+                  <span style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.4);">복붙 1초 완료</span>
+                </div>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">터미널 없이 대화창에 바로 붙여넣어 전문가 모드로 대화</span>
+              </div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button id="btn-copy-chatgpt-master" class="btn" style="flex: 1; min-width: 220px; padding: 10px 18px; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 0.92rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3); transition: all 0.2s;">
+                  <span style="font-size: 1.1rem;">🤖</span>
+                  <span id="btn-copy-chatgpt-text">ChatGPT 마스터 프롬프트 복사 & 대화창 열기</span>
+                </button>
+                <button id="btn-copy-gpts-instructions" class="btn" style="padding: 10px 16px; background: rgba(255, 255, 255, 0.08); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; font-weight: 600; font-size: 0.88rem; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
+                  <span>🧩</span>
+                  <span id="btn-copy-gpts-text">Custom GPTs 맞춤지침 복사</span>
+                </button>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">
+                * 클릭 즉시 AI 페르소나 및 핵심 지침이 완성된 프롬프트로 복사되며, ChatGPT 대화창에서 즉시 에이전트처럼 작동합니다.
+              </p>
+            </div>
+
             <div class="detail-body" style="display: flex; flex-direction: column; gap: 2.5rem;">
               <section>
                 <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-indigo); display: flex; align-items: center; gap: 0.5rem;">
@@ -275,31 +300,35 @@
           </div>
 
           <div class="install-path-preset">
-            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">🌐 웹사이트(ChatGPT / Claude / Gemini)에서 바로 쓰기</h4>
-            <div class="preset-btns" style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 2rem;" id="ai-selector-web">
-              <button class="preset-btn" data-ai="clipboard" style="text-align: left; padding: 15px; font-size: 1rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px;">
-                <div style="flex: 1;">
-                  <div style="font-weight: bold; color: var(--text-primary); display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
-                    <span style="display: flex; align-items: center; gap: 6px;">
-                      <!-- ChatGPT Image -->
-                      <img src="/assets/chatgpt-logo-new.png" width="24" height="24" alt="ChatGPT Logo" style="object-fit: contain;">
-                      ChatGPT
-                    </span>
-                    <span style="color: var(--text-muted);">/</span>
-                    <span style="display: flex; align-items: center; gap: 6px;">
-                      <!-- Claude Image -->
-                      <img src="/assets/claude-ai-symbol.svg" width="23" height="23" alt="Claude Logo" style="object-fit: contain;">
-                      Claude
-                    </span>
-                    <span style="color: var(--text-muted);">/</span>
-                    <span style="display: flex; align-items: center; gap: 6px;">
-                      <!-- Gemini Image -->
-                      <img src="/assets/gemini-logo.svg" width="23" height="23" alt="Gemini Logo" style="object-fit: contain;">
-                      Gemini
-                    </span>
-                    <span style="margin-left: 4px; color: var(--text-secondary); font-size: 0.9rem; font-weight: normal;">(프롬프트 복사하기)</span>
+            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-size: 1.1rem;">🌐 웹 대화형 AI (ChatGPT / Claude / Gemini)에서 바로 쓰기</h4>
+            <div class="preset-btns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 2rem;" id="ai-selector-web">
+              <!-- ChatGPT Master Prompt -->
+              <button class="preset-btn" data-ai="chatgpt" style="text-align: left; padding: 14px; font-size: 0.95rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                <img src="/assets/chatgpt-logo-new.png" width="28" height="28" alt="ChatGPT Logo" style="object-fit: contain; flex-shrink: 0;">
+                <div>
+                  <div style="font-weight: bold; color: #10b981; display: flex; align-items: center; gap: 6px;">
+                    ChatGPT 대화창 실행
+                    <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-size: 0.7rem; padding: 1px 6px; border-radius: 9999px;">추천</span>
                   </div>
-                  <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">마법 주문(프롬프트)을 복사해서 AI와 대화할 때 붙여넣기만 하면 스킬이 발동돼요!</div>
+                  <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">마스터 프롬프트 복사 후 대화창 이동</div>
+                </div>
+              </button>
+
+              <!-- Custom GPTs Instructions -->
+              <button class="preset-btn" data-ai="gpts" style="text-align: left; padding: 14px; font-size: 0.95rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                <span style="font-size: 1.6rem; flex-shrink: 0;">🧩</span>
+                <div>
+                  <div style="font-weight: bold; color: #a855f7;">Custom GPTs 지침</div>
+                  <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">Instructions 설정용 시스템 지침</div>
+                </div>
+              </button>
+
+              <!-- Generic Web Copy -->
+              <button class="preset-btn" data-ai="clipboard" style="text-align: left; padding: 14px; font-size: 0.95rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-primary); display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                <span style="font-size: 1.6rem; flex-shrink: 0;">📋</span>
+                <div>
+                  <div style="font-weight: bold; color: var(--text-primary);">전체 원문 복사</div>
+                  <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">Claude / Gemini 등 웹 붙여넣기</div>
                 </div>
               </button>
             </div>
@@ -440,10 +469,14 @@
           </div>
 
           <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary);">🚀 어디에 바로 설치하시겠어요?</h4>
-          <div class="preset-btns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px;" id="sp-ai-selector">
-            <button class="preset-btn sp-ai-btn" data-ai="clipboard" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
-              <span style="font-size: 1.5rem;">📋</span>
-              <span style="font-weight: bold; color: var(--text-primary);">웹 복사</span>
+          <div class="preset-btns" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); gap: 10px;" id="sp-ai-selector">
+            <button class="preset-btn sp-ai-btn" data-ai="chatgpt" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <img src="/assets/chatgpt-logo-new.png" width="24" height="24" alt="ChatGPT">
+              <span style="font-weight: bold; color: #10b981;">ChatGPT</span>
+            </button>
+            <button class="preset-btn sp-ai-btn" data-ai="gpts" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <span style="font-size: 1.5rem;">🧩</span>
+              <span style="font-weight: bold; color: #a855f7;">GPTs</span>
             </button>
             <button class="preset-btn sp-ai-btn" data-ai="cursor" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
               <img src="/assets/cursor-logo.png" width="24" height="24">
@@ -456,6 +489,10 @@
             <button class="preset-btn sp-ai-btn" data-ai="copilot" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
               <img src="/assets/copilot-logo.svg" width="24" height="24">
               <span style="font-weight: bold; color: var(--text-primary);">Copilot</span>
+            </button>
+            <button class="preset-btn sp-ai-btn" data-ai="clipboard" style="padding: 10px; font-size: 0.9rem; border: 2px solid transparent; border-radius: var(--radius-lg); background: var(--bg-secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s;">
+              <span style="font-size: 1.5rem;">📋</span>
+              <span style="font-weight: bold; color: var(--text-primary);">웹 복사</span>
             </button>
           </div>
         </div>

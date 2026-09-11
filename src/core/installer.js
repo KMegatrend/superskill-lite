@@ -45,7 +45,122 @@ export function showCustomAlert(message, title = '알림', icon = '💡') {
   });
 }
 
+export function showCustomConfirmModal({ title = '알림', icon = '💡', message = '', confirmText = '확인', cancelText = '닫기' }) {
+  return new Promise((resolve) => {
+    let modal = document.getElementById('custom-confirm-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'custom-confirm-modal';
+      modal.className = 'install-modal';
+      modal.style.cssText = 'display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);';
+      document.body.appendChild(modal);
+    }
+
+    modal.innerHTML = `
+      <div class="install-modal-box" style="max-width: 480px; width: 90%; background: #0c0c14; border: 1px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-lg); padding: 2rem; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">${icon}</div>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;">${title}</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; word-break: keep-all; margin-bottom: 1.8rem; white-space: pre-line;">${message}</p>
+        <div style="display: flex; gap: 10px;">
+          <button id="custom-confirm-cancel" class="btn btn-secondary" style="flex: 1; padding: 12px; font-size: 0.95rem;">${cancelText}</button>
+          <button id="custom-confirm-ok" class="btn btn-primary" style="flex: 1.5; padding: 12px; font-size: 0.95rem; background: linear-gradient(135deg, #10b981, #059669); border: none; font-weight: bold; color: white;">${confirmText}</button>
+        </div>
+      </div>
+    `;
+
+    modal.style.display = 'flex';
+
+    const btnOk = modal.querySelector('#custom-confirm-ok');
+    const btnCancel = modal.querySelector('#custom-confirm-cancel');
+
+    const handleOk = () => {
+      modal.style.display = 'none';
+      resolve(true);
+    };
+    const handleCancel = () => {
+      modal.style.display = 'none';
+      resolve(false);
+    };
+
+    btnOk.addEventListener('click', handleOk, { once: true });
+    btnCancel.addEventListener('click', handleCancel, { once: true });
+  });
+}
+
+export function generateChatGptMasterPrompt(skill) {
+  const starters = (skill.starterPrompts && skill.starterPrompts.length > 0)
+    ? skill.starterPrompts.map((p, idx) => `${idx + 1}. "${p}"`).join('\n')
+    : `1. "이 프로젝트에 ${skill.name} 최적 워크플로우를 가동해줘."\n2. "현재 구현 상태를 점검하고 개선 가이드를 제시해줘."`;
+
+  return `# 🤖 [AI SuperSkill] ${skill.name} 전문 에이전트 모드
+
+당신은 지금부터 **${skill.name}** 분야의 최고 권위자이자 전문 실행 에이전트(Autonomous Expert Agent)로 작동합니다.
+${skill.role ? `- **수행 페르소나**: ${skill.role}\n` : ''}${skill.description ? `- **목표 및 핵심 가치**: ${skill.description}\n` : ''}
+---
+
+## 🎯 핵심 행동 지침 및 작업 원칙
+${skill.skillContent || skill.manual || '전문적인 분석과 최적화된 워크플로우에 따라 체계적으로 문제를 해결합니다.'}
+
+---
+
+## 💬 즉시 실행 가능한 마스터 프롬프트 예시
+${starters}
+
+---
+
+## ⚡ 에이전트 행동 규칙
+1. **명확한 로직 분리**: 복잡한 작업은 반드시 단계별(Step-by-Step) 계획을 먼저 브리핑한 후 실행합니다.
+2. **생산성 극대화**: 사용자가 불필요한 질문을 반복하지 않도록, 최선의 모범 사례(Best Practice)를 먼저 제안합니다.
+3. **즉시 준비 완료**: 위 지침을 완벽히 숙지했다면, "준비되었습니다! **${skill.name}** 전문 모드가 활성화되었습니다. 어떤 작업부터 시작할까요?"라고만 간결하게 첫 인사를 건네고 사용자의 입력을 대기하세요.`;
+}
+
+export function generateGptsInstructions(skill) {
+  return `# Role & Persona
+You are a top-tier industry specialist acting as "${skill.name}".
+${skill.role ? `Role: ${skill.role}\n` : ''}${skill.description ? `Objective: ${skill.description}\n` : ''}
+
+# Instructions & Workflow
+${skill.skillContent || skill.manual || 'Provide world-class expert advice, automated workflow steps, and production-ready output.'}
+
+# Execution Guidelines
+- Deliver clear, well-structured, production-ready responses.
+- Always communicate primarily in natural, professional Korean unless specified otherwise.
+- Proactively anticipate edge cases and security best practices.`;
+}
+
 export async function installSkillToAI(aiType, skill, onProgress) {
+  if (aiType === 'chatgpt') {
+    const prompt = generateChatGptMasterPrompt(skill);
+    await navigator.clipboard.writeText(prompt);
+    const go = await showCustomConfirmModal({
+      title: 'ChatGPT 마스터 프롬프트 복사 완료!',
+      icon: '🤖',
+      message: `"${skill.name}" 마스터 프롬프트가 클립보드에 복사되었습니다.\n\n지금 ChatGPT 대화창(chatgpt.com)으로 이동하여 붙여넣기(Ctrl+V)하시겠습니까?`,
+      confirmText: '🚀 ChatGPT 대화창 열기',
+      cancelText: '닫기'
+    });
+    if (go) {
+      window.open('https://chatgpt.com/', '_blank');
+    }
+    return true;
+  }
+
+  if (aiType === 'gpts') {
+    const prompt = generateGptsInstructions(skill);
+    await navigator.clipboard.writeText(prompt);
+    const go = await showCustomConfirmModal({
+      title: 'Custom GPTs 맞춤지침 복사 완료!',
+      icon: '🧩',
+      message: `"${skill.name}" GPTs 맞춤지침(Instructions)이 복사되었습니다.\n\nChatGPT의 'Explore GPTs > Create a GPT'의 [Instructions] 란에 그대로 붙여넣으세요!`,
+      confirmText: '🚀 GPTs 만들기 창 열기',
+      cancelText: '닫기'
+    });
+    if (go) {
+      window.open('https://chatgpt.com/gpts/editor', '_blank');
+    }
+    return true;
+  }
+
   if (aiType === 'clipboard') {
     const textToCopy = `[Skill: ${skill.name}]\n\n${skill.skillContent || ''}`;
     await navigator.clipboard.writeText(textToCopy);
@@ -137,6 +252,41 @@ ${contentToInstall}`;
 
 export async function installSkillsBatchToAI(aiType, skills) {
   if (!skills || skills.length === 0) return true;
+
+  if (aiType === 'chatgpt') {
+    let combinedPrompt = `# 🤖 [AI SuperSkill] 통합 멀티 스킬 전문 에이전트 모드\n\n당신은 지금부터 아래 ${skills.length}개 핵심 스킬을 통합 탑재한 슈퍼 에이전트로 작동합니다.\n\n`;
+    skills.forEach((skill, idx) => {
+      combinedPrompt += `## [스킬 ${idx + 1}] ${skill.name}\n${skill.role ? `**역할**: ${skill.role}\n` : ''}${skill.description ? `**목표**: ${skill.description}\n` : ''}\n### 핵심 지침:\n${skill.skillContent || skill.manual || ''}\n\n---\n\n`;
+    });
+    combinedPrompt += `\n위 모든 스킬의 지침을 통합 수행할 준비가 완료되었으면, "선택하신 ${skills.length}개 통합 스킬 팩이 로드되었습니다. 어떤 작업을 시작할까요?"라고만 짧게 응답하세요.`;
+    await navigator.clipboard.writeText(combinedPrompt);
+    const go = await showCustomConfirmModal({
+      title: 'ChatGPT 통합 마스터 프롬프트 복사 완료!',
+      icon: '🤖',
+      message: `선택하신 ${skills.length}개 스킬이 모두 통합된 ChatGPT 마스터 프롬프트가 복사되었습니다.\n\n지금 ChatGPT 대화창을 열어 바로 붙여넣으시겠습니까?`,
+      confirmText: '🚀 ChatGPT 대화창 열기',
+      cancelText: '닫기'
+    });
+    if (go) window.open('https://chatgpt.com/', '_blank');
+    return true;
+  }
+
+  if (aiType === 'gpts') {
+    let combinedInstructions = `# Integrated Multi-Skill Persona\n\nYou possess the capabilities of the following ${skills.length} professional skills:\n\n`;
+    skills.forEach((skill, idx) => {
+      combinedInstructions += `## Skill ${idx + 1}: ${skill.name}\n${skill.role ? `Role: ${skill.role}\n` : ''}${skill.description ? `Objective: ${skill.description}\n` : ''}\nInstructions:\n${skill.skillContent || skill.manual || ''}\n\n`;
+    });
+    await navigator.clipboard.writeText(combinedInstructions);
+    const go = await showCustomConfirmModal({
+      title: 'Custom GPTs 통합 지침 복사 완료!',
+      icon: '🧩',
+      message: `선택하신 ${skills.length}개 스킬의 GPTs 통합 맞춤지침(Instructions)이 복사되었습니다.\n\nGPTs 만들기 창을 여시겠습니까?`,
+      confirmText: '🚀 GPTs 만들기 열기',
+      cancelText: '닫기'
+    });
+    if (go) window.open('https://chatgpt.com/gpts/editor', '_blank');
+    return true;
+  }
 
   if (aiType === 'clipboard') {
     let combinedText = '';
