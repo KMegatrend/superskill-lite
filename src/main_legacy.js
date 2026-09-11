@@ -1086,13 +1086,33 @@ if (searchInput) {
 // 4.5 스킬 풀 패키지 ZIP 다운로드 함수
 async function downloadSkillZip(skill) {
   if (!skill) return;
-  if (!window.JSZip) {
-    alert("ZIP 다운로드 라이브러리를 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
-    return;
-  }
-  
+
+  // 1. 서버에 사전 빌드된 100% 완전한 공식 ZIP 패키지(/packages/{skill.id}.zip) 직접 다운로드
+  const packageUrl = `/packages/${skill.id}.zip`;
   try {
-    const zip = new window.JSZip();
+    const headCheck = await fetch(packageUrl, { method: 'HEAD' });
+    if (headCheck.ok) {
+      const a = document.createElement("a");
+      a.href = packageUrl;
+      a.download = `${skill.id}.zip`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      return;
+    }
+  } catch (e) {
+    console.warn('정적 패키지 직접 다운로드 실패, 클라이언트 번들러로 대체:', e);
+  }
+
+  // 2. 만약 정적 파일이 없을 경우 JSZip으로 안전하게 생성 (압축 옵션 및 지연 해제 적용)
+  try {
+    const JSZipLib = window.JSZip;
+    if (!JSZipLib) {
+      alert("ZIP 다운로드 라이브러리를 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
+      return;
+    }
+
+    const zip = new JSZipLib();
     const folder = zip.folder(skill.id);
     
     // 1. SKILL.md
@@ -1152,21 +1172,29 @@ ${skill.role ? `> **역할**: ${skill.role}\n` : ''}
 `;
     folder.file("README.md", readmeContent);
 
-    // ZIP 생성 및 다운로드
-    const blob = await zip.generateAsync({ type: "blob" });
+    // ZIP 생성 (표준 MIME 및 DEFLATE 압축 지정)
+    const blob = await zip.generateAsync({ 
+      type: "blob", 
+      mimeType: "application/zip",
+      compression: "DEFLATE",
+      compressionOptions: { level: 6 }
+    });
+
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${skill.id}-skill-package.zip`;
+    a.download = `${skill.id}.zip`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    
-    alert(`📦 [${skill.name}] 풀 패키지 ZIP 다운로드가 완료되었습니다!\n\n압축을 해제하여 프로젝트의 .agents/skills/ 폴더에 넣으시면 에이전트가 100% 지능으로 작동합니다.`);
+
+    // [중요] 즉시 revokeObjectURL을 호출하면 브라우저 다운로드 전 끊김 발생 -> 10초 후 안전 해제
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, 10000);
   } catch (err) {
     console.error('ZIP 생성 실패:', err);
-    alert('ZIP 다운로드 생성 중 오류가 발생했습니다.');
+    alert('ZIP 다운로드 생성 중 오류가 발생했습니다: ' + err.message);
   }
 }
 window.downloadSkillZip = downloadSkillZip;
