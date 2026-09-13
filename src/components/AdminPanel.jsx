@@ -17,17 +17,19 @@ export default function AdminPanel({ onBack }) {
   }, []);
 
   useEffect(() => {
-    fetch('/api/admin-data')
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          setUsers(data.users);
-        } else {
-          toast.error(data.error || '데이터를 불러오는데 실패했습니다.');
-        }
-      })
-      .catch(() => toast.error('서버 통신 오류'))
-      .finally(() => setIsLoading(false));
+    // 백엔드 API 대신 프론트엔드 시연용 목업(Mock) 데이터 사용
+    const mockUsers = [
+      { id: 'user_001', data: { profile: { name: '김코딩', job: '프론트엔드 개발자' }, plan: { type: 'PRO', usage: 1250 }, skills: [1,2,3] } },
+      { id: 'user_002', data: { profile: { name: '이마켓', job: '퍼포먼스 마케터' }, plan: { type: 'PREMIUM', usage: 5420 }, skills: [1,2,3,4,5] } },
+      { id: 'user_003', data: { profile: { name: '박디잔', job: 'UI/UX 디자이너' }, plan: { type: 'BASIC', usage: 120 }, skills: [1] } },
+      { id: 'user_004', data: { profile: { name: '최기획', job: '서비스 기획자' }, plan: { type: 'PRO', usage: 890 }, skills: [1,2] } },
+      { id: 'user_005', data: { profile: { name: '정데이터', job: '데이터 분석가' }, plan: { type: 'BASIC', usage: 50 }, skills: [] } },
+    ];
+    
+    setTimeout(() => {
+      setUsers(mockUsers);
+      setIsLoading(false);
+    }, 600);
   }, []);
 
   const handleReplySubmit = (e) => {
